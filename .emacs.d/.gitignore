@@ -1,0 +1,5 @@
+el-get/*
+el-get/.*
+elisp/*
+elisp/.*
+!elisp/.status.el
