@@ -6,7 +6,9 @@
 ;; terminal
 (defun open-terminal ()
   (interactive)
-  (shell-command-to-string "open -a terminal"))
+  (with-temp-buffer
+    (cd "/")
+    (shell-command-to-string "open -a terminal")))
 
 ;; Force to bind
 (setq my-keyjack-mode-map (make-sparse-keymap))
