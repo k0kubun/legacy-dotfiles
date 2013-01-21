@@ -1,4 +1,4 @@
-PROMPT='%m:%(5~,%-2~/.../%2~,%~) %n%# '
+PROMPT='%m:%c %n%# '
 
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmuxx >/dev/null 2>&1; then
