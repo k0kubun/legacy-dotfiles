@@ -1,17 +1,13 @@
-(setq el-get-dir "~/.emacs.d/elisp")
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get/")
-(unless (require 'el-get nil t)
-  (url-retrieve
- "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
- (lambda (s)
-   (goto-char (point-max))
-   (eval-print-last-sexp))))
-(el-get 'sync)
-
-;; init.d
-(add-to-list 'load-path "~/.emacs.d/init.d")
-(load "basic")
-(load "keybind")
-(load "extensions")
-(load "languages")
-
+(let*
+    ((user-emacs-directory
+      (substring (or load-file-name "~/.emacs.d/init.el") 0 -7))
+     (conf-list (list
+                 "basic.el"
+                 "keybind.el"
+                 "el-get.el"
+                 "extensions.el"
+                 "languages.el"
+                 )))
+  (progn
+    (dolist (conf conf-list)
+      (load (concat user-emacs-directory "conf/" conf)))))
