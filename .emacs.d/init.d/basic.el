@@ -13,10 +13,18 @@
 (setq inhibit-startup-screen t)
 
 ;; frame size
-(setq default-frame-alist
-      (append (list '(width . 120)
-                    '(height . 73))
+(setq hostname (system-name))
+(setq custom-frame
+  (cond ((string-equal hostname "macbook") (list '(width . 100)
+                                                 '(height . 51)))
+        (t (list '(width . 120)
+                 '(height . 40)))))
+
+(setq default-frame-alist      
+      (append custom-frame
               default-frame-alist))
+
+
 
 ;; bar
 (column-number-mode t)
