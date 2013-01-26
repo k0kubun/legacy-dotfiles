@@ -2,11 +2,11 @@
     ((user-emacs-directory
       (substring (or load-file-name "~/.emacs.d/init.el") 0 -7))
      (conf-list (list
-                 "basic.el"
-                 "keybind.el"
-                 "el-get.el"
-                 "extensions.el"
-                 "languages.el"
+                 "basic"
+                 "keybind"
+                 "el-get"
+                 "extensions"
+                 "languages"
                  )))
   (progn
     (dolist (conf conf-list)
