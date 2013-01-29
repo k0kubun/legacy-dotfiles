@@ -17,4 +17,5 @@
 
 (el-get 'sync
         '(el-get
+          rcodetools
           ))
