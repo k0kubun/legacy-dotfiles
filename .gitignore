@@ -1,5 +1,6 @@
 .DS_Store
 *.elc
 tramp
-auto-save-list
+el-get/*
+auto-save-list/*
 *~
