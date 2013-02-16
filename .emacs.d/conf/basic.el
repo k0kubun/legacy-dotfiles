@@ -17,14 +17,14 @@
 (setq custom-frame
   (cond ((string-equal hostname "macbook") (list '(width . 100)
                                                  '(height . 51)))
+        ((string-equal hostname "iMac") (list '(width . 110)
+                                              '(height . 72)))
         (t (list '(width . 120)
                  '(height . 40)))))
 
 (setq default-frame-alist      
       (append custom-frame
               default-frame-alist))
-
-
 
 ;; bar
 (column-number-mode t)
@@ -102,19 +102,6 @@
 (setq hl-line-face 'my-hl-line-face)
 (global-hl-line-mode t)
 
-;; redo+
-(when (require 'redo+ nil t)
-  ;; C-:にリドゥを割り当てる
-  (global-set-key (kbd "C-:") 'redo))
-
-;; multi-term
-;; (require 'multi-term)
-
-;; shell-command
-;; (global-set-key "\M-s" 'multi-term-next)
-
-;; term に奪われたくないキー
-;; (add-to-list 'term-unbind-key-list '"C-t")
 
 ;; term 内での文字削除、ペーストを有効にする
 ;; (add-hook 'term-mode-hook
@@ -130,22 +117,6 @@
 ;; (require 'recentf-ext)
 ;; (define-key global-map (kbd "C-c C-c") 'recentf-open-files)
 
-
-;; gosh
-;; (setq scheme-program-name "gosh")
-;; (require 'cmuscheme)
-
-;; ;; ウィンドウを２つに分けて、
-;; ;; 一方でgoshインタプリタを実行するコマンドを定義します。
-;; (defun scheme-other-window ()
-;;   "Run scheme on other window"
-;;   (interactive)
-;;   (switch-to-buffer-other-window
-;;    (get-buffer-create "*scheme*"))
-;;   (run-scheme scheme-program-name))
-;; ;; そのコマンドをCtrl-cSで呼び出します。
-;; (define-key global-map
-;;   "\C-cS" 'scheme-other-window)
 
 ;; ;; 直前/直後の括弧に対応する括弧を光らせます。
 ;; (show-paren-mode)
