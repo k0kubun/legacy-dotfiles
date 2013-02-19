@@ -18,3 +18,11 @@
 (define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
 (define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
 (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
+
+;; flymake
+(require 'flymake)
+(add-hook
+ 'ruby-mode-hook
+ '(lambda ()
+    ;; Don't want flymake mode for ruby regions in rhtml files
+    (if (not (null buffer-file-name)) (flymake-mode))))
