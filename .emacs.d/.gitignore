@@ -1,5 +1,5 @@
 el-get/*
 el-get/.*
-elisp/*
-elisp/.*
-!elisp/.status.el
+auto-save-list/*
+tramp
+backups/*

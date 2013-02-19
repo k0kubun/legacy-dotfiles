@@ -46,6 +46,12 @@
 (if window-system (progn (set-frame-parameter nil 'alpha 90)))
 (load-theme 'deeper-blue t)
 
+;; backup and autosave
+(add-to-list 'backup-directory-alist
+             (cons "." "~/.emacs.d/backups/"))
+(setq auto-save-file-name-transforms
+      `((".*" ,(expand-file-name "~/.emacs.d/backups/") t)))
+
 ;; フォントの設定
 (when (eq window-system 'ns)
   ;; asciiフォントをMenloに
@@ -73,22 +79,6 @@
           (".*nfmotoyacedar-medium.*" . 1.2)
           ("-cdac$" . 1.3))))
 
-(when (eq system-type 'windows-nt)
-  ;; asciiフォントをConsolasに
-  (set-face-attribute 'default nil
-                      :family "Consolas"
-                      :height 120)
-  ;; 日本語フォントをメイリオに
-  (set-fontset-font
-   nil
-   'japanese-jisx0208
-   (font-spec :family "メイリオ"))
-  ;; フォントの横幅を調節する
-  (setq face-font-rescale-alist
-        '((".*Consolas.*" . 1.0)
-          (".*メイリオ.*" . 1.15)
-          ("-cdac$" . 1.3))))
-
 ;; 現在行のハイライト
 (defface my-hl-line-face
   ;; 背景がdarkならば背景色を紺に
@@ -101,35 +91,6 @@
   "hl-line's my face")
 (setq hl-line-face 'my-hl-line-face)
 (global-hl-line-mode t)
-
-
-;; term 内での文字削除、ペーストを有効にする
-;; (add-hook 'term-mode-hook
-;;           '(lambda ()
-;;              (define-key term-raw-map (kbd "C-h") 'term-send-backspace)
-;;              (define-key term-raw-map (kbd "C-y") 'term-paste)
-;;              ))
-
-
-;;recentf
-;; (setq recentf-max-saved-items 3000)
-;; (setq recentf-exclude '("TAGS$" "/var/tmp"))
-;; (require 'recentf-ext)
-;; (define-key global-map (kbd "C-c C-c") 'recentf-open-files)
-
-
-;; ;; 直前/直後の括弧に対応する括弧を光らせます。
-;; (show-paren-mode)
-
-;; ;; php-modeのみタブを利用しない
-;; (add-hook 'php-mode-hook
-;;           '(lambda ()
-;;             (setq indent-tabs-mode nil)))
-
-;; ;; C、C++、JAVA、PHPなどのインデント
-;; (add-hook 'c-mode-common-hook
-;;           '(lambda ()
-;;              (c-set-style "bsd")))
 
 ;; ;; grep
 ;; (define-key global-map (kbd "M-t") 'grep-find)
