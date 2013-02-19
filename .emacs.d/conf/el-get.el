@@ -18,4 +18,6 @@
 (el-get 'sync
         '(el-get
           rcodetools
+          yasnippet
+          zencoding-mode
           ))
