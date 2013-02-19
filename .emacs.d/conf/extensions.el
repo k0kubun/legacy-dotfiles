@@ -39,3 +39,20 @@
  '(lambda ()
     ;; Don't want flymake mode for ruby regions in rhtml files
     (if (not (null buffer-file-name)) (flymake-mode))))
+
+;; tabbar
+(require 'tabbar)
+(tabbar-mode 1)
+(tabbar-mwheel-mode -1)
+(dolist (btn '(tabbar-buffer-home-button
+               tabbar-scroll-left-button
+               tabbar-scroll-right-button))
+  (set btn (cons (cons "" nil)
+                 (cons "" nil))))
+(setq tabbar-buffer-groups-function nil)
+(defun my-tabbar-buffer-list ()
+  (remove-if
+   (lambda (buffer)
+     (find (aref (buffer-name buffer) 0) " *"))
+   (buffer-list)))
+(setq tabbar-buffer-list-function 'my-tabbar-buffer-list)

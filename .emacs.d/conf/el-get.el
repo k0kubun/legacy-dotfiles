@@ -20,4 +20,5 @@
           rcodetools
           yasnippet
           zencoding-mode
+          tabbar
           ))

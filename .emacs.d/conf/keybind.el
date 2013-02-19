@@ -17,6 +17,9 @@
           (global-set-key (car x) (cdr x)))
         '(("\C-t" . other-window)
           ("\C-o" . open-terminal)
+          ("\M-}" . tabbar-forward-tab)
+          ("\M-{" . tabbar-backward-tab)
+          ("\M-w" . kill-this-buffer)
           ))
 (easy-mmode-define-minor-mode my-keyjack-mode "Grab keys"
                               t " Keyjack" my-keyjack-mode-map)
