@@ -21,4 +21,5 @@
           yasnippet
           zencoding-mode
           tabbar
+          tempbuf
           ))
