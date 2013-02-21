@@ -22,4 +22,6 @@
           zencoding-mode
           tabbar
           tempbuf
+          rsense
+          navi2ch
           ))

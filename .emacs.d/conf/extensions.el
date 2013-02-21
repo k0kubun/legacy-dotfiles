@@ -82,3 +82,10 @@
 ;; uniquify
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+
+;; navi2ch
+(require 'navi2ch)
+(setq navi2ch-article-exist-message-range '(1 . 1000))
+(setq navi2ch-article-new-message-range '(1000 . 1))
+(setq navi2ch-list-init-open-category t)
+(setq navi2ch-history-max-line nil)
