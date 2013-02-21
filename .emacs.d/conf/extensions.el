@@ -9,9 +9,7 @@
   (define-key zencoding-mode-keymap "\C-z" 'zencoding-expand-line))
 
 ;; yasnippet
-(when (require 'yasnippet nil t)
-  (setq yas-snippet-dirs
-         '("~/.emacs.d/snippets")))
+(require 'yasnippet nil t)
 (yas-global-mode 1)
 
 (custom-set-variables '(yas-trigger-key "TAB"))
@@ -41,7 +39,7 @@
     (if (not (null buffer-file-name)) (flymake-mode))))
 
 ;; tabbar
-(require 'tabbar)
+(require 'tabbar) 
 (tabbar-mode 1)
 (tabbar-mwheel-mode -1)
 (dolist (btn '(tabbar-buffer-home-button
@@ -57,27 +55,54 @@
    (buffer-list)))
 (setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
 
-(setq tabbar-separator '(1.5))          
-
 (set-face-attribute
  'tabbar-default nil
- :family "Comic Sans MS"
- :background "black"
- :foreground "gray72"
- :height 1.0)
+; :family "Comic Sans MS"
+ :height 1.0
+ :background "gray20"
+ :foreground "gray20"
+ :box '(:line-width 1 :color "gray20" :style nil))
 (set-face-attribute
  'tabbar-unselected nil
- :background "black"
- :foreground "grey72"
- :box nil)
+ :background "gray30"
+ :foreground "white"
+ :box '(:line-width 2 :color "gray30" :style nil))
 (set-face-attribute
  'tabbar-selected nil
- :background "black"
- :foreground "yellow"
- :box nil)
+ :background "gray75"
+ :foreground "black"
+ :box '(:line-width 2 :color "gray75" :style nil))
+(set-face-attribute
+ 'tabbar-highlight nil
+ :background "white"
+ :foreground "black"
+ :underline nil
+ :box '(:line-width 1 :color "white" :style nil))
 (set-face-attribute
  'tabbar-button nil
- :box nil)
+ :box '(:line-width 1 :color "gray20" :style nil))
+(set-face-attribute
+ 'tabbar-separator nil
+ :background "gray20")
+
+(custom-set-variables
+ '(tabbar-separator (quote (0.5))))
+;; adding spaces
+(defun tabbar-buffer-tab-label (tab)
+  "Return a label for TAB.
+That is, a string used to represent it on the tab bar."
+  (let ((label  (if tabbar--buffer-show-groups
+                    (format "[%s]  " (tabbar-tab-tabset tab))
+                  (format "%s  " (tabbar-tab-value tab)))))
+    ;; Unless the tab bar auto scrolls to keep the selected tab
+    ;; visible, shorten the tab label to keep as many tabs as possible
+    ;; in the visible area of the tab bar.
+    (if tabbar-auto-scroll-flag
+        label
+      (tabbar-shorten
+       label (max 1 (/ (window-width)
+                       (length (tabbar-view
+                                (tabbar-current-tabset)))))))))
 
 ;; uniquify
 (require 'uniquify)

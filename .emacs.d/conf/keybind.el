@@ -13,7 +13,7 @@
 ;; for opening new tab with tabbar
 (defun open-emacs-d ()
   (interactive)
-  (find-file "~/source/dotfiles.emacs.d/"))
+  (find-file "~/source/dotfiles/.emacs.d/"))
 
 ;; Force to bind
 (setq my-keyjack-mode-map (make-sparse-keymap))
@@ -26,6 +26,7 @@
           ("\M-{" . tabbar-backward-tab)          
           ("\M-w" . kill-this-buffer)
           ("\M-t" . open-emacs-d)
+          ("\M-i" . eval-buffer)
           ))
 (easy-mmode-define-minor-mode my-keyjack-mode "Grab keys"
                               t " Keyjack" my-keyjack-mode-map)
