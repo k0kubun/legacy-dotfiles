@@ -92,5 +92,11 @@
 (setq hl-line-face 'my-hl-line-face)
 (global-hl-line-mode t)
 
+;; completion
+(setq completion-ignore-case t)
+
+;; auto reload buffer
+(global-auto-revert-mode 1)
+
 ;; ;; grep
 ;; (define-key global-map (kbd "M-t") 'grep-find)

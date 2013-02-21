@@ -56,3 +56,29 @@
      (find (aref (buffer-name buffer) 0) " *"))
    (buffer-list)))
 (setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
+
+(setq tabbar-separator '(1.5))          
+
+(set-face-attribute
+ 'tabbar-default nil
+ :family "Comic Sans MS"
+ :background "black"
+ :foreground "gray72"
+ :height 1.0)
+(set-face-attribute
+ 'tabbar-unselected nil
+ :background "black"
+ :foreground "grey72"
+ :box nil)
+(set-face-attribute
+ 'tabbar-selected nil
+ :background "black"
+ :foreground "yellow"
+ :box nil)
+(set-face-attribute
+ 'tabbar-button nil
+ :box nil)
+
+;; uniquify
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
