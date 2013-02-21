@@ -3,3 +3,5 @@
     email = mail@ikst.jp
 [color]
     ui = true
+[core]
+    excludesfile = ~/.gitignore
