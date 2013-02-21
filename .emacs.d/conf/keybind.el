@@ -13,7 +13,7 @@
 ;; for opening new tab with tabbar
 (defun open-emacs-d ()
   (interactive)
-  (find-file "~/.emacs.d/"))
+  (find-file "~/source/dotfiles.emacs.d/"))
 
 ;; Force to bind
 (setq my-keyjack-mode-map (make-sparse-keymap))
