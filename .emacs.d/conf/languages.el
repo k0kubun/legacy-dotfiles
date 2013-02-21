@@ -11,6 +11,10 @@
 (add-to-list 'load-path (concat rsense-home "/etc"))
 (require 'rsense)
 
+(add-hook 'ruby-mode-hook
+ '(lambda ()
+ (add-to-list 'ruby-encoding-map '(undecided . utf-8))))
+
 ;; PHP
 (when (require 'php-mode nil t)
   (add-to-list 'auto-mode-alist '("\\.ctp\\'" . php-mode))
