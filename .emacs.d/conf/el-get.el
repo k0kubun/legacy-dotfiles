@@ -24,4 +24,5 @@
           tempbuf
           rsense
           navi2ch
+          savekill
           ))
