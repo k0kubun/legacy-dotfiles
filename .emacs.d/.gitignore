@@ -3,3 +3,4 @@ el-get/.*
 auto-save-list/*
 tramp
 backups/*
+kill-ring-saved.el
