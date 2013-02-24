@@ -24,12 +24,17 @@
           ("\C-o" . open-terminal)
           ("\M-}" . tabbar-forward-tab)
           ("\M-{" . tabbar-backward-tab)          
-          ("\M-w" . kill-this-buffer)
+          ("\M-k" . kill-this-buffer)
           ("\M-t" . open-emacs-d)
           ("\M-i" . eval-buffer)
+          ("\C-j" . newline-and-indent)
           ))
 (easy-mmode-define-minor-mode my-keyjack-mode "Grab keys"
                               t " Keyjack" my-keyjack-mode-map)
+
+
+
+
 
 ;; toggle-truncate-lines
 (define-key global-map (kbd "C-c l") 'toggle-truncate-lines)

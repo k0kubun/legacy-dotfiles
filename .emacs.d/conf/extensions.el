@@ -5,8 +5,11 @@
 ;; zen coding mode
 (when (require 'zencoding-mode nil t)
   (add-hook 'html-mode-hook 'zencoding-mode)
+  (add-hook 'html-mode-hook
+            '(lambda ()
+               (define-key zencoding-mode-keymap (kbd "C-j") 'newline-and-indent)))
   (add-hook 'text-mode-hook 'zencoding-mode)
-  (define-key zencoding-mode-keymap "\C-z" 'zencoding-expand-line))
+  (define-key zencoding-mode-keymap "\C-m" 'zencoding-expand-line))
 
 ;; yasnippet
 (require 'yasnippet nil t)
