@@ -10,11 +10,6 @@
     (cd "/")
     (shell-command-to-string "open -a terminal")))
 
-;; for opening new tab with tabbar
-(defun open-emacs-d ()
-  (interactive)
-  (find-file "~/source/dotfiles/.emacs.d/"))
-
 ;; Force to bind
 (setq my-keyjack-mode-map (make-sparse-keymap))
 (mapcar (lambda (x)
@@ -23,11 +18,21 @@
         '(("\C-t" . other-window)
           ("\C-o" . open-terminal)
           ("\M-}" . tabbar-forward-tab)
-          ("\M-{" . tabbar-backward-tab)          
-          ("\M-k" . kill-this-buffer)
-          ("\M-t" . open-emacs-d)
+          ("\M-{" . tabbar-backward-tab)
+          
+          ("\M-T" . elscreen-create)
+          ("\M-e" . elscreen-kill)
+          ("\M-t" . elscreen-clone)
+          ("\M-}" . elscreen-next)
+          ("\M-{" . elscreen-previous)
+          
+          ([(super t)] . elscreen-create)
+          ([(super T)] . elscreen-create)
+          ([(super w)] . elscreen-kill)
+          ([(super })] . elscreen-next)
+          ([(super {)] . elscreen-previous)
+
           ("\M-i" . eval-buffer)
-          ("\C-j" . newline-and-indent)
           ))
 (easy-mmode-define-minor-mode my-keyjack-mode "Grab keys"
                               t " Keyjack" my-keyjack-mode-map)

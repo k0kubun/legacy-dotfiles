@@ -41,79 +41,98 @@
     ;; Don't want flymake mode for ruby regions in rhtml files
     (if (not (null buffer-file-name)) (flymake-mode))))
 
+;; elscreen
+(load "elscreen" "ElScreen" t)
+
+;; タブを表示(非表示にする場合は nil を設定する)
+(setq elscreen-display-tab t)
+
+;; ;; 自動でスクリーンを作成
+;; (defmacro elscreen-create-automatically (ad-do-it)
+;;   `(if (not (elscreen-one-screen-p))
+;;        ,ad-do-it
+;;      (elscreen-create)
+;;      (elscreen-notify-screen-modification 'force-immediately)
+;;      (elscreen-message "New screen is automatically created")))
+
+;; (defadvice elscreen-next (around elscreen-create-automatically activate)
+;;   (elscreen-create-automatically ad-do-it))
+
+;; (defadvice elscreen-previous (around elscreen-create-automatically activate)
+;;   (elscreen-create-automatically ad-do-it))
+
+;; (defadvice elscreen-toggle (around elscreen-create-automatically activate)
+;;   (elscreen-create-automatically ad-do-it))
+
+;; ;; タブ移動を簡単に
+;; (define-key global-map (kbd "M-t") 'elscreen-next)
+
 ;; tabbar
-(require 'tabbar) 
-(tabbar-mode 1)
-(tabbar-mwheel-mode -1)
-(dolist (btn '(tabbar-buffer-home-button
-               tabbar-scroll-left-button
-               tabbar-scroll-right-button))
-  (set btn (cons (cons "" nil)
-                 (cons "" nil))))
-(setq tabbar-buffer-groups-function nil)
-(defun my-tabbar-buffer-list ()
-  (remove-if
-   (lambda (buffer)
-     (find (aref (buffer-name buffer) 0) " *"))
-   (buffer-list)))
-(setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
+;; (require 'tabbar) 
+;; (tabbar-mode 1)
+;; (tabbar-mwheel-mode -1)
+;; (dolist (btn '(tabbar-buffer-home-button
+;;                tabbar-scroll-left-button
+;;                tabbar-scroll-right-button))
+;;   (set btn (cons (cons "" nil)
+;;                  (cons "" nil))))
+;; (setq tabbar-buffer-groups-function nil)
+;; (defun my-tabbar-buffer-list ()
+;;   (remove-if
+;;    (lambda (buffer)
+;;      (find (aref (buffer-name buffer) 0) " *"))
+;;    (buffer-list)))
+;; (setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
 
-(set-face-attribute
- 'tabbar-default nil
-; :family "Comic Sans MS"
- :height 1.0
- :background "gray20"
- :foreground "gray20"
- :box '(:line-width 1 :color "gray20" :style nil))
-(set-face-attribute
- 'tabbar-unselected nil
- :background "gray30"
- :foreground "white"
- :box '(:line-width 2 :color "gray30" :style nil))
-(set-face-attribute
- 'tabbar-selected nil
- :background "gray75"
- :foreground "black"
- :box '(:line-width 2 :color "gray75" :style nil))
-(set-face-attribute
- 'tabbar-highlight nil
- :background "white"
- :foreground "black"
- :underline nil
- :box '(:line-width 1 :color "white" :style nil))
-(set-face-attribute
- 'tabbar-button nil
- :box '(:line-width 1 :color "gray20" :style nil))
-(set-face-attribute
- 'tabbar-separator nil
- :background "gray20")
+;; (set-face-attribute
+;;  'tabbar-default nil
+;; ; :family "Comic Sans MS"
+;;  :height 1.0
+;;  :background "gray20"
+;;  :foreground "gray20"
+;;  :box '(:line-width 1 :color "gray20" :style nil))
+;; (set-face-attribute
+;;  'tabbar-unselected nil
+;;  :background "gray30"
+;;  :foreground "white"
+;;  :box '(:line-width 2 :color "gray30" :style nil))
+;; (set-face-attribute
+;;  'tabbar-selected nil
+;;  :background "gray75"
+;;  :foreground "black"
+;;  :box '(:line-width 2 :color "gray75" :style nil))
+;; (set-face-attribute
+;;  'tabbar-highlight nil
+;;  :background "white"
+;;  :foreground "black"
+;;  :underline nil
+;;  :box '(:line-width 1 :color "white" :style nil))
+;; (set-face-attribute
+;;  'tabbar-button nil
+;;  :box '(:line-width 1 :color "gray20" :style nil))
+;; (set-face-attribute
+;;  'tabbar-separator nil
+;;  :background "gray20")
 
-(custom-set-variables
- '(tabbar-separator (quote (0.5))))
-;; adding spaces
-(defun tabbar-buffer-tab-label (tab)
-  "Return a label for TAB.
-That is, a string used to represent it on the tab bar."
-  (let ((label  (if tabbar--buffer-show-groups
-                    (format "[%s]  " (tabbar-tab-tabset tab))
-                  (format "%s  " (tabbar-tab-value tab)))))
-    ;; Unless the tab bar auto scrolls to keep the selected tab
-    ;; visible, shorten the tab label to keep as many tabs as possible
-    ;; in the visible area of the tab bar.
-    (if tabbar-auto-scroll-flag
-        label
-      (tabbar-shorten
-       label (max 1 (/ (window-width)
-                       (length (tabbar-view
-                                (tabbar-current-tabset)))))))))
+;; (custom-set-variables
+;;  '(tabbar-separator (quote (0.5))))
+;; ;; adding spaces
+;; (defun tabbar-buffer-tab-label (tab)
+;;   "Return a label for TAB.
+;; That is, a string used to represent it on the tab bar."
+;;   (let ((label  (if tabbar--buffer-show-groups
+;;                     (format "[%s]  " (tabbar-tab-tabset tab))
+;;                   (format "%s  " (tabbar-tab-value tab)))))
+;;     ;; Unless the tab bar auto scrolls to keep the selected tab
+;;     ;; visible, shorten the tab label to keep as many tabs as possible
+;;     ;; in the visible area of the tab bar.
+;;     (if tabbar-auto-scroll-flag
+;;         label
+;;       (tabbar-shorten
+;;        label (max 1 (/ (window-width)
+;;                        (length (tabbar-view
+;;                                 (tabbar-current-tabset)))))))))
 
 ;; uniquify
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
-
-;; navi2ch
-(require 'navi2ch)
-(setq navi2ch-article-exist-message-range '(1 . 1000))
-(setq navi2ch-article-new-message-range '(1000 . 1))
-(setq navi2ch-list-init-open-category t)
-(setq navi2ch-history-max-line nil)
