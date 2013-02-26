@@ -15,3 +15,9 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
         screen -rx || screen -D -RR
     fi
 fi
+
+function g {
+    git add .
+    git commit -m $1
+    git push
+}
