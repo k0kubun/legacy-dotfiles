@@ -25,4 +25,5 @@
           rsense
           savekill
           elscreen
+          elscreen-addon
           ))

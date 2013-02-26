@@ -1,0 +1,3 @@
+(:name elscreen-addon
+       :type github
+       :pkgname "knu/elscreen")

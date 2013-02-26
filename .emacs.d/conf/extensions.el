@@ -45,7 +45,19 @@
 (load "elscreen" "ElScreen" t)
 
 ;; タブを表示(非表示にする場合は nil を設定する)
-(setq elscreen-display-tab t)
+;(setq elscreen-display-tab t)
+
+(setq elscreen-display-tab 14)
+(setq elscreen-tab-display-kill-screen nil)
+
+;; elscreen-server
+(require 'elscreen-server)
+
+;; elscreen-dired
+(require 'elscreen-dired)
+
+;; elscreen-color-theme
+(require 'elscreen-color-theme)
 
 ;; ;; 自動でスクリーンを作成
 ;; (defmacro elscreen-create-automatically (ad-do-it)
