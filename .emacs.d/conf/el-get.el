@@ -26,4 +26,5 @@
           savekill
           elscreen
           elscreen-addon
+          sudo-ext
           ))

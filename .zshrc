@@ -1,6 +1,7 @@
 PROMPT='%m:%c %n%# '
 
 alias spec="rspec -c"
+alias rspecdoc='rake spec SPEC_OPTS="--format documentation"'
 
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmuxx >/dev/null 2>&1; then
