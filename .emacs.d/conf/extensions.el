@@ -44,9 +44,6 @@
 ;; elscreen
 (load "elscreen" "ElScreen" t)
 
-;; タブを表示(非表示にする場合は nil を設定する)
-;(setq elscreen-display-tab t)
-
 (setq elscreen-display-tab 14)
 (setq elscreen-tab-display-kill-screen nil)
 
@@ -58,26 +55,6 @@
 
 ;; elscreen-color-theme
 (require 'elscreen-color-theme)
-
-;; ;; 自動でスクリーンを作成
-;; (defmacro elscreen-create-automatically (ad-do-it)
-;;   `(if (not (elscreen-one-screen-p))
-;;        ,ad-do-it
-;;      (elscreen-create)
-;;      (elscreen-notify-screen-modification 'force-immediately)
-;;      (elscreen-message "New screen is automatically created")))
-
-;; (defadvice elscreen-next (around elscreen-create-automatically activate)
-;;   (elscreen-create-automatically ad-do-it))
-
-;; (defadvice elscreen-previous (around elscreen-create-automatically activate)
-;;   (elscreen-create-automatically ad-do-it))
-
-;; (defadvice elscreen-toggle (around elscreen-create-automatically activate)
-;;   (elscreen-create-automatically ad-do-it))
-
-;; ;; タブ移動を簡単に
-;; (define-key global-map (kbd "M-t") 'elscreen-next)
 
 ;; tabbar
 ;; (require 'tabbar) 

@@ -38,10 +38,6 @@
 (easy-mmode-define-minor-mode my-keyjack-mode "Grab keys"
                               t " Keyjack" my-keyjack-mode-map)
 
-
-
-
-
 ;; toggle-truncate-lines
 (define-key global-map (kbd "C-c l") 'toggle-truncate-lines)
 
