@@ -16,8 +16,8 @@
           (define-key my-keyjack-mode-map (car x) (cdr x))
           (global-set-key (car x) (cdr x)))
         '(("\C-t" . other-window)
-;;          ("\C-o" . open-terminal)
-          ("\M-r" . replace-string)
+          ("\M-r" . replace-regexp)
+          ("\M-h" . backward-kill-word)
           ("\M-}" . tabbar-forward-tab)
           ("\M-{" . tabbar-backward-tab)
           
