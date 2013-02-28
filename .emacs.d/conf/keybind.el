@@ -4,11 +4,11 @@
 (keyboard-translate ?\C-h ?\C-?)
 
 ;; terminal
-(defun open-terminal ()
-  (interactive)
-  (with-temp-buffer
-    (cd "/")
-    (shell-command-to-string "open -a terminal")))
+;; (defun open-terminal ()
+;;   (interactive)
+;;   (with-temp-buffer
+;;     (cd "/")
+;;     (shell-command-to-string "open -a terminal")))
 
 ;; Force to bind
 (setq my-keyjack-mode-map (make-sparse-keymap))
@@ -17,9 +17,8 @@
           (global-set-key (car x) (cdr x)))
         '(("\C-t" . other-window)
           ("\M-r" . replace-regexp)
+          ("\M-g" . grep-find)
           ("\M-h" . backward-kill-word)
-          ("\M-}" . tabbar-forward-tab)
-          ("\M-{" . tabbar-backward-tab)
           
           ("\M-T" . elscreen-create)
           ("\M-e" . elscreen-kill)
