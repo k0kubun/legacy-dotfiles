@@ -3,22 +3,22 @@
 (setq cua-enable-cua-keys nil)
 
 ;; zen coding mode
-(when (require 'zencoding-mode nil t)
-  (add-hook 'html-mode-hook 'zencoding-mode)
-  (add-hook 'html-mode-hook
-            '(lambda ()
-               (define-key zencoding-mode-keymap (kbd "C-j") 'newline-and-indent)))
-  (add-hook 'text-mode-hook 'zencoding-mode)
-  (define-key zencoding-mode-keymap "\C-m" 'zencoding-expand-line))
+;; (when (require 'zencoding-mode nil t)
+;;   (add-hook 'html-mode-hook 'zencoding-mode)
+;;   (add-hook 'html-mode-hook
+;;             '(lambda ()
+;;                (define-key zencoding-mode-keymap (kbd "C-j") 'newline-and-indent)))
+;;   (add-hook 'text-mode-hook 'zencoding-mode)
+;;   (define-key zencoding-mode-keymap "\C-m" 'zencoding-expand-line))
 
 ;; yasnippet
-(require 'yasnippet nil t)
-(yas-global-mode 1)
+;; (require 'yasnippet nil t)
+;; (yas-global-mode 1)
 
-(custom-set-variables '(yas-trigger-key "TAB"))
-(define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
-(define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
-(define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
+;; (custom-set-variables '(yas-trigger-key "TAB"))
+;; (define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
+;; (define-key yas-minor-mode-map (kbd "C-x i n") 'yas-new-snippet)
+;; (define-key yas-minor-mode-map (kbd "C-x i v") 'yas-visit-snippet-file)
 
 ;; flymake
 ;; (require 'flymake)
