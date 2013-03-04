@@ -9,15 +9,6 @@
  '(lambda ()
  (add-to-list 'ruby-encoding-map '(undecided . utf-8))))
 
-;; xmpfilter
-;; (require 'rcodetools)
-;; (define-key ruby-mode-map (kbd "C-c C-d") 'xmp)
-
-;; RSense
-;; (setq rsense-home "$RSENSE_HOME")
-;; (add-to-list 'load-path (concat rsense-home "/etc"))
-;; (require 'rsense)
-
 ;; Ruby indent configuration
 (setq ruby-deep-indent-paren-style nil)
 (defadvice ruby-indent-line (after unindent-closing-paren activate)

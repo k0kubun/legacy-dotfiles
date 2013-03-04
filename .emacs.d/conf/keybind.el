@@ -3,13 +3,6 @@
 ;; C-h to Delete
 (keyboard-translate ?\C-h ?\C-?)
 
-;; terminal
-;; (defun open-terminal ()
-;;   (interactive)
-;;   (with-temp-buffer
-;;     (cd "/")
-;;     (shell-command-to-string "open -a terminal")))
-
 ;; Force to bind
 (setq my-keyjack-mode-map (make-sparse-keymap))
 (mapcar (lambda (x)
