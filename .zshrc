@@ -21,6 +21,7 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
 fi
 
 function g {
+    git rm -r . --cached
     git add .
     git commit -m $1
     git push
