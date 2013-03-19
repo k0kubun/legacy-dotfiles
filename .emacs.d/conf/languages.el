@@ -9,6 +9,14 @@
  '(lambda ()
  (add-to-list 'ruby-encoding-map '(undecided . utf-8))))
 
+;; Ruby End
+(require 'ruby-end)
+
+;; Ruby Block
+(require 'ruby-block)
+(ruby-block-mode t)
+(setq ruby-block-highlight-toggle t)
+
 ;; Ruby indent configuration
 (setq ruby-deep-indent-paren-style nil)
 (defadvice ruby-indent-line (after unindent-closing-paren activate)

@@ -17,13 +17,9 @@
 
 (el-get 'sync
         '(el-get
-          rcodetools
-          yasnippet
-          zencoding-mode
-          tabbar
-          tempbuf
-          rsense
           savekill
+          ruby-end
+          ruby-block
           elscreen
           elscreen-addon
           php-mode
