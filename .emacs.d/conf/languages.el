@@ -3,6 +3,8 @@
                        (getenv "HOME") "/.rbenv/bin:" (getenv "PATH")))
 (setq exec-path (cons (concat (getenv "HOME") "/.rbenv/shims")
                       (cons (concat (getenv "HOME") "/.rbenv/bin") exec-path)))
+
+(add-to-list 'load-path "el-get/enh-ruby-mode")
 (require 'ruby-mode)
 
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
@@ -16,9 +18,10 @@
  '(lambda ()
  (add-to-list 'ruby-encoding-map '(undecided . utf-8))))
 
-;; Ruby End
-(require 'ruby-end)
-(setq ruby-end-insert-newline nil)
+;; Ruby Electric
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
+(setq ruby-electric-expand-delimiters-list nil)
 
 ;; Ruby Block
 (require 'ruby-block)

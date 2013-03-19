@@ -18,7 +18,7 @@
 (el-get 'sync
         '(el-get
           savekill
-          ruby-end
+          ruby-electric
           ruby-block
           elscreen
           elscreen-addon
