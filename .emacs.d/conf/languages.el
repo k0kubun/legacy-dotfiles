@@ -4,7 +4,6 @@
 (setq exec-path (cons (concat (getenv "HOME") "/.rbenv/shims")
                       (cons (concat (getenv "HOME") "/.rbenv/bin") exec-path)))
 
-(add-to-list 'load-path "el-get/enh-ruby-mode")
 (require 'ruby-mode)
 
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))

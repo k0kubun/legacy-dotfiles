@@ -54,26 +54,17 @@
 (setq auto-save-file-name-transforms
       `((".*" ,(expand-file-name "~/.emacs.d/backups/") t)))
 
-;; フォントの設定
+;; Fonts
 (when (eq window-system 'ns)
-  ;; asciiフォントをMenloに
   (set-face-attribute 'default nil
                       :family "Menlo"
                       :height 120)
-  ;; 日本語フォントをヒラギノ明朝 Proに
   (set-fontset-font
    nil 'japanese-jisx0208
-   ;; 英語名の場合
-   ;; (font-spec :family "Hiragino Mincho Pro"))
    (font-spec :family "ヒラギノ明朝 Pro"))
-  ;; ひらがなとカタカナをモトヤシーダに
-  ;; U+3000-303F	CJKの記号および句読点
-  ;; U+3040-309F	ひらがな
-  ;; U+30A0-30FF	カタカナ
   (set-fontset-font
    nil '(#x3040 . #x30ff)
    (font-spec :family "NfMotoyaCedar"))
-  ;; フォントの横幅を調節する
   (setq face-font-rescale-alist
         '((".*Menlo.*" . 1.0)
           (".*Hiragino_Mincho_Pro.*" . 1.2)
@@ -81,12 +72,9 @@
           (".*nfmotoyacedar-medium.*" . 1.2)
           ("-cdac$" . 1.3))))
 
-;; 現在行のハイライト
 (defface my-hl-line-face
-  ;; 背景がdarkならば背景色を紺に
   '((((class color) (background dark))
      (:background "NavyBlue" t))
-    ;; 背景がlightならば背景色を緑に
     (((class color) (background light))
      (:background "LightGoldenrodYellow" t))
     (t (:bold t)))
