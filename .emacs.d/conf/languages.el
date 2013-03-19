@@ -11,6 +11,7 @@
 
 ;; Ruby End
 (require 'ruby-end)
+(setq ruby-end-insert-newline nil)
 
 ;; Ruby Block
 (require 'ruby-block)
