@@ -20,6 +20,7 @@
           savekill
           ruby-electric
           ruby-block
+          google-c-style
           elscreen
           elscreen-addon
           php-mode
