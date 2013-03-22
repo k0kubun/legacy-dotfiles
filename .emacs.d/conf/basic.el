@@ -19,7 +19,7 @@
                                                  '(height . 51)))
         ((string-equal hostname "iMac") (list '(width . 260)
                                               '(height . 73)))
-        ((string-equal hostname "MacBook") (list '(width . 170)
+        ((string-equal hostname "MacBook") (list '(width . 260)
                                               '(height . 82)))
         (t (list '(width . 120)
                  '(height . 40)))))
