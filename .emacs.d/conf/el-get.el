@@ -18,6 +18,7 @@
 (el-get 'sync
         '(el-get
           savekill
+          auto-complete
           ruby-electric
           ruby-block
           google-c-style

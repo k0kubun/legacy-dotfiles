@@ -16,3 +16,9 @@
 
 ;; elscreen-color-theme
 (require 'elscreen-color-theme)
+
+;; auto-complete
+(require 'auto-complete)
+(require 'auto-complete-config)
+(global-auto-complete-mode t)
+(define-key ac-completing-map (kbd "C-j") 'ac-complete)
