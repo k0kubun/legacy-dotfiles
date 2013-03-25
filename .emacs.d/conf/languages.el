@@ -58,3 +58,11 @@
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
+
+;; javascript
+(require 'js)
+(setq js-indent-level 2)
+(defalias 'javascript-generic-mode 'js2-mode)
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(setq js2-basic-offset 2)

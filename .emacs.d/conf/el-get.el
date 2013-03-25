@@ -21,6 +21,7 @@
           auto-complete
           ruby-electric
           ruby-block
+          js2-mode
           google-c-style
           elscreen
           elscreen-addon
