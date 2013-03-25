@@ -53,6 +53,8 @@
 ;; C++
 (setq auto-mode-alist
       (cons (cons "\\.mm$" 'c++-mode) auto-mode-alist))
+(setq auto-mode-alist
+      (cons (cons "\\.h$" 'c++-mode) auto-mode-alist))
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
