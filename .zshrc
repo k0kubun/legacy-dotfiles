@@ -4,6 +4,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 alias spec="rspec -c"
+alias g="git"
 alias rspecdoc='rake spec SPEC_OPTS="--format documentation"'
 
 if [ -z "$TMUX" -a -z "$STY" ]; then
@@ -19,13 +20,6 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
         screen -rx || screen -D -RR
     fi
 fi
-
-function g {
-    git rm -r . --cached
-    git add .
-    git commit -m $1
-    git push
-}
 
 function gem(){
     $HOME/.rbenv/shims/gem $*
