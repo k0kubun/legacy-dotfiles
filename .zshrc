@@ -21,6 +21,12 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
     fi
 fi
 
+function gsync {
+    git add .
+    git commit -m $1
+    git push
+}
+
 function gem(){
     $HOME/.rbenv/shims/gem $*
     if [ "$1" = "install" ] || [ "$1" = "i" ] || [ "$1" = "uninstall" ] || [ "$1" = "uni" ]

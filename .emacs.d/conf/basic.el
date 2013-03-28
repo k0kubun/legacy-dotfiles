@@ -15,11 +15,11 @@
 ;; frame size
 (setq hostname (system-name))
 (setq custom-frame
-  (cond ((string-equal hostname "macbook") (list '(width . 180)
+  (cond ((string-equal hostname "macbook") (list '(width . 165)
                                                  '(height . 51)))
-        ((string-equal hostname "iMac") (list '(width . 260)
+        ((string-equal hostname "iMac") (list '(width . 165)
                                               '(height . 73)))
-        ((string-equal hostname "MacBook") (list '(width . 260)
+        ((string-equal hostname "MacBook") (list '(width . 165)
                                               '(height . 82)))
         (t (list '(width . 120)
                  '(height . 40)))))
