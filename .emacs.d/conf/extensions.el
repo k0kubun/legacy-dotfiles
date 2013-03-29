@@ -5,7 +5,7 @@
 ;; elscreen
 (load "elscreen" "ElScreen" t)
 
-(setq elscreen-display-tab 14)
+(setq elscreen-display-tab 10)
 (setq elscreen-tab-display-kill-screen nil)
 
 ;; elscreen-server
