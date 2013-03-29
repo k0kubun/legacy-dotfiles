@@ -21,8 +21,8 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
 fi
 
 alias g="git"
-alias ga="git add"
-alias gc="git commit -am"
+alias ga="git commit -am"
+alias gm="git commit -m"
 alias gp="git push"
 
 function gem(){
