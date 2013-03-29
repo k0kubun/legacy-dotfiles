@@ -23,6 +23,7 @@ fi
 alias g="git"
 alias ga="git add"
 alias gc="git commit -am"
+alias gp="git push"
 
 function gem(){
     $HOME/.rbenv/shims/gem $*
