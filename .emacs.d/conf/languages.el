@@ -63,15 +63,6 @@
            (define-key c-mode-base-map (kbd "C-c o") 'ff-find-other-file)
          ))
 (add-to-list 'ac-modes 'objc-mode)
-(add-hook 'c-mode-common-hook
-         '(lambda()
-            (make-variable-buffer-local 'skeleton-pair)
-            (make-variable-buffer-local 'skeleton-pair-on-word)
-            (setq skeleton-pair-on-word t)
-            (setq skeleton-pair t)
-            (make-variable-buffer-local 'skeleton-pair-alist)
-            (local-set-key (kbd "{") 'skeleton-pair-insert-maybe)
-            ))
 
 (setq ff-other-file-alist
      '(("\\.mm?$" (".h"))
