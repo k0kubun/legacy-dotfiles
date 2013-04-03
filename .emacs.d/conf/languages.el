@@ -62,7 +62,7 @@
          (lambda ()
            (define-key c-mode-base-map (kbd "C-c o") 'ff-find-other-file)
          ))
-
+(add-to-list 'ac-modes 'objc-mode)
 (add-hook 'c-mode-common-hook
          '(lambda()
             (make-variable-buffer-local 'skeleton-pair)
@@ -70,12 +70,17 @@
             (setq skeleton-pair-on-word t)
             (setq skeleton-pair t)
             (make-variable-buffer-local 'skeleton-pair-alist)
-            (local-set-key (kbd "(") 'skeleton-pair-insert-maybe)
-            (local-set-key (kbd "[") 'skeleton-pair-insert-maybe)
             (local-set-key (kbd "{") 'skeleton-pair-insert-maybe)
-            (local-set-key (kbd "`") 'skeleton-pair-insert-maybe)
-            (local-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
             ))
+
+(setq ff-other-file-alist
+     '(("\\.mm?$" (".h"))
+       ("\\.cc$"  (".hh" ".h"))
+       ("\\.h$"   (".c" ".cc" ".m" ".mm"))))
+(add-hook 'objc-mode-hook
+         (lambda ()
+           (define-key c-mode-base-map (kbd "C-c o") 'ff-find-other-file)
+         ))
 
 ;; C++
 (setq auto-mode-alist
