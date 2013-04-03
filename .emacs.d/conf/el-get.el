@@ -19,7 +19,6 @@
         '(el-get
           savekill
           company
-          ac-company
           auto-complete
           ruby-electric
           ruby-block
