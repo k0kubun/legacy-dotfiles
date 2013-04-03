@@ -1,4 +1,3 @@
 (:name ac-company
 :type emacswiki
-:description "Use Company Backends for Auto-complete"
 :website "https://raw.github.com/buzztaiki/auto-complete/master/ac-company.el")

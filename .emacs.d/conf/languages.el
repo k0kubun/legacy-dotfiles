@@ -67,6 +67,24 @@
            (define-key c-mode-base-map (kbd "C-c o") 'ff-find-other-file)
          ))
 
+(require 'auto-complete-config)
+(require 'ac-company)
+(global-auto-complete-mode t)
+(ac-company-define-source ac-source-company-xcode company-xcode)
+(setq ac-modes (append ac-modes '(objc-mode)))
+(add-hook 'objc-mode-hook
+         (lambda ()
+           (define-key objc-mode-map (kbd "\t") 'ac-complete)
+           (push 'ac-source-company-xcode ac-sources)
+           (push 'ac-source-c++-keywords ac-sources)
+         ))
+(define-key ac-completing-map (kbd "C-n") 'ac-next)
+(define-key ac-completing-map (kbd "C-p") 'ac-previous)
+(define-key ac-completing-map (kbd "M-/") 'ac-stop)
+(setq ac-auto-start nil)
+(ac-set-trigger-key "TAB")
+(setq ac-candidate-max 20)
+
 ;; C++
 (setq auto-mode-alist
       (cons (cons "\\.h$" 'c++-mode) auto-mode-alist))
