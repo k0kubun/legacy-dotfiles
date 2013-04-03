@@ -67,8 +67,12 @@
            (define-key c-mode-base-map (kbd "C-c o") 'ff-find-other-file)
          ))
 
-(require 'auto-complete-config)
+(let ((default-directory (expand-file-name "~/.emacs.d/elisp")))
+ (add-to-list 'load-path default-directory)
+ (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+     (normal-top-level-add-subdirs-to-load-path)))
 (require 'ac-company)
+(require 'auto-complete-config)
 (global-auto-complete-mode t)
 (ac-company-define-source ac-source-company-xcode company-xcode)
 (setq ac-modes (append ac-modes '(objc-mode)))
