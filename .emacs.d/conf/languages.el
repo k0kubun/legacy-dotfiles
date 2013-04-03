@@ -54,10 +54,6 @@
 (add-to-list 'magic-mode-alist '("\\(.\\|\n\\)*\n@implementation" . objc-mode))
 (add-to-list 'magic-mode-alist '("\\(.\\|\n\\)*\n@interface" . objc-mode))
 (add-to-list 'magic-mode-alist '("\\(.\\|\n\\)*\n@protocol" . objc-mode))
- 
-(ffap-bindings)
-(setq ffap-newfile-prompt t)
-(setq ffap-kpathsea-depth 5)
 
 (setq ff-other-file-alist
      '(("\\.mm?$" (".h"))
@@ -67,27 +63,19 @@
            (define-key c-mode-base-map (kbd "C-c o") 'ff-find-other-file)
          ))
 
-(let ((default-directory (expand-file-name "~/.emacs.d/elisp")))
- (add-to-list 'load-path default-directory)
- (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-     (normal-top-level-add-subdirs-to-load-path)))
-(require 'ac-company)
-(require 'auto-complete-config)
-(global-auto-complete-mode t)
-(ac-company-define-source ac-source-company-xcode company-xcode)
-(setq ac-modes (append ac-modes '(objc-mode)))
-(add-hook 'objc-mode-hook
-         (lambda ()
-           (define-key objc-mode-map (kbd "\t") 'ac-complete)
-           (push 'ac-source-company-xcode ac-sources)
-           (push 'ac-source-c++-keywords ac-sources)
-         ))
-(define-key ac-completing-map (kbd "C-n") 'ac-next)
-(define-key ac-completing-map (kbd "C-p") 'ac-previous)
-(define-key ac-completing-map (kbd "M-/") 'ac-stop)
-(setq ac-auto-start nil)
-(ac-set-trigger-key "TAB")
-(setq ac-candidate-max 20)
+(add-hook 'c-mode-common-hook
+         '(lambda()
+            (make-variable-buffer-local 'skeleton-pair)
+            (make-variable-buffer-local 'skeleton-pair-on-word)
+            (setq skeleton-pair-on-word t)
+            (setq skeleton-pair t)
+            (make-variable-buffer-local 'skeleton-pair-alist)
+            (local-set-key (kbd "(") 'skeleton-pair-insert-maybe)
+            (local-set-key (kbd "[") 'skeleton-pair-insert-maybe)
+            (local-set-key (kbd "{") 'skeleton-pair-insert-maybe)
+            (local-set-key (kbd "`") 'skeleton-pair-insert-maybe)
+            (local-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
+            ))
 
 ;; C++
 (setq auto-mode-alist
