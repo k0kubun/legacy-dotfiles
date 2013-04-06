@@ -1,4 +1,0 @@
-(:name company
-:auto-generated t
-:type elpa
-:description "Modular in-buffer completion framework")

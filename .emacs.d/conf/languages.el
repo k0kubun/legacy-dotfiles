@@ -57,15 +57,6 @@
 
 (setq ff-other-file-alist
      '(("\\.mm?$" (".h"))
-       ("\\.cc$"  (".hh" ".h"))))
-(add-hook 'objc-mode-hook
-         (lambda ()
-           (define-key c-mode-base-map (kbd "C-c o") 'ff-find-other-file)
-         ))
-(add-to-list 'ac-modes 'objc-mode)
-
-(setq ff-other-file-alist
-     '(("\\.mm?$" (".h"))
        ("\\.cc$"  (".hh" ".h"))
        ("\\.h$"   (".c" ".cc" ".m" ".mm"))))
 (add-hook 'objc-mode-hook

@@ -18,7 +18,6 @@
 (el-get 'sync
         '(el-get
           savekill
-          company
           auto-complete
           ruby-electric
           ruby-block
