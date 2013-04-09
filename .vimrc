@@ -1,8 +1,8 @@
 "新しい行のインデントを現在行と同じにする
 set autoindent
 
-"バックアップファイルを作るディレクトリ
-set backupdir=~/vimbackup
+"バックアップを取らない
+set nobackup
 
 "ファイル保存ダイアログの初期ディレクトリをバッファファイル位置に設定
 set browsedir=buffer 
