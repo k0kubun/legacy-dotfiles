@@ -1,3 +1,19 @@
+set nocompatible
+filetype off
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+
+  call neobundle#rc(expand('~/.vim/bundle'))
+endif
+
+NeoBundle 'molokai'
+
+syntax on
+filetype plugin on
+set encoding=utf-8
+set t_Co=256
+
 "新しい行のインデントを現在行と同じにする
 set autoindent
 
@@ -6,9 +22,6 @@ set nobackup
 
 "ファイル保存ダイアログの初期ディレクトリをバッファファイル位置に設定
 set browsedir=buffer 
-
-"Vi互換をオフ
-set nocompatible
 
 "タブの代わりに空白文字を挿入する
 set expandtab
