@@ -8,6 +8,7 @@ if has('vim_starting')
 endif
 
 NeoBundle 'molokai'
+NeoBundleCheck
 
 syntax on
 filetype plugin on
