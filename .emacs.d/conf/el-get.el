@@ -17,13 +17,13 @@
 
 (el-get 'sync
         '(el-get
-          savekill
+;          savekill
           auto-complete
           ruby-electric
           ruby-block
           js2-mode
           google-c-style
-          elscreen
+;          elscreen
           elscreen-addon
           php-mode
           ))
