@@ -15,9 +15,6 @@ filetype plugin on
 set encoding=utf-8
 set t_Co=256
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
-
 "新しい行のインデントを現在行と同じにする
 set autoindent
 
