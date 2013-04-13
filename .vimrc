@@ -16,7 +16,6 @@ set encoding=utf-8
 set t_Co=256
 
 set autoindent
-set nobackup
 set browsedir=buffer 
 set expandtab
 set hidden
@@ -29,3 +28,4 @@ set smartindent
 set tabstop=2
 
 set directory=~/.vim/tmp
+set backupdir=~/.vim/tmp
