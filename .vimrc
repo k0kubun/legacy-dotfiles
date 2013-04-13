@@ -28,3 +28,4 @@ set ignorecase
 set smartindent
 set tabstop=2
 
+set directory=~/.vim/tmp
