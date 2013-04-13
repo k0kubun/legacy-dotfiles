@@ -31,6 +31,10 @@ set cursorline
 set showtabline=2
 
 let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_auto_select = 1
+let g:neocomplcache_snippets_dir='~/.vim/snippets'
+inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
+inoremap <expr><C-n>  pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>\<C-p>"
 
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
