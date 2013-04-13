@@ -8,6 +8,7 @@ if has('vim_starting')
 endif
 
 NeoBundle 'molokai'
+NeoBundle 'cocoa.vim'
 NeoBundleCheck
 
 syntax on
