@@ -28,6 +28,8 @@ set ignorecase
 set smartindent
 set tabstop=2
 set cursorline
+set showtabline=2
+
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
