@@ -26,6 +26,9 @@ set showmatch
 set ignorecase
 set smartindent
 set tabstop=2
+set cursorline
+set hlsearch
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 set directory=~/.vim/tmp
 set backupdir=~/.vim/tmp

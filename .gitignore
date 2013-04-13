@@ -9,3 +9,4 @@ database.yml
 ac-comphist.dat
 .vim/bundle/.neobundle/*
 .netrwhist
+.vim/tmp/*
