@@ -8,7 +8,7 @@ if has('vim_starting')
 endif
 
 NeoBundle 'molokai'
-NeoBundle 'cocoa.vim'
+NeoBundle 'neocomplcache'
 NeoBundleCheck
 
 syntax on
@@ -29,6 +29,8 @@ set smartindent
 set tabstop=2
 set cursorline
 set showtabline=2
+
+let g:neocomplcache_enable_at_startup = 1
 
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
