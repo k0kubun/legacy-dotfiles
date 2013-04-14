@@ -31,8 +31,10 @@
 (set-face-background 'highlight-indentation-current-column-face "#224477")
 (add-hook 'ruby-mode-hook 'highlight-indentation-mode)
 
-;; anything
-; (require 'anything-startup)
-
 ;; helm
 (require 'helm-config)
+
+;; popwin
+(require 'popwin)
+(setq display-buffer-function 'popwin:display-buffer)
+(push '("^\*helm .+\*$" :regexp t) popwin:special-display-config)

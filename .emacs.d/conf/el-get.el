@@ -18,6 +18,7 @@
 (el-get 'sync
         '(el-get
           helm
+          popwin
           highlight-indentation
           auto-complete
           ruby-electric
