@@ -4,6 +4,7 @@
 
 ;; elscreen
 (load "elscreen" "elscreen" t)
+(elscreen-start)
 (setq elscreen-display-tab 10)
 (setq elscreen-tab-display-kill-screen nil)
 
