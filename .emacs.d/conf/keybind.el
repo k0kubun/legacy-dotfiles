@@ -25,7 +25,7 @@
           ([(super })] . elscreen-next)
           ([(super {)] . elscreen-previous)
 
-          ("\M-i" . eval-buffer)
+          ("\M-a" . helm-mini)
           ))
 (easy-mmode-define-minor-mode my-keyjack-mode "Grab keys"
                               t " Keyjack" my-keyjack-mode-map)
