@@ -3,8 +3,7 @@
 (setq cua-enable-cua-keys nil)
 
 ;; elscreen
-(load "elscreen" "ElScreen" t)
-
+(require 'elscreen nil 'noerror)
 (setq elscreen-display-tab 10)
 (setq elscreen-tab-display-kill-screen nil)
 
