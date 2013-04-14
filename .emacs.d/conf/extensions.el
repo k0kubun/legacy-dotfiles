@@ -28,5 +28,5 @@
 ;; highlight-indentation
 (require 'highlight-indentation)
 (add-hook 'ruby-mode-hook 'highlight-indentation-current-column-mode)
-(set-face-background 'highlight-indentation-face "#000022")
-(set-face-background 'highlight-indentation-current-column-face "#000033")
+(set-face-background 'highlight-indentation-face "#112233")
+(set-face-background 'highlight-indentation-current-column-face "#224477")
