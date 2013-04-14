@@ -112,8 +112,6 @@
     </autogen>
   </item>
 
-
-
   <item>
     <name>[All Time]Control+J to Return</name>
     <identifier>remap.controlJ2return_all_time</identifier>
@@ -136,12 +134,31 @@
   </item>
 
   <item>
-    <name>[Not Terminal] Option+T to Command+T</name>
-    <identifier>option.not_terminal_opt_t</identifier>
-    <not>TERMINAL</not>
+    <name>[ex] Option+T to Command+T</name>
+    <identifier>option.emacsmode_ex_optionT_org</identifier>
+    <not>{{EMACS_MODE_IGNORE_APPS}}</not>
     <autogen>__KeyToKey__ KeyCode::T, VK_OPTION, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
   </item>
 
+  <replacementdef>
+    <replacementname>EMACS_MODE_MARKSET_EXTRA</replacementname>
+    <replacementvalue>
+      <![CDATA[
+               <autogen>
+               --KeyToKey--
+               KeyCode::I, VK_CONTROL | ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+               KeyCode::VK_LOCK_SHIFT_L_FORCE_OFF,
+               KeyCode::I, VK_CONTROL,
+               KeyCode::VK_CONFIG_FORCE_OFF_notsave_emacsmode_ex_controlSpace_core
+               </autogen>
+      ]]>
+    </replacementvalue>
+  </replacementdef>
+  
+  <item>
+    <name>MarkSet is changed.</name>
+  </item>
+  
   <item>
     <name>[All Time] Option+H to Backward Delete</name>
     <identifier>option.opt_h_backward_delete</identifier>
