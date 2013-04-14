@@ -24,7 +24,7 @@
         (t (list '(width . 120)
                  '(height . 40)))))
 
-(setq default-frame-alist      
+(setq default-frame-alist
       (append custom-frame
               default-frame-alist))
 
@@ -87,3 +87,12 @@
 
 ;; auto reload buffer
 (global-auto-revert-mode 1)
+
+;; Mark Tabs and fullwidth space
+(setq whitespace-style
+      '(tabs tab-mark spaces space-mark))
+(setq whitespace-space-regexp "\\(\x3000+\\)")
+(setq whitespace-display-mappings
+      '((space-mark ?\x3000 [?\□])
+        (tab-mark   ?\t   [?\xBB ?\t])
+        ))
