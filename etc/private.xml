@@ -10,7 +10,7 @@
       KeyCode::VK_CONFIG_FORCE_ON_notsave_private_control_u_1,
     </autogen>
   </item>
- 
+
   <item hidden="true">
     <name>C-u (1)</name>
     <identifier vk_config="true">notsave.private_control_u_1</identifier>
@@ -29,23 +29,23 @@
     <autogen>
       __KeyToKey__
       KeyCode::P, VK_CONTROL,
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
       KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
     </autogen>
     <autogen>
       __KeyToKey__
       KeyCode::N, VK_CONTROL,
-      KeyCode::CURSOR_DOWN, 
-      KeyCode::CURSOR_DOWN, 
-      KeyCode::CURSOR_DOWN, 
-      KeyCode::CURSOR_DOWN, 
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
       KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
     </autogen>
   </item>
- 
+
   <item hidden="true">
     <name>C-u (2)</name>
     <identifier vk_config="true">notsave.private_control_u_2</identifier>
@@ -63,26 +63,26 @@
     <autogen>
       __KeyToKey__
       KeyCode::P, VK_CONTROL,
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
- 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
- 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
- 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
-      KeyCode::CURSOR_UP, 
- 
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+      KeyCode::CURSOR_UP,
+
       KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
     </autogen>
     <autogen>
@@ -92,22 +92,22 @@
       KeyCode::CURSOR_DOWN,
       KeyCode::CURSOR_DOWN,
       KeyCode::CURSOR_DOWN,
- 
+
       KeyCode::CURSOR_DOWN,
       KeyCode::CURSOR_DOWN,
       KeyCode::CURSOR_DOWN,
       KeyCode::CURSOR_DOWN,
- 
+
       KeyCode::CURSOR_DOWN,
       KeyCode::CURSOR_DOWN,
       KeyCode::CURSOR_DOWN,
       KeyCode::CURSOR_DOWN,
- 
+
       KeyCode::CURSOR_DOWN,
       KeyCode::CURSOR_DOWN,
       KeyCode::CURSOR_DOWN,
       KeyCode::CURSOR_DOWN,
- 
+
       KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
     </autogen>
   </item>
@@ -154,11 +154,11 @@
       ]]>
     </replacementvalue>
   </replacementdef>
-  
+
   <item>
     <name>MarkSet is changed.</name>
   </item>
-  
+
   <item>
     <name>[All Time] Option+H to Backward Delete</name>
     <identifier>option.opt_h_backward_delete</identifier>
