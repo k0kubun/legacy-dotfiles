@@ -48,6 +48,8 @@
   (lambda ()
     (font-lock-add-keywords nil
       '(("^[^\n]\\{80\\}\\(.*\\)$" 1 font-lock-warning-face t)))))
+(setq-default show-trailing-whitespace t)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; PHP
 (when (require 'php-mode nil t)
