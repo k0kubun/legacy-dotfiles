@@ -72,16 +72,6 @@
           (".*nfmotoyacedar-medium.*" . 1.2)
           ("-cdac$" . 1.3))))
 
-(defface my-hl-line-face
-  '((((class color) (background dark))
-     (:background "NavyBlue" t))
-    (((class color) (background light))
-     (:background "LightGoldenrodYellow" t))
-    (t (:bold t)))
-  "hl-line's my face")
-(setq hl-line-face 'my-hl-line-face)
-(global-hl-line-mode t)
-
 ;; completion
 (setq completion-ignore-case t)
 
