@@ -24,3 +24,9 @@
 (define-key ac-completing-map (kbd "C-j") 'ac-complete)
 (define-key ac-completing-map (kbd "C-n") 'ac-next)
 (define-key ac-completing-map (kbd "C-p") 'ac-previous)
+
+;; highlight-indentation
+(require 'highlight-indentation)
+(add-hook 'ruby-mode-hook 'highlight-indentation-current-column-mode)
+(set-face-background 'highlight-indentation-face "#000022")
+(set-face-background 'highlight-indentation-current-column-face "#000033")

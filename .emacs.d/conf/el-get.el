@@ -17,7 +17,7 @@
 
 (el-get 'sync
         '(el-get
-;          savekill
+          highlight-indentation
           auto-complete
           ruby-electric
           ruby-block
