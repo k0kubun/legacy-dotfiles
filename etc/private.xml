@@ -165,4 +165,11 @@
     <not>TERMINAL</not>
     <autogen>__KeyToKey__ KeyCode::H, VK_OPTION, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
+
+  <item>
+    <name>[Emacs] toggle eisuu with C-x</name>
+    <identifier>option.control_x_with_eisuu</identifier>
+    <only>{{EMACS_MODE_IGNORE_APPS}}</only>
+    <autogen>__KeyToKey__ KeyCode::X, VK_CONTROL, KeyCode::X, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+  </item>
 </root>
