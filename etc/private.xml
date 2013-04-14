@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<root>
+<item>
+  <name>Enable Control-u</name>
+    <identifier>private.emacsmode_control_u</identifier>
+    <not>{{EMACS_MODE_IGNORE_APPS}}</not>
+    <autogen>
+      __KeyToKey__
+      KeyCode::U, VK_CONTROL,
+      KeyCode::VK_CONFIG_FORCE_ON_notsave_private_control_u_1,
+    </autogen>
+  </item>
+ 
+  <item hidden="true">
+    <name>C-u (1)</name>
+    <identifier vk_config="true">notsave.private_control_u_1</identifier>
+    <autogen>__ShowStatusMessage__ C-u (1)</autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::G, VK_CONTROL,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::U, VK_CONTROL,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
+      KeyCode::VK_CONFIG_FORCE_ON_notsave_private_control_u_2,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::P, VK_CONTROL,
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::N, VK_CONTROL,
+      KeyCode::CURSOR_DOWN, 
+      KeyCode::CURSOR_DOWN, 
+      KeyCode::CURSOR_DOWN, 
+      KeyCode::CURSOR_DOWN, 
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
+    </autogen>
+  </item>
+ 
+  <item hidden="true">
+    <name>C-u (2)</name>
+    <identifier vk_config="true">notsave.private_control_u_2</identifier>
+    <autogen>__ShowStatusMessage__ C-u (2)</autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::G, VK_CONTROL,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::U, VK_CONTROL,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::P, VK_CONTROL,
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+ 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+ 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+ 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+      KeyCode::CURSOR_UP, 
+ 
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::N, VK_CONTROL,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+ 
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+ 
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+ 
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+      KeyCode::CURSOR_DOWN,
+ 
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
+    </autogen>
+  </item>
+
+
+
+  <item>
+    <name>[All Time]Control+J to Return</name>
+    <identifier>remap.controlJ2return_all_time</identifier>
+    <autogen>__KeyToKey__ KeyCode::J, VK_CONTROL, KeyCode::RETURN</autogen>
+  </item>
+
+  <item>
+    <name>[Not Terminal] Option+{|} to Command+{|}</name>
+    <identifier>option.not_terminal_tab_change</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::JIS_BRACKET_RIGHT, VK_OPTION | VK_SHIFT, KeyCode::JIS_BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::JIS_BRACKET_LEFT, VK_OPTION | VK_SHIFT, KeyCode::JIS_BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+  </item>
+
+  <item>
+    <name>[Not Terminal] Option+E to Command+W</name>
+    <identifier>option.not_terminal_opt_e</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::E, VK_OPTION, KeyCode::W, ModifierFlag::COMMAND_L</autogen>
+  </item>
+
+  <item>
+    <name>[Not Terminal] Option+T to Command+T</name>
+    <identifier>option.not_terminal_opt_t</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::T, VK_OPTION, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
+  </item>
+
+  <item>
+    <name>[All Time] Option+H to Backward Delete</name>
+    <identifier>option.opt_h_backward_delete</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::H, VK_OPTION, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
+  </item>
+</root>
