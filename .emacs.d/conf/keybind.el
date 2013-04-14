@@ -33,3 +33,5 @@
 ;; toggle-truncate-lines
 (define-key global-map (kbd "C-c l") 'toggle-truncate-lines)
 
+(require 'dired)
+(define-key dired-mode-map (kbd "C-j") 'dired-find-file)
