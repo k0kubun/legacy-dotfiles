@@ -86,3 +86,16 @@
       '((space-mark ?\x3000 [?\□])
         (tab-mark   ?\t   [?\xBB ?\t])
         ))
+
+(defface hlline-face
+  '((((class color)
+      (background dark))
+     (:background "#113377"))
+    (((class color)
+      (background light))
+     (:background "#CC0066"))
+    (t
+     ()))
+  "*Face used by hl-line.")
+(setq hl-line-face 'hlline-face)
+(global-hl-line-mode)
