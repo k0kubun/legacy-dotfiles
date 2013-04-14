@@ -12,13 +12,13 @@
           ("\M-r" . replace-regexp)
           ("\M-g" . grep-find)
           ("\M-h" . backward-kill-word)
-          
-          ("\M-T" . elscreen-create)
+
+          ("\M-t" . elscreen-create)
           ("\M-e" . elscreen-kill)
-          ("\M-t" . elscreen-clone)
+          ("\M-T" . elscreen-clone)
           ("\M-}" . elscreen-next)
           ("\M-{" . elscreen-previous)
-          
+
           ([(super t)] . elscreen-create)
           ([(super T)] . elscreen-create)
           ([(super w)] . elscreen-kill)
