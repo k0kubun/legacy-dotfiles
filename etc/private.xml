@@ -162,7 +162,6 @@
   <item>
     <name>[All Time] Option+H to Backward Delete</name>
     <identifier>option.opt_h_backward_delete</identifier>
-    <not>TERMINAL</not>
     <autogen>__KeyToKey__ KeyCode::H, VK_OPTION, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
 
