@@ -9,13 +9,13 @@
 (setq elscreen-tab-display-kill-screen nil)
 
 ;; elscreen-server
-(require 'elscreen-server)
+;(require 'elscreen-server)
 
 ;; elscreen-dired
-(require 'elscreen-dired)
+;(require 'elscreen-dired)
 
 ;; elscreen-color-theme
-(require 'elscreen-color-theme)
+;(require 'elscreen-color-theme)
 
 ;; auto-complete
 (require 'auto-complete)
