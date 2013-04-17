@@ -1,15 +1,20 @@
+# zsh prompt
 PROMPT='%m:%c %n%# '
 
+# rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# rspec
 alias spec="rspec -c"
 alias rspecdoc='rake spec SPEC_OPTS="--format documentation"'
 
+# Vim
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
+# Run tmux automatically
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmuxx >/dev/null 2>&1; then
         tmuxx
@@ -24,6 +29,7 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
     fi
 fi
 
+# Configuration for git
 alias g="git"
 alias ga="git commit -am"
 alias gm="git commit -m"
@@ -36,4 +42,9 @@ function gem(){
         rbenv rehash
         rehash
     fi
+}
+
+# function for grep
+function find-grep(){
+    find . -exec grep -nH $1 {} \;
 }
