@@ -87,6 +87,7 @@
         (tab-mark   ?\t   [?\xBB ?\t])
         ))
 
+;; highlight current line
 (defface hlline-face
   '((((class color)
       (background dark))
@@ -99,3 +100,7 @@
   "*Face used by hl-line.")
 (setq hl-line-face 'hlline-face)
 (global-hl-line-mode)
+
+;; trailing whitespace
+(setq-default show-trailing-whitespace t)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)

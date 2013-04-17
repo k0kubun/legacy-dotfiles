@@ -7,6 +7,7 @@
                  "el-get"
                  "extensions"
                  "languages"
+                 "language-ruby"
                  )))
   (progn
     (dolist (conf conf-list)
