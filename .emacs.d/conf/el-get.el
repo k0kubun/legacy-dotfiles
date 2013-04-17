@@ -24,6 +24,7 @@
           auto-complete
           ruby-electric
           ruby-block
+          column-marker
           js2-mode
           google-c-style
           elscreen

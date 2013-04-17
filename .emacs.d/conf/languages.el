@@ -44,10 +44,10 @@
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
 
-(add-hook 'ruby-mode-hook
-  (lambda ()
-    (font-lock-add-keywords nil
-      '(("^[^\n]\\{80\\}\\(.*\\)$" 1 font-lock-warning-face t)))))
+;; (add-hook 'ruby-mode-hook
+;;   (lambda ()
+;;     (font-lock-add-keywords nil
+;;       '(("^[^\n]\\{80\\}\\(.*\\)$" 1 font-lock-warning-face t)))))
 (setq-default show-trailing-whitespace t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 

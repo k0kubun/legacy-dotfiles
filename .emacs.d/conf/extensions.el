@@ -43,3 +43,14 @@
 (autoload 'camelCase-mode "camelCase-mode" nil t)
 (add-hook 'c++-mode-hook '(lambda () (camelCase-mode 1)))
 (add-hook 'objc-mode-hook '(lambda () (camelCase-mode 1)))
+
+;; mark 80 column
+(require 'column-marker)
+(custom-set-faces
+ '(column-marker-2 ((t (:background "#113377")))))
+(mapc (lambda (hook)
+        (add-hook hook (lambda () (interactive) (column-marker-2 80))))
+      '(emacs-lisp-mode-hook
+        ruby-mode-hook
+        js2-mode-hook
+        text-mode-hook))
