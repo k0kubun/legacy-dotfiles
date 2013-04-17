@@ -1,4 +1,3 @@
-
 ;; PHP
 (when (require 'php-mode nil t)
   (add-to-list 'auto-mode-alist '("\\.ctp\\'" . php-mode))

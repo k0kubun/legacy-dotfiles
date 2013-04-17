@@ -8,15 +8,6 @@
 (setq elscreen-display-tab 10)
 (setq elscreen-tab-display-kill-screen nil)
 
-;; elscreen-server
-;(require 'elscreen-server)
-
-;; elscreen-dired
-;(require 'elscreen-dired)
-
-;; elscreen-color-theme
-;(require 'elscreen-color-theme)
-
 ;; auto-complete
 (require 'auto-complete)
 (require 'auto-complete-config)
@@ -33,11 +24,6 @@
 
 ;; helm
 (require 'helm-config)
-
-;; popwin
-(require 'popwin)
-(setq display-buffer-function 'popwin:display-buffer)
-(push '("^\*helm .+\*$" :regexp t) popwin:special-display-config)
 
 ;; camelCase-mode
 (autoload 'camelCase-mode "camelCase-mode" nil t)
