@@ -38,3 +38,8 @@
 (require 'popwin)
 (setq display-buffer-function 'popwin:display-buffer)
 (push '("^\*helm .+\*$" :regexp t) popwin:special-display-config)
+
+;; camelCase-mode
+(autoload 'camelCase-mode "camelCase-mode" nil t)
+(add-hook 'c++-mode-hook '(lambda () (camelCase-mode 1)))
+(add-hook 'objc-mode-hook '(lambda () (camelCase-mode 1)))

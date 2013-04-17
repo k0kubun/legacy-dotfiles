@@ -18,6 +18,7 @@
 (el-get 'sync
         '(el-get
           helm
+          camelCase-mode
           popwin
           highlight-indentation
           auto-complete
