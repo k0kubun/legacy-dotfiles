@@ -46,5 +46,5 @@ function gem(){
 
 # function for grep
 function find-grep(){
-    find . -name $1 -exec grep -nH $2 {} \;
+    find . -name \*.$1 -exec grep -nH $2 {} \;
 }
