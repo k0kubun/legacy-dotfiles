@@ -32,3 +32,10 @@
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (setq js2-basic-offset 2)
+
+;; Assembler
+(add-hook 'asm-mode-hook
+          '(lambda ()
+             (setq asm-indent-level 4)
+             (setq-default tab-width 4)
+             ))
