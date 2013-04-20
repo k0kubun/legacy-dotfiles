@@ -43,3 +43,9 @@
     (when indent
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
+
+;; trailing whitespace
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook 'delete-trailing-whitespace)
+            ))

@@ -103,10 +103,6 @@
 
 ;; trailing whitespace
 (setq-default show-trailing-whitespace t)
-(add-hook 'ruby-mode-hook
-          (lambda ()
-            (add-hook 'before-save-hook 'delete-trailing-whitespace)
-            ))
 
 ;; linum
 (global-linum-mode t)
