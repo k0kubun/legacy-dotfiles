@@ -113,8 +113,9 @@
   </item>
 
   <item>
-    <name>[All Time]Control+J to Return</name>
-    <identifier>remap.controlJ2return_all_time</identifier>
+    <name>[Not Emacs]Control+J to Return</name>
+    <identifier>remap.controlJ2return_not_emacs</identifier>
+    <not>EMACS</not>
     <autogen>__KeyToKey__ KeyCode::J, VK_CONTROL, KeyCode::RETURN</autogen>
   </item>
 
