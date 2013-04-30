@@ -103,6 +103,3 @@
 
 ;; trailing whitespace
 (setq-default show-trailing-whitespace t)
-
-;; linum
-(global-linum-mode t)
