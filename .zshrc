@@ -1,10 +1,6 @@
 # zsh prompt
 PROMPT='%m:%c %n%# '
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # rspec
 alias spec="rspec -c"
 alias rspecdoc='rake spec SPEC_OPTS="--format documentation"'
@@ -34,6 +30,14 @@ alias g="git"
 alias ga="git commit -am"
 alias gm="git commit -m"
 alias gp="git push"
+
+function gc(){
+    git clone https://github.com/$1/$2
+}
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 function gem(){
     $HOME/.rbenv/shims/gem $*
