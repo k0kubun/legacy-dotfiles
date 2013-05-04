@@ -35,6 +35,12 @@ function gc(){
     git clone https://github.com/$1/$2
 }
 
+function readd() {
+    git add . # must add first because it will raise error if there are unstaged files
+    git rm . -r --cached
+    git add .
+}
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
