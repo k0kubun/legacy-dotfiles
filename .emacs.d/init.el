@@ -3,9 +3,9 @@
       (substring (or load-file-name "~/.emacs.d/init.el") 0 -7))
      (conf-list (list
                  "basic"
-                 "keybind"
                  "el-get"
                  "extensions"
+                 "keybind"
                  "languages"
                  "language-ruby"
                  )))

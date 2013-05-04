@@ -27,7 +27,6 @@
 
 ;; camelCase-mode
 (autoload 'camelCase-mode "camelCase-mode" nil t)
-(add-hook 'c++-mode-hook '(lambda () (camelCase-mode 1)))
 (add-hook 'objc-mode-hook '(lambda () (camelCase-mode 1)))
 
 ;; mark 80 column
