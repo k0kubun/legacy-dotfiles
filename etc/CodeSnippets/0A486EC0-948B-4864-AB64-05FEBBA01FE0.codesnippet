@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>sceneInit</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (id)scene {
+	CCScene *scene = [CCScene node];
+	CCLayer *layer = [&lt;#Scene#&gt; node];
+	[scene addChild:layer];
+	
+	return scene;
+}
+
+//==============================================================================
+#pragma mark - Private
+
+- (id)init {
+	if (self = [super init]) {
+		;
+	}
+	return self;
+}
+
+- (void)dealloc {
+	[super dealloc];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0A486EC0-948B-4864-AB64-05FEBBA01FE0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Scene Initialize</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

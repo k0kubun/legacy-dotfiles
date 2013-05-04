@@ -5,8 +5,7 @@ ln -s ~/source/dotfiles/.gvimrc ~/.gvimrc
 ln -s ~/source/dotfiles/.zshrc ~/.zshrc
 ln -s ~/source/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/source/dotfiles/.gitconfig ~/.gitconfig
-rm ~/Library/Application\ Support/KeyRemap4MacBook/private.xml 
-ln -s ~/source/dotfiles/etc/private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml 
-
-
-
+rm ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
+ln -s ~/source/dotfiles/etc/private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
+mv ~/Library/Developer/Xcode/UserData/CodeSnippets ~/Library/Developer/Xcode/UserData/CodeSnippets.org
+ln -s ~/source/dotfiles/etc/CodeSnippets ~/Library/Developer/Xcode/UserData/CodeSnippets
