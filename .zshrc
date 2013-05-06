@@ -65,7 +65,7 @@ function find-grep(){
 export PATH="/usr/texbin:$PATH"
 function ttp() {
     platex $1
-    dvipdfmx
+    dvipdfmx $1
     rm *.dvi
     rm *.log
     rm *.dvi
