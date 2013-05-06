@@ -120,6 +120,12 @@
   </item>
 
   <item>
+    <name>[All Time]Control+J to Return</name>
+    <identifier>remap.controlJ2return_all_time</identifier>
+    <autogen>__KeyToKey__ KeyCode::J, VK_CONTROL, KeyCode::RETURN</autogen>
+  </item>
+
+  <item>
     <name>[Not Terminal] Option+{|} to Command+{|}</name>
     <identifier>option.not_terminal_tab_change</identifier>
     <not>TERMINAL</not>
