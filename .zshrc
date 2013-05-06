@@ -58,3 +58,13 @@ function gem(){
 function find-grep(){
     find . -name \*.$1 -exec grep -nH $2 {} \;
 }
+
+# TeX
+export PATH="/usr/texbin:$PATH"
+function ttp() {
+    platex $1
+    dvipdfmx
+    rm *.dvi
+    rm *.log
+    rm *.dvi
+}
