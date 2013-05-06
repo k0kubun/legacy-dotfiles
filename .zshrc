@@ -68,5 +68,5 @@ function ttp() {
     dvipdfmx $1
     rm *.dvi
     rm *.log
-    rm *.dvi
+    rm *.aux
 }
