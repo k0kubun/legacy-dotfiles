@@ -1,6 +1,8 @@
 # zsh prompt
 PROMPT='%m:%c %n%# '
 
+alias ls="ls -la"
+
 # rspec
 alias spec="rspec -c"
 alias rspecdoc='rake spec SPEC_OPTS="--format documentation"'
