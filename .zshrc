@@ -70,3 +70,6 @@ function ttp() {
     rm *.log
     rm *.aux
 }
+
+# Xcode
+alias cleanx="rm -rf ~/Library/Developer/Xcode/DerivedData/"
