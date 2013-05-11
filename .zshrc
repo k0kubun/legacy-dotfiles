@@ -56,6 +56,9 @@ function gem(){
     fi
 }
 
+# bundler
+alias be="bundle exec"
+
 # function for grep
 function find-grep(){
     find . -name \*.$1 -exec grep -nH $2 {} \;
