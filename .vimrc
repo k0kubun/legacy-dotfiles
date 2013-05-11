@@ -17,7 +17,7 @@ set encoding=utf-8
 set t_Co=256
 
 set autoindent
-set browsedir=buffer 
+set browsedir=buffer
 set expandtab
 set hidden
 set incsearch
@@ -33,8 +33,6 @@ set showtabline=2
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_auto_select = 1
 inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
-let g:neocomplcache_same_filetype_lists['objc'] = 'objcpp'
-let g:neocomplcache_same_filetype_lists['objcpp'] = 'objc'
 
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
