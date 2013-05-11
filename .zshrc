@@ -1,7 +1,7 @@
 # zsh prompt
 PROMPT='%m:%c %n%# '
 
-alias ls="ls -la"
+alias l="ls -Gla"
 
 # rspec
 alias spec="rspec -c"
