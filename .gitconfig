@@ -6,7 +6,7 @@
 [core]
     excludesfile = ~/.gitignore
 [alias]
-    co = checkout 
+    co = checkout
     st = status -sb
     pr = pull --rebase
     fo = fetch origin
@@ -15,4 +15,3 @@
     wd = diff --word-diff
     gp = grep -n
     lg = log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches
-  
