@@ -1,7 +1,108 @@
 <?xml version="1.0"?>
 <root>
-<item>
-  <name>Enable Control-u</name>
+  <item>
+    <name>Core settings</name>
+    <identifier>private.core_settings</identifier>
+    <block>
+      <config_only>notsave.private_control_u_1</config_only>
+      <autogen>
+        __KeyToKey__
+        KeyCode::G, VK_CONTROL,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::U, VK_CONTROL,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
+        KeyCode::VK_CONFIG_FORCE_ON_notsave_private_control_u_2,
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::P, VK_CONTROL,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::N, VK_CONTROL,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
+      </autogen>
+    </block>
+
+    <block>
+      <config_only>notsave.private_control_u_2</config_only>
+      <autogen>
+        __KeyToKey__
+        KeyCode::G, VK_CONTROL,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::U, VK_CONTROL,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::P, VK_CONTROL,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+        KeyCode::CURSOR_UP,
+
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::N, VK_CONTROL,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+        KeyCode::CURSOR_DOWN,
+
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
+      </autogen>
+    </block>
+  </item>
+
+  <item>
+    <name>Enable Control-u</name>
     <identifier>private.emacsmode_control_u</identifier>
     <not>{{EMACS_MODE_IGNORE_APPS}}</not>
     <autogen>
@@ -15,101 +116,12 @@
     <name>C-u (1)</name>
     <identifier vk_config="true">notsave.private_control_u_1</identifier>
     <autogen>__ShowStatusMessage__ C-u (1)</autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::G, VK_CONTROL,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::U, VK_CONTROL,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
-      KeyCode::VK_CONFIG_FORCE_ON_notsave_private_control_u_2,
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::P, VK_CONTROL,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::N, VK_CONTROL,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_1,
-    </autogen>
   </item>
 
   <item hidden="true">
     <name>C-u (2)</name>
     <identifier vk_config="true">notsave.private_control_u_2</identifier>
     <autogen>__ShowStatusMessage__ C-u (2)</autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::G, VK_CONTROL,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::U, VK_CONTROL,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::P, VK_CONTROL,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-      KeyCode::CURSOR_UP,
-
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::N, VK_CONTROL,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-      KeyCode::CURSOR_DOWN,
-
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_control_u_2,
-    </autogen>
   </item>
 
   <item>
