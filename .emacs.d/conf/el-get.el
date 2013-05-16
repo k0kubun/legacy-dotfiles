@@ -1,5 +1,7 @@
 (add-to-list 'load-path (concat user-emacs-directory "el-get/el-get"))
 
+(setq exec-path (append exec-path '("/usr/local/bin/")))
+
 (setq
  el-get-dir (concat user-emacs-directory "el-get")
  el-get-verbose t
