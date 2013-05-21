@@ -45,6 +45,10 @@ function readd() {
     git add .
 }
 
+# Android SDK
+export PATH="/Applications/android-sdk-macosx/tools:$PATH"
+export PATH="/Applications/android-sdk-macosx/platform-tools:$PATH"
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
