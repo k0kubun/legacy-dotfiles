@@ -20,7 +20,7 @@
 (el-get 'sync
         '(el-get
           helm
-          yatex
+
           camelCase-mode
           highlight-indentation
           auto-complete
