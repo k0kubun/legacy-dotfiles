@@ -112,6 +112,17 @@
     </autogen>
   </item>
 
+  <item>
+    <name>Enable Control-u in Eclipse</name>
+    <identifier>private.emacsmode_control_u_eclipse</identifier>
+    <only>ECLIPSE</only>
+    <autogen>
+      __KeyToKey__
+      KeyCode::U, VK_CONTROL,
+      KeyCode::VK_CONFIG_FORCE_ON_notsave_private_control_u_1,
+    </autogen>
+  </item>
+
   <item hidden="true">
     <name>C-u (1)</name>
     <identifier vk_config="true">notsave.private_control_u_1</identifier>
