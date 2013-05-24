@@ -1,3 +1,10 @@
+;; for yatex, install mercurial
+(unless (executable-find "hg")
+  (interactive)
+  (shell-command "brew install mercurial")
+)
+
+;; el-get
 (add-to-list 'load-path (concat user-emacs-directory "el-get/el-get"))
 
 (setq exec-path (append exec-path '("/usr/local/bin/")))
@@ -20,7 +27,7 @@
 (el-get 'sync
         '(el-get
           helm
-
+          yatex
           camelCase-mode
           highlight-indentation
           auto-complete
