@@ -82,3 +82,6 @@ function ttp() {
 
 # Xcode
 alias cleanx="rm -rf ~/Library/Developer/Xcode/DerivedData/"
+
+# Perlbrew
+source $HOME/perl5/perlbrew/etc/bashrc
