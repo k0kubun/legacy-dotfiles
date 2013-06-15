@@ -220,14 +220,14 @@
   </item>
 
   <item>
-    <name>Shift_R to Up-Arrow</name>
-    <identifier>remap.shiftR_to_uparrow</identifier>
-    <autogen>__KeyToKey__ KeyCode::SHIFT_R, KeyCode::CURSOR_UP</autogen>
-  </item>
-
-  <item>
     <name>Up-Arrow to Shift_L</name>
     <identifier>remap.uparrow_to_shiftL</identifier>
     <autogen>__KeyToKey__ KeyCode::CURSOR_UP, KeyCode::SHIFT_L</autogen>
+  </item>
+
+  <item>
+    <name>Forward delete to up-arrow</name>
+    <identifier>remap.delete_to_up</identifier>
+    <autogen>__KeyToKey__ KeyCode::FORWARD_DELETE, KeyCode::CURSOR_UP</autogen>
   </item>
 </root>
