@@ -34,6 +34,7 @@
           ruby-electric
           ruby-block
           column-marker
+          haml-mode
           js2-mode
           google-c-style
           elscreen
