@@ -85,3 +85,6 @@ alias cleanx="rm -rf ~/Library/Developer/Xcode/DerivedData/"
 
 # Perlbrew
 source $HOME/perl5/perlbrew/etc/bashrc
+
+# PostgreSQL
+export PGDATA=/usr/local/var/postgres
