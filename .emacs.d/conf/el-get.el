@@ -35,6 +35,7 @@
           ruby-block
           column-marker
           haml-mode
+          scss-mode
           js2-mode
           google-c-style
           elscreen
