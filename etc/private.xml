@@ -164,9 +164,9 @@
   </item>
 
   <item>
-    <name>[ex] Option+T to Command+T</name>
+    <name>[Not Terminal] Option+T to Command+T</name>
     <identifier>option.emacsmode_ex_optionT_org</identifier>
-    <not>{{EMACS_MODE_IGNORE_APPS}}</not>
+    <not>TERMINAL</not>
     <autogen>__KeyToKey__ KeyCode::T, VK_OPTION, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
   </item>
 
@@ -237,6 +237,14 @@
     <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::COMMAND_L</autogen>    
     <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::CONTROL_R</autogen>
     <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>[Not Vim]Control_C to turn on Vi Mode</name>
+    <identifier>remap.vimode_turnon_ctrl_c</identifier>
+    <not>VI</not>
+    <config_not>notsave.complete_vimode</config_not>
+    <autogen>__KeyToKey__ KeyCode::C, VK_CONTROL, KeyCode::VK_CONFIG_FORCE_ON_notsave_complete_vimode</autogen>
   </item>
 
 </root>

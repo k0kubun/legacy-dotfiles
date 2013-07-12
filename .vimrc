@@ -39,3 +39,5 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 set directory=~/.vim/tmp
 set backupdir=~/.vim/tmp
+
+imap jj <Esc>
