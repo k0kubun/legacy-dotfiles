@@ -41,3 +41,4 @@ set directory=~/.vim/tmp
 set backupdir=~/.vim/tmp
 
 imap jj <Esc>
+nmap f <Enter>

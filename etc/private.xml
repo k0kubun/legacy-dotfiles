@@ -240,11 +240,56 @@
   </item>
 
   <item>
-    <name>[Not Vim]Control_C to turn on Vi Mode</name>
+    <name>Complete Vi Mode Improved</name>
+    <identifier vk_config="true">notsave.complete_vimode_improved</identifier>
+    <autogen>__ShowStatusMessage__ Vi Mode Improved</autogen>
+    <block>
+      <!-- HJKL -->
+      <autogen>__KeyToKey__ KeyCode::H, KeyCode::CURSOR_LEFT</autogen>
+      <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_DOWN</autogen>
+      <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_UP</autogen>
+      <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
+
+      <!-- 0, Shift+4 -->
+      <autogen>__KeyToKey__ KeyCode::KEY_0, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::KEY_4, VK_SHIFT, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
+
+      <!-- C-f, C-b -->
+      <autogen>__KeyToKey__ KeyCode::F, VK_CONTROL, KeyCode::PAGEDOWN</autogen>
+      <autogen>__KeyToKey__ KeyCode::B, VK_CONTROL, KeyCode::PAGEUP</autogen>
+
+      <!-- B, E -->
+      <autogen>__KeyToKey__ KeyCode::B, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::E, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
+
+      <!-- W -->
+      <autogen>__KeyToKey__ KeyCode::W, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>
+
+      <!-- G, Shift+G -->
+      <autogen>__KeyToKey__ KeyCode::G, VK_SHIFT, KeyCode::END</autogen>
+      <autogen>__KeyToKey__ KeyCode::G, KeyCode::HOME</autogen>
+
+      <!-- SLASH, N -->
+      <autogen>__KeyToKey__ KeyCode::SLASH, KeyCode::F, ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_complete_vimode</autogen>
+      <autogen>__KeyToKey__ KeyCode::N, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
+
+      <!-- X -->
+      <autogen>__KeyToKey__ KeyCode::X, VK_SHIFT | ModifierFlag::NONE, KeyCode::DELETE</autogen>
+      <autogen>__KeyToKey__ KeyCode::X, ModifierFlag::NONE, KeyCode::FORWARD_DELETE</autogen>
+
+      <!-- F, I -->
+      <autogen>__KeyToKey__ KeyCode::F, KeyCode::FN</autogen>
+      <autogen>__KeyToKey__ KeyCode::I, KeyCode::VK_CONFIG_TOGGLE_notsave_complete_vimode_improved</autogen>
+    </block>
+
+  </item>
+
+  <item>
+    <name>[Not Vim]Control_C to turn on Complete Vi Mode Improved</name>
     <identifier>remap.vimode_turnon_ctrl_c</identifier>
     <not>VI</not>
-    <config_not>notsave.complete_vimode</config_not>
-    <autogen>__KeyToKey__ KeyCode::C, VK_CONTROL, KeyCode::VK_CONFIG_FORCE_ON_notsave_complete_vimode</autogen>
+    <config_not>notsave.complete_vimode_improved</config_not>
+    <autogen>__KeyToKey__ KeyCode::C, VK_CONTROL, KeyCode::VK_CONFIG_FORCE_ON_notsave_complete_vimode_improved</autogen>
   </item>
 
 </root>
