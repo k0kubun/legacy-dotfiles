@@ -9,6 +9,9 @@ endif
 
 NeoBundle 'molokai'
 NeoBundle 'neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimfiler'
 NeoBundleCheck
 
 syntax on
@@ -30,6 +33,7 @@ set tabstop=2
 set cursorline
 set showtabline=2
 
+let g:vimfiler_as_default_explorer = 1
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_auto_select = 1
 inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"

@@ -12,5 +12,3 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=l
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
