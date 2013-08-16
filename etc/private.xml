@@ -149,11 +149,19 @@
   </item>
 
   <item>
-    <name>[Not Terminal] Option+{|} to Command+{|}</name>
-    <identifier>option.not_terminal_tab_change</identifier>
+    <name>[Not Terminal] Option+{|} to Command+{|} (JIS)</name>
+    <identifier>option.not_terminal_tab_change_jis</identifier>
     <not>TERMINAL</not>
     <autogen>__KeyToKey__ KeyCode::JIS_BRACKET_RIGHT, VK_OPTION | VK_SHIFT, KeyCode::JIS_BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
     <autogen>__KeyToKey__ KeyCode::JIS_BRACKET_LEFT, VK_OPTION | VK_SHIFT, KeyCode::JIS_BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+  </item>
+  
+  <item>
+    <name>[Not Terminal] Option+{|} to Command+{|} (US)</name>
+    <identifier>option.not_terminal_tab_change_us</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, VK_OPTION | VK_SHIFT, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, VK_OPTION | VK_SHIFT, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
   </item>
 
   <item>
