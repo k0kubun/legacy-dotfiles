@@ -33,6 +33,7 @@
           auto-complete
           ruby-electric
           ruby-block
+          coffee-mode
           column-marker
           haml-mode
           scss-mode
