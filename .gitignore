@@ -7,7 +7,8 @@ auto-save-list/*
 \#*\#
 database.yml
 ac-comphist.dat
-.vim/bundle/.neobundle/*
+.vim/bundle/*
+!.vim/bundle/neobundle.vim
 .netrwhist
 .vim/tmp/*
 .\#*
