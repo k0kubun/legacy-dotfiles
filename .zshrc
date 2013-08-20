@@ -3,16 +3,10 @@ PROMPT='%m:%c %n%# '
 
 # ls
 alias ls="ls -Gla"
-alias lsorg="/bin/ls"
 
 # rspec
 alias spec="rspec -c"
 alias rspecdoc='rake spec SPEC_OPTS="--format documentation"'
-
-# Vim
-export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
-alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
 # Run tmux automatically
 if [ -z "$TMUX" -a -z "$STY" ]; then
@@ -32,22 +26,7 @@ fi
 # Configuration for git
 alias g="git"
 alias ga="git commit -am"
-alias gm="git commit -m"
 alias gp="git push"
-
-function gc(){
-    git clone https://github.com/$1/$2
-}
-
-function readd() {
-    git add . # must add first because it will raise error if there are unstaged files
-    git rm . -r --cached
-    git add .
-}
-
-# Android SDK
-export PATH="/Applications/android-sdk-macosx/tools:$PATH"
-export PATH="/Applications/android-sdk-macosx/platform-tools:$PATH"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -79,12 +58,6 @@ function ttp() {
     rm *.log
     rm *.aux
 }
-
-# Xcode
-alias cleanx="rm -rf ~/Library/Developer/Xcode/DerivedData/"
-
-# Perlbrew
-source $HOME/perl5/perlbrew/etc/bashrc
 
 # PostgreSQL
 export PGDATA=/usr/local/var/postgres
