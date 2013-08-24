@@ -4,5 +4,3 @@ auto-save-list/*
 tramp
 backups/*
 kill-ring-saved.el
-database.yml
-secret_token.rb
