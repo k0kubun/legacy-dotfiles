@@ -102,4 +102,4 @@
 (global-hl-line-mode)
 
 ;; trailing whitespace
-;(setq-default show-trailing-whitespace t)
+(setq-default show-trailing-whitespace t)
