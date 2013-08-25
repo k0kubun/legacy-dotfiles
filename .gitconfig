@@ -1,17 +1,18 @@
 [user]
-    name = Takashi Kokubun
-    email = takashikkbn@gmail.com
+  name = Takashi Kokubun
+  email = takashikkbn@gmail.com
 [color]
-    ui = true
+  ui = true
 [core]
-    excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
+	editor = /usr/bin/vi
 [alias]
-    co = checkout
-    st = status -sb
-    pr = pull --rebase
-    fo = fetch origin
-    ro = rebase origin
-    rc = rebase --continue
-    wd = diff --word-diff
-    gp = grep -n
-    lg = log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches
+  co = checkout
+  st = status -sb
+  pr = pull --rebase
+  fo = fetch origin
+  ro = rebase origin
+  rc = rebase --continue
+  wd = diff --word-diff
+  gp = grep -n
+  lg = log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches
