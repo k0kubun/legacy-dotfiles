@@ -63,4 +63,4 @@ function ttp() {
 export PGDATA=/usr/local/var/postgres
 
 # load local settings
-[ -f ~/.zshrc.alias ] && source ~/.zshrc.local
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
