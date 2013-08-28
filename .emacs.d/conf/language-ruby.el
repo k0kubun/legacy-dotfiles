@@ -12,10 +12,8 @@
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 
-(add-to-list 'ruby-encoding-map '(utf-8-hfs . utf-8))
-(add-hook 'ruby-mode-hook
- '(lambda ()
- (add-to-list 'ruby-encoding-map '(undecided . utf-8))))
+;; Disable automatic magick comment inserting
+(defun ruby-mode-set-encoding () ())
 
 ;; Ruby Electric
 (require 'ruby-electric)
