@@ -149,19 +149,27 @@
   </item>
 
   <item>
-    <name>[Not Terminal] Option+{|} to Command+{|} (JIS)</name>
+    <name>[Not Terminal] Option+[|] to Command+{|} (JIS)</name>
     <identifier>option.not_terminal_tab_change_jis</identifier>
     <not>TERMINAL</not>
-    <autogen>__KeyToKey__ KeyCode::JIS_BRACKET_RIGHT, VK_OPTION | VK_SHIFT, KeyCode::JIS_BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
-    <autogen>__KeyToKey__ KeyCode::JIS_BRACKET_LEFT, VK_OPTION | VK_SHIFT, KeyCode::JIS_BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::JIS_BRACKET_RIGHT, VK_OPTION, KeyCode::JIS_BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::JIS_BRACKET_LEFT, VK_OPTION, KeyCode::JIS_BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
   </item>
-  
+
   <item>
-    <name>[Not Terminal] Option+{|} to Command+{|} (US)</name>
+    <name>[Not Terminal] Option+[|] to Command+{|} (US)</name>
     <identifier>option.not_terminal_tab_change_us</identifier>
     <not>TERMINAL</not>
-    <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, VK_OPTION | VK_SHIFT, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
-    <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, VK_OPTION | VK_SHIFT, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, VK_OPTION, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, VK_OPTION, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+  </item>
+
+  <item>
+    <name>[Only Terminal] Option+[|] to Option+{|} (US)</name>
+    <identifier>option.only_terminal_tab_change_us</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, VK_OPTION, KeyCode::BRACKET_RIGHT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, VK_OPTION, KeyCode::BRACKET_LEFT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
   </item>
 
   <item>
