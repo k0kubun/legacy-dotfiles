@@ -12,7 +12,7 @@ NeoBundle 'neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Lokaltog/powerline'
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
 NeoBundleCheck
 
 syntax on
@@ -48,3 +48,6 @@ set backupdir=~/.vim/tmp
 imap jj <Esc>
 
 set laststatus=2
+
+map <M-f> <C-f>
+map <M-b> <C-b>
