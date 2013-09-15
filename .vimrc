@@ -12,6 +12,7 @@ NeoBundle 'neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Lokaltog/powerline'
 NeoBundleCheck
 
 syntax on
@@ -45,3 +46,5 @@ set directory=~/.vim/tmp
 set backupdir=~/.vim/tmp
 
 imap jj <Esc>
+
+set laststatus=2
