@@ -8,7 +8,8 @@ alias ls="ls -Gla"
 alias spec="rspec -c"
 alias rspecdoc='rake spec SPEC_OPTS="--format documentation"'
 
-# Run tmux automatically
+# tmux
+export PATH="$HOME/bin:$PATH"
 alias tmux="tmux -2"
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmuxx >/dev/null 2>&1; then
