@@ -32,7 +32,6 @@ set ignorecase
 set smartindent
 set tabstop=2
 set cursorline
-set showtabline=2
 
 let g:vimfiler_as_default_explorer = 1
 let g:neocomplcache_enable_at_startup = 1
@@ -49,5 +48,53 @@ imap jj <Esc>
 
 set laststatus=2
 
-map <M-f> <C-f>
-map <M-b> <C-b>
+" 自動コメント防止
+autocmd FileType * set formatoptions-=ro
+
+noremap <Space>j <C-f>
+noremap <Space>k <C-b>
+
+" Anywhere SID.
+function! s:SID_PREFIX()
+  return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
+endfunction
+
+" Set tabline.
+function! s:my_tabline()  "{{{
+  let s = ''
+  for i in range(1, tabpagenr('$'))
+    let bufnrs = tabpagebuflist(i)
+    let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
+    let no = i  " display 0-origin tabpagenr.
+    let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
+    let title = fnamemodify(bufname(bufnr), ':t')
+    let title = '[' . title . ']'
+    let s .= '%'.i.'T'
+    let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
+    let s .= no . ':' . title
+    let s .= mod
+    let s .= '%#TabLineFill# '
+  endfor
+  let s .= '%#TabLineFill#%T%=%#TabLine#'
+  return s
+endfunction "}}}
+let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
+set showtabline=2 " 常にタブラインを表示
+
+" The prefix key.
+nnoremap    [Tag]   <Nop>
+nmap    t [Tag]
+" Tab jump
+for n in range(1, 9)
+  execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
+endfor
+" t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
+
+" tt 新しいタブ
+map <silent> [Tag]t :tablast <bar> tabnew<CR>
+" te タブを閉じる 
+map <silent> [Tag]e :tabclose<CR>
+" tp 次のタブ
+map <silent> [Tag]p :tabnext<CR>
+" to 前のタブ
+map <silent> [Tag]o :tabprevious<CR>
