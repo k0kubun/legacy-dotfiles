@@ -7,7 +7,6 @@ if has('vim_starting')
   call neobundle#rc(expand('~/.vim/bundle'))
 endif
 
-NeoBundle 'molokai'
 NeoBundle 'neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
@@ -19,6 +18,7 @@ syntax on
 filetype plugin on
 set encoding=utf-8
 set t_Co=256
+colorscheme hybrid
 
 set autoindent
 set browsedir=buffer
