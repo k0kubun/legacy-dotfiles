@@ -157,19 +157,19 @@
   </item>
 
   <item>
-    <name>[Not Terminal] Option+[|] to Command+{|} (US)</name>
+    <name>[Not Terminal] Option+O|P to Command+{|} (US)</name>
     <identifier>option.not_terminal_tab_change_us</identifier>
     <not>TERMINAL</not>
-    <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, VK_OPTION, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
-    <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, VK_OPTION, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::P, VK_OPTION, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::O, VK_OPTION, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
   </item>
 
   <item>
-    <name>[Only Terminal] Option+[|] to Option+{|} (US)</name>
+    <name>[Only Terminal] Option+O|P to Option+{|} (US)</name>
     <identifier>option.only_terminal_tab_change_us</identifier>
     <only>TERMINAL</only>
-    <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, VK_OPTION, KeyCode::BRACKET_RIGHT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
-    <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, VK_OPTION, KeyCode::BRACKET_LEFT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::P, VK_OPTION, KeyCode::BRACKET_RIGHT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::O, VK_OPTION, KeyCode::BRACKET_LEFT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
   </item>
 
   <item>
