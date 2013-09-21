@@ -8,6 +8,7 @@
   <item>
     <name>YoruFukurou Account Change</name>
     <identifier>remap.yorufukurou_account_change</identifier>
+    <only>YORUFUKUROU</only>
     <autogen>__KeyToKey__ KeyCode::K, VK_OPTION, KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
     <autogen>__KeyToKey__ KeyCode::J, VK_OPTION, KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
   </item>
