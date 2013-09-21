@@ -84,11 +84,10 @@ set showtabline=2 " 常にタブラインを表示
 " The prefix key.
 nnoremap [Tag] <Nop>
 nmap <Space> [Tag]
-" Tab jump
+" t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
 for n in range(1, 9)
   execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
 endfor
-" t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
 
 " tt 新しいタブ
 map <silent> [Tag]t :tablast <bar> tabnew<CR>
@@ -99,8 +98,5 @@ map <silent> [Tag]p :tabnext<CR>
 " to 前のタブ
 map <silent> [Tag]o :tabprevious<CR>
 
-" CTRL-hjklでウィンドウ移動
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-nnoremap <C-h> <C-w>h
+nnoremap [Tag]h <C-w>h
+nnoremap [Tag]l <C-w>l
