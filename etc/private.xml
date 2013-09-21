@@ -1,5 +1,17 @@
 <?xml version="1.0"?>
 <root>
+  <appdef>
+    <appname>YORUFUKUROU</appname>
+    <equal>com.YoruFukurouProject.YoruFukurou</equal>
+  </appdef>
+
+  <item>
+    <name>YoruFukurou Account Change</name>
+    <identifier>remap.yorufukurou_account_change</identifier>
+    <autogen>__KeyToKey__ KeyCode::K, VK_OPTION, KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
+    <autogen>__KeyToKey__ KeyCode::J, VK_OPTION, KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
+  </item>
+
   <item>
     <name>Core settings</name>
     <identifier>private.core_settings</identifier>
