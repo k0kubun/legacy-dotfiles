@@ -1,11 +1,7 @@
-ln -s ~/source/dotfiles/.emacs.d ~/.emacs.d
-ln -s ~/source/dotfiles/.vim ~/.vim
-ln -s ~/source/dotfiles/.vimrc ~/.vimrc
-ln -s ~/source/dotfiles/.gvimrc ~/.gvimrc
-ln -s ~/source/dotfiles/.zshrc ~/.zshrc
-ln -s ~/source/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/source/dotfiles/.gitconfig ~/.gitconfig
+ln -s `pwd`/.vim ~/.vim
+ln -s `pwd`/.vimrc ~/.vimrc
+ln -s `pwd`/.zshrc ~/.zshrc
+ln -s `pwd`/.tmux.conf ~/.tmux.conf
+ln -s `pwd`/.gitconfig ~/.gitconfig
 rm ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
-ln -s ~/source/dotfiles/etc/private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
-mv ~/Library/Developer/Xcode/UserData/CodeSnippets ~/Library/Developer/Xcode/UserData/CodeSnippets.org
-ln -s ~/source/dotfiles/etc/CodeSnippets ~/Library/Developer/Xcode/UserData/CodeSnippets
+ln -s `pwd`/etc/private.xml ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
