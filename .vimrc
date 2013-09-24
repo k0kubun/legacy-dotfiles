@@ -10,7 +10,6 @@ endif
 NeoBundle 'neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
 NeoBundleCheck
 
