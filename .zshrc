@@ -73,3 +73,13 @@ export PGDATA=/usr/local/var/postgres
 
 # load local settings
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# rails
+alias -g RET="RAILS_ENV=test"
+alias -g RED="RAILS_ENV=development"
+alias -g REP="RAILS_ENV=production"
+
+# rake
+alias raket='RAILS_ENV=test rake'
+alias raked='RAILS_ENV=development rake'
+alias rakep='RAILS_ENV=production rake'
