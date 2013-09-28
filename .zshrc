@@ -34,6 +34,7 @@ fi
 
 # Configuration for git
 alias g="git"
+alias gs="git status"
 alias ga="git commit -am"
 alias gp="git push"
 
