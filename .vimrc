@@ -99,3 +99,7 @@ map <silent> [Tag]o :tabprevious<CR>
 
 nnoremap [Tag]h <C-w>h
 nnoremap [Tag]l <C-w>l
+
+" Ruby syntax highlight
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+autocmd BufNewFile,BufRead Capfile set filetype=ruby
