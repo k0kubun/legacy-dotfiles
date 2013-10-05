@@ -103,3 +103,15 @@ nnoremap [Tag]l <C-w>l
 " Ruby syntax highlight
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Capfile set filetype=ruby
+
+" Explorer
+nnoremap <silent> ;e :e<Space>.<CR>
+
+" Unite.vim configuration
+let g:unite_enable_start_insert = 1
+let g:unite_source_history_yank_enable = 1
+let g:unite_source_file_mru_limit = 200
+nnoremap <silent> ;uu :<C-u>Unite file_mru buffer<CR>
+nnoremap <silent> ;ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ;uy :<C-u>Unite history/yank<CR>
+imap jq <C-u><C-h>
