@@ -9,7 +9,6 @@ endif
 
 NeoBundle 'neocomplcache'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'basyura/unite-rails'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
 NeoBundle 'tpope/vim-rails'
@@ -116,3 +115,14 @@ let g:unite_enable_start_insert = 1
 let g:unite_source_file_mru_limit = 200
 nnoremap <silent> ;u :<C-u>Unite buffer file_rec<CR>
 imap ;q <C-u><C-h> 
+
+" Rails
+nnoremap <silent> ;a :<C-u>A<CR>
+nnoremap <silent> ;r :<C-u>R<CR>
+nnoremap <silent> ;m :<C-u>Rmodel<CR>
+nnoremap <silent> ;v :<C-u>Rview<CR>
+nnoremap <silent> ;c :<C-u>Rcontroller<CR>
+nnoremap <silent> ;t :<C-u>Rspec<CR>
+nnoremap <silent> ;h :<C-u>Rhelper<CR>
+nnoremap <silent> ;j :<C-u>Rjavascript<CR>
+nnoremap <silent> ;s :<C-u>Rstylesheet<CR>
