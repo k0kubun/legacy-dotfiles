@@ -109,9 +109,6 @@ nnoremap <silent> ;e :e<Space>.<CR>
 
 " Unite.vim configuration
 let g:unite_enable_start_insert = 1
-let g:unite_source_history_yank_enable = 1
 let g:unite_source_file_mru_limit = 200
-nnoremap <silent> ;u :<C-u>Unite file_mru buffer<CR>
-nnoremap <silent> ;b :<C-u>Unite buffer<CR>
-nnoremap <silent> ;y :<C-u>Unite history/yank<CR>
+nnoremap <silent> ;u :<C-u>Unite file_mru buffer file_rec<CR>
 imap ;q <C-u><C-h> 
