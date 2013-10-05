@@ -18,3 +18,5 @@
   lg = log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches
 [push]
 	default = simple
+[branch]
+	autosetuprebase = always
