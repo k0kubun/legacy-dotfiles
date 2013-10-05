@@ -108,7 +108,7 @@ autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Capfile set filetype=ruby
 
 " Explorer
-nnoremap <silent> ;e :e<Space>.<CR>
+nnoremap <silent> ;e :E<CR>
 
 " Unite.vim configuration
 let g:unite_enable_start_insert = 1
