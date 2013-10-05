@@ -9,8 +9,12 @@ endif
 
 NeoBundle 'neocomplcache'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'basyura/unite-rails'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundleCheck
 
 syntax on
