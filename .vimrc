@@ -110,6 +110,9 @@ autocmd BufNewFile,BufRead Capfile set filetype=ruby
 " Explorer
 nnoremap <silent> ;e :E<CR>
 
+" Buffer back
+nnoremap <silent> ;b<Space>#<CR>
+
 " Unite.vim configuration
 let g:unite_enable_start_insert = 1
 let g:unite_source_file_mru_limit = 200
