@@ -1,6 +1,6 @@
+## dotfiles
 ```
-cd ~/source  
-git clone https://github.com/ikstrm/dotfiles  
-cd dotfiles  
-sh setup.sh
+git clone git@github.com:tkkbn/setup.git
+cd setup
+./setup.sh
 ```
