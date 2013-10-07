@@ -93,7 +93,7 @@ for n in range(1, 9)
 endfor
 
 " tt 新しいタブ
-map <silent> [Tag]t :tablast <bar> tabnew<CR>
+map <silent> [Tag]t :tablast <bar> tabnew <bar> Explore <bar> vs<CR>
 " te タブを閉じる 
 map <silent> [Tag]e :tabclose<CR>
 " tp 次のタブ
@@ -108,11 +108,14 @@ nnoremap [Tag]l <C-w>l
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Capfile set filetype=ruby
 
-" Explorer
+" Explore
 nnoremap <silent> ;e :<C-u>Explore<CR>
 
 " Buffer back
 nnoremap <silent> ;b :b<Space>#<CR>
+
+" End Vim
+nnoremap <silent> ;xc :qa!<CR>
 
 " Unite.vim configuration
 let g:unite_enable_start_insert = 1
