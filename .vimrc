@@ -108,7 +108,7 @@ autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Capfile set filetype=ruby
 
 " Explorer
-nnoremap <silent> ;e :<C-u>E<CR>
+nnoremap <silent> ;e :<C-u>Explore<CR>
 
 " Buffer back
 nnoremap <silent> ;b :b<Space>#<CR>
