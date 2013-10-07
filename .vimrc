@@ -9,6 +9,7 @@ endif
 
 NeoBundle 'neocomplcache'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'yuku-t/unite-git'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
 NeoBundle 'tpope/vim-rails'
@@ -116,7 +117,7 @@ nnoremap <silent> ;b :b<Space>#<CR>
 " Unite.vim configuration
 let g:unite_enable_start_insert = 1
 let g:unite_source_file_mru_limit = 20
-nnoremap <silent> ;u :<C-u>Unite buffer file_mru file_rec<CR>
+nnoremap <silent> ;u :<C-u>Unite buffer file_mru git_cached<CR>
 imap ;q <C-u><C-h> 
 
 " Rails
