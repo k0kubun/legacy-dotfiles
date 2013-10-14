@@ -136,3 +136,6 @@ nnoremap <silent> ;s :<C-u>Rstylesheet<CR>
 
 " .swp禁止
 set noswapfile
+
+" ファイルが変わっても自動で再読み込み
+set autoread
