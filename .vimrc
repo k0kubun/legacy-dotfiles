@@ -133,3 +133,6 @@ nnoremap <silent> ;t :<C-u>Rspec<CR>
 nnoremap <silent> ;h :<C-u>Rhelper<CR>
 nnoremap <silent> ;j :<C-u>Rjavascript<CR>
 nnoremap <silent> ;s :<C-u>Rstylesheet<CR>
+
+" .swp禁止
+set noswapfile
