@@ -46,3 +46,6 @@ nnoremap <silent> ;t :<C-u>Rspec<CR>
 nnoremap <silent> ;h :<C-u>Rhelper<CR>
 nnoremap <silent> ;j :<C-u>Rjavascript<CR>
 nnoremap <silent> ;s :<C-u>Rstylesheet<CR>
+
+" 検索解除
+" nmap <Esc><Esc> :nohlsearch<CR><Esc>
