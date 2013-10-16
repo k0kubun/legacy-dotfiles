@@ -1,0 +1,29 @@
+set nocompatible
+filetype plugin indent off
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/bundle'))
+endif
+
+" Language
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'kchmck/vim-coffee-script'
+
+" Completion
+NeoBundle 'neocomplcache'
+
+" Skin
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
+
+" Additional
+NeoBundle 'yuku-t/unite-git'
+
+" Unite
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc'
+
+NeoBundleCheck
+
+filetype plugin indent on
