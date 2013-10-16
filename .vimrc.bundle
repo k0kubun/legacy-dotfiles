@@ -16,6 +16,7 @@ NeoBundle 'neocomplcache'
 
 " Skin
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
+NeoBundle 'w0ng/vim-hybrid'
 
 " Additional
 NeoBundle 'yuku-t/unite-git'
