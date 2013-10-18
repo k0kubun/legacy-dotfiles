@@ -1,3 +1,4 @@
+" Esc
 imap jj <Esc>
 
 " スクロール
@@ -12,13 +13,10 @@ for n in range(1, 9)
   execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
 endfor
 
-" tt 新しいタブ
+" tabline
 map <silent> [Tag]t :tablast <bar> tabnew <bar> Explore <bar> vs<CR>
-" te タブを閉じる 
 map <silent> [Tag]e :tabclose<CR>
-" tp 次のタブ
 map <silent> [Tag]p :tabnext<CR>
-" to 前のタブ
 map <silent> [Tag]o :tabprevious<CR>
 
 " ウィンドウ切り替え
