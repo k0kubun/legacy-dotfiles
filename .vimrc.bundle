@@ -20,6 +20,7 @@ NeoBundle 'w0ng/vim-hybrid'
 
 " Additional
 NeoBundle 'yuku-t/unite-git'
+NeoBundle 'bronson/vim-trailing-whitespace'
 
 " Unite
 NeoBundle 'Shougo/unite.vim'
