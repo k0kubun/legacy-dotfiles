@@ -1,5 +1,6 @@
 imap jj <Esc>
 
+" スクロール
 noremap <Space>j <C-f>
 noremap <Space>k <C-b>
 
@@ -20,6 +21,7 @@ map <silent> [Tag]p :tabnext<CR>
 " to 前のタブ
 map <silent> [Tag]o :tabprevious<CR>
 
+" ウィンドウ切り替え
 nnoremap [Tag]h <C-w>h
 nnoremap [Tag]l <C-w>l
 
@@ -46,6 +48,9 @@ nnoremap <silent> ;t :<C-u>Rspec<CR>
 nnoremap <silent> ;h :<C-u>Rhelper<CR>
 nnoremap <silent> ;j :<C-u>Rjavascript<CR>
 nnoremap <silent> ;s :<C-u>Rstylesheet<CR>
+
+" オリジナルの;の挙動を素早く呼び出す
+nnoremap <silent> [Tag]; ;
 
 " 検索解除
 " nmap <Esc><Esc> :nohlsearch<CR><Esc>
