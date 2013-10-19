@@ -85,3 +85,6 @@ alias -g REP="RAILS_ENV=production"
 alias raket='RAILS_ENV=test rake'
 alias raked='RAILS_ENV=development rake'
 alias rakep='RAILS_ENV=production rake'
+
+# Screen Lock
+alias l='"/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession" -suspend'
