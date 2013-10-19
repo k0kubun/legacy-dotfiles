@@ -22,7 +22,7 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'yuku-t/unite-git'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'nathanaelkane/vim-indent-guides'
+" NeoBundle 'nathanaelkane/vim-indent-guides'
 
 " Unite
 NeoBundle 'Shougo/unite.vim'
