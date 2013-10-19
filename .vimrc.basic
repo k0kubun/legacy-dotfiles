@@ -9,6 +9,7 @@ set shiftwidth=2
 set showmatch
 set ignorecase
 set cursorline
+set nowrap
 
 set hlsearch
 
