@@ -11,9 +11,6 @@ RPROMPT="%1(v|%F{green}%1v%f|)"
 # ls
 alias ls="ls -Gla"
 
-# vim
-alias vi="vi -c 'vs'"
-
 # rspec
 alias spec="rspec -c"
 alias rspecdoc='rake spec SPEC_OPTS="--format documentation"'
