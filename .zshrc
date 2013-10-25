@@ -73,6 +73,10 @@ function ttp() {
     rm *.aux
 }
 
+function md2pdf() {
+    gimli -f $1
+}
+
 # PostgreSQL
 export PGDATA=/usr/local/var/postgres
 
