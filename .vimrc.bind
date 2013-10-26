@@ -34,7 +34,7 @@ nnoremap <silent> ;xc :qa!<CR>
 
 " Unite.vim
 nnoremap <silent> ;u :<C-u>Unite buffer file_mru git_cached<CR>
-imap ;q <C-u><C-h> 
+imap ;q <C-u><C-h>
 
 " Rails
 nnoremap <silent> ;a :<C-u>A<CR>
@@ -52,3 +52,9 @@ nnoremap <silent> [Tag]; ;
 
 " 検索解除
 " nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+" Gtags
+nnoremap <silent> ;g :<C-u>Gtags -f %<CR>
+nnoremap <silent> <C-n> :<C-u>cn<CR>
+nnoremap <silent> <C-p> :<C-u>cp<CR>
+nnoremap <silent> <C-j> :<C-u>GtagsCursor<CR>
