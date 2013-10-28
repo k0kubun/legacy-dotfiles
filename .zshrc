@@ -88,3 +88,8 @@ alias rakep='RAILS_ENV=production rake'
 
 # Screen Lock
 alias l='"/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession" -suspend'
+
+# hash rocket
+function hr() {
+    sed -i '' -e 's/:\([a-zA-Z_]*\) =>/\1:/g' $1
+}
