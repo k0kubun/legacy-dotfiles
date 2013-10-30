@@ -38,6 +38,9 @@ alias gs="git status"
 alias gd="git diff"
 alias ga="git commit -am"
 alias gp="git push"
+alias gg="git grep -n"
+alias gh="git branch"
+alias go="git checkout"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
