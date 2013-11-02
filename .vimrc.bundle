@@ -19,15 +19,16 @@ NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
 NeoBundle 'w0ng/vim-hybrid'
 
 " Additional
-NeoBundle 'yuku-t/unite-git'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'tpope/vim-fugitive'
-" NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'vim-scripts/gtags.vim'
+
+" ctags
+NeoBundle 'szw/vim-tags'
 
 " Unite
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
+NeoBundle 'yuku-t/unite-git'
 
 NeoBundleCheck
 
