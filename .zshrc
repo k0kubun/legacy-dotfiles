@@ -100,3 +100,6 @@ alias l='"/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/
 function hr() {
     sed -i '' -e 's/:\([a-zA-Z_]*\) =>/\1:/g' $1
 }
+
+# ctags
+alias ctags=`brew list ctags | grep 'bin/ctags$'`
