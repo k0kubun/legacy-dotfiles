@@ -1,22 +1,17 @@
-filetype plugin on
-set encoding=utf-8
-
-set browsedir=buffer
-set hidden
-set incsearch
-set number
-set shiftwidth=2
-set showmatch
-set ignorecase
-set cursorline
-set nowrap
-
-set hlsearch
-
-set directory=~/.vim/tmp
-set backupdir=~/.vim/tmp
-
-set laststatus=2
+" Basic Settings
+set encoding=utf-8          " UTF-8
+set browsedir=buffer        " Exploreの初期ディレクトリ
+set hidden                  " 編集中でも他のファイルを開けるようにする
+set incsearch               " インクリメンタル検索を行う
+set number                  " 行番号表示
+set showmatch               " 対応するカッコを表示
+set ignorecase              " 検索で大文字小文字を区別しない
+set cursorline              " カレント行ハイライト
+set noswapfile              " .swpを作らない
+set nowrap                  " 画面端で折り返さない
+set autoread                " 更新時自動再読み込み
+set hlsearch                " 検索結果ハイライト
+set laststatus=2            " 常にステータスラインを表示
 
 " 自動コメント防止
 autocmd FileType * set formatoptions-=ro
@@ -25,8 +20,5 @@ autocmd FileType * set formatoptions-=ro
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Capfile set filetype=ruby
 
-" .swp禁止
-set noswapfile
-
-" ファイルが変わっても自動で再読み込み
-set autoread
+" ファイルタイプ判定をon
+filetype plugin on
