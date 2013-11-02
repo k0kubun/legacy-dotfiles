@@ -9,6 +9,7 @@ endif
 " Language
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
 
 " Completion
