@@ -53,11 +53,10 @@ nnoremap <silent> [Tag]; ;
 " 検索解除
 " nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
-" Gtags
-nnoremap <silent> ;g :<C-u>Gtags -f %<CR>
-nnoremap <silent> <C-n> :<C-u>cn<CR>
-nnoremap <silent> <C-p> :<C-u>cp<CR>
-nnoremap <silent> <C-j> :<C-u>GtagsCursor<CR>
+" ctags
+nnoremap <silent> [Tag]f <C-]>
+nnoremap <silent> [Tag]u :<C-u>bn<CR>
+nnoremap <silent> [Tag]i :<C-u>bp<CR>
 
 " Hash Rocket
 command! -bar -range=% NotRocket :<line1>,<line2>s/:\(\w\+\)\s*=>/\1:/ge
