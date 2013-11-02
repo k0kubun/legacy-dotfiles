@@ -102,4 +102,4 @@ function hr() {
 }
 
 # ctags
-alias ctags=`brew list ctags | grep 'bin/ctags$'`
+alias ctags="/usr/local/bin/ctags"
