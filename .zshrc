@@ -103,4 +103,3 @@ function hr() {
 
 # ctags
 alias ctags="/usr/local/bin/ctags"
-alias rtags="/usr/local/bin/ctags -R .; /usr/local/bin/ctags -R `bundle show --paths`"
