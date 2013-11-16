@@ -22,7 +22,6 @@ NeoBundle 'w0ng/vim-hybrid'
 
 " Additional
 NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'tpope/vim-fugitive'
 
 " ctags
 NeoBundle 'szw/vim-tags'
@@ -31,6 +30,10 @@ NeoBundle 'szw/vim-tags'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'yuku-t/unite-git'
+
+" Git
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'gregsexton/gitv'
 
 NeoBundleCheck
 
