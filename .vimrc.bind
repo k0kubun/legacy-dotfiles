@@ -55,8 +55,8 @@ nnoremap <silent> [Tag]; ;
 
 " ctags
 nnoremap <silent> [Tag]f <C-]>
-nnoremap <silent> [Tag]u :<C-u>bn<CR>
-nnoremap <silent> [Tag]i :<C-u>bp<CR>
+nnoremap <silent> [Tag]u <C-o>
+nnoremap <silent> [Tag]i <C-i>
 
 " Hash Rocket
 command! -bar -range=% NotRocket :<line1>,<line2>s/:\([a-z_]\+\)\s*=>/\1:/g
