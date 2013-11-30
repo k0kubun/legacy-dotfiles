@@ -262,10 +262,17 @@
 
   <item>
     <name>Control_L to Command_L, Command_L to Control_R, Command_R to Option_L</name>
-    <identifier>remap.ikstrm_style_cmd</identifier>
-    <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::COMMAND_L</autogen>    
+    <identifier>remap.tkkbn_style_cmd</identifier>
+    <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::COMMAND_L</autogen>
     <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::CONTROL_R</autogen>
     <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>Exchange Control + Space and Command + Space</name>
+    <identifier>remap.exchange_cmd_ctr_space</identifier>
+    <autogen>__KeyToKey__ KeyCode::SPACE, VK_CONTROL, KeyCode::SPACE, VK_COMMAND</autogen>
+    <autogen>__KeyToKey__ KeyCode::SPACE, VK_COMMAND, KeyCode::SPACE, VK_CONTROL</autogen>
   </item>
 
   <item>
