@@ -103,3 +103,6 @@ function hr() {
 
 # ctags
 alias ctags="/usr/local/bin/ctags"
+
+# git-hook
+export PATH="$HOME/.git-hook/bin:$PATH"
