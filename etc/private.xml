@@ -328,4 +328,9 @@
     <autogen>__KeyToKey__ KeyCode::C, VK_CONTROL, KeyCode::VK_CONFIG_FORCE_ON_notsave_complete_vimode_improved</autogen>
   </item>
 
+  <item>
+    <name>Option+L to CapsLock</name>
+    <identifier>remap.tkkbn.option_l_caps_lock</identifier>
+    <autogen>__KeyToKey__ KeyCode::L, VK_OPTION, KeyCode::CAPSLOCK</autogen>
+  </item>
 </root>
