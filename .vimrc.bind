@@ -1,5 +1,6 @@
 " Esc
 imap jj <Esc>
+imap JJ <Esc>
 
 " スクロール
 noremap <Space>j <C-f>
