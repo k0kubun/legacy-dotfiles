@@ -46,7 +46,7 @@ nnoremap <silent> ;c :<C-u>Rcontroller<CR>
 nnoremap <silent> ;t :<C-u>Rspec<CR>
 nnoremap <silent> ;h :<C-u>Rhelper<CR>
 nnoremap <silent> ;j :<C-u>Rjavascript<CR>
-nnoremap <silent> ;s :<C-u>Rstylesheet<CR>
+" nnoremap <silent> ;s :<C-u>Rstylesheet<CR>
 
 " オリジナルの;の挙動を素早く呼び出す
 nnoremap <silent> [Tag]; ;
@@ -62,3 +62,6 @@ nnoremap <silent> [Tag]i <C-i>
 " Hash Rocket
 command! -bar -range=% NotRocket :<line1>,<line2>s/:\([a-z_]\+\)\s*=>/\1:/g
 vnoremap <silent> gr :NotRocket<CR>
+
+" Source .vimrc
+noremap <silent> ;s :<C-u>source<Space>~/.vimrc<CR>
