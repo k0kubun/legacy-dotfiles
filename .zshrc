@@ -108,5 +108,5 @@ alias ctags="/usr/local/bin/ctags"
 export PATH="$HOME/.git-hook/bin:$PATH"
 
 # For use /usr/local/bin/vim
-export PATH="/usr/local/bin:$PATH"
-alias vi="vim"
+alias vi="/usr/local/bin/vim"
+alias vim="/usr/local/bin/vim"
