@@ -65,3 +65,7 @@ vnoremap <silent> gr :NotRocket<CR>
 
 " Source .vimrc
 noremap <silent> ;s :<C-u>source<Space>~/.vimrc<CR>
+
+" Cursor in command line
+cmap <C-f> <Right>
+cmap <C-b> <Left>
