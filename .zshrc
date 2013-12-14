@@ -106,3 +106,6 @@ alias ctags="/usr/local/bin/ctags"
 
 # git-hook
 export PATH="$HOME/.git-hook/bin:$PATH"
+
+# explicitly use original vim in mac
+alias vi="/usr/bin/vim"
