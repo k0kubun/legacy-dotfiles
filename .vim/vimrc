@@ -1,8 +1,8 @@
-source ~/.vim/vimrc.bundle
+source ~/.vim/bundle.vim
 
-source ~/.vim/vimrc.basic
-source ~/.vim/vimrc.indent
+source ~/.vim/basic.vim
+source ~/.vim/indentation.vim
 
-source ~/.vim/vimrc.skin
-source ~/.vim/vimrc.plugin
-source ~/.vim/vimrc.bind
+source ~/.vim/skin.vim
+source ~/.vim/plugin.vim
+source ~/.vim/bind.vim
