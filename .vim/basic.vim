@@ -12,7 +12,7 @@ set nowrap                       " 画面端で折り返さない
 set autoread                     " 更新時自動再読み込み
 set hlsearch                     " 検索結果ハイライト
 set laststatus=2                 " 常にステータスラインを表示
-set bs=start                     " インサートモードで文字を消せるようにする
+set bs=start,indent              " インサートモードで文字を消せるようにする
 set clipboard=unnamed,autoselect " ヤンクでクリップボードにコピー
 
 " 自動コメント防止
