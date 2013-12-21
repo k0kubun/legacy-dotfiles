@@ -69,3 +69,6 @@ noremap <silent> ;s :<C-u>source<Space>~/.vimrc<CR>
 " Cursor in command line
 cmap <C-f> <Right>
 cmap <C-b> <Left>
+
+" paste
+nnoremap <Space>g :<C-u>r !pbpaste<CR>
