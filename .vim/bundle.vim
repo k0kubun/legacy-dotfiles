@@ -23,6 +23,7 @@ NeoBundle 'w0ng/vim-hybrid'
 
 " Additional
 NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'osyo-manga/vim-over'
 
 " ctags
 NeoBundle 'szw/vim-tags'
