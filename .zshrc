@@ -110,3 +110,6 @@ export PATH="$HOME/.git-hook/bin:$PATH"
 # vim
 alias vi="/usr/local/bin/vim"
 alias vim="/usr/local/bin/vim"
+
+# bundler
+export BUNDLE_JOBS=4
