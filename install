@@ -1,4 +1,4 @@
-#!/bash/sh
+#!/bin/sh
 
 # expand path of this script
 script_absolute_path=$(cd $(dirname $0); pwd)
