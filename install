@@ -1,0 +1,49 @@
+#!/bash/sh
+
+# expand path of this script
+script_absolute_path=$(cd $(dirname $0); pwd)
+
+# Usage:
+# $ update_alias .vimrc
+update_alias() {
+  # requred argument: alias target file/dir name
+  file_name=$1
+
+  # alias path initialization
+  alias_source_path=$script_absolute_path"/"$file_name
+  alias_destination_path=$HOME"/"$file_name
+
+  # check alias source
+  if [ ! -e $alias_source_path ]; then
+    echo "Alias source not found: "$alias_source_path
+    return 1
+  fi
+
+  # remove existing file at destination path
+  if [ -e $alias_destination_path ] || [ -L $alias_destination_path ]; then
+    echo "\nDeleted existing file: "$alias_destination_path
+    rm $alias_destination_path
+  fi
+
+  # create symlink
+  ln -s $alias_source_path $alias_destination_path
+  if [ $? -eq 0 ]; then
+    echo "Successfully created symlink: "\
+      $alias_source_path" -> "$alias_destination_path
+  fi
+}
+
+# update alias for files whose filename start with '.'
+for dotfile in `ls -A | grep "^\."`
+do
+  # skip .git, .gitconfig and .gitmodules
+  echo $dotfile | grep -q "^\.\(git\|gitconfig\|gitmodules\)\$"
+  [ $? -eq 0 ] && continue
+
+  update_alias $dotfile
+done
+
+# override keyremap4macbook configuration
+rm -f ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
+ln -s $script_absolute_path"/etc/private.xml" \
+  $HOME"/Library/Application Support/KeyRemap4MacBook/private.xml"
