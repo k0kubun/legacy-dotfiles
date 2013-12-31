@@ -72,3 +72,6 @@ cmap <C-b> <Left>
 
 " paste
 nnoremap <Space>g :<C-u>r !pbpaste<CR>
+
+" delete highlight
+nnoremap <silent> gh :let @/=''<CR>
