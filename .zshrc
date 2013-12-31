@@ -19,17 +19,17 @@ alias rspecdoc='rake spec SPEC_OPTS="--format documentation"'
 export PATH="$HOME/bin:$PATH"
 alias tmux="tmux -2"
 if [ -z "$TMUX" -a -z "$STY" ]; then
-    if type tmuxx >/dev/null 2>&1; then
-        tmuxx
-    elif type tmux >/dev/null 2>&1; then
-        if tmux has-session && tmux list-sessions | /usr/bin/grep -qE '.*]$'; then
-            tmux attach && echo "tmux attached session "
-        else
-            tmux new-session && echo "tmux created new session"
-        fi
-    elif type screen >/dev/null 2>&1; then
-        screen -rx || screen -D -RR
+  if type tmuxx >/dev/null 2>&1; then
+    tmuxx
+  elif type tmux >/dev/null 2>&1; then
+    if tmux has-session && tmux list-sessions | /usr/bin/grep -qE '.*]$'; then
+      tmux attach && echo "tmux attached session "
+    else
+      tmux new-session && echo "tmux created new session"
     fi
+  elif type screen >/dev/null 2>&1; then
+    screen -rx || screen -D -RR
+  fi
 fi
 
 # Configuration for git
@@ -100,7 +100,7 @@ alias l='"/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/
 
 # hash rocket
 function hr() {
-    sed -i '' -e 's/:\([a-zA-Z_]*\) =>/\1:/g' $1
+  sed -i '' -e 's/:\([a-zA-Z_]*\) =>/\1:/g' $1
 }
 
 # ctags
@@ -115,3 +115,24 @@ alias vim="/usr/local/bin/vim"
 
 # .zshrc reload
 alias re="source ~/.zshrc"
+
+# zsh-context-sensitive-alias
+source ~/.zsh/bundle/zsh-context-sensitive-alias/csa.zsh
+csa_init
+
+function my_context_func {
+  local -a ctx
+  if [[ -n `git rev-parse --git-dir 2> /dev/null` ]]; then
+    ctx+=git
+  fi
+  if [[ -e Gemfile ]]; then
+    ctx+=bundler
+  fi
+  csa_set_context $ctx
+}
+typeset -ga chpwd_functions
+chpwd_functions+=my_context_func
+
+csalias bundler rails 'bundle exec rails'
+csalias bundler rake 'bundle exec rake'
+csalias bundler rspec 'bundle exec rspec'
