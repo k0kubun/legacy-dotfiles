@@ -261,10 +261,12 @@
   </item>
 
   <item>
-    <name>Control_L to Command_L, Command_L to Control_R, Command_R to Option_L</name>
-    <identifier>remap.tkkbn_style_cmd</identifier>
+    <name>Control_L to Command_L, Command_L to Control_R, Command_R to Option_L, Option_R/L to Shift</name>
+    <identifier>remap.tkkbn_style_key_mappings</identifier>
     <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::COMMAND_L</autogen>
     <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::CONTROL_R</autogen>
+    <autogen>__KeyToKey__ KeyCode::OPTION_L,  KeyCode::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::OPTION_R,  KeyCode::SHIFT_R</autogen>
     <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_L</autogen>
   </item>
 
