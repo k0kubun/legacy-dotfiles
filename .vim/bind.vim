@@ -1,6 +1,10 @@
 " Esc
-imap jj <Esc>
-imap JJ <Esc>
+noremap <C-e> <Esc>
+noremap <C-E> <Esc>
+inoremap <C-e> <Esc>
+inoremap <C-E> <Esc>
+cnoremap <C-e> <Esc>
+cnoremap <C-E> <Esc>
 
 " スクロール
 noremap <Space>j <C-f>
