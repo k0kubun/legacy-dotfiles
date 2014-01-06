@@ -60,9 +60,9 @@
   </item>
 
   <item>
-    <name>Command+L to CapsLock</name>
+    <name>Command+K to CapsLock</name>
     <identifier>remap.tkkbn.option_l_caps_lock</identifier>
-    <autogen>__KeyToKey__ KeyCode::L, VK_COMMAND, KeyCode::CAPSLOCK</autogen>
+    <autogen>__KeyToKey__ KeyCode::K, VK_COMMAND, KeyCode::CAPSLOCK</autogen>
   </item>
 
   <item>
