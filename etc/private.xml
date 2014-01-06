@@ -9,48 +9,47 @@
     <name>YoruFukurou Account Change</name>
     <identifier>remap.yorufukurou_account_change</identifier>
     <only>YORUFUKUROU</only>
-    <autogen>__KeyToKey__ KeyCode::K, VK_OPTION, KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
-    <autogen>__KeyToKey__ KeyCode::J, VK_OPTION, KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
+    <autogen>__KeyToKey__ KeyCode::K, VK_COMMAND, KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
+    <autogen>__KeyToKey__ KeyCode::J, VK_COMMAND, KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
   </item>
 
   <item>
-    <name>[Not Terminal] Option+O|P to Command+{|} (US)</name>
+    <name>[Not Terminal] Command+O|P to Command+{|} (US)</name>
     <identifier>option.not_terminal_tab_change_us</identifier>
     <not>TERMINAL</not>
-    <autogen>__KeyToKey__ KeyCode::P, VK_OPTION, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
-    <autogen>__KeyToKey__ KeyCode::O, VK_OPTION, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::P, VK_COMMAND, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::O, VK_COMMAND, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
   </item>
 
   <item>
-    <name>[Only Terminal] Option+O|P to Option+{|} (US)</name>
+    <name>[Only Terminal] Command+O|P to Option+{|} (US)</name>
     <identifier>option.only_terminal_tab_change_us</identifier>
     <only>TERMINAL</only>
-    <autogen>__KeyToKey__ KeyCode::P, VK_OPTION, KeyCode::BRACKET_RIGHT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
-    <autogen>__KeyToKey__ KeyCode::O, VK_OPTION, KeyCode::BRACKET_LEFT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::P, VK_COMMAND, KeyCode::BRACKET_RIGHT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::O, VK_COMMAND, KeyCode::BRACKET_LEFT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
   </item>
 
   <item>
-    <name>[Not Terminal] Option+E to Command+W</name>
+    <name>[Not Terminal] Command+E to Command+W</name>
     <identifier>option.not_terminal_opt_e</identifier>
     <not>TERMINAL</not>
-    <autogen>__KeyToKey__ KeyCode::E, VK_OPTION, KeyCode::W, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::E, VK_COMMAND, KeyCode::W, ModifierFlag::COMMAND_L</autogen>
   </item>
 
   <item>
-    <name>[Not Terminal] Option+T to Command+T</name>
+    <name>[Only Terminal] Command+T to Option+T, Command+E to Option+E</name>
     <identifier>option.emacsmode_ex_optionT_org</identifier>
-    <not>TERMINAL</not>
-    <autogen>__KeyToKey__ KeyCode::T, VK_OPTION, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::T, VK_COMMAND, KeyCode::T, ModifierFlag::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::E, VK_COMMAND, KeyCode::E, ModifierFlag::OPTION_L</autogen>
   </item>
 
   <item>
-    <name>Control_L to Command_L, Command_L to Control_R, Command_R to Option_L, Option_R/L to Shift</name>
+    <name>Control_L(CapsLock) to Space, Command_L to Control_R, Option_L to Command_R</name>
     <identifier>remap.tkkbn_style_key_mappings</identifier>
-    <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::SPACE</autogen>
     <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::CONTROL_R</autogen>
-    <autogen>__KeyToKey__ KeyCode::OPTION_L,  KeyCode::SHIFT_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::OPTION_R,  KeyCode::SHIFT_R</autogen>
-    <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::OPTION_L,  KeyCode::COMMAND_R</autogen>
   </item>
 
   <item>
@@ -61,8 +60,8 @@
   </item>
 
   <item>
-    <name>Option+L to CapsLock</name>
+    <name>Command+L to CapsLock</name>
     <identifier>remap.tkkbn.option_l_caps_lock</identifier>
-    <autogen>__KeyToKey__ KeyCode::L, VK_OPTION, KeyCode::CAPSLOCK</autogen>
+    <autogen>__KeyToKey__ KeyCode::L, VK_COMMAND, KeyCode::CAPSLOCK</autogen>
   </item>
 </root>
