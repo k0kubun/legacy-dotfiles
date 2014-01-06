@@ -76,18 +76,18 @@
   </item>
 
   <item>
-    <name>[Emacs mode] Option+D to Option+Forward Delete</name>
+    <name>[Emacs mode] Command+D to Option+Forward Delete</name>
     <identifier>option.emacsmode_optionD_imported</identifier>
-    <not>{{EMACS_MODE_IGNORE_APPS}}</not>
-    <autogen>__KeyToKey__ KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION, KeyCode::FORWARD_DELETE, ModifierFlag::OPTION_L</autogen>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::FORWARD_DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
 
   <item>
-    <name>[Emacs mode] Option+BF to Option+Left/Right</name>
+    <name>[Emacs mode] Command+BF to Option+Left/Right</name>
     <identifier>option.emacsmode_optionBF_imported</identifier>
-    <not>{{EMACS_MODE_IGNORE_APPS}}</not>
-    <autogen>__KeyToKey__ KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
   </item>
 
   <item>
@@ -95,5 +95,14 @@
     <identifier>option.emacsmode_ex_controlW_imported</identifier>
     <not>{{EMACS_MODE_IGNORE_APPS}}</not>
     <autogen>__KeyToKey__ KeyCode::W, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>[Only Terminal] Command+D to Option+D, Command+BF to Option+BF</name>
+    <identifier>option.terminal_command_option</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::D, VK_COMMAND, KeyCode::D, ModifierFlag::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::B, VK_COMMAND, KeyCode::B, ModifierFlag::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::F, VK_COMMAND, KeyCode::F, ModifierFlag::OPTION_L</autogen>
   </item>
 </root>
