@@ -105,4 +105,10 @@
     <autogen>__KeyToKey__ KeyCode::B, VK_COMMAND, KeyCode::B, ModifierFlag::OPTION_L</autogen>
     <autogen>__KeyToKey__ KeyCode::F, VK_COMMAND, KeyCode::F, ModifierFlag::OPTION_L</autogen>
   </item>
+
+  <item>
+    <name>Control+LeftClick to Command+LeftClick</name>
+    <identifier>remap.command_click_override</identifier>
+    <autogen>__PointingButtonToPointingButton__ PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+  </item>
 </root>
