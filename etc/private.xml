@@ -60,10 +60,37 @@
   </item>
 
   <item>
-    <name>Command+L to CapsLock, Command+K to Command+L</name>
-    <identifier>remap.tkkbn.option_l_caps_lock</identifier>
-    <autogen>__KeyToKey__ KeyCode::L, VK_COMMAND, KeyCode::CAPSLOCK</autogen>
+    <name>Command+K to Command+L</name>
+    <identifier>remap.tkkbn.command_l</identifier>
     <autogen>__KeyToKey__ KeyCode::K, VK_COMMAND, KeyCode::L, VK_COMMAND</autogen>
+  </item>
+
+  <item>
+    <name>CapsLock ON</name>
+    <identifier>remap.tkkbn.caps_on</identifier>
+    <config_not>notsave.private_capslock_on</config_not>
+    <autogen>
+      __KeyToKey__ KeyCode::L, VK_COMMAND,
+      KeyCode::CAPSLOCK,
+      KeyCode::VK_CONFIG_FORCE_ON_notsave_private_capslock_on
+    </autogen>
+  </item>
+
+  <item>
+    <name>CapsLock OFF</name>
+    <identifier>remap.tkkbn.caps_off</identifier>
+    <config_only>notsave.private_capslock_on</config_only>
+    <autogen>
+      __KeyToKey__ KeyCode::L, VK_COMMAND,
+      KeyCode::CAPSLOCK,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_capslock_on
+    </autogen>
+  </item>
+
+  <item>
+    <name>CapsLock Mode</name>
+    <identifier vk_config="true">notsave.private_capslock_on</identifier>
+    <autogen>__ShowStatusMessage__ CapsLock</autogen>
   </item>
 
   <item>
