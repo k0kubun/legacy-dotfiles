@@ -45,6 +45,13 @@
   </item>
 
   <item>
+    <name>[Only Terminal] Command+I to Option+I</name>
+    <identifier>option.only_terminal_command_i</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::I, VK_COMMAND, KeyCode::I, ModifierFlag::OPTION_L</autogen>
+  </item>
+
+  <item>
     <name>Control_L(CapsLock) to Space, Command_L to Control_R, Option_L to Command_R</name>
     <identifier>remap.tkkbn_style_key_mappings</identifier>
     <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::SPACE</autogen>
