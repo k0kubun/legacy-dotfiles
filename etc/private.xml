@@ -147,4 +147,10 @@
     <identifier>remap.command_click_override</identifier>
     <autogen>__PointingButtonToPointingButton__ PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
   </item>
+
+  <item>
+    <name>Chrome inspecter</name>
+    <identifier>remap.chrome_inspecter</identifier>
+    <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::COMMAND_R, VK_CONTROL, KeyCode::I, VK_COMMAND, VK_OPTION</autogen>
+  </item>
 </root>
