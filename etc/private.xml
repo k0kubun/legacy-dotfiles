@@ -149,8 +149,8 @@
   </item>
 
   <item>
-    <name>Chrome inspecter</name>
+    <name>Chrome inspecter Command+Control+I</name>
     <identifier>remap.chrome_inspecter</identifier>
-    <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::COMMAND_R, VK_CONTROL, KeyCode::I, VK_COMMAND, VK_OPTION</autogen>
+    <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::COMMAND_R | ModifierFlag::CONTROL_R, KeyCode::I, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_R</autogen>
   </item>
 </root>
