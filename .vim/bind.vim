@@ -32,7 +32,7 @@ nnoremap [Tag]l <C-w>l
 nnoremap <silent> ge :<C-u>Explore<CR>
 
 " End Vim
-nnoremap <silent> ,xc :qa!<CR>
+nnoremap <silent> :xc :qa!<CR>
 
 " Unite.vim
 nnoremap <silent> gu :<C-u>Unite buffer git_cached<CR>
