@@ -161,4 +161,18 @@
     <not>TERMINAL</not>
     <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::CONTROL_R, KeyCode::R, ModifierFlag::COMMAND_R</autogen>
   </item>
+
+  <item>
+    <name>Exchange colon and semicolon</name>
+    <identifier>remap.exchange_colon</identifier>
+    <autogen>__KeyToKey__ KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::SEMICOLON</autogen>
+    <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+  </item>
+
+  <item>
+    <name>Exchange single quote and double quote</name>
+    <identifier>remap.exchange_quote</identifier>
+    <autogen>__KeyToKey__ KeyCode::QUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::QUOTE</autogen>
+    <autogen>__KeyToKey__ KeyCode::QUOTE, KeyCode::QUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+  </item>
 </root>

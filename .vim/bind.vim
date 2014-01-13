@@ -29,34 +29,14 @@ nnoremap [Tag]h <C-w>h
 nnoremap [Tag]l <C-w>l
 
 " Explore
-nnoremap <silent> ;e :<C-u>Explore<CR>
-
-" Buffer back
-nnoremap <silent> ;b :b<Space>#<CR>
+nnoremap <silent> ge :<C-u>Explore<CR>
 
 " End Vim
-nnoremap <silent> ;xc :qa!<CR>
+nnoremap <silent> ,xc :qa!<CR>
 
 " Unite.vim
-nnoremap <silent> ;u :<C-u>Unite buffer git_cached<CR>
-imap ;q <C-u><C-h>
-
-" Rails
-nnoremap <silent> ;a :<C-u>A<CR>
-nnoremap <silent> ;r :<C-u>R<CR>
-nnoremap <silent> ;m :<C-u>Rmodel<CR>
-nnoremap <silent> ;v :<C-u>Rview<CR>
-nnoremap <silent> ;c :<C-u>Rcontroller<CR>
-nnoremap <silent> ;t :<C-u>Rspec<CR>
-nnoremap <silent> ;h :<C-u>Rhelper<CR>
-nnoremap <silent> ;j :<C-u>Rjavascript<CR>
-" nnoremap <silent> ;s :<C-u>Rstylesheet<CR>
-
-" オリジナルの;の挙動を素早く呼び出す
-nnoremap <silent> [Tag]; ;
-
-" 検索解除
-" nmap <Esc><Esc> :nohlsearch<CR><Esc>
+nnoremap <silent> gu :<C-u>Unite buffer git_cached<CR>
+imap ,q <C-u><C-h>
 
 " ctags
 nnoremap <silent> [Tag]f <C-]>
@@ -75,7 +55,7 @@ cmap <C-f> <Right>
 cmap <C-b> <Left>
 
 " paste
-nnoremap <Space>g :<C-u>r !pbpaste<CR>
+nnoremap gp :<C-u>r !pbpaste<CR>
 
 " delete highlight
 nnoremap <silent> gh :let @/=''<CR>
