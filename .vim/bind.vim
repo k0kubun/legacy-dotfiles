@@ -29,7 +29,7 @@ nnoremap [Tag]h <C-w>h
 nnoremap [Tag]l <C-w>l
 
 " Explore
-nnoremap <silent> ge :<C-u>Explore<CR>
+nnoremap <silent> ;e :<C-u>Explore<CR>
 
 " End Vim
 nnoremap <silent> ;xc :qa!<CR>
