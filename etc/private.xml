@@ -163,10 +163,9 @@
   </item>
 
   <item>
-    <name>Exchange colon and semicolon</name>
+    <name>Control semicolon to colon</name>
     <identifier>remap.exchange_colon</identifier>
-    <autogen>__KeyToKey__ KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::SEMICOLON</autogen>
-    <autogen>__KeyToKey__ KeyCode::SEMICOLON, KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
   </item>
 
   <item>
