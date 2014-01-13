@@ -149,8 +149,16 @@
   </item>
 
   <item>
-    <name>Chrome inspecter Command+Control+I</name>
+    <name>[Not Terminal]Chrome inspecter Command+Control+I</name>
     <identifier>remap.chrome_inspecter</identifier>
+    <not>TERMINAL</not>
     <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::COMMAND_R | ModifierFlag::CONTROL_R, KeyCode::I, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_R</autogen>
+  </item>
+
+  <item>
+    <name>[Not Terminal] Control-R -> Command-R</name>
+    <identifier>remap.chrome_reload</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::CONTROL_R, KeyCode::R, ModifierFlag::COMMAND_R</autogen>
   </item>
 </root>
