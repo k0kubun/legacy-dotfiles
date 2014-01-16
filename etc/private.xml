@@ -163,6 +163,13 @@
   </item>
 
   <item>
+    <name>[Only Terminal] Command-R -> Option-R</name>
+    <identifier>remap.option_r__</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::COMMAND_R, KeyCode::R, ModifierFlag::OPTION_L</autogen>
+  </item>
+
+  <item>
     <name>Command semicolon to colon</name>
     <identifier>remap.exchange_colon</identifier>
     <autogen>__KeyToKey__ KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
