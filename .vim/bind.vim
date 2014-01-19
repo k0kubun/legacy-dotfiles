@@ -7,8 +7,8 @@ cnoremap <C-e> <Esc>
 cnoremap <C-E> <Esc>
 
 " 移動
-noremap gj 8j
-noremap gk 8k
+noremap gj 6j
+noremap gk 6k
 
 " スクロール
 noremap <Space>j <C-f>
