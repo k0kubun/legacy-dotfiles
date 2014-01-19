@@ -6,6 +6,10 @@ inoremap <C-E> <Esc>
 cnoremap <C-e> <Esc>
 cnoremap <C-E> <Esc>
 
+" 移動
+noremap gj 8j
+noremap gk 8k
+
 " スクロール
 noremap <Space>j <C-f>
 noremap <Space>k <C-b>
