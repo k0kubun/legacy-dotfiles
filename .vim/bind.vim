@@ -63,3 +63,6 @@ nnoremap gp :<C-u>r !pbpaste<CR>
 
 " delete highlight
 nnoremap <silent> gh :let @/=''<CR>
+
+" Git Blame
+nnoremap <silent> gb :<C-u>Gblame<CR>
