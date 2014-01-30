@@ -43,7 +43,11 @@ alias gh="git branch"
 alias go="git checkout"
 alias gos="git branch | percol | xargs git checkout"
 function ps(){
-  git push $@ `git rev-parse --abbrev-ref HEAD`
+  if [ $# -ne 0 ]; then
+    git push $@ `git rev-parse --abbrev-ref HEAD`
+  else
+    git push
+  fi
 }
 
 # rbenv
