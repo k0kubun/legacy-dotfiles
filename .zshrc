@@ -40,7 +40,8 @@ alias ga="git commit -am"
 alias gp="git push"
 alias gg="git grep -n"
 alias gh="git branch"
-alias go="git branch | percol | xargs git checkout"
+alias go="git checkout"
+alias gos="git branch | percol | xargs git checkout"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
