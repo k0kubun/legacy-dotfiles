@@ -38,11 +38,13 @@ alias gs="git status"
 alias gd="git diff"
 alias ga="git commit -am"
 alias gp="git push"
-alias gps="git branch | percol | xargs git branch"
 alias gg="git grep -n"
 alias gh="git branch"
 alias go="git checkout"
 alias gos="git branch | percol | xargs git checkout"
+function ps(){
+  git push $@ `git rev-parse --abbrev-ref HEAD`
+}
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
