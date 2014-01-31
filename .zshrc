@@ -37,12 +37,11 @@ alias g="git"
 alias gs="git status"
 alias gd="git diff"
 alias ga="git commit -am"
-alias gp="git push"
 alias gg="git grep -n"
 alias gh="git branch"
 alias go="git checkout"
 alias gos="git branch | percol | xargs git checkout"
-function ps(){
+function gp(){
   if [ $# -ne 0 ]; then
     git push $@ `git rev-parse --abbrev-ref HEAD`
   else
