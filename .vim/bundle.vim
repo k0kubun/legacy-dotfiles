@@ -37,6 +37,7 @@ NeoBundle 'yuku-t/unite-git'
 " Git
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
+NeoBundle 'airblade/vim-gitgutter'
 
 NeoBundleCheck
 
