@@ -54,12 +54,12 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 function gem(){
-    $HOME/.rbenv/shims/gem $*
-    if [ "$1" = "install" ] || [ "$1" = "i" ] || [ "$1" = "uninstall" ] || [ "$1" = "uni" ]
-    then
-        rbenv rehash
-        rehash
-    fi
+  $HOME/.rbenv/shims/gem $*
+  if [ "$1" = "install" ] || [ "$1" = "i" ] || [ "$1" = "uninstall" ] || [ "$1" = "uni" ]
+  then
+    rbenv rehash
+    rehash
+  fi
 }
 
 # bundler
@@ -75,15 +75,15 @@ function find-grep(){
 # TeX
 export PATH="/usr/texbin:$PATH"
 function ttp() {
-    platex $1
-    dvipdfmx $1
-    rm *.dvi
-    rm *.log
-    rm *.aux
+  platex $1
+  dvipdfmx $1
+  rm *.dvi
+  rm *.log
+  rm *.aux
 }
 
 function md2pdf() {
-    gimli -f $1
+  gimli -f $1
 }
 
 # PostgreSQL
