@@ -176,6 +176,12 @@
   </item>
 
   <item>
+    <name>Control - to _</name>
+    <identifier>remap.control_underbar</identifier>
+    <autogen>__KeyToKey__ KeyCode::MINUS, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+  </item>
+
+  <item>
     <name>Exchange single quote and double quote</name>
     <identifier>remap.exchange_quote</identifier>
     <autogen>__KeyToKey__ KeyCode::QUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::QUOTE</autogen>
