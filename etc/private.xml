@@ -187,6 +187,11 @@
     <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
     <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
     <autogen>__KeyToKey__ KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::COMMA, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::COMMA, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::DOT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DOT, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::SLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::SLASH, ModifierFlag::SHIFT_L</autogen>
   </item>
 
   <item>
