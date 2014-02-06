@@ -176,9 +176,17 @@
   </item>
 
   <item>
-    <name>Control - to _</name>
-    <identifier>remap.control_underbar</identifier>
+    <name>Shift by control</name>
+    <identifier>remap.shift_by_control</identifier>
     <autogen>__KeyToKey__ KeyCode::MINUS, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_0, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::KEY_0, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_9, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::KEY_9, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_8, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::KEY_8, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_7, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::KEY_7, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_6, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::KEY_6, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
   </item>
 
   <item>
