@@ -40,7 +40,7 @@ alias ga="git commit -am"
 alias gg="git grep -n"
 alias gh="git branch"
 alias go="git checkout"
-alias gl="git log --graph --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(auto)%d%Creset'"
+alias gl="git log --graph --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset'"
 alias gos="git branch | percol | xargs git checkout"
 function gp(){
   if [ $# -ne 0 ]; then
