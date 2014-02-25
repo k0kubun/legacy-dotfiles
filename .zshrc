@@ -40,9 +40,15 @@ alias ga="git commit -am"
 alias gg="git grep -n"
 alias gh="git branch"
 alias go="git checkout"
-alias gl="git log --graph --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset'"
 alias gos="git branch | percol | xargs git checkout"
 alias ghs="git branch | percol | xargs git branch -D"
+function gl(){
+  if [ $# -ne 0 ]; then
+    git log --reverse --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset' $@
+  else
+    git log --reverse --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset' -10
+  fi
+}
 function gp(){
   if [ $# -ne 0 ]; then
     git push $@ `git rev-parse --abbrev-ref HEAD`
