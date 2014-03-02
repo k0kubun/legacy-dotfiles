@@ -14,7 +14,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'groenewege/vim-less'
-NeoBundle 'Blackrush/vim-gocode'
+NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 
 " Completion
 NeoBundle 'neocomplcache'
