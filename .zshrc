@@ -39,8 +39,8 @@ alias gd="git diff"
 alias ga="git commit -am"
 alias gg="git grep -n"
 alias gh="git branch"
-alias go="git checkout"
-alias gos="git branch | percol | xargs git checkout"
+alias gu="git checkout"
+alias gus="git branch | percol | xargs git checkout"
 alias ghs="git branch | percol | xargs git branch -D"
 function gl(){
   if [ $# -ne 0 ]; then
