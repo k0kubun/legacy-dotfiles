@@ -151,3 +151,6 @@ chpwd_functions+=my_context_func
 csalias bundler rails 'bundle exec rails'
 csalias bundler rake 'bundle exec rake'
 csalias bundler rspec 'bundle exec rspec'
+
+# golang
+export GOPATH=${HOME}/go
