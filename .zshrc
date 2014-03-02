@@ -154,3 +154,4 @@ csalias bundler rspec 'bundle exec rspec'
 
 # golang
 export GOPATH=${HOME}/go
+export GOROOT="/usr/local/Cellar/go/1.2/libexec"

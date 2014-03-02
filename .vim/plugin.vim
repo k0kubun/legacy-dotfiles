@@ -22,3 +22,9 @@ let g:vim_tags_gems_tags_command = "/usr/local/bin/ctags -R {OPTIONS} `bundle sh
 
 " vim-gitgutter
 let g:gitgutter_sign_column_always = 1
+
+" gocode
+set rtp+=$GOROOT/misc/vim
+
+" golint
+exe "set rtp+=" . globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
