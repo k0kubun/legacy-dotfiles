@@ -44,9 +44,9 @@ alias gus="git branch | percol | xargs git checkout"
 alias ghs="git branch | percol | xargs git branch -D"
 function gl(){
   if [ $# -ne 0 ]; then
-    git log --reverse --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset' $@
+    git log --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset' $@
   else
-    git log --reverse --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset' -10
+    git log --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset' -10
   fi
 }
 function gp(){
