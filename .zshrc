@@ -33,7 +33,6 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
 fi
 
 # Configuration for git
-alias g="git"
 alias gs="git status"
 alias gd="git diff"
 alias ga="git commit -am"
@@ -155,3 +154,4 @@ csalias bundler rspec 'bundle exec rspec'
 # golang
 export GOPATH=${HOME}/go
 export GOROOT="/usr/local/Cellar/go/1.2/libexec"
+alias g="/usr/local/bin/go"
