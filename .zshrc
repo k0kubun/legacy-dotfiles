@@ -155,3 +155,4 @@ csalias bundler rspec 'bundle exec rspec'
 export GOPATH=${HOME}/go
 export GOROOT="/usr/local/Cellar/go/1.2/libexec"
 alias g="/usr/local/bin/go"
+alias gor="/usr/local/bin/go run"
