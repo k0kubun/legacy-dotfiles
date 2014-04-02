@@ -38,7 +38,7 @@ alias gd="git diff"
 alias ga="git commit -am"
 alias gg="git grep -n"
 alias gh="git branch"
-alias go="git checkout"
+alias co="git checkout"
 alias gus="git branch | percol | xargs git checkout"
 alias ghs="git branch | percol | xargs git branch -D"
 function gl(){
