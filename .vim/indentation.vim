@@ -1,6 +1,6 @@
 set autoindent    " 自動でインデント
 set smartindent   " 新しい行を開始したときに、新しい行のインデントを現在行と同じ量にする。
-set expandtab     " tabでなくスペースを挿入(C-v Tabでタブを挿入できる)
+set noexpandtab   " tabをspaceに置換しない
 set cindent       " Cプログラムファイルの自動インデントを始める
 
 set tabstop=2     " Tabの幅
