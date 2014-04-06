@@ -101,9 +101,8 @@
   </item>
 
   <item>
-    <name>[Not Terminal] Control+PNBF to Up/Down/Left/Right</name>
+    <name>Control+PNBF to Up/Down/Left/Right</name>
     <identifier>option.emacsmode_controlPNBF_imported</identifier>
-    <not>TERMINAL</not>
     <autogen>__KeyToKey__ KeyCode::P, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_UP</autogen>
     <autogen>__KeyToKey__ KeyCode::N, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_DOWN</autogen>
     <autogen>__KeyToKey__ KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_LEFT</autogen>
