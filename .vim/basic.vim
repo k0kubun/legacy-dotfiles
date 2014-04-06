@@ -14,6 +14,7 @@ set hlsearch                     " 検索結果ハイライト
 set laststatus=2                 " 常にステータスラインを表示
 set bs=start,indent              " インサートモードで文字を消せるようにする
 set clipboard=unnamed,autoselect " ヤンクでクリップボードにコピー
+set cmdheight=2                  " コマンドラインウィンドウを2行で表示
 
 " 自動コメント防止
 autocmd FileType * set formatoptions-=ro
