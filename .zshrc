@@ -55,6 +55,8 @@ function gp(){
     git push
   fi
 }
+alias titech="git config --global http.proxy 131.112.125.238:3128"
+alias untitech="git config --global --unset http.proxy"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
