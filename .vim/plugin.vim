@@ -28,3 +28,6 @@ set rtp+=$GOROOT/misc/vim
 
 " golint
 exe "set rtp+=" . globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
+
+" coq-syntax
+au BufRead,BufNewFile *.v set filetype=coq
