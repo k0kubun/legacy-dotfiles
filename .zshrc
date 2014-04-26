@@ -159,3 +159,19 @@ export PATH="${GOPATH}/bin:$PATH"
 export GOROOT="/usr/local/Cellar/go/1.2.1/libexec"
 alias g="/usr/local/bin/go"
 alias gor="/usr/local/bin/go run"
+
+# misc
+function lines(){
+  if [ $# -ne 0 ]; then
+		sum=0
+		for source in `find . -type f -name "*.$@"`
+		do
+			lines=`wc -l $source | sed -e "s/ [^ ]*$//" | sed -e "s/ //g"`
+			sum=`expr $lines + $sum`
+			printf "%6d $source\n" $lines
+		done
+		echo "Total: $sum"
+  else
+		echo "Usage: lines [extension]"
+  fi
+}
