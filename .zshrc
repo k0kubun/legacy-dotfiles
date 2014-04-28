@@ -196,7 +196,7 @@ function goverride {
 		fi
 
 		echo "#!/bin/sh" > $override_path
-		echo "go run \`find $load_path -type f -name \"*.go\"\`" >> $override_path
+		echo "go run \`find $load_path -type f -name \"*.go\"\` \$@" >> $override_path
 		chmod 755 $override_path
 
 		echo "Installed overrided $1"
