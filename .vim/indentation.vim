@@ -1,6 +1,6 @@
 set autoindent    " 自動でインデント
 set smartindent   " 新しい行を開始したときに、新しい行のインデントを現在行と同じ量にする。
-set noexpandtab   " tabをspaceに置換しない
+set expandtab   " tabをspaceに置換しない
 set cindent       " Cプログラムファイルの自動インデントを始める
 
 set tabstop=2     " Tabの幅
@@ -19,4 +19,5 @@ if has("autocmd")
   autocmd FileType haml       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType vim        setlocal sw=2 sts=2 ts=2 et
   autocmd FileType yacc       setlocal sw=8 sts=8 ts=8 et
+  autocmd FileType go         setlocal sw=2 sts=2 ts=2 et noexpandtab
 endif
