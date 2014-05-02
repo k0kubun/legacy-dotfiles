@@ -36,7 +36,6 @@ fi
 alias gs="git status"
 alias gd="git diff"
 alias ga="git commit -am"
-alias gg="git grep -n"
 alias gh="git branch"
 alias co="git checkout"
 alias gus="git branch | percol | xargs git checkout"
@@ -53,6 +52,13 @@ function gp(){
     git push $@ `git rev-parse --abbrev-ref HEAD`
   else
     git push
+  fi
+}
+function gg() {
+  if [ -e .git ]; then
+    git grep -n $@
+  else
+    find . -type f | xargs grep -n $@
   fi
 }
 alias titech="git config --global http.proxy 131.112.125.238:3128"
