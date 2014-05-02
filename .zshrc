@@ -58,7 +58,7 @@ function gg() {
   if [ -e .git ]; then
     git grep -n $@
   else
-    find . -type f | xargs grep -n $@
+    find . -type f | xargs grep -n --color=auto $@
   fi
 }
 alias titech="git config --global http.proxy 131.112.125.238:3128"
