@@ -66,3 +66,7 @@ nnoremap <silent> gh :let @/=''<CR>
 
 " Git Blame
 nnoremap <silent> gb :<C-u>Gblame<CR>
+
+" Golang
+noremap <silent> ;t :!go test .<CR>
+noremap <silent> ;r :!go run %<CR>
