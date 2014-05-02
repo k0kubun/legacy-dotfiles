@@ -118,7 +118,7 @@ alias raked='RAILS_ENV=development rake'
 alias rakep='RAILS_ENV=production rake'
 
 # Screen Lock
-alias l='"/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession" -suspend'
+alias lock='"/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession" -suspend'
 
 # hash rocket
 function hr() {
