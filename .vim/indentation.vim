@@ -20,9 +20,4 @@ if has("autocmd")
   autocmd FileType vim        setlocal sw=2 sts=2 ts=2 et
   autocmd FileType yacc       setlocal sw=8 sts=8 ts=8 et
   autocmd FileType go         setlocal sw=2 sts=2 ts=2 et noexpandtab
-
-  " For scheme
-  autocmd FileType scheme     set nocindent
-  autocmd FileType scheme     set lisp
-  autocmd FileType scheme     setlocal sw=2 sts=2 ts=2 et
 endif
