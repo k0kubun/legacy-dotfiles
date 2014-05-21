@@ -24,6 +24,6 @@ if has("autocmd")
   " For scheme
   autocmd FileType scheme     set nocindent
   autocmd FileType scheme     set lisp
-  autocmd FileType scheme     set lispwords=define,let
+  autocmd FileType scheme     set lispwords=define,let,lambda
   autocmd FileType scheme     setlocal sw=2 sts=2 ts=2 et
 endif
