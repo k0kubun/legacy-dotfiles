@@ -26,8 +26,14 @@ let b:undo_indent = 'setlocal '.join([
 \ ])
 
 function! GetSchemeIndent()
-  let indentCount = GetOpenParenthesisCount() - GetCloseParenthesisCount()
-  return indent(prevnonblank(v:lnum - 1)) + indentCount * &l:shiftwidth
+  let indentDiff = 0
+  for i in range(1, v:lnum)
+    let line = getline(i)
+    let indentDiff += GetCharCount(line, "(")
+    let indentDiff -= GetCharCount(line, ")")
+  endfor
+
+  return indentDiff * &l:shiftwidth
 endfunction
 
 function! GetCharCount(text, char)
@@ -38,18 +44,6 @@ function! GetCharCount(text, char)
     endif
   endfor
   return cnt
-endfunction
-
-function! GetOpenParenthesisCount()
-  let prevLine = getline(prevnonblank(v:lnum - 1))
-  let currentLine = getline(v:lnum)
-  return GetCharCount(prevLine, "(") + GetCharCount(currentLine, "(")
-endfunction
-
-function! GetCloseParenthesisCount()
-  let prevLine = getline(prevnonblank(v:lnum - 1))
-  let currentLine = getline(v:lnum)
-  return GetCharCount(prevLine, ")") + GetCharCount(currentLine, ")")
 endfunction
 
 let b:did_indent = 1
