@@ -222,3 +222,6 @@ function goverride {
 		echo "    goverride [command]"
   fi
 }
+
+# Scheme
+alias gosh="gosh-rl"
