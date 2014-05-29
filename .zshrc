@@ -1,5 +1,5 @@
 # Load splitted configs
-for file in `ls -F ~/.zsh/lib/*`
+for file in `/bin/ls -F ~/.zsh/lib/*`
 do
   source $file
 done

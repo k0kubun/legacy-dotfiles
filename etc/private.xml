@@ -208,6 +208,7 @@
     <autogen>__KeyToKey__ KeyCode::W, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::W</autogen>
   </item>
 
+  <!--
 	<item>
 		<name>HHK mac arrangement mode (backquote to delete, backslash to delete, delete to backslash, escape to backquote)</name>
 		<identifier>remap.hhk_mac_arrangement</identifier>
@@ -216,4 +217,12 @@
 		<autogen>__KeyToKey__ KeyCode::DELETE, KeyCode::BACKSLASH</autogen>
 		<autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::BACKQUOTE</autogen>
 	</item>
+  -->
+
+  <item>
+    <name>[Only Terminal] Command+A to Option+A</name>
+    <identifier>option.command_a_to_option_a</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::A, VK_COMMAND, KeyCode::A, ModifierFlag::OPTION_L</autogen>
+  </item>
 </root>
