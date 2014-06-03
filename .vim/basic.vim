@@ -21,6 +21,7 @@ autocmd FileType * set formatoptions-=ro
 
 " Ruby syntax highlight
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+autocmd BufNewFile,BufRead Gemfile.shared set filetype=ruby
 autocmd BufNewFile,BufRead Capfile set filetype=ruby
 
 " ファイルタイプ判定をon
