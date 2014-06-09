@@ -18,6 +18,6 @@ function ttp() {
 # Go
 export GOPATH=${HOME}/go
 export PATH="${GOPATH}/bin:$PATH"
-export GOROOT="/usr/local/Cellar/go/1.2.1/libexec"
+export GOROOT="/usr/local/opt/go/libexec"
 alias g="/usr/local/bin/go"
 alias gor="/usr/local/bin/go run"
