@@ -32,6 +32,10 @@ function gg() {
   fi
 }
 
+function up() {
+  git branch --set-upstream-to=$@/master master
+}
+
 # Apply proxy for titech pubnet
 alias titech="git config --global http.proxy 131.112.125.238:3128"
 alias untitech="git config --global --unset http.proxy"
