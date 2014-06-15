@@ -1,0 +1,6 @@
+{
+  "Keymap": {
+    "C-c": "peco.Finish",
+    "C-d": "peco.Finish"
+  }
+}
