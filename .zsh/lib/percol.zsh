@@ -16,9 +16,6 @@ function percol-select-history() {
   CURSOR=$#BUFFER
   zle -R -c
 }
-zle -N percol-select-history
-
-bindkey '^r' percol-select-history
 
 # Function
 # ppgrep -- find or signal processes by name

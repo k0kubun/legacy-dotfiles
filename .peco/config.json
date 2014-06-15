@@ -1,6 +1,11 @@
 {
   "Keymap": {
-    "C-c": "peco.Finish",
-    "C-d": "peco.Finish"
+    "C-c": "peco.Cancel",
+    "C-d": "peco.EndOfFile"
+  },
+  "Style": {
+    "Basic": ["on_default", "default"],
+    "Selected": ["on_cyan", "black"],
+    "Query": ["yellow", "bold"]
   }
 }

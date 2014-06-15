@@ -59,3 +59,9 @@ percol.import_keymap({
   'M-r' : lambda percol: percol.command.toggle_finder(FinderMultiQueryRegex),
   'M-a' : lambda percol: percol.command.mark_all()
 })
+
+## Color
+percol.view.CANDIDATES_LINE_BASIC    = ("on_default", "default")
+percol.view.CANDIDATES_LINE_SELECTED = ("underline", "on_cyan", "black")
+percol.view.CANDIDATES_LINE_MARKED   = ("bold", "on_cyan", "black")
+percol.view.CANDIDATES_LINE_QUERY    = ("yellow", "bold")
