@@ -2,7 +2,7 @@ if ! which peco > /dev/null; then
   return
 fi
 
-# History
+# history
 function peco-select-history() {
   typeset tac
   if which tac > /dev/null; then
@@ -16,3 +16,6 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+# git branch
+alias -g B='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
