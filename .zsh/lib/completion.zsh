@@ -7,3 +7,4 @@ setopt magic_equal_subst
 
 # complete / of dir name
 setopt auto_param_slash
+setopt mark_dirs
