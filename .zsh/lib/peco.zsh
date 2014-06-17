@@ -1,3 +1,6 @@
+# git branch
+alias -g B='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
+
 if ! which peco > /dev/null; then
   return
 fi
@@ -16,6 +19,3 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
-
-# git branch
-alias -g B='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
