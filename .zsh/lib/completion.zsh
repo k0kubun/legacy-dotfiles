@@ -1,16 +1,16 @@
 # use completion
-autoload -U compinit
-compinit
+# autoload -U compinit
+# compinit
 
 # select completion by cursor
-zstyle ':completion:*:default' menu select=2
+# zstyle ':completion:*:default' menu select=2
 
 # --opt=*** completion
-setopt magic_equal_subst
+# setopt magic_equal_subst
 
 # complete / of dir name
-setopt auto_param_slash
-setopt mark_dirs
+# setopt auto_param_slash
+# setopt mark_dirs
 
 # colorize completions
 zstyle ':completion:*' verbose yes
@@ -22,11 +22,11 @@ zstyle ':completion:*:options' description 'yes'
 zstyle ':completion:*:descriptions' format '%F{yellow}Completing %B%d%b%f'$DEFAULT
 
 # group completions
-zstyle ':completion:*' group-name ''
+# zstyle ':completion:*' group-name ''
 
 # option separater
-zstyle ':completion:*' list-separator '-->'
-zstyle ':completion:*:manuals' separate-sections true
+# zstyle ':completion:*' list-separator '-->'
+# zstyle ':completion:*:manuals' separate-sections true
 
 # colorize completions
 autoload colors
