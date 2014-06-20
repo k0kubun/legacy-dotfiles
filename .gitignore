@@ -12,3 +12,4 @@ ac-comphist.dat
 .vim/tmp/*
 .\#*
 tags
+.gitconfig.local
