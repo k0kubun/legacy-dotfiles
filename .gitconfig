@@ -22,3 +22,5 @@
 	default = simple
 [branch]
 	autosetuprebase = always
+[ghq]
+  root = ~/src
