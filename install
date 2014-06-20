@@ -37,7 +37,7 @@ update_alias() {
 for dotfile in `ls -A | grep "^\."`
 do
   # skip .git, .gitconfig and .gitmodules
-  echo $dotfile | grep -q "^\.\(git\|gitconfig\|gitmodules\)\$"
+  echo $dotfile | grep -q "^\.\(git\|gitmodules\)\$"
   [ $? -eq 0 ] && continue
 
   update_alias $dotfile
