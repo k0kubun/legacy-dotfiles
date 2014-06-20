@@ -1,3 +1,6 @@
+[user]
+  name = Takashi Kokubun
+  email = takashikkbn@gmail.com
 [include]
   path = .gitconfig.local
 [color]
