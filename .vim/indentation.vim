@@ -19,6 +19,6 @@ if has("autocmd")
   autocmd FileType haml       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType slim       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType vim        setlocal sw=2 sts=2 ts=2 et
-  autocmd FileType yacc       setlocal sw=8 sts=8 ts=8 et
+  autocmd FileType yacc       setlocal sw=2 sts=2 ts=2 et noexpandtab
   autocmd FileType go         setlocal sw=2 sts=2 ts=2 et noexpandtab
 endif
