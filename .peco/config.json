@@ -1,7 +1,8 @@
 {
   "Keymap": {
     "C-c": "peco.Cancel",
-    "C-d": "peco.EndOfFile"
+    "C-d": "peco.EndOfFile",
+    "M-d": "peco.DeleteForwardWord"
   },
   "Style": {
     "Basic": ["on_default", "default"],
