@@ -25,6 +25,7 @@ let g:gitgutter_sign_column_always = 1
 
 " gocode
 set rtp+=$GOROOT/misc/vim
+let g:go_fmt_autofmt = 1
 
 " golint
 exe "set rtp+=" . globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
