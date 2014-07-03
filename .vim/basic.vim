@@ -23,6 +23,7 @@ autocmd FileType * set formatoptions-=ro
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Gemfile.shared set filetype=ruby
 autocmd BufNewFile,BufRead Capfile set filetype=ruby
+autocmd BufNewFile,BufRead *.cap set filetype=ruby
 
 " ファイルタイプ判定をon
 filetype plugin on
