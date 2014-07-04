@@ -2,11 +2,14 @@
   "Keymap": {
     "C-c": "peco.Cancel",
     "C-d": "peco.EndOfFile",
+    "C-v": "peco.ToggleSelectMode",
     "M-d": "peco.DeleteForwardWord"
   },
   "Style": {
     "Basic": ["on_default", "default"],
+    "SavedSelection": ["on_blue", "black"],
     "Selected": ["on_cyan", "black"],
-    "Query": ["yellow", "bold"]
+    "Query": ["on_default", "default"],
+    "Matched": ["yellow", "bold"]
   }
 }
