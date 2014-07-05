@@ -3,7 +3,11 @@
     "C-c": "peco.Cancel",
     "C-d": "peco.EndOfFile",
     "C-v": "peco.ToggleSelectMode",
-    "M-d": "peco.DeleteForwardWord"
+    "M-d": "peco.DeleteForwardWord",
+    "C-i": {
+      "C-f": "peco.SelectNextPage",
+      "C-b": "peco.SelectPreviousPage"
+    }
   },
   "Style": {
     "Basic": ["on_default", "default"],
