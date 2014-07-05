@@ -32,3 +32,12 @@ function peco-src() {
 zle -N peco-src
 stty -ixon
 bindkey '^s' peco-src
+
+# process kill
+function peco-pkill() {
+  for pid in `ps aux | peco | awk '{ print $2 }'`
+  do
+    kill $pid
+  done
+}
+alias pk="peco-pkill"
