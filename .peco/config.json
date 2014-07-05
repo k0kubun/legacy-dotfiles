@@ -1,4 +1,5 @@
 {
+  "Prompt": "[peco]",
   "Keymap": {
     "C-c": "peco.Cancel",
     "C-d": "peco.EndOfFile",
@@ -10,10 +11,10 @@
     }
   },
   "Style": {
-    "Basic": ["on_default", "default"],
+    "Basic": ["on_default", "white"],
     "SavedSelection": ["on_blue", "black"],
     "Selected": ["on_cyan", "black"],
-    "Query": ["on_default", "default"],
+    "Query": ["on_default", "white"],
     "Matched": ["yellow", "bold"]
   }
 }
