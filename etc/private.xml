@@ -1,18 +1,5 @@
 <?xml version="1.0"?>
 <root>
-  <appdef>
-    <appname>YORUFUKUROU</appname>
-    <equal>com.YoruFukurouProject.YoruFukurou</equal>
-  </appdef>
-
-  <item>
-    <name>YoruFukurou Account Change</name>
-    <identifier>remap.yorufukurou_account_change</identifier>
-    <only>YORUFUKUROU</only>
-    <autogen>__KeyToKey__ KeyCode::K, VK_COMMAND, KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
-    <autogen>__KeyToKey__ KeyCode::J, VK_COMMAND, KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
-  </item>
-
   <item>
     <name>[Not Terminal] Command+O|P to Command+{|} (US)</name>
     <identifier>option.not_terminal_tab_change_us</identifier>
@@ -202,27 +189,16 @@
     <autogen>__KeyToKey__ KeyCode::QUOTE, KeyCode::QUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
   </item>
 
-  <!--
-	<item>
-		<name>HHK mac arrangement mode (backquote to delete, backslash to delete, delete to backslash, escape to backquote)</name>
-		<identifier>remap.hhk_mac_arrangement</identifier>
-		<autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DELETE</autogen>
-		<autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::DELETE</autogen>
-		<autogen>__KeyToKey__ KeyCode::DELETE, KeyCode::BACKSLASH</autogen>
-		<autogen>__KeyToKey__ KeyCode::ESCAPE, KeyCode::BACKQUOTE</autogen>
-	</item>
-  -->
+  <appdef>
+    <appname>YORUFUKUROU</appname>
+    <equal>com.YoruFukurouProject.YoruFukurou</equal>
+  </appdef>
 
   <item>
-    <name>[Only Terminal] Command+A to Option+A</name>
-    <identifier>option.command_a_to_option_a</identifier>
-    <only>TERMINAL</only>
-    <autogen>__KeyToKey__ KeyCode::A, VK_COMMAND, KeyCode::A, ModifierFlag::OPTION_L</autogen>
-  </item>
-
-  <item>
-    <name>Command+W to Command+S</name>
-    <identifier>option.command_w_to_command_s</identifier>
-    <autogen>__KeyToKey__ KeyCode::W, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+    <name>YoruFukurou Account Change</name>
+    <identifier>remap.yorufukurou_account_change</identifier>
+    <only>YORUFUKUROU</only>
+    <autogen>__KeyToKey__ KeyCode::K, VK_COMMAND, KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
+    <autogen>__KeyToKey__ KeyCode::J, VK_COMMAND, KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
   </item>
 </root>
