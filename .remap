@@ -125,6 +125,10 @@ item "[Only Terminal] Command+A to Option+A", only: "TERMINAL" do
   remap "Cmd-A", to: "M-a"
 end
 
+item "Disable Command-W" do
+  remap "Cmd-W", to: "w"
+end
+
 appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
 
 item "YoruFukurou Account Change", only: "YORUFUKUROU" do
