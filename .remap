@@ -34,8 +34,13 @@ item "Exchange Control + Space and Command + Space" do
   remap "Cmd-Space", to: "C-Space"
 end
 
+# Cmd-L is used by CapsLock
+item "Command+K to Command+L" do
+  remap "Cmd-K", to: "Cmd-L"
+end
+
 item "CapsLock ON", config_not: "notsave.private_capslock_on" do
-  remap "Cmd-L", to: ["capslock", "VK_CONFIG_FORCE_OFF_notsave_private_capslock_on"]
+  remap "Cmd-L", to: ["capslock", "VK_CONFIG_FORCE_ON_notsave_private_capslock_on"]
 end
 
 item "CapsLock OFF", config_only: "notsave.private_capslock_on" do
@@ -117,8 +122,8 @@ item "Shift by control" do
 end
 
 item "Exchange single quote and double quote" do
-  remap "'", to: "Shift-'"
   remap "Shift-'", to: "'"
+  remap "'", to: "Shift-'"
 end
 
 item "[Only Terminal] Command+A to Option+A", only: "TERMINAL" do
