@@ -17,7 +17,8 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'vim-scripts/coq-syntax'
 NeoBundle 'eagletmt/coqtop-vim'
 NeoBundle 'haruyama/scheme.vim'
-NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
+NeoBundle 'fatih/vim-go'
+" NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 
 " Completion
 NeoBundle 'neocomplcache'
