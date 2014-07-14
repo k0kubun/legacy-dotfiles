@@ -140,3 +140,10 @@ end
 item "Disable Command-W" do
   remap "Cmd-W", to: "w"
 end
+
+item "Screen shot" do
+  remap "Ctrl-Shift-4", to: "Cmd-Shift-4"
+  remap "Ctrl-Shift-3", to: "Cmd-Shift-3"
+  remap "Opt-Shift-4", to: "Cmd-Shift-4"
+  remap "Opt-Shift-3", to: "Cmd-Shift-3"
+end
