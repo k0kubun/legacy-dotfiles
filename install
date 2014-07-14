@@ -22,7 +22,7 @@ update_alias() {
   # remove existing file at destination path
   if [ -e $alias_destination_path ] || [ -L $alias_destination_path ]; then
     echo "\nDeleted existing file: "$alias_destination_path
-    rm $alias_destination_path
+    rm -rf $alias_destination_path
   fi
 
   # create symlink
