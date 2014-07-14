@@ -44,6 +44,17 @@ do
 done
 
 # override keyremap4macbook configuration
-rm -f ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
-ln -s $script_absolute_path"/etc/private.xml" \
-  $HOME"/Library/Application Support/KeyRemap4MacBook/private.xml"
+# rm -f ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
+# ln -s $script_absolute_path"/etc/private.xml" \
+#   $HOME"/Library/Application Support/KeyRemap4MacBook/private.xml"
+
+if ! which dotremap > /dev/null; then
+  sudo gem install dotremap
+
+  if ! which dotremap > /dev/null; then
+    echo "failed to install dotremap"
+    return
+  fi
+fi
+
+dotremap
