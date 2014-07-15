@@ -1,6 +1,6 @@
 if ! which dotremap > /dev/null; then
   echo "Installing dotremap..."
-  gem install dotremap
+  sudo gem install dotremap
 
   if ! which dotremap > /dev/null; then
     echo "failed to install dotremap"
