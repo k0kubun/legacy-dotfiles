@@ -147,3 +147,7 @@ item "Screen shot" do
   remap "Opt-Shift-4", to: "Cmd-Shift-4"
   remap "Opt-Shift-3", to: "Cmd-Shift-3"
 end
+
+item "Terminal enter fix", only: "TERMINAL" do
+  remap "Return", to: "C-j"
+end

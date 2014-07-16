@@ -1,6 +1,7 @@
 {
   "Prompt": "[peco]",
   "Keymap": {
+    "C-j": "peco.Finish",
     "C-c": "peco.Cancel",
     "C-d": "peco.EndOfFile",
     "C-v": "peco.ToggleSelectMode",
