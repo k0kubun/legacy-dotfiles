@@ -1,11 +1,7 @@
 #!/usr/bin/env ruby
 
 appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
-
-item "YoruFukurou Account Change", only: "YORUFUKUROU" do
-  remap "Cmd-K", to: "Cmd-Opt-Up"
-  remap "Cmd-J", to: "Cmd-Opt-Down"
-end
+appdef "CHROME", equal: "com.google.Chrome"
 
 item "[Not Terminal] Command+O|P to Command+{|} (US)", not: "TERMINAL" do
   remap "Cmd-P", to: "Cmd-Shift-]"
@@ -42,7 +38,7 @@ item "Exchange Control + Space and Command + Space" do
 end
 
 # Cmd-L is used by CapsLock
-item "Command+K to Command+L" do
+item "Command+K to Command+L", only: "CHROME" do
   remap "Cmd-K", to: "Cmd-L"
 end
 
@@ -146,4 +142,9 @@ item "Screen shot" do
   remap "Ctrl-Shift-3", to: "Cmd-Shift-3"
   remap "Opt-Shift-4", to: "Cmd-Shift-4"
   remap "Opt-Shift-3", to: "Cmd-Shift-3"
+end
+
+item "YoruFukurou Account Change", only: "YORUFUKUROU" do
+  remap "Cmd-K", to: "Cmd-Opt-Up"
+  remap "Cmd-J", to: "Cmd-Opt-Down"
 end
