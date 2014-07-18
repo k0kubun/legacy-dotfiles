@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
 appdef "CHROME", equal: "com.google.Chrome"
 

@@ -10,7 +10,12 @@ update_alias() {
   file_name=$1
 
   # alias path initialization
-  alias_source_path=$script_absolute_path"/"$file_name
+  if [ $# -eq 2 ]; then
+    src_name=$2
+    alias_source_path=$script_absolute_path"/"$src_name
+  else
+    alias_source_path=$script_absolute_path"/"$file_name
+  fi
   alias_destination_path=$HOME"/"$file_name
 
   # check alias source
@@ -37,16 +42,14 @@ update_alias() {
 for dotfile in `ls -A | grep "^\."`
 do
   # skip .git, .gitconfig and .gitmodules
-  echo $dotfile | grep -q "^\.\(git\|gitmodules\)\$"
+  echo $dotfile | grep -q "^\.\(git\|gitmodules\|remap\\.rb\)\$"
   [ $? -eq 0 ] && continue
 
+  echo $dotfile
   update_alias $dotfile
 done
 
-# override keyremap4macbook configuration
-# rm -f ~/Library/Application\ Support/KeyRemap4MacBook/private.xml
-# ln -s $script_absolute_path"/etc/private.xml" \
-#   $HOME"/Library/Application Support/KeyRemap4MacBook/private.xml"
+update_alias .remap .remap.rb
 
 if ! which dotremap > /dev/null; then
   sudo gem install dotremap
