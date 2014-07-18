@@ -1,27 +1,27 @@
 appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
 appdef "CHROME", equal: "com.google.Chrome"
 
-item "[Not Terminal] Command+O|P to Command+{|} (US)", not: "TERMINAL" do
+item "Command+O|P to Command+{|}", not: "TERMINAL" do
   remap "Cmd-P", to: "Cmd-Shift-]"
   remap "Cmd-O", to: "Cmd-Shift-["
 end
 
-item "[Only Terminal] Command+O|P to Option+{|} (US)", only: "TERMINAL" do
+item "Command+O|P to Option+{|}", only: "TERMINAL" do
   remap "Cmd-P", to: "Opt-Shift-]"
   remap "Cmd-O", to: "Opt-Shift-["
 end
 
-item "[Not Terminal] Command+E to Command+W", not: "TERMINAL" do
+item "Command+E to Command+W", not: "TERMINAL" do
   remap "Cmd-E", to: "Cmd-W"
 end
 
-item "[Only Terminal] Command+T to Option+T, Command+E to Option+E", only: "TERMINAL" do
+item "Command+T to Option+T, Command+E to Option+E", only: "TERMINAL" do
   remap "Cmd-T", to: "Opt-T"
   remap "Cmd-E", to: "Opt-E"
 end
 
 # For tmux copy mode
-item "[Only Terminal] Command+I to Option+I", only: "TERMINAL" do
+item "Command+I to Option+I", only: "TERMINAL" do
   remap "Cmd-I", to: "Opt-I"
 end
 
@@ -53,7 +53,7 @@ item "CapsLock Mode" do
   show_message "CapsLock"
 end
 
-item "[Not Terminal] Control+PNBF to Up/Down/Left/Right", not: "TERMINAL" do
+item "Control+PNBF to Up/Down/Left/Right", not: "TERMINAL" do
   remap "C-p", to: "Up"
   remap "C-n", to: "Down"
   remap "C-b", to: "Left"
@@ -61,24 +61,24 @@ item "[Not Terminal] Control+PNBF to Up/Down/Left/Right", not: "TERMINAL" do
 end
 
 # Use Cmd_R+D as M-d
-item "[Not Terminal] Command+D to Option+Forward Delete", not: "TERMINAL" do
+item "Command+D to Option+Forward Delete", not: "TERMINAL" do
   remap "Cmd-D", to: "Opt-forward_delete"
 end
 
-item "[Only Terminal] Command+D to Option+D, Command+BF to Option+BF", only: "TERMINAL" do
+item "Command+D to Option+D, Command+BF to Option+BF", only: "TERMINAL" do
   remap "Cmd-D", to: "M-d"
   remap "Cmd-B", to: "M-b"
   remap "Cmd-F", to: "M-f"
 end
 
 # Use Cmd_R+B/F as M-b/f, and Cmd_R+S as Cmd+F to avoid conflict with M-f
-item "[Not Terminal] Command+B/F to Option+Left/Right, Command+S to Command+F", not: "TERMINAL" do
+item "Command+B/F to Option+Left/Right, Command+S to Command+F", not: "TERMINAL" do
   remap "Cmd-B", to: "Opt-Left"
   remap "Cmd-F", to: "Opt-Right"
   remap "Cmd-S", to: "Cmd-F"
 end
 
-item "[Not Terminal] Control+W to Option+Delete", not: "TERMINAL" do
+item "Control+W to Option+Delete", not: "TERMINAL" do
   remap "C-w", to: "Opt-delete"
 end
 
@@ -86,17 +86,22 @@ item "Control+LeftClick to Command+LeftClick" do
   autogen "__PointingButtonToPointingButton__ PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND"
 end
 
-item "[Not Terminal] Chrome inspector Command+Control+I", not: "TERMINAL" do
+item "YoruFukurou Account Change", only: "YORUFUKUROU" do
+  remap "Cmd-K", to: "Cmd-Opt-Up"
+  remap "Cmd-J", to: "Cmd-Opt-Down"
+end
+
+item "Chrome inspector Command+Control+I", not: "TERMINAL" do
   remap "Cmd-Ctrl-I", to: "Cmd-Opt-i"
 end
 
 # browser reload
-item "[Not Terminal] Control-R -> Command-R", not: "TERMINAL" do
+item "Control-R -> Command-R", not: "TERMINAL" do
   remap "C-r", to: "Cmd-R"
 end
 
 # tmux prefix
-item "[Only Terminal] Command-R -> Option-R", only: "TERMINAL" do
+item "Command-R -> Option-R", only: "TERMINAL" do
   remap "Cmd-R", to: "M-r"
 end
 
@@ -127,7 +132,7 @@ item "Exchange single quote and double quote" do
   remap "'", to: "Shift-'"
 end
 
-item "[Only Terminal] Command+A to Option+A", only: "TERMINAL" do
+item "Command+A to Option+A", only: "TERMINAL" do
   remap "Cmd-A", to: "M-a"
 end
 
@@ -140,9 +145,4 @@ item "Screen shot" do
   remap "Ctrl-Shift-3", to: "Cmd-Shift-3"
   remap "Opt-Shift-4", to: "Cmd-Shift-4"
   remap "Opt-Shift-3", to: "Cmd-Shift-3"
-end
-
-item "YoruFukurou Account Change", only: "YORUFUKUROU" do
-  remap "Cmd-K", to: "Cmd-Opt-Up"
-  remap "Cmd-J", to: "Cmd-Opt-Down"
 end
