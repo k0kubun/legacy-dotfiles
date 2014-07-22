@@ -39,7 +39,7 @@ nnoremap <silent> ;e :<C-u>Explore<CR>
 nnoremap <silent> ;xc :qa!<CR>
 
 " Unite.vim
-nnoremap <silent> ;u :<C-u>Unite buffer file_rec/git<CR>
+nnoremap <silent> ;u :<C-u>Unite buffer git_cached<CR>
 imap ;q <C-u><C-h>
 
 " ctags
