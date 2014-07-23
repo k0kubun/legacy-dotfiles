@@ -146,3 +146,7 @@ item "Screen shot" do
   remap "Opt-Shift-4", to: "Cmd-Shift-4"
   remap "Opt-Shift-3", to: "Cmd-Shift-3"
 end
+
+item "Window change in the same app" do
+  remap "Cmd-tab", to: "Cmd-F1"
+end
