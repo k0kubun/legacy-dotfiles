@@ -1,6 +1,12 @@
 appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
 appdef "CHROME", equal: "com.google.Chrome"
 
+item "Application shortcuts" do
+  remap "C-o", to: invoke("YoruFukurou")
+  remap "C-u", to: invoke("Google Chrome")
+  remap "C-h", to: invoke("iTerm")
+end
+
 item "Command+O|P to Command+{|}", not: "TERMINAL" do
   remap "Cmd-P", to: "Cmd-Shift-]"
   remap "Cmd-O", to: "Cmd-Shift-["
