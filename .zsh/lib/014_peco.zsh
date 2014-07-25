@@ -15,7 +15,7 @@ function peco-select-history() {
 	fi
 	BUFFER=$(fc -l -n 1 | eval $tac | peco --query "$LBUFFER")
 	CURSOR=$#BUFFER
-	zle -R -c
+	zle redisplay
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
@@ -27,7 +27,7 @@ function peco-src() {
 		BUFFER="cd ${GOPATH}/src/${selected_dir}"
 		zle accept-line
 	fi
-	zle clear-screen
+	zle redisplay
 }
 zle -N peco-src
 stty -ixon
