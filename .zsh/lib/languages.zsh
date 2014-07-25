@@ -1,6 +1,7 @@
 # Python
 export PATH="$HOME/.pyenv/bin:$PATH"
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# Disable pyenv because "pyenv init" is very slow
+# if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # Scheme
 alias gosh="gosh-rl"
