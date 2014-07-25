@@ -1,6 +1,9 @@
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+
+# Currently "rbenv init" is disabled because it is very slow
+# eval "$(rbenv init -)"
+alias bundle='eval "$(rbenv init -)"; unalias bundle; bundle'
 
 # auto rehash when gem install
 function gem(){
