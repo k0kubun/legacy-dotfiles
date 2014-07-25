@@ -1,6 +1,11 @@
-DEBUG=0
+TIMEFUNC=0
+LIB_DEBUG=0
 
-if [ $DEBUG -ne 0 ]; then
+if [ $LIB_DEBUG -ne 0 ]; then
+  TIMEFUNC=1
+fi
+
+if [ $TIMEFUNC -ne 0 ]; then
   function microsec() {
     perl -e 'use Time::HiRes qw(gettimeofday); my($sec,$microsec)=gettimeofday(); $curdate=localtime($sec); print $microsec . "\n";'
   }
@@ -25,7 +30,7 @@ fi
 # Load splitted configs
 for file in `/bin/ls -F ~/.zsh/lib/*`
 do
-  if [ $DEBUG -ne 0 ]; then
+  if [ $LIB_DEBUG -ne 0 ]; then
     start
     source $file
     finish $file
