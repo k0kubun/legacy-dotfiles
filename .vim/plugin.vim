@@ -32,3 +32,11 @@ exe "set rtp+=" . globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
 
 " coq-syntax
 au BufRead,BufNewFile *.v set filetype=coq
+
+" disable trailing whitespace highlight in unite
+autocmd FileType unite autocmd! BufWinEnter * match
+autocmd FileType unite autocmd! InsertLeave * match
+autocmd FileType unite autocmd! InsertEnter * match
+autocmd BufLeave unite autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd BufLeave unite autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufLeave unite autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
