@@ -1,6 +1,11 @@
 TIMEFUNC=0
 LIB_DEBUG=0
 
+if ! which go > /dev/null; then
+	TIMEFUNC=0
+	LIB_DEBUG=0
+fi
+
 if [ $LIB_DEBUG -ne 0 ]; then
 	TIMEFUNC=1
 fi
