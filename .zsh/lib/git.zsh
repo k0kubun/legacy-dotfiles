@@ -9,31 +9,31 @@ alias ghs="git branch | percol | xargs git branch -D"
 alias amend="git commit --amend"
 
 function gl(){
-  if [ $# -ne 0 ]; then
-    git log --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset' $@
-  else
-    git log --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset' -10
-  fi
+	if [ $# -ne 0 ]; then
+		git log --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset' $@
+	else
+		git log --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset' -10
+	fi
 }
 
 function gp(){
-  if [ $# -ne 0 ]; then
-    git push $@ `git rev-parse --abbrev-ref HEAD`
-  else
-    git push
-  fi
+	if [ $# -ne 0 ]; then
+		git push $@ `git rev-parse --abbrev-ref HEAD`
+	else
+		git push
+	fi
 }
 
 function gg() {
-  if [ -e .git ]; then
-    git grep -n $@
-  else
-    find . -type f | xargs grep -n --color=auto $@
-  fi
+	if [ -e .git ]; then
+		git grep -n $@
+	else
+		find . -type f | xargs grep -n --color=auto $@
+	fi
 }
 
 function up() {
-  git branch --set-upstream-to=$@/master master
+	git branch --set-upstream-to=$@/master master
 }
 
 # Apply proxy for titech pubnet

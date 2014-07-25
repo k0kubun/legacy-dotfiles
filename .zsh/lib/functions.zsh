@@ -1,11 +1,11 @@
 # function for grep
 function find-grep(){
-  find . -name \*.$1 -exec grep -nH $2 {} \;
+	find . -name \*.$1 -exec grep -nH $2 {} \;
 }
 
 # misc
 function lines(){
-  if [ $# -ne 0 ]; then
+	if [ $# -ne 0 ]; then
 		sum=0
 		for source in `find . -type f -name "*.$@"`
 		do
@@ -14,26 +14,26 @@ function lines(){
 			printf "%6d $source\n" $lines
 		done
 		echo "Total: $sum"
-  else
+	else
 		echo "Usage: lines [extension]"
-  fi
+	fi
 }
 
 # markdown to pdf
 function md2pdf() {
-  gimli -f $1
+	gimli -f $1
 }
 
 # override command in $GOPATH/bin for development
 function goverride {
-  local override_path
+	local override_path
 	local original_command_path
 	local load_path
 
 	override_path="$GOPATH/bin/$1"
 	original_command_path="$override_path.goverride"
 
-  if [ $# -eq 2 ]; then
+	if [ $# -eq 2 ]; then
 		load_path=$2
 
 		if [ ! -e $original_command_path ]; then
@@ -58,22 +58,22 @@ function goverride {
 		fi
 	else
 		echo "Usage:"
-		echo "  Install:"
-		echo "    goverride [command] [local_path]"
-		echo "  Uninstall:"
-		echo "    goverride [command]"
-  fi
+		echo "	Install:"
+		echo "		goverride [command] [local_path]"
+		echo "	Uninstall:"
+		echo "		goverride [command]"
+	fi
 }
 
 # command history analyzer
 function analyze() {
-  cat ~/.zsh_history | awk 'BEGIN {FS=";"} {print $2}' | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 15
+	cat ~/.zsh_history | awk 'BEGIN {FS=";"} {print $2}' | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 15
 }
 
 # bundler directory
 function bd() {
-  dir=`ruby -e "require 'bundler'; Bundler.load.specs.sort_by(&:name).each{|s| puts s.full_gem_path}" | peco`
-  if [ $? -eq 0 ]; then
-    cd $dir
-  fi
+	dir=`ruby -e "require 'bundler'; Bundler.load.specs.sort_by(&:name).each{|s| puts s.full_gem_path}" | peco`
+	if [ $? -eq 0 ]; then
+		cd $dir
+	fi
 }

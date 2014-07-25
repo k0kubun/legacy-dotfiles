@@ -2,26 +2,31 @@ TIMEFUNC=0
 LIB_DEBUG=0
 
 if [ $LIB_DEBUG -ne 0 ]; then
-  TIMEFUNC=1
+	TIMEFUNC=1
 fi
 
 if [ $TIMEFUNC -ne 0 ]; then
-  function microsec() {
-    perl -e 'use Time::HiRes qw(gettimeofday); my($sec,$microsec)=gettimeofday(); $curdate=localtime($sec); print $microsec . "\n";'
-  }
+	function microsec() {
+		perl -e <<-EOS
+			use Time::HiRes qw(gettimeofday);
+			my($sec,$microsec)=gettimeofday();
+			$curdate=localtime($sec);
+			print $microsec . "\n";
+		EOS
+	}
 
-  function start() {
-    START_TIME=`microsec`
-  }
+	function start() {
+		START_TIME=`microsec`
+	}
 
-  function finish() {
-    END_TIME=`microsec`
+	function finish() {
+		END_TIME=`microsec`
 
-    TIME=`expr ${END_TIME} - ${START_TIME}`
-    SEC=`expr $TIME / 1000000`
-    MIC=`expr $TIME % 1000000`
-    echo "${SEC}.`printf '%06d' $MIC`: $1"
-  }
+		TIME=`expr ${END_TIME} - ${START_TIME}`
+		SEC=`expr $TIME / 1000000`
+		MIC=`expr $TIME % 1000000`
+		echo "${SEC}.`printf '%06d' $MIC`: $1"
+	}
 fi
 
 # Load local settings first
@@ -30,11 +35,11 @@ fi
 # Load splitted configs
 for file in `/bin/ls -F ~/.zsh/lib/*`
 do
-  if [ $LIB_DEBUG -ne 0 ]; then
-    start
-    source $file
-    finish $file
-  else
-    source $file
-  fi
+	if [ $LIB_DEBUG -ne 0 ]; then
+		start
+		source $file
+		finish $file
+	else
+		source $file
+	fi
 done

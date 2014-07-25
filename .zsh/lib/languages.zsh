@@ -8,9 +8,9 @@ alias gosh="gosh-rl"
 # TeX
 export PATH="/usr/texbin:$PATH"
 function ttp() {
-  platex $1
-  dvipdfmx $1
-  rm *.dvi
-  rm *.log
-  rm *.aux
+	platex $1
+	dvipdfmx $1
+	rm *.dvi
+	rm *.log
+	rm *.aux
 }
