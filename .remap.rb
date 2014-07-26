@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
-appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
-appdef "CHROME", equal: "com.google.Chrome"
+# ************
+# * Launcher *
+# ************
 
 item "Application shortcuts" do
   remap "C-o", to: invoke("YoruFukurou")
@@ -9,32 +10,98 @@ item "Application shortcuts" do
   remap "C-h", to: invoke("iTerm")
 end
 
+
+# ****************
+# * Basic Remaps *
+# ****************
+
+item "Use Option_L and Option_R as Shift" do
+  remap "Opt_L", to: "Shift_L"
+  remap "Opt_R", to: "Shift_R"
+end
+
+item "Use Command_L as Control" do
+  remap "Cmd_L", to: "Ctrl_R"
+end
+
+
+# **************************************************
+# * Option Key Replacement (Use Cmd as Option too) *
+# **************************************************
+
+# M-o, M-p: Tab moves
+item "Command+O|P to Option+{|}", only: "TERMINAL" do
+  remap "Cmd-P", to: "Opt-Shift-]"
+  remap "Cmd-O", to: "Opt-Shift-["
+end
 item "Command+O|P to Command+{|}", not: "TERMINAL" do
   remap "Cmd-P", to: "Cmd-Shift-]"
   remap "Cmd-O", to: "Cmd-Shift-["
 end
 
-item "Command+O|P to Option+{|}", only: "TERMINAL" do
-  remap "Cmd-P", to: "Opt-Shift-]"
-  remap "Cmd-O", to: "Opt-Shift-["
-end
-
-item "Command+E to Command+W", not: "TERMINAL" do
-  remap "Cmd-E", to: "Cmd-W"
-end
-
+# M-t: Tab create
 item "Command+T to Option+T, Command+E to Option+E", only: "TERMINAL" do
   remap "Cmd-T", to: "Opt-T"
   remap "Cmd-E", to: "Opt-E"
 end
 
-# For tmux copy mode
+# M-e: Tab close
+item "Command+E to Command+W", not: "TERMINAL" do
+  remap "Cmd-E", to: "Cmd-W"
+end
+
+# M-i: For tmux copy mode
 item "Command+I to Option+I", only: "TERMINAL" do
   remap "Cmd-I", to: "Opt-I"
 end
 
-item "Command_L to Control_R" do
-  remap "Cmd_L", to: "Ctrl_R"
+# M-d: Forward word delete
+item "Command+D to Option+Forward Delete", not: "TERMINAL" do
+  remap "Cmd-D", to: "Opt-forward_delete"
+end
+item "Terminal M-d", only: "TERMINAL" do
+  remap "Cmd-D", to: "M-d"
+end
+
+# M-r: tmux prefix
+item "Command-R -> Option-R", only: "TERMINAL" do
+  remap "Cmd-R", to: "M-r"
+end
+
+# M-b, M-f: Word move
+item "Command+D to Option+D, Command+BF to Option+BF", only: "TERMINAL" do
+  remap "Cmd-B", to: "M-b"
+  remap "Cmd-F", to: "M-f"
+end
+item "Command+B/F to Option+Left/Right", not: "TERMINAL" do
+  remap "Cmd-B", to: "Opt-Left"
+  remap "Cmd-F", to: "Opt-Right"
+end
+
+
+# **********
+# * Others *
+# **********
+
+appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
+appdef "CHROME", equal: "com.google.Chrome"
+# appdef "MACVIM", equal: "org.vim.MacVim"
+
+# CaplsLock by Cmd_L+L
+item "CapsLock ON", config_not: "notsave.private_capslock_on" do
+  remap "Cmd-L", to: ["capslock", "VK_CONFIG_FORCE_ON_notsave_private_capslock_on"]
+end
+item "CapsLock OFF", config_only: "notsave.private_capslock_on" do
+  remap "Cmd-L", to: ["capslock", "VK_CONFIG_FORCE_OFF_notsave_private_capslock_on"]
+end
+item "CapsLock Mode" do
+  identifier "notsave.private_capslock_on", vk_config: "true"
+  show_message "CapsLock"
+end
+
+# Use Cmd_R+S as Cmd+F to avoid conflict with M-f
+item "Command+S to Command+F", not: "TERMINAL" do
+  remap "Cmd-S", to: "Cmd-F"
 end
 
 # Change japanese input mode by Cmd_L + Space
@@ -48,42 +115,11 @@ item "Command+K to Command+L", only: "CHROME" do
   remap "Cmd-K", to: "Cmd-L"
 end
 
-item "CapsLock ON", config_not: "notsave.private_capslock_on" do
-  remap "Cmd-L", to: ["capslock", "VK_CONFIG_FORCE_ON_notsave_private_capslock_on"]
-end
-
-item "CapsLock OFF", config_only: "notsave.private_capslock_on" do
-  remap "Cmd-L", to: ["capslock", "VK_CONFIG_FORCE_OFF_notsave_private_capslock_on"]
-end
-
-item "CapsLock Mode" do
-  identifier "notsave.private_capslock_on", vk_config: "true"
-  show_message "CapsLock"
-end
-
 item "Control+PNBF to Up/Down/Left/Right", not: "TERMINAL" do
   remap "C-p", to: "Up"
   remap "C-n", to: "Down"
   remap "C-b", to: "Left"
   remap "C-f", to: "Right"
-end
-
-# Use Cmd_R+D as M-d
-item "Command+D to Option+Forward Delete", not: "TERMINAL" do
-  remap "Cmd-D", to: "Opt-forward_delete"
-end
-
-item "Command+D to Option+D, Command+BF to Option+BF", only: "TERMINAL" do
-  remap "Cmd-D", to: "M-d"
-  remap "Cmd-B", to: "M-b"
-  remap "Cmd-F", to: "M-f"
-end
-
-# Use Cmd_R+B/F as M-b/f, and Cmd_R+S as Cmd+F to avoid conflict with M-f
-item "Command+B/F to Option+Left/Right, Command+S to Command+F", not: "TERMINAL" do
-  remap "Cmd-B", to: "Opt-Left"
-  remap "Cmd-F", to: "Opt-Right"
-  remap "Cmd-S", to: "Cmd-F"
 end
 
 item "Control+W to Option+Delete", not: "TERMINAL" do
@@ -106,11 +142,6 @@ end
 # browser reload
 item "Control-R -> Command-R", not: "TERMINAL" do
   remap "C-r", to: "Cmd-R"
-end
-
-# tmux prefix
-item "Command-R -> Option-R", only: "TERMINAL" do
-  remap "Cmd-R", to: "M-r"
 end
 
 # I don't want to press shift key
@@ -156,5 +187,5 @@ item "Screen shot" do
 end
 
 item "Window change in the same app" do
-  remap "Opt-tab", to: "Cmd-F1"
+  remap "Cmd-tab", to: "Cmd-F1"
 end
