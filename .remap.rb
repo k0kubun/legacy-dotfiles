@@ -24,11 +24,6 @@ item "Use Option_L and Option_R as Shift" do
   remap "Opt_R", to: "Shift_R"
 end
 
-item "Disable original Shift" do
-  remap "Shift_L", to: "VK_NONE"
-  remap "Shift_R", to: "VK_NONE"
-end
-
 
 # **************************************************
 # * Option Key Replacement (Use Cmd as Option too) *
@@ -150,9 +145,9 @@ item "Control-R -> Command-R", not: "TERMINAL" do
 end
 
 # I don't want to press shift key
-item "Command semicolon to colon" do
-  remap "Cmd-;", to: "Shift-;"
-end
+# item "Command semicolon to colon" do
+#   remap "Cmd-;", to: "Shift-;"
+# end
 
 item "Shift by control" do
   remap "C--", to: "Shift--"
