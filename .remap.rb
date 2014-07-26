@@ -15,13 +15,18 @@ end
 # * Basic Remaps *
 # ****************
 
+item "Use Command_L as Control" do
+  remap "Cmd_L", to: "Ctrl_R"
+end
+
 item "Use Option_L and Option_R as Shift" do
   remap "Opt_L", to: "Shift_L"
   remap "Opt_R", to: "Shift_R"
 end
 
-item "Use Command_L as Control" do
-  remap "Cmd_L", to: "Ctrl_R"
+item "Disable original Shift" do
+  remap "Shift_L", to: "VK_NONE"
+  remap "Shift_R", to: "VK_NONE"
 end
 
 
