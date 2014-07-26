@@ -1,5 +1,6 @@
-# git branch
+# global aliases
 alias -g B='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
+alias -g P='| peco | xargs '
 
 if ! which peco > /dev/null; then
 	return
