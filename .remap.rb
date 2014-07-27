@@ -108,9 +108,14 @@ item "Control-R -> Command-R", not: "TERMINAL" do
   remap "C-r", to: "Cmd-R"
 end
 
-# tmux prefix
-item "Tmux Prefix", only: "TERMINAL" do
+item "Tmux configs", only: "TERMINAL" do
+  # Prefix
   remap "Cmd-K", to: "M-k"
+
+  # Window change
+  (1..6).each do |index|
+    remap "Cmd-#{index}", to: "M-#{index}"
+  end
 end
 
 # I don't want to press shift key
