@@ -123,6 +123,10 @@ item "tmux resize", only: "TERMINAL" do
   remap "Cmd-.", to: "Shift-."
 end
 
+item "Open config" do
+  remap "Opt-,", to: "Cmd-,"
+end
+
 item "Shift by control" do
   remap "C--", to: "Shift--"
   remap "C-0", to: "Shift-0"
