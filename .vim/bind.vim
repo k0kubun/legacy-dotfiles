@@ -74,3 +74,7 @@ noremap <silent> ;r :!go run %<CR>
 " break undo chain when using insert mode deletions (:h i_CTRL-G_u)
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
+
+" pane size changer
+nnoremap <C-w>> <C-w>14>
+nnoremap <C-w>< <C-w>14<

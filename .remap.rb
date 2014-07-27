@@ -109,13 +109,18 @@ item "Control-R -> Command-R", not: "TERMINAL" do
 end
 
 # tmux prefix
-item "Command-M -> Option-M", only: "TERMINAL" do
-  remap "Cmd-J", to: "M-j"
+item "Tmux Prefix", only: "TERMINAL" do
+  remap "Cmd-K", to: "M-k"
 end
 
 # I don't want to press shift key
 item "Command semicolon to colon" do
   remap "Cmd-;", to: "Shift-;"
+end
+
+item "tmux resize", only: "TERMINAL" do
+  remap "Cmd-,", to: "Shift-,"
+  remap "Cmd-.", to: "Shift-."
 end
 
 item "Shift by control" do
