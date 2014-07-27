@@ -109,8 +109,8 @@ item "Control-R -> Command-R", not: "TERMINAL" do
 end
 
 # tmux prefix
-item "Command-R -> Option-R", only: "TERMINAL" do
-  remap "Cmd-R", to: "M-r"
+item "Command-M -> Option-M", only: "TERMINAL" do
+  remap "Cmd-J", to: "M-j"
 end
 
 # I don't want to press shift key
