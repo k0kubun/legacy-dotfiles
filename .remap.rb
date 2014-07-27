@@ -187,5 +187,5 @@ item "Screen shot" do
 end
 
 item "Window change in the same app" do
-  remap "Cmd-tab", to: "Cmd-F1"
+  remap "C-tab", to: "Cmd-F1"
 end
