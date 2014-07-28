@@ -21,16 +21,15 @@ function create-session() {
 		tmux switch-client -t $session_name
 		return
 	fi
-	TMUX= tmux new-session -d -s $session_name -c $target_dir -n console
+	TMUX= tmux new-session -d -s $session_name -c $target_dir -n editor
 	tmux switch-client -t $session_name
 
 	# open 'editor', 'git' and 'test' windows
-	tmux send-keys -t $session_name "tmux new-window -d -n editor" C-m
-	tmux send-keys -t $session_name "tmux send-keys -t editor 'vim .' C-m" C-m
 	tmux send-keys -t $session_name "tmux new-window -d -n git" C-m
 	tmux send-keys -t $session_name "tmux new-window -d -n test" C-m
+	tmux send-keys -t $session_name "tmux new-window -d -n console" C-m
 
-	tmux send-keys -t $session_name "tmux select-window -t console" C-m
 	tmux send-keys -t $session_name "clear" C-m
+	tmux send-keys -t $session_name "vim ." C-m
 }
 alias cs="create-session"
