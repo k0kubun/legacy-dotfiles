@@ -61,7 +61,7 @@ item "CapsLock Mode" do
   show_message "CapsLock"
 end
 
-item "Control+PNBF to Up/Down/Left/Right" do
+item "Control+PNBF to Up/Down/Left/Right", not: "TERMINAL" do
   remap "C-p", to: "Up"
   remap "C-n", to: "Down"
   remap "C-b", to: "Left"
