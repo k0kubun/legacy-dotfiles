@@ -113,7 +113,7 @@ item "Tmux configs", only: "TERMINAL" do
   remap "Cmd-K", to: "M-k"
 
   # Window change
-  (1..6).each do |index|
+  (1..5).each do |index|
     remap "Cmd-#{index}", to: "M-#{index}"
     remap "C-#{index}", to: "M-#{index}"
   end
