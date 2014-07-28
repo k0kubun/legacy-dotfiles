@@ -30,6 +30,7 @@ function create-session() {
 	tmux send-keys -t $session_name "tmux new-window -d -n console" C-m
 
 	tmux send-keys -t $session_name "clear" C-m
-	tmux send-keys -t $session_name "vim ." C-m
+	tmux send-keys -t $session_name "tmux send-keys -t editor 'vim .' C-m" C-m
+	tmux send-keys -t $session_name "tmux send-keys -t editor ':vs' C-m" C-m
 }
 alias cs="create-session"
