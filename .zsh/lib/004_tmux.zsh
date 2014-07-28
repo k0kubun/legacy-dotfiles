@@ -8,7 +8,7 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
 fi
 
 function create-session() {
-  if [ $# -ne 0 ]; then
+	if [ $# -ne 0 ]; then
 		target_dir=$1
 	else
 		target_dir='.'
