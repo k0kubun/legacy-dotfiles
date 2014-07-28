@@ -111,6 +111,7 @@ end
 item "Tmux configs", only: "TERMINAL" do
   # Prefix
   remap "Cmd-K", to: "M-k"
+  remap "Cmd-S", to: "M-s"
 
   # Window change
   (1..5).each do |index|
