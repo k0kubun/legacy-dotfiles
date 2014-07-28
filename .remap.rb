@@ -109,9 +109,10 @@ item "Control-R -> Command-R", not: "TERMINAL" do
 end
 
 item "Tmux configs", only: "TERMINAL" do
-  # Prefix
-  remap "Cmd-K", to: "M-k"
+  remap "Cmd-R", to: "M-r"
   remap "Cmd-S", to: "M-s"
+  remap "Cmd-J", to: "M-j"
+  remap "Cmd-K", to: "M-k"
 
   # Window change
   (1..5).each do |index|
