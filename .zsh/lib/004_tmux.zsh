@@ -33,3 +33,4 @@ function create-session() {
 	tmux send-keys -t $session_name "tmux select-window -t console" C-m
 	tmux send-keys -t $session_name "clear" C-m
 }
+alias cs="create-session"
