@@ -4,7 +4,11 @@ appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
 appdef "CHROME", equal: "com.google.Chrome"
 
 item "Application shortcuts" do
-  remap "C-o", to: invoke("YoruFukurou")
+  if ENV['WORK_PC'] == 'true'
+    remap "C-o", to: invoke("HipChat")
+  else
+    remap "C-o", to: invoke("YoruFukurou")
+  end
   remap "C-u", to: invoke("Google Chrome")
   remap "C-h", to: invoke("iTerm")
 end
