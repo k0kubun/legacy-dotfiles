@@ -2,6 +2,7 @@
 
 appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
 appdef "CHROME", equal: "com.google.Chrome"
+appdef "HIPCHAT", equal: "com.hipchat.HipChat"
 
 item "Application shortcuts" do
   if ENV['WORK_PC'] == 'true'
@@ -101,6 +102,11 @@ end
 item "YoruFukurou Account Change", only: "YORUFUKUROU" do
   remap "Cmd-K", to: "Cmd-Opt-Up"
   remap "Cmd-J", to: "Cmd-Opt-Down"
+end
+
+item "HipChat Room Change", only: "HIPCHAT" do
+  remap "Cmd-K", to: "Cmd-Shift-["
+  remap "Cmd-J", to: "Cmd-Shift-]"
 end
 
 item "Chrome inspector Command+Control+I", not: "TERMINAL" do
