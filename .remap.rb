@@ -125,6 +125,12 @@ item "Tmux configs", only: "TERMINAL" do
   end
 end
 
+item "Tab Change", not: "TERMINAL" do
+  (1..5).each do |index|
+    remap "C-#{index}", to: "Cmd-#{index}"
+  end
+end
+
 # I don't want to press shift key
 item "Command semicolon to colon" do
   remap "Cmd-;", to: "Shift-;"
