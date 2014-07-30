@@ -24,8 +24,8 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'neocomplcache'
 
 " Skin
-" NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
-NeoBundle 'bling/vim-airline'
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
+" NeoBundle 'bling/vim-airline'
 NeoBundle 'w0ng/vim-hybrid'
 
 " Additional
