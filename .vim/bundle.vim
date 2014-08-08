@@ -32,6 +32,7 @@ NeoBundle 'w0ng/vim-hybrid'
 " NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'k0kubun/vim-trailing-whitespace'
 NeoBundle 'osyo-manga/vim-over'
+NeoBundle 'thinca/vim-prettyprint'
 
 " ctags
 " NeoBundle 'szw/vim-tags'
