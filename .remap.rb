@@ -178,7 +178,7 @@ item "Command+A to Option+A", only: "TERMINAL" do
 end
 
 item "Disable Command-W" do
-  remap "Cmd-W", to: "w"
+  remap "Cmd-W", to: "M-w"
 end
 
 item "Screen shot" do

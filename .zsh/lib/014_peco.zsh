@@ -52,4 +52,4 @@ function peco-append-filepath() {
 	zle redisplay
 }
 zle -N peco-append-filepath
-bindkey '^w' peco-append-filepath
+bindkey '^[w' peco-append-filepath
