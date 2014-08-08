@@ -25,7 +25,7 @@ function gp(){
 }
 
 function gg() {
-	if [ -e .git ]; then
+	if [[ -n `git rev-parse --git-dir 2> /dev/null` ]]; then
 		git grep -n $@
 	else
 		find . -type f | xargs grep -n --color=auto $@
