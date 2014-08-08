@@ -8,15 +8,15 @@ endif
 
 " Language
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tpope/vim-rails'
+" NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'slim-template/vim-slim'
-NeoBundle 'plasticboy/vim-markdown'
+" NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'groenewege/vim-less'
-NeoBundle 'vim-scripts/coq-syntax'
-NeoBundle 'eagletmt/coqtop-vim'
-NeoBundle 'haruyama/scheme.vim'
+" NeoBundle 'vim-scripts/coq-syntax'
+" NeoBundle 'eagletmt/coqtop-vim'
+" NeoBundle 'haruyama/scheme.vim'
 NeoBundle 'fatih/vim-go'
 " NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 
@@ -34,7 +34,7 @@ NeoBundle 'k0kubun/vim-trailing-whitespace'
 NeoBundle 'osyo-manga/vim-over'
 
 " ctags
-NeoBundle 'szw/vim-tags'
+" NeoBundle 'szw/vim-tags'
 
 " Unite
 NeoBundle 'Shougo/unite.vim'
@@ -50,7 +50,7 @@ NeoBundle 'Shougo/vimproc', {
 
 " Git
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'gregsexton/gitv'
+" NeoBundle 'gregsexton/gitv'
 NeoBundle 'airblade/vim-gitgutter'
 
 NeoBundleCheck
