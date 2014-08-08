@@ -34,17 +34,4 @@ exe "set rtp+=" . globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
 au BufRead,BufNewFile *.v set filetype=coq
 
 " disable trailing whitespace highlight in unite
-" autocmd FileType unite autocmd! BufWinEnter * match
-" autocmd FileType unite autocmd! InsertLeave * match
-" autocmd FileType unite autocmd! InsertEnter * match
-" autocmd BufLeave unite autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-" autocmd BufLeave unite autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-" autocmd BufLeave unite autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-
-" Airline
-" let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline_inactive_collapse=1
-" let g:airline_theme='powerlineish'
-" let g:airline#extensions#tabline#tab_nr_type = 1
-" let g:airline#extensions#tabline#show_buffers = 0
+let g:extra_whitespace_ignored_filetypes = ['unite']
