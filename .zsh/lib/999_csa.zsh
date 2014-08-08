@@ -3,9 +3,6 @@ source ~/.zsh/bundle/zsh-context-sensitive-alias/csa.zsh
 csa_init
 function my_context_func {
 	local -a ctx
-	if [[ -n `git rev-parse --git-dir 2> /dev/null` ]]; then
-		ctx+=git
-	fi
 	if [[ -e Gemfile ]]; then
 		ctx+=bundler
 	fi
