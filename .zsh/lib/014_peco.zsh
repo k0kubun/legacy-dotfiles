@@ -27,7 +27,6 @@ function peco-src() {
 	if [ -n "$selected_dir" ]; then
 		BUFFER="cd ${GOPATH}/src/${selected_dir}"
 		zle accept-line
-		# create-session "${GOPATH}/src/${selected_dir}"
 	fi
 	zle redisplay
 }
@@ -44,3 +43,13 @@ function peco-pkill() {
 	done
 }
 alias pk="peco-pkill"
+
+# search file recursively and append the path to the buffer
+function peco-append-filepath() {
+	local selected_file=$(find . -type f | grep -v "\.\/\.git\/" | peco)
+	BUFFER="${BUFFER}${selected_file}"
+	CURSOR=$#BUFFER
+	zle redisplay
+}
+zle -N peco-append-filepath
+bindkey '^w' peco-append-filepath
