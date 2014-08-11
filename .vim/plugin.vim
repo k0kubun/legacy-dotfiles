@@ -35,3 +35,6 @@ au BufRead,BufNewFile *.v set filetype=coq
 
 " disable trailing whitespace highlight in unite
 let g:extra_whitespace_ignored_filetypes = ['unite']
+
+" Unite.vim limit brake
+let g:unite_redraw_hold_candidates = 40000
