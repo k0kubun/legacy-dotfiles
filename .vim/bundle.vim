@@ -29,8 +29,7 @@ NeoBundle 'Lokaltog/powerline', 'da6667b', { 'rtp' : 'powerline/bindings/vim' }
 NeoBundle 'w0ng/vim-hybrid'
 
 " Additional
-" NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'k0kubun/vim-trailing-whitespace'
+NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'thinca/vim-prettyprint'
 
