@@ -38,3 +38,10 @@ let g:extra_whitespace_ignored_filetypes = ['unite']
 
 " Unite.vim redraw limit
 let g:unite_redraw_hold_candidates = 15000
+
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
