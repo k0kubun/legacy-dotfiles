@@ -7,7 +7,7 @@
   ui = true
 [core]
   excludesfile = ~/.gitignore
-	editor = /usr/bin/vim
+  editor = /usr/local/bin/vim
 [alias]
   co = checkout
   st = status -sb
