@@ -14,7 +14,7 @@ function peco-select-history() {
 	else
 		tac='tail -r'
 	fi
-	BUFFER=$(fc -l -n 1 | eval $tac | peco --query "$LBUFFER")
+	BUFFER=$(fc -l -n 1 | eval $tac | peco --query "$LBUFFER" --prompt "[zsh history]")
 	CURSOR=$#BUFFER
 	zle redisplay
 }
@@ -23,7 +23,7 @@ bindkey '^r' peco-select-history
 
 # integrate all source code with ghq
 function peco-src() {
-	local selected_dir=$(ghq list | peco --query "$LBUFFER")
+	local selected_dir=$(ghq list | peco --query "$LBUFFER" --prompt "[ghq list]")
 	if [ -n "$selected_dir" ]; then
 		BUFFER="cd ${GOPATH}/src/${selected_dir}"
 		zle accept-line
@@ -46,10 +46,10 @@ alias pk="peco-pkill"
 
 # search file recursively and append the path to the buffer
 function peco-append-filepath() {
-	local selected_file=$(find . -type f | grep -v "\.\/\.git\/" | peco)
+local selected_file=$(find . -type f | grep -v "\.\/\.git\/" | peco --prompt "[find file]")
 	BUFFER="${BUFFER}${selected_file}"
 	CURSOR=$#BUFFER
 	zle redisplay
 }
 zle -N peco-append-filepath
-bindkey '^w' peco-append-filepath
+bindkey '^q' peco-append-filepath
