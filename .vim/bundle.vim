@@ -1,3 +1,4 @@
+
 set nocompatible
 filetype plugin indent off
 
@@ -21,7 +22,7 @@ NeoBundle 'fatih/vim-go'
 " NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 
 " Completion
-NeoBundle 'neocomplcache'
+NeoBundle 'Shougo/neocomplcache.vim'
 " NeoBundle 'Shougo/neocomplete.vim'
 
 " Skin
