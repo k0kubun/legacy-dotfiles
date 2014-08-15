@@ -37,6 +37,18 @@ function up() {
 	git branch --set-upstream-to=$@/master master
 }
 
+function mine() {
+	if [[ -n `git remote | grep mine` ]]; then
+		echo "remote mine is already set up"
+		return
+	fi
+
+	local repo_name=$(git rev-parse --show-toplevel | sed -e "s/^.*\///g")
+	local repo_path="github.com:k0kubun/${repo_name}"
+	git remote add mine $repo_path
+	echo "added remote mine: ${repo_name}"
+}
+
 # Apply proxy for titech pubnet
 alias titech="git config --global http.proxy 131.112.125.238:3128"
 alias untitech="git config --global --unset http.proxy"
