@@ -6,6 +6,7 @@ alias gh="git branch"
 alias co="git checkout"
 alias gus="git branch | percol | xargs git checkout"
 alias ghs="git branch | percol | xargs git branch -D"
+alias origin="git pull origin master"
 alias amend="git commit --amend"
 
 function gl(){
