@@ -9,6 +9,8 @@ alias ghs="git branch | percol | xargs git branch -D"
 alias origin="git pull origin master"
 alias amend="git commit --amend"
 
+alias current-branch='git rev-parse --abbrev-ref HEAD'
+
 function gl(){
 	if [ $# -ne 0 ]; then
 		git log --date=iso --pretty=format:'%h %Cgreen%ad %Cblue%cn %Creset%s %C(blue)%d%Creset' $@
@@ -19,7 +21,7 @@ function gl(){
 
 function gp(){
 	if [ $# -ne 0 ]; then
-		git push $@ `git rev-parse --abbrev-ref HEAD`
+		git push $@ `current-branch`
 	else
 		git push
 	fi
@@ -46,6 +48,8 @@ function mine() {
 	local repo_name=$(git rev-parse --show-toplevel | sed -e "s/^.*\///g")
 	local repo_path="github.com:k0kubun/${repo_name}"
 	git remote add mine $repo_path
+	git fetch mine
+	git branch --set-upstream-to=mine/`current-branch` `current-branch`
 	echo "added remote mine: ${repo_name}"
 }
 
