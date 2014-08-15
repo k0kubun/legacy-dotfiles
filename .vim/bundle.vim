@@ -21,8 +21,8 @@ NeoBundle 'fatih/vim-go'
 " NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 
 " Completion
-" NeoBundle 'neocomplcache'
-NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'neocomplcache'
+" NeoBundle 'Shougo/neocomplete.vim'
 
 " Skin
 NeoBundle 'Lokaltog/powerline', 'da6667b', { 'rtp' : 'powerline/bindings/vim' }
