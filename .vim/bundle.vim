@@ -20,6 +20,7 @@ NeoBundle 'groenewege/vim-less'
 " NeoBundle 'haruyama/scheme.vim'
 NeoBundle 'fatih/vim-go'
 " NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
+NeoBundle 'wannesm/wmnusmv.vim'
 
 " Completion
 NeoBundle 'Shougo/neocomplcache.vim'
