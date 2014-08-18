@@ -16,3 +16,5 @@ export SAVEHIST=100000
 
 # don't logout by EOF
 setopt ignore_eof
+
+export PATH="/opt/local/bin:$PATH"
