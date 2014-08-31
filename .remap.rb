@@ -12,7 +12,7 @@ item "Application shortcuts" do
   end
   remap "C-u", to: invoke("Google Chrome")
   remap "C-h", to: invoke("iTerm")
-  remap "C-m", to: invoke("Deckset")
+  remap "C-m", to: invoke("Notes")
 end
 
 item "Command+O|P to Command+{|}", not: "TERMINAL" do
