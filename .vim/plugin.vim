@@ -52,3 +52,7 @@ let g:unite_redraw_hold_candidates = 15000
 " function! s:my_cr_function()
 "   return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 " endfunction
+
+" vim-go
+let g:go_fmt_autosave = 0
+let g:go_fmt_fail_silently = 1
