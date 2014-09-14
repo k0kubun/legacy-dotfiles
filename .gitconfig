@@ -8,6 +8,7 @@
 [core]
   excludesfile = ~/.gitignore
   editor = /usr/local/bin/vim
+  filemode = true
 [alias]
   co = checkout
   st = status -sb
