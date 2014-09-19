@@ -4,6 +4,12 @@ appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
 appdef "CHROME", equal: "com.google.Chrome"
 appdef "HIPCHAT", equal: "com.hipchat.HipChat"
 
+local = File.expand_path("~/.remap.local")
+if File.exists?(local)
+  source = File.read(local)
+  eval(source)
+end
+
 item "Application shortcuts" do
   if ENV['WORK_PC'] == 'true'
     remap "C-o", to: invoke("HipChat")
@@ -12,7 +18,6 @@ item "Application shortcuts" do
   end
   remap "C-u", to: invoke("Google Chrome")
   remap "C-h", to: invoke("iTerm")
-  remap "C-m", to: invoke("Notes")
 end
 
 item "Command+O|P to Command+{|}", not: "TERMINAL" do
