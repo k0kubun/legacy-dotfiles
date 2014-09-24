@@ -8,6 +8,7 @@ alias gus="git branch | percol | xargs git checkout"
 alias ghs="git branch | percol | xargs git branch -D"
 alias origin="git pull origin master"
 alias amend="git commit --amend"
+alias ch='git rev-parse HEAD | sed -e "s/\(.\{7\}\).*/\1/" | tr -d "\n" | pbcopy'
 
 alias current-branch='git rev-parse --abbrev-ref HEAD'
 
