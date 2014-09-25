@@ -9,6 +9,7 @@ alias ghs="git branch | percol | xargs git branch -D"
 alias origin="git pull origin master"
 alias amend="git commit --amend"
 alias ch='git rev-parse HEAD | sed -e "s/\(.\{7\}\).*/\1/" | tr -d "\n" | pbcopy'
+alias empty="git commit --allow-empty -m"
 
 alias current-branch='git rev-parse --abbrev-ref HEAD'
 
