@@ -176,6 +176,8 @@ end
 
 item "Exchange single quote and double quote" do
   remap "Shift-'", to: "'"
+  remap "Cmd-'", to: "'"
+  remap "C-'", to: "'"
   remap "'", to: "Shift-'"
 end
 
