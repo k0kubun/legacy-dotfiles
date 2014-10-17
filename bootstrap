@@ -6,16 +6,24 @@ branch=master
 
 tempdir=/tmp
 archive=${tempdir}/${repo}.zip
-workdir=${tempdir}/${repo}-${branch}
+unzipped=${tempdir}/${repo}-${branch}
+
+userdir=${HOME}/src/github.com/${user}
+repodir=${userdir}/${repo}
 
 # Fetch repository to /tmp/dotfiles-master
 curl -L -o $archive https://github.com/${user}/${repo}/archive/${branch}.zip
 unzip -o $archive -d $tempdir
 
+# Move /tmp/dotfiles-master to ~/src/github.com/k0kubun/dotfiles
+mkdir -p $userdir
+rm -rf $repodir
+mv $unzipped $repodir
+
 # Run installer
-pushd $workdir
-# WIP
+pushd $repodir
+./install
 
 # Cleanup
 popd
-rm -rf $archive $workdir
+rm $archive
