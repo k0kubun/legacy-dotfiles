@@ -1,11 +1,9 @@
 # dotfiles
 
-My configuration for development tools
+My development environment boostrap script
 
 ## Installation
 
-```
-git clone git@github.com:k0kubun/dotfiles --recursive
-cd dotfiles
-./install
+```bash
+curl -L https://raw.githubusercontent.com/k0kubun/dotfiles/master/bootstrap | bash
 ```
