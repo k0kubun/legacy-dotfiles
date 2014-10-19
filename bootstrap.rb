@@ -8,10 +8,7 @@ PRIMARY_RECIPES = %w[
 
 # Self execution by ./bootstrap.rb
 if ARGV.length == 0
-  require "itamae/runner"
-
-  script_path = File.expand_path(__FILE__)
-  system("itamae local #{script_path}")
+  system("bundle exec itamae local #{File.expand_path(__FILE__)}")
   exit 0
 end
 
