@@ -11,7 +11,7 @@ end
 
 # These recipes are executed first in this order
 PRIMARY_RECIPES = %w[
-  git
+  command_line_tools
 ]
 
 recipes_dir = File.expand_path("../recipes", __FILE__)
