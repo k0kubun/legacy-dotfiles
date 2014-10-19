@@ -25,7 +25,12 @@ fi
 
 # Ensure itamae availability
 if ! which itamae > /dev/null; then
-  gem install itamae
+  if which ruby | grep -q rbenv; then
+    gem install itamae
+  elif
+    # For system ruby
+    sudo gem install itamae
+  fi
 fi
 
 # Execute itamae recipes
