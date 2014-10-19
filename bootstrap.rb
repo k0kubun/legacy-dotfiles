@@ -1,3 +1,14 @@
+#!/usr/bin/env ruby
+
+# Self execution
+if ARGV.length == 0
+  require "itamae/runner"
+
+  script_path = File.expand_path(__FILE__)
+  system("itamae local #{script_path}")
+  exit 0
+end
+
 # These recipes are executed first in this order
 PRIMARY_RECIPES = %w[
   git
