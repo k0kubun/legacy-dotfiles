@@ -1,6 +1,5 @@
-GIT
-  remote: git://github.com/k0kubun/specinfra.git
-  revision: 41f90d0f20bc9d41ee59d0e5a28c98c3dfbc221f
+PATH
+  remote: vendor/specinfra
   specs:
     specinfra (2.1.0)
       net-scp
