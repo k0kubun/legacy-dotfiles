@@ -2,6 +2,12 @@
 
 Development environment bootstrap recipes
 
+## Preparation
+
+You have to install these by AppStore
+
+- XCode
+
 ## Installation
 
 ```bash
