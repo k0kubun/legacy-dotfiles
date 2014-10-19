@@ -23,17 +23,18 @@ if ! which ruby > /dev/null; then
   exit 1
 fi
 
-# Ensure itamae availability
-if ! which itamae > /dev/null; then
+# Ensure bundler availability
+if ! which bundle > /dev/null; then
   if which ruby | grep -q rbenv; then
-    gem install itamae
+    gem install bundler
   else
     # For system ruby
-    sudo gem install itamae
+    sudo gem install bundler
   fi
 fi
 
 # Execute itamae recipes
 pushd $workdir > /dev/null
-itamae local bootstrap.rb
+bundle install
+bundle exec itamae local bootstrap.rb
 popd > /dev/null
