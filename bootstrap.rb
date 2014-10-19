@@ -12,6 +12,7 @@ end
 # These recipes are executed first in this order
 PRIMARY_RECIPES = %w[
   command_line_tools
+  brew
 ]
 
 recipes_dir = File.expand_path("../recipes", __FILE__)
