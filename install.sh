@@ -17,10 +17,18 @@ if [ ! -e $workdir ]; then
   echo " done."
 fi
 
-# Update repository
-echo "Updating repository..."
-pushd $workdir > /dev/null
+# Ensure ruby availability
+if ! which ruby > /dev/null; then
+  printf "\e[31mRuby is not available. Aborted.\e[m\n"
+  exit 1
+fi
 
-# Cleanup
+# Ensure itamae availability
+if ! which ruby > /dev/null; then
+  gem install itamae
+fi
+
+# Execute itamae recipes
+pushd $workdir > /dev/null
+itamae local bootstrap.rb
 popd > /dev/null
-echo "Finished to install dotfiles."
