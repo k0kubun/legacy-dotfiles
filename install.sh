@@ -24,7 +24,7 @@ if ! which ruby > /dev/null; then
 fi
 
 # Ensure itamae availability
-if ! which ruby > /dev/null; then
+if ! which itamae > /dev/null; then
   gem install itamae
 fi
 
