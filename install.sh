@@ -27,7 +27,7 @@ fi
 if ! which itamae > /dev/null; then
   if which ruby | grep -q rbenv; then
     gem install itamae
-  elif
+  else
     # For system ruby
     sudo gem install itamae
   fi
