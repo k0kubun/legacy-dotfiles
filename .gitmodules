@@ -1,6 +1,0 @@
-[submodule ".vim/bundle/neobundle.vim"]
-	path = .vim/bundle/neobundle.vim
-	url = git@github.com:Shougo/neobundle.vim
-[submodule ".zsh/bundle/zsh-context-sensitive-alias"]
-	path = .zsh/bundle/zsh-context-sensitive-alias
-	url = github:uasi/zsh-context-sensitive-alias
