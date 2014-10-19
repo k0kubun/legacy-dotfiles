@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-# Self execution
+# Self execution by ./bootstrap.rb
 if ARGV.length == 0
   require "itamae/runner"
 
