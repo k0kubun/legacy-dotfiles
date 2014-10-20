@@ -8,7 +8,7 @@ PRIMARY_RECIPES = %w[
 
 # Self execution by ./bootstrap.rb
 if ARGV.length == 0
-  system("bundle exec itamae local #{File.expand_path(__FILE__)}")
+  system("bundle exec itamae local -l debug #{File.expand_path(__FILE__)}")
   exit 0
 end
 

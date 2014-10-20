@@ -36,5 +36,5 @@ fi
 # Execute itamae recipes
 pushd $workdir > /dev/null
 bundle install
-bundle exec itamae local bootstrap.rb
+./bootstrap.rb
 popd > /dev/null
