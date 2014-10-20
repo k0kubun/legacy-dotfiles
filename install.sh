@@ -11,7 +11,7 @@ workdir=${tempdir}/${repo}-${branch}
 # Fetch repository to /tmp/dotfiles-master
 if [ ! -e $workdir ]; then
   echo -n "Fetching dotfiles repository..."
-  curl -L -o $archive https://github.com/${user}/${repo}/archive/${branch}.zip 2> /dev/null
+  curl -Ls -o $archive https://github.com/${user}/${repo}/archive/${branch}.zip
   unzip -o $archive -d $tempdir > /dev/null
   rm $archive
   echo " done."
