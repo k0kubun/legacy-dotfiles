@@ -14,6 +14,7 @@ if [ ! -e $workdir ]; then
   curl -L -o $archive https://github.com/${user}/${repo}/archive/${branch}.zip 2> /dev/null
   unzip -o $archive -d $tempdir > /dev/null
   rm $archive
+  git init # to suppress bundler's warning
   echo " done."
 fi
 
