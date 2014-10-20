@@ -7,7 +7,7 @@ WORK IN PROGRESS
 ## Installation
 
 ```bash
-curl -Ls https://raw.githubusercontent.com/k0kubun/dotfiles/master/install.sh | bash
+curl -Ls dotfiles.k0kubun.com | bash
 ```
 
 ### Tasks

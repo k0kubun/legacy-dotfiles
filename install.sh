@@ -17,12 +17,6 @@ if [ ! -e $workdir ]; then
   echo " done."
 fi
 
-# Ensure ruby availability
-if ! which ruby > /dev/null; then
-  printf "\e[31mRuby is not available. Aborted.\e[m\n"
-  exit 1
-fi
-
 # Ensure bundler availability
 if ! which bundle > /dev/null; then
   if which ruby | grep -q rbenv; then
@@ -33,7 +27,7 @@ if ! which bundle > /dev/null; then
   fi
 fi
 
-# Execute itamae recipes
+# Execute bootstrap script
 pushd $workdir > /dev/null
 bundle install
 ./bootstrap.rb
