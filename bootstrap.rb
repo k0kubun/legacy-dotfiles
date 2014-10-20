@@ -8,8 +8,7 @@ PRIMARY_RECIPES = %w[
 
 # Self execution by ./bootstrap.rb
 if ARGV.length == 0
-  system("bundle exec itamae local -l debug #{File.expand_path(__FILE__)}")
-  exit 0
+  exit system("bundle exec itamae local -l debug #{File.expand_path(__FILE__)}")
 end
 
 recipes_dir = File.expand_path("../recipes", __FILE__)
