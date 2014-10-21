@@ -15,5 +15,6 @@ curl -Ls dotfiles.k0kubun.com | bash
 - Launch command line tools installer
 - Accept XCode/iOS license agreement
 - Install homebrew
+- Install homebrew cask
 - Install tmux
 - Install vim

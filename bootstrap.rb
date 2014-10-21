@@ -6,9 +6,17 @@ PRIMARY_RECIPES = %w[
   brew
 ]
 
+RESOURCE_PLUGINS = %w[
+  cask
+]
+
 # Self execution by ./bootstrap.rb
 if ARGV.length == 0
   exit system("bundle exec itamae local -l debug #{File.expand_path(__FILE__)}")
+end
+
+RESOURCE_PLUGINS.each do |name|
+  require "itamae/plugin/resource/#{name}"
 end
 
 recipes_dir = File.expand_path("../recipes", __FILE__)
