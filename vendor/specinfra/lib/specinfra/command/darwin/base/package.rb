@@ -1,7 +1,7 @@
 class Specinfra::Command::Darwin::Base::Package < Specinfra::Command::Base::Package
   class << self
     def check_is_installed(package, version=nil)
-      escaped_package = escape(package)
+      escaped_package = escape(package.split("/").last)
       if version
         cmd = "/usr/local/bin/brew info #{escaped_package} | grep -E '^\/usr\/local\/Cellar\/#{escaped_package}\/#{escape(version)}'"
       else
