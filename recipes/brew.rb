@@ -5,6 +5,8 @@ BREW_PACKAGES = %w[
   rbenv
   ruby-build
   reattach-to-user-namespace
+
+  peco/peco/peco
 ]
 
 BREW_INSTALLER = "https://raw.githubusercontent.com/Homebrew/install/master/install"
