@@ -29,6 +29,9 @@ fi
 
 # Execute bootstrap script
 pushd $workdir > /dev/null
-bundle install
-./bootstrap.rb
+echo -n Password:
+read -s password
+echo
+echo $password | sudo -s bundle install
+SUDO_PASSWORD=$password bundle exec itamae local -l debug bootstrap.rb
 popd > /dev/null
