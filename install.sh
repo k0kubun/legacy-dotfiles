@@ -17,21 +17,23 @@ if [ ! -e $workdir ]; then
   echo " done."
 fi
 
+# Require password only once
+echo -n Password:
+read -s password
+echo
+
 # Ensure bundler availability
 if ! which bundle > /dev/null; then
   if which ruby | grep -q rbenv; then
     gem install bundler
   else
     # For system ruby
-    sudo gem install bundler
+    echo $password | sudo -s gem install bundler
   fi
 fi
 
 # Execute bootstrap script
 pushd $workdir > /dev/null
-echo -n Password:
-read -s password
-echo
 echo $password | sudo -s bundle install
 SUDO_PASSWORD=$password bundle exec itamae local -l debug bootstrap.rb
 popd > /dev/null
