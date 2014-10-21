@@ -18,8 +18,7 @@ if [ ! -e $workdir ]; then
 fi
 
 # Require password only once
-echo -n Password:
-read -s password
+read -s -p "Password:" password
 echo
 
 # Ensure bundler availability
