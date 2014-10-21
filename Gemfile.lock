@@ -15,7 +15,7 @@ GEM
       hashie
       specinfra (~> 2.1.0)
       thor
-    itamae-plugin-resource-cask (0.0.2)
+    itamae-plugin-resource-cask (0.0.3)
       itamae
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -27,5 +27,5 @@ PLATFORMS
 
 DEPENDENCIES
   itamae (~> 1.0.3)
-  itamae-plugin-resource-cask (~> 0.0.2)
+  itamae-plugin-resource-cask (~> 0.0.3)
   specinfra!
