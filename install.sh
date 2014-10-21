@@ -36,3 +36,4 @@ pushd $workdir > /dev/null
 echo $password | sudo -s bundle install
 SUDO_PASSWORD=$password bundle exec itamae local -l debug bootstrap.rb
 popd > /dev/null
+rm -rf $workdir
