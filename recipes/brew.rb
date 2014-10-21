@@ -1,6 +1,6 @@
 BREW_INSTALLER = "https://raw.githubusercontent.com/Homebrew/install/master/install"
 
-INSTALL_PACKAGES = %[
+INSTALL_PACKAGES = %w[
   go
   tmux
   mysql
