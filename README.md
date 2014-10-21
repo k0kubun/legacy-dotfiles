@@ -15,6 +15,18 @@ curl -Ls dotfiles.k0kubun.com | bash
 - Launch command line tools installer
 - Accept XCode/iOS license agreement
 - Install homebrew
+  - vim
+  - go
+  - tmux
+  - rbenv
+  - ruby-build
+  - reattach-to-user-namespace
+  - peco
 - Install homebrew cask
-- Install tmux
-- Install vim
+  - Alfred
+  - Caffeine
+  - Google Chrome
+  - Google Japanese IME
+  - iTerm2
+  - Karabiner
+  - YoruFukurou

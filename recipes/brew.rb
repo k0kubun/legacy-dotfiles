@@ -1,7 +1,6 @@
 BREW_PACKAGES = %w[
   go
   tmux
-  mysql
   rbenv
   ruby-build
   reattach-to-user-namespace
