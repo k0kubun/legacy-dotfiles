@@ -1,6 +1,4 @@
-BREW_INSTALLER = "https://raw.githubusercontent.com/Homebrew/install/master/install"
-
-INSTALL_PACKAGES = %w[
+BREW_PACKAGES = %w[
   go
   tmux
   mysql
@@ -9,11 +7,13 @@ INSTALL_PACKAGES = %w[
   reattach-to-user-namespace
 ]
 
-execute %Q[ruby -e "$(curl -fsSL #{BREW_INSTALLER})"] do
+BREW_INSTALLER = "https://raw.githubusercontent.com/Homebrew/install/master/install"
+execute "install homebrew" do
+  command %Q[ruby -e "$(curl -fsSL #{BREW_INSTALLER})"]
   not_if "which brew"
 end
 
-INSTALL_PACKAGES.each do |pkg|
+BREW_PACKAGES.each do |pkg|
   package pkg
 end
 
