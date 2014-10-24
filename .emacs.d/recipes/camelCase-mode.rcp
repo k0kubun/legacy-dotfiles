@@ -1,0 +1,4 @@
+(:name camelCase-mode
+       :description "Camel case support"
+       :type http
+       :url "http://www.eecs.ucf.edu/~leavens/emacs/camelCase/camelCase-mode.el")

@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>[Not Terminal] Command+O|P to Command+{|} (US)</name>
+    <identifier>option.not_terminal_tab_change_us</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::P, VK_COMMAND, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::O, VK_COMMAND, KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | VK_SHIFT</autogen>
+  </item>
+
+  <item>
+    <name>[Only Terminal] Command+O|P to Option+{|} (US)</name>
+    <identifier>option.only_terminal_tab_change_us</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::P, VK_COMMAND, KeyCode::BRACKET_RIGHT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::O, VK_COMMAND, KeyCode::BRACKET_LEFT, ModifierFlag::OPTION_L | VK_SHIFT</autogen>
+  </item>
+
+  <item>
+    <name>[Not Terminal] Command+E to Command+W</name>
+    <identifier>option.not_terminal_opt_e</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::E, VK_COMMAND, KeyCode::W, ModifierFlag::COMMAND_L</autogen>
+  </item>
+
+  <item>
+    <name>[Only Terminal] Command+T to Option+T, Command+E to Option+E</name>
+    <identifier>option.emacsmode_ex_optionT_org</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::T, VK_COMMAND, KeyCode::T, ModifierFlag::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::E, VK_COMMAND, KeyCode::E, ModifierFlag::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>[Only Terminal] Command+I to Option+I</name>
+    <identifier>option.only_terminal_command_i</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::I, VK_COMMAND, KeyCode::I, ModifierFlag::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>Control_L(CapsLock) to Space, Command_L to Control_R, Option_L to Command_R</name>
+    <identifier>remap.tkkbn_style_key_mappings</identifier>
+    <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::SPACE</autogen>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::CONTROL_R</autogen>
+    <autogen>__KeyToKey__ KeyCode::OPTION_L,  KeyCode::COMMAND_R</autogen>
+  </item>
+
+  <item>
+    <name>Exchange Control + Space and Command + Space</name>
+    <identifier>remap.exchange_cmd_ctr_space</identifier>
+    <autogen>__KeyToKey__ KeyCode::SPACE, VK_CONTROL, KeyCode::SPACE, VK_COMMAND</autogen>
+    <autogen>__KeyToKey__ KeyCode::SPACE, VK_COMMAND, KeyCode::SPACE, VK_CONTROL</autogen>
+  </item>
+
+  <item>
+    <name>Command+K to Command+L</name>
+    <identifier>remap.tkkbn.command_l</identifier>
+    <autogen>__KeyToKey__ KeyCode::K, VK_COMMAND, KeyCode::L, VK_COMMAND</autogen>
+  </item>
+
+  <item>
+    <name>CapsLock ON</name>
+    <identifier>remap.tkkbn.caps_on</identifier>
+    <config_not>notsave.private_capslock_on</config_not>
+    <autogen>
+      __KeyToKey__ KeyCode::L, VK_COMMAND,
+      KeyCode::CAPSLOCK,
+      KeyCode::VK_CONFIG_FORCE_ON_notsave_private_capslock_on
+    </autogen>
+  </item>
+
+  <item>
+    <name>CapsLock OFF</name>
+    <identifier>remap.tkkbn.caps_off</identifier>
+    <config_only>notsave.private_capslock_on</config_only>
+    <autogen>
+      __KeyToKey__ KeyCode::L, VK_COMMAND,
+      KeyCode::CAPSLOCK,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_private_capslock_on
+    </autogen>
+  </item>
+
+  <item>
+    <name>CapsLock Mode</name>
+    <identifier vk_config="true">notsave.private_capslock_on</identifier>
+    <autogen>__ShowStatusMessage__ CapsLock</autogen>
+  </item>
+
+  <item>
+    <name>[Not Terminal] Control+PNBF to Up/Down/Left/Right</name>
+    <not>TERMINAL</not>
+    <identifier>option.emacsmode_controlPNBF_imported</identifier>
+    <autogen>__KeyToKey__ KeyCode::P, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_UP</autogen>
+    <autogen>__KeyToKey__ KeyCode::N, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_DOWN</autogen>
+    <autogen>__KeyToKey__ KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_LEFT</autogen>
+    <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_RIGHT</autogen>
+  </item>
+
+  <item>
+    <name>[Not Terminal] Command+D to Option+Forward Delete</name>
+    <identifier>option.emacsmode_optionD_imported</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::D, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::FORWARD_DELETE, ModifierFlag::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>[Not Terminal] Command+BF to Option+Left/Right, Command+S to Command+F</name>
+    <identifier>option.emacsmode_optionBF_imported</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::F, ModifierFlag::COMMAND_L</autogen>
+  </item>
+
+  <item>
+    <name>[Not Terminal] Control+W to Option+Delete</name>
+    <identifier>option.emacsmode_ex_controlW_imported</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::W, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>[Only Terminal] Command+D to Option+D, Command+BF to Option+BF</name>
+    <identifier>option.terminal_command_option</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::D, VK_COMMAND, KeyCode::D, ModifierFlag::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::B, VK_COMMAND, KeyCode::B, ModifierFlag::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::F, VK_COMMAND, KeyCode::F, ModifierFlag::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>Control+LeftClick to Command+LeftClick</name>
+    <identifier>remap.command_click_override</identifier>
+    <autogen>__PointingButtonToPointingButton__ PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+  </item>
+
+  <item>
+    <name>[Not Terminal]Chrome inspecter Command+Control+I</name>
+    <identifier>remap.chrome_inspecter</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::COMMAND_R | ModifierFlag::CONTROL_R, KeyCode::I, ModifierFlag::OPTION_L | ModifierFlag::COMMAND_R</autogen>
+  </item>
+
+  <item>
+    <name>[Not Terminal] Control-R -> Command-R</name>
+    <identifier>remap.chrome_reload</identifier>
+    <not>TERMINAL</not>
+    <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::CONTROL_R, KeyCode::R, ModifierFlag::COMMAND_R</autogen>
+  </item>
+
+  <item>
+    <name>[Only Terminal] Command-R -> Option-R</name>
+    <identifier>remap.option_r__</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::COMMAND_R, KeyCode::R, ModifierFlag::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>Command semicolon to colon</name>
+    <identifier>remap.exchange_colon</identifier>
+    <autogen>__KeyToKey__ KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+  </item>
+
+  <item>
+    <name>Shift by control</name>
+    <identifier>remap.shift_by_control</identifier>
+    <autogen>__KeyToKey__ KeyCode::MINUS, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_0, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::KEY_0, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_9, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::KEY_9, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_8, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::KEY_8, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_7, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::KEY_7, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_6, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::KEY_6, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::BRACKET_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::COMMA, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::COMMA, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::DOT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DOT, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::SEMICOLON, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::BACKSLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::BACKSLASH, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::SLASH, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::SLASH, ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::EQUAL, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::EQUAL, ModifierFlag::SHIFT_L</autogen>
+  </item>
+
+  <item>
+    <name>Exchange single quote and double quote</name>
+    <identifier>remap.exchange_quote</identifier>
+    <autogen>__KeyToKey__ KeyCode::QUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT, KeyCode::QUOTE</autogen>
+    <autogen>__KeyToKey__ KeyCode::QUOTE, KeyCode::QUOTE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT</autogen>
+  </item>
+
+  <appdef>
+    <appname>YORUFUKUROU</appname>
+    <equal>com.YoruFukurouProject.YoruFukurou</equal>
+  </appdef>
+
+  <item>
+    <name>YoruFukurou Account Change</name>
+    <identifier>remap.yorufukurou_account_change</identifier>
+    <only>YORUFUKUROU</only>
+    <autogen>__KeyToKey__ KeyCode::K, VK_COMMAND, KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
+    <autogen>__KeyToKey__ KeyCode::J, VK_COMMAND, KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L | VK_OPTION</autogen>
+  </item>
+</root>
