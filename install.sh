@@ -51,13 +51,13 @@ done
 
 update_alias .remap .remap.rb
 
-if ! which dotremap > /dev/null; then
-  sudo gem install dotremap
-
-  if ! which dotremap > /dev/null; then
-    echo "failed to install dotremap"
-    return
-  fi
-fi
-
-dotremap
+# if ! which dotremap > /dev/null; then
+#   sudo gem install dotremap
+#
+#   if ! which dotremap > /dev/null; then
+#     echo "failed to install dotremap"
+#     return
+#   fi
+# fi
+#
+# dotremap
