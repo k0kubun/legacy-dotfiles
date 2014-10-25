@@ -40,7 +40,7 @@ update_alias() {
 }
 
 # update alias for files whose filename start with '.'
-for dotfile in `ls -A ${script_absolute_path} | grep "^\."`
+for dotfile in `\ls -A ${script_absolute_path} | grep "\/\."`
 do
   # skip .git, .gitconfig and .gitmodules
   echo $dotfile | grep -q "^\.\(git\|gitmodules\|remap\\.rb\)\$"
