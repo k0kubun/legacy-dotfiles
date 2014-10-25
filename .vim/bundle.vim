@@ -34,10 +34,11 @@ NeoBundle 'Lokaltog/powerline', 'da6667b', { 'rtp' : 'powerline/bindings/vim' }
 " NeoBundle 'bling/vim-airline'
 NeoBundle 'w0ng/vim-hybrid'
 
-" Additional
+" Editing
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'thinca/vim-prettyprint'
+NeoBundle 'haya14busa/incsearch.vim'
 
 " ctags
 " NeoBundle 'szw/vim-tags'
