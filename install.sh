@@ -1,1 +1,4 @@
-echo "hello world"
+#!/usr/bin/env bash
+
+repo_path=~/src/github.com/k0kubun/newdot
+rebuild k0kubun/dotfiles -s script -d $repo_path
