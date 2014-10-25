@@ -2,6 +2,7 @@
 
 # expand path of this script
 script_absolute_path=$(cd $(dirname $0); pwd)
+echo $script_absolute_path
 
 # Usage:
 # $ update_alias .vimrc
@@ -39,7 +40,7 @@ update_alias() {
 }
 
 # update alias for files whose filename start with '.'
-for dotfile in `ls -A | grep "^\."`
+for dotfile in `ls -A ${script_absolute_path} | grep "^\."`
 do
   # skip .git, .gitconfig and .gitmodules
   echo $dotfile | grep -q "^\.\(git\|gitmodules\|remap\\.rb\)\$"
