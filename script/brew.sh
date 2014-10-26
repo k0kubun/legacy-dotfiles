@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Install brew
 if ! which brew > /dev/null; then
   install_script_url=https://raw.githubusercontent.com/Homebrew/install/master/install
   ruby -e "$(curl -fsSL $install_script_url)"
@@ -11,6 +12,7 @@ PACKAGES="
   rbenv
   ruby-build
   reattach-to-user-namespace
+  openssl
 
   peco/peco/peco
   caskroom/cask/brew-cask
