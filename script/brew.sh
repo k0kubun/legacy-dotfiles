@@ -6,24 +6,28 @@ if ! which brew > /dev/null; then
   ruby -e "$(curl -fsSL $install_script_url)"
 fi
 
-PACKAGES="
+BREW_PACKAGES="
   go
-  tmux
-  rbenv
-  ruby-build
-  reattach-to-user-namespace
   openssl
+  rbenv
+  reattach-to-user-namespace
+  ruby-build
+  tmux
+  vim --with-lua --with-luajit
 
   peco/peco/peco
   caskroom/cask/brew-cask
 "
 
-for package in $PACKAGES; do
-  package_name=$(basename ${package})
+while read line; do
+  if [[ $line != "" ]]; then
+    package=$(echo $line | cut -d' ' -f1)
+    package_name=$(basename ${package})
 
-  if brew list -1 | grep "^${package_name}" > /dev/null; then
-    echo "Skip: brew install ${package}"
-  else
-    brew install $package
+    if brew list -1 | grep "^${package_name}" > /dev/null; then
+      echo "Skip: brew install ${line}"
+    else
+      brew cask install ${line}
+    fi
   fi
-done
+done <<< "${BREW_PACKAGES}"
