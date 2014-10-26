@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
 
-# CASK_PACKAGES="
-#   alfred
-#   caffeine
-#   google-chrome
-#   google-japanese-ime
-#   iterm2
-#   karabiner
-#   yorufukurou
-# "
 CASK_PACKAGES="
+  alfred
   caffeine
+  google-chrome
+  google-japanese-ime
+  iterm2
+  karabiner
+  yorufukurou
 "
 INSTALL_OPTIONS="--appdir=/Applications"
 
