@@ -27,7 +27,7 @@ while read line; do
     if brew list -1 | grep "^${package_name}" > /dev/null; then
       echo "Skip: brew install ${line}"
     else
-      brew cask install ${line}
+      brew install ${line}
     fi
   fi
 done <<< "${BREW_PACKAGES}"
