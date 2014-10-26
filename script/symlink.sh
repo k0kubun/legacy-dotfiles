@@ -11,7 +11,7 @@ force_symlink() {
 
   rm -rf $to
   ln -s $from $to
-  echo "  Link: ${target} -> ${to}"
+  echo "Link: ${target} -> ${to}"
 }
 
 for linked in `\ls -A ${linked_dir}`; do
