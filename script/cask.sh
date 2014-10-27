@@ -8,6 +8,7 @@ CASK_PACKAGES="
   iterm2
   karabiner
   yorufukurou
+  dropbox
 "
 INSTALL_OPTIONS="--appdir=/Applications"
 
