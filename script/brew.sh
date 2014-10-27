@@ -17,6 +17,7 @@ BREW_PACKAGES="
   vim --with-lua --with-luajit
 
   peco/peco/peco
+  motemen/ghq/ghq
   caskroom/cask/brew-cask
 "
 
