@@ -17,3 +17,4 @@ force_symlink() {
 for linked in `\ls -A ${linked_dir}`; do
   force_symlink $linked
 done
+touch ~/.tmux.conf.local
