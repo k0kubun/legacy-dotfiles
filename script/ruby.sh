@@ -7,6 +7,7 @@ INSTALL_OPTIONS="
 "
 DEFAULT_GEMS="
   bundler
+  rake
   rebuild
 "
 
