@@ -15,4 +15,4 @@ alias vim="/usr/local/bin/vim"
 alias ..="cd .."
 
 # Karabiner CLI
-alias karabiner="/Applications/Karabiner.app/Contents/Library/bin/karabiner"
+# alias karabiner="/Applications/Karabiner.app/Contents/Library/bin/karabiner"
