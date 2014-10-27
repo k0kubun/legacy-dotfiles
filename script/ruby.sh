@@ -20,8 +20,10 @@ fi
 rbenv_init=$(rbenv init -)
 eval "${rbenv_init}"
 
+gem_list=$(gem list)
+
 for gem_name in $DEFAULT_GEMS; do
-  if gem list | grep $gem_name > /dev/null; then
+  if echo "${gem_list}" | grep $gem_name > /dev/null; then
     echo "Skip: gem install ${gem_name}"
   else
     gem install $gem_name
