@@ -7,4 +7,5 @@ rebuild k0kubun/dotfiles -f -s script -d $repo_path <<-PRIMARY
   cask.sh
   ruby.sh
   symlink.sh
+  karabiner.sh
 PRIMARY
