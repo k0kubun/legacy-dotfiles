@@ -15,13 +15,15 @@ if rbenv versions | grep $VERSION > /dev/null; then
 else
   RUBY_CONFIGURE_OPTS="${INSTALL_OPTIONS}" rbenv install ${VERSION}
   rbenv global $VERSION
-  rbenv rehash
 fi
 
-# for gem_name in $DEFAULT_GEMS; do
-#   if gem list | grep $gem_name > /dev/null; then
-#     echo "Skip: gem install ${gem_name}"
-#   else
-#     gem install $gem_name
-#   fi
-# done
+rbenv_init=$(rbenv init -)
+eval "${rbenv_init}"
+
+for gem_name in $DEFAULT_GEMS; do
+  if gem list | grep $gem_name > /dev/null; then
+    echo "Skip: gem install ${gem_name}"
+  else
+    gem install $gem_name
+  fi
+done
