@@ -12,10 +12,10 @@ fi
 
 rbenv_init=$(rbenv init -)
 eval "${rbenv_init}"
-ruby -v
 
 if ! which dotremap; then
   gem install dotremap
+  rbenv rehash
 fi
 
 dotremap

@@ -27,5 +27,6 @@ for gem_name in $DEFAULT_GEMS; do
     echo "Skip: gem install ${gem_name}"
   else
     gem install $gem_name
+    rbenv rehash
   fi
 done
