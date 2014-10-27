@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if ! pgrep -q Karabiner > /dev/null; then
+if ! pgrep -q Karabiner; then
   printf "\e[32mObtain accessibility for Karabiner AXNotifier\e[0m\n"
   sql="
     INSERT OR REPLACE INTO access
@@ -13,7 +13,7 @@ fi
 rbenv_init=$(rbenv init -)
 eval "${rbenv_init}"
 
-if ! which dotremap; then
+if ! which -s dotremap; then
   gem install dotremap
   rbenv rehash
 fi

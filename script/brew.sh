@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install brew
-if ! which brew > /dev/null; then
+if ! which -s brew; then
   install_script_url=https://raw.githubusercontent.com/Homebrew/install/master/install
   ruby -e "$(curl -fsSL $install_script_url)"
 fi
@@ -26,7 +26,7 @@ while read line; do
     package=$(echo $line | cut -d' ' -f1)
     package_name=$(basename ${package})
 
-    if echo "${brew_list}" | grep "^${package_name}" > /dev/null; then
+    if echo "${brew_list}" | grep -q "^${package_name}"; then
       echo "Skip: brew install ${line}"
     else
       brew install ${line}

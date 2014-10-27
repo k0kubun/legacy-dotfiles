@@ -11,7 +11,7 @@ DEFAULT_GEMS="
   rebuild
 "
 
-if rbenv versions | grep $VERSION > /dev/null; then
+if rbenv versions | grep -q $VERSION; then
   echo "Skip: rbenv install ${VERSION}"
 else
   RUBY_CONFIGURE_OPTS="${INSTALL_OPTIONS}" rbenv install ${VERSION}
@@ -24,7 +24,7 @@ eval "${rbenv_init}"
 gem_list=$(gem list)
 
 for gem_name in $DEFAULT_GEMS; do
-  if echo "${gem_list}" | grep $gem_name > /dev/null; then
+  if echo "${gem_list}" | grep -q $gem_name; then
     echo "Skip: gem install ${gem_name}"
   else
     gem install $gem_name
