@@ -27,3 +27,7 @@
   rebase = true
 [ghq]
   root = ~/src
+[rebuild]
+  repo = k0kubun/dotfiles
+  scriptdir = script
+  directory = ~/src/github.com/k0kubun/dotfiles
