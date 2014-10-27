@@ -19,6 +19,7 @@ BREW_PACKAGES="
   peco/peco/peco
   motemen/ghq/ghq
   caskroom/cask/brew-cask
+  homebrew/science/nusmv
 "
 
 brew_list=$(brew list -1)
