@@ -10,6 +10,7 @@ BREW_PACKAGES="
   go
   openssl
   rbenv
+  readline
   reattach-to-user-namespace
   ruby-build
   tmux
