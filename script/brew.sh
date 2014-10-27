@@ -19,12 +19,14 @@ BREW_PACKAGES="
   caskroom/cask/brew-cask
 "
 
+brew_list=$(brew list -1)
+
 while read line; do
   if [[ $line != "" ]]; then
     package=$(echo $line | cut -d' ' -f1)
     package_name=$(basename ${package})
 
-    if brew list -1 | grep "^${package_name}" > /dev/null; then
+    if echo "${brew_list}" | grep "^${package_name}" > /dev/null; then
       echo "Skip: brew install ${line}"
     else
       brew install ${line}
