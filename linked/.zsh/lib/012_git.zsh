@@ -19,14 +19,6 @@ function gl(){
 	fi
 }
 
-function gp(){
-	if [ $# -ne 0 ]; then
-		git push $@ `current-branch`
-	else
-		git push
-	fi
-}
-
 function gg() {
 	if [[ -n `git rev-parse --git-dir 2> /dev/null` ]]; then
 		git grep -n $@

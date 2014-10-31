@@ -1,5 +1,5 @@
-#! /usr/bin/env ruby
-# usage: exyacc.rb [yaccfiles]
+#!/usr/bin/env ruby
+# usage: exyacc [yaccfiles]
 # this is coverted from exyacc.pl in the camel book
 
 ARGF.each(nil) do |source|

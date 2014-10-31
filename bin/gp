@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+if ARGV.empty?
+  exit system('git', 'push')
+else
+  exit system('git', 'push', *ARGV)
+end
