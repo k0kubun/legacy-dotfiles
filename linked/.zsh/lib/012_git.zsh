@@ -33,7 +33,7 @@ function gp() {
 			if git remote | grep -q mine; then
 				git push $@ `current-branch`
 			else
-				git push `echo $@ | sed -e "s/mine/origin/"` `current_branch`
+				git push `echo $@ | sed -e "s/mine/origin/"` `current-branch`
 			fi
 		else
 			git push $@ `current-branch`
