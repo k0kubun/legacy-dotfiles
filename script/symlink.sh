@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+pushd $repository_root > /dev/null
+git submodule init
+git submodule update
+popd > /dev/null
+
 repository_root=$(cd $(dirname $0); cd ..; pwd)
 linked_dir=${repository_root}/linked
 link_destination=$HOME
@@ -19,7 +24,9 @@ for linked in `\ls -A ${linked_dir}`; do
 done
 touch ~/.tmux.conf.local
 
-pushd $repository_root > /dev/null
-git submodule init
-git submodule update
-popd > /dev/null
+linked_dir=${repository_root}/bin
+link_destination=${HOME}/bin
+
+for linked in `\ls ${source_dir}`; do
+  force_symlink $linked
+done
