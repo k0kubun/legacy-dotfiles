@@ -14,6 +14,8 @@ force_symlink() {
   echo "Link: ${target} -> ${to}"
 }
 
+git submodule update
+
 for linked in `\ls -A ${linked_dir}`; do
   force_symlink $linked
 done
