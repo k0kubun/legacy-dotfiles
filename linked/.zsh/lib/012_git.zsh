@@ -19,6 +19,30 @@ function gl(){
 	fi
 }
 
+# git push to current branch with 'mine' remote fallback
+function gp() {
+	if [ $# -ne 0 ]; then
+		mine_push=false
+		for arg in $@; do
+			if [ $arg = "mine" ]; then
+				mine_push=true
+			fi
+		done
+
+		if $mine_push; then
+			if git remote | grep -q mine; then
+				git push $@ `current-branch`
+			else
+				git push `echo $@ | sed -e "s/mine/origin/"` `current_branch`
+			fi
+		else
+			git push $@ `current-branch`
+		fi
+	else
+		git push
+	fi
+}
+
 function gg() {
 	if [[ -n `git rev-parse --git-dir 2> /dev/null` ]]; then
 		git grep -n $@

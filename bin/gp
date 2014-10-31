@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-
-exit system('git', 'push') if ARGV.empty?
-
-require 'optparse'
-
-opt = OptionParser.new
-args = opt.parse!(ARGV)
