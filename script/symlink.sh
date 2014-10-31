@@ -27,6 +27,6 @@ touch ~/.tmux.conf.local
 linked_dir=${repository_root}/bin
 link_destination=${HOME}/bin
 
-for linked in `\ls ${source_dir}`; do
+for linked in `\ls ${linked_dir}`; do
   force_symlink $linked
 done
