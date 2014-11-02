@@ -19,9 +19,22 @@ function gl(){
 	fi
 }
 
-# git push to current branch with 'mine' remote fallback
+# git push to current branch with remote fallback
 function gp() {
 	if [ $# -ne 0 ]; then
+		# if origin is http://github.com/foo/bar, change to github.com:foo/bar
+		if git remote | grep -q origin; then
+			remote=`git config --get remote.origin.url`
+
+			if echo $remote | grep -q "^https://"; then
+				new_remote=`echo $remote | sed -e "s/https:\/\/github\.com\//github.com:/g"`
+
+				git remote rm origin
+				git remote add origin $new_remote
+			fi
+		fi
+
+		# check whether remote mine exists or not
 		mine_push=false
 		for arg in $@; do
 			if [ $arg = "mine" ]; then
@@ -29,6 +42,7 @@ function gp() {
 			fi
 		done
 
+		# if mine does not exist, push to origin
 		if $mine_push; then
 			if git remote | grep -q mine; then
 				git push $@ `current-branch`
