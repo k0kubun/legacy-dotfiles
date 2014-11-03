@@ -7,6 +7,7 @@ if ! which -s brew; then
 fi
 
 BREW_PACKAGES="
+  mercurial
   mysql
   go
   openssl
