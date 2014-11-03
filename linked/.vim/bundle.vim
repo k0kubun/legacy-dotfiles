@@ -19,6 +19,7 @@ NeoBundle 'groenewege/vim-less'
 " NeoBundle 'eagletmt/coqtop-vim'
 " NeoBundle 'haruyama/scheme.vim'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'vim-jp/vim-go-extra'
 " NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 NeoBundle 'wannesm/wmnusmv.vim'
 " NeoBundleLazy 'shinka-cb/smv_vim', {'autoload':{'filetypes':['smv']}}

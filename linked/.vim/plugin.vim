@@ -54,5 +54,5 @@ let g:unite_redraw_hold_candidates = 15000
 " endfunction
 
 " vim-go
-let g:go_fmt_autosave = 0
+let g:go_fmt_autosave = 1
 let g:go_fmt_fail_silently = 1
