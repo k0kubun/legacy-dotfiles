@@ -18,3 +18,4 @@ export SAVEHIST=100000
 setopt ignore_eof
 
 export PATH="/opt/local/bin:$PATH"
+export EDITOR="vim"
