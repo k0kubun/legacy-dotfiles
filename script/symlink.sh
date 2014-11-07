@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
+repository_root=$(cd $(dirname $0); cd ..; pwd)
+linked_dir=${repository_root}/linked
+link_destination=$HOME
+
 pushd $repository_root > /dev/null
 git submodule init
 git submodule update
 popd > /dev/null
-
-repository_root=$(cd $(dirname $0); cd ..; pwd)
-linked_dir=${repository_root}/linked
-link_destination=$HOME
 
 force_symlink() {
   target=$1
