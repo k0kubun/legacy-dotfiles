@@ -46,7 +46,8 @@ NeoBundle 'haya14busa/incsearch.vim'
 
 " Unite
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'yuku-t/unite-git'
+" NeoBundle 'yuku-t/unite-git'
+NeoBundle 'k0kubun/unite-git-files'
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
