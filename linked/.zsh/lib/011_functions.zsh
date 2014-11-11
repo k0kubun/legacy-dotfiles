@@ -70,14 +70,6 @@ function analyze() {
 	cat ~/.zsh_history | awk 'BEGIN {FS=";"} {print $2}' | awk '{print $1}' | sort | uniq -c | sort -nr | head -n 15
 }
 
-# bundler directory
-function bd() {
-	dir=`ruby -e "require 'bundler'; Bundler.load.specs.sort_by(&:name).each{|s| puts s.full_gem_path}" | peco`
-	if [ $? -eq 0 ]; then
-		cd $dir
-	fi
-}
-
 # replace foo bar #=> s/foo/bar/
 function replace() {
 	gg --name-only $1 | xargs sed -i "" -e "s/$1/$2/g"

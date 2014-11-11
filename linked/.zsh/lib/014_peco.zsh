@@ -53,3 +53,17 @@ local selected_file=$(find . -type f | grep -v "\.\/\.git\/" | peco --prompt "[f
 }
 zle -N peco-append-filepath
 bindkey '^q' peco-append-filepath
+
+# bundler directory
+function bundler-directory() {
+	bundle_show=`bundle show --paths`
+	if [ $bundle_show = "Could not locate Gemfile" ]; then
+		echo $bundle_show
+		return
+	fi
+	dir=`echo ${bundle_show} | peco`
+	if [ $? -eq 0 ]; then
+		cd $dir
+	fi
+}
+alias bd="bundler-directory"
