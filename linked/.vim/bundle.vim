@@ -59,6 +59,7 @@ NeoBundle 'Shougo/vimproc', {
 
 " Git
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tonchis/vim-to-github'
 " NeoBundle 'gregsexton/gitv'
 NeoBundle 'airblade/vim-gitgutter'
 

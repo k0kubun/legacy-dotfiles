@@ -19,7 +19,7 @@ if has("autocmd")
   autocmd FileType ruby       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType haml       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType slim       setlocal sw=2 sts=2 ts=2 et
-  autocmd FileType vim        setlocal sw=4 sts=4 ts=4 et
+  autocmd FileType vim        setlocal sw=2 sts=2 ts=2 et
   autocmd FileType yacc       setlocal sw=2 sts=2 ts=2 et noexpandtab
   autocmd FileType go         setlocal sw=2 sts=2 ts=2 et noexpandtab
   autocmd FileType zsh        setlocal sw=2 sts=2 ts=2 et noexpandtab
