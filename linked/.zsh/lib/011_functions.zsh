@@ -74,3 +74,10 @@ function analyze() {
 function replace() {
 	gg --name-only $1 | xargs sed -i "" -e "s/$1/$2/g"
 }
+
+function kill-applespell() {
+  if [ -e /System/Library/Services/AppleSpell.service/Contents/Resources ]; then
+		sudo mv /System/Library/Services/AppleSpell.service/Contents/Resources{,.disabled}
+	fi
+	pkill AppleSpell
+}
