@@ -16,3 +16,5 @@ alias ..="cd .."
 
 # Karabiner CLI
 # alias karabiner="/Applications/Karabiner.app/Contents/Library/bin/karabiner"
+
+alias -g icloud-drive="~/Library/Mobile\ Documents/com\~apple\~CloudDocs"
