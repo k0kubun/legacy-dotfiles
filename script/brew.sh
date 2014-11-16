@@ -22,6 +22,7 @@ BREW_PACKAGES="
   motemen/ghq/ghq
   caskroom/cask/brew-cask
   homebrew/science/nusmv
+  k0kubun/envchain/envchain
 "
 
 brew_list=$(brew list -1)
