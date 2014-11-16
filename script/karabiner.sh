@@ -13,9 +13,9 @@ fi
 rbenv_init=$(rbenv init -)
 eval "${rbenv_init}"
 
-if ! which -s dotremap; then
-  gem install dotremap
+if ! which -s karabiner-dsl; then
+  gem install karabiner
   rbenv rehash
 fi
 
-dotremap
+karabiner dsl
