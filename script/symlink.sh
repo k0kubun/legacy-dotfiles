@@ -31,3 +31,7 @@ mkdir ${HOME}/bin
 for linked in `\ls ${linked_dir}`; do
   force_symlink $linked
 done
+
+if [ ! -e ~/icloud ]; then
+  ln -s -f ~/Library/Mobile\ Documents/com\~apple\~CloudDocs ~/icloud
+fi
