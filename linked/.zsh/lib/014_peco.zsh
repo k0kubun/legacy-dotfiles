@@ -67,3 +67,6 @@ function bundler-directory() {
 	fi
 }
 alias bd="bundler-directory"
+
+# https://github.com/k0kubun/grimoire
+alias grimoire-peco="grimoire | peco --initial-matcher=Regexp"
