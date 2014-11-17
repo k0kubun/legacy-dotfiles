@@ -81,3 +81,11 @@ function kill-applespell() {
 	fi
 	pkill AppleSpell
 }
+
+function pass() {
+	if [ $# -ne 0 ]; then
+		envchain $@ env | grep SUDO_PASSWORD | sed -e "s/SUDO_PASSWORD=//" | tr -d "\n" | pbcopy
+	else
+		echo "Usage: pass NAMESPACE"
+	fi
+}
