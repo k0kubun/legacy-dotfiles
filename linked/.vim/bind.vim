@@ -78,3 +78,6 @@ inoremap <C-w> <C-g>u<C-w>
 " pane size changer
 nnoremap <C-w>> <C-w>14>
 nnoremap <C-w>< <C-w>14<
+
+" binding.pry
+inoremap <C-v> require "pry"; binding.pry
