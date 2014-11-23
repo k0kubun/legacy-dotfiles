@@ -3,12 +3,13 @@
 CASK_PACKAGES="
   alfred
   caffeine
+  dropbox
   google-chrome
   google-japanese-ime
   iterm2
   karabiner
+  vagrant
   yorufukurou
-  dropbox
 "
 INSTALL_OPTIONS="--appdir=/Applications"
 
