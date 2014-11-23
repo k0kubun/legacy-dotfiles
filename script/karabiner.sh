@@ -13,7 +13,7 @@ fi
 rbenv_init=$(rbenv init -)
 eval "${rbenv_init}"
 
-if ! which -s karabiner-dsl; then
+if ! which -s karabiner; then
   gem install karabiner
   rbenv rehash
 fi
