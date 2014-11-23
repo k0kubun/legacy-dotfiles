@@ -9,6 +9,7 @@ CASK_PACKAGES="
   iterm2
   karabiner
   vagrant
+  virtualbox
   yorufukurou
 "
 INSTALL_OPTIONS="--appdir=/Applications"
