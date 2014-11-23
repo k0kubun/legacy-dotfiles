@@ -174,12 +174,12 @@ item "Shift by control" do
   remap "C-\\", to: "Shift-\\"
 end
 
-item "Exchange single quote and double quote" do
-  remap "Shift-'", to: "'"
-  remap "Cmd-'", to: "'"
-  remap "C-'", to: "'"
-  remap "'", to: "Shift-'"
-end
+# item "Exchange single quote and double quote" do
+#   remap "Shift-'", to: "'"
+#   remap "Cmd-'", to: "'"
+#   remap "C-'", to: "'"
+#   remap "'", to: "Shift-'"
+# end
 
 item "Command+A to Option+A", only: "TERMINAL" do
   remap "Cmd-A", to: "M-a"
