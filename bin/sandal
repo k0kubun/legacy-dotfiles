@@ -1,0 +1,14 @@
+#!/bin/sh
+pushd /Users/k0kubun/src/github.com/k0kubun/sandal/lang/parsing > /dev/null
+make > /dev/null
+popd > /dev/null
+
+pushd /Users/k0kubun/src/github.com/k0kubun/sandal > /dev/null
+go build
+popd > /dev/null
+
+if [ $# -ne 0 ]; then
+  /Users/k0kubun/src/github.com/k0kubun/sandal/sandal $@
+else
+  echo "Built"
+fi
