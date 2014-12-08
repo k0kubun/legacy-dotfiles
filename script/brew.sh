@@ -7,9 +7,11 @@ if ! which -s brew; then
 fi
 
 BREW_PACKAGES="
+  ghostscript
+  go
+  imagemagick
   mercurial
   mysql
-  go
   openssl
   rbenv
   readline

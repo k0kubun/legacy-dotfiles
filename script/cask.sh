@@ -8,6 +8,7 @@ CASK_PACKAGES="
   google-japanese-ime
   iterm2
   karabiner
+  mactex
   vagrant
   virtualbox
   yorufukurou
