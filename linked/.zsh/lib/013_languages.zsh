@@ -7,8 +7,8 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 alias gosh="gosh-rl"
 
 # TeX
-export PATH="/usr/texbin:$PATH"
-function ttp() {
+eval `/usr/libexec/path_helper -s`
+function tex() {
 	platex $1
 	dvipdfmx $1
 	rm *.dvi
