@@ -8,7 +8,7 @@ fi
 
 BREW_PACKAGES="
   ghostscript
-  go
+  go --cross-compile-common
   imagemagick
   mercurial
   mysql
