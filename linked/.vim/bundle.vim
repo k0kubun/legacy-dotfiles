@@ -45,7 +45,7 @@ NeoBundle 'haya14busa/incsearch.vim'
 " NeoBundle 'szw/vim-tags'
 
 " Unite
-NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite.vim', '76612ec'
 " NeoBundle 'yuku-t/unite-git'
 NeoBundle 'k0kubun/unite-git-files'
 NeoBundle 'Shougo/vimproc', {
