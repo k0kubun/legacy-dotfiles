@@ -7,6 +7,7 @@ if ! which -s brew; then
 fi
 
 BREW_PACKAGES="
+  ctags
   ghostscript
   go --cross-compile-common
   imagemagick
