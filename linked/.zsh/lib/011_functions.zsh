@@ -89,3 +89,10 @@ function pass() {
 		echo "Usage: pass NAMESPACE"
 	fi
 }
+
+function replace-githooks() {
+	if [ -e .git/hooks ]; then
+		rm -rf .git/hooks
+		ln -s ~/.githooks .git/hooks
+	fi
+}
