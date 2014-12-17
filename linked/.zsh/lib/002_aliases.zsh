@@ -2,7 +2,7 @@
 alias ls="ls -Gla"
 
 # override system ctags
-alias ctags="/usr/local/bin/ctags"
+# alias ctags="/usr/local/bin/ctags"
 
 # .zshrc reload
 alias re="source ~/.zshrc"
