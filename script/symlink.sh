@@ -35,3 +35,8 @@ done
 if [ ! -e ~/icloud ]; then
   ln -s -f ~/Library/Mobile\ Documents/com\~apple\~CloudDocs ~/icloud
 fi
+
+# initialize .git-template
+if [ ! -e ~/.git-template/hooks ]; then
+	ln -s ~/.githooks ~/.git-template/hooks
+fi

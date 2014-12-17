@@ -88,4 +88,4 @@ alias titech="git config --global http.proxy 131.112.125.238:3128"
 alias untitech="git config --global --unset http.proxy"
 
 # git-hook
-export PATH="$HOME/.git-hook/bin:$PATH"
+# export PATH="$HOME/.git-hook/bin:$PATH"
