@@ -30,6 +30,7 @@ autocmd BufNewFile,BufRead *.sandal set filetype=go
 autocmd BufNewFile,BufRead *.pending set filetype=go
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead .itamae set filetype=yaml
+autocmd BufNewFile,BufRead *.tex set filetype=tex
 
 " ファイルタイプ判定をon
 filetype plugin on
