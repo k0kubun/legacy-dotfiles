@@ -106,3 +106,8 @@ function replace-all() {
 		popd > /dev/null
 	done
 }
+
+functions tags-update() {
+	source ~/.githooks/ctags
+}
+alias t="tags-update"
