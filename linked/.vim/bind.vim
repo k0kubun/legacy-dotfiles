@@ -43,7 +43,7 @@ nnoremap <silent> ;u :<C-u>Unite buffer git_files<CR>
 imap ;q <C-u><C-h>
 
 " ctags
-nnoremap <silent> [Tag]f <C-]>
+nnoremap <silent> [Tag]d <C-]>
 nnoremap <silent> [Tag]u <C-o>
 nnoremap <silent> [Tag]i <C-i>
 
