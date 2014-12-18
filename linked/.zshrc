@@ -1,26 +1,20 @@
 # Load local settings first
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-LOAD_LIBS="
-  go
-	ruby
-	aliases
-	basic
-	tmux
-	completion
-	functions
-	git
-	languages
-	peco
-	theme
-	csa
-"
-
-while read line; do
-	if [[ $line == "" ]]; then
-		continue
-	fi
-
-	lib="${HOME}/.zsh/lib/${line}.zsh"
+function load() {
+	lib="${HOME}/.zsh/lib/${1}.zsh"
 	source $lib
-done <<< "${LOAD_LIBS}"
+}
+
+load go
+load ruby
+load aliases
+load basic
+load tmux
+load completion
+load functions
+load git
+load languages
+load peco
+load theme
+load csa
