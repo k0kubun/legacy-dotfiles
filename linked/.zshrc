@@ -1,19 +1,26 @@
-ENABLE_TIMEFUNC=0
-LIB_DEBUG=0
-
-source ~/.zsh/debugger.zsh
-
 # Load local settings first
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-# Load splitted configs
-for file in `/bin/ls -F ~/.zsh/lib/*`
-do
-	if [ $LIB_DEBUG -ne 0 ]; then
-		start
-		source $file
-		finish $file
-	else
-		source $file
+LOAD_LIBS="
+  go
+	ruby
+	aliases
+	basic
+	tmux
+	completion
+	functions
+	git
+	languages
+	peco
+	theme
+	csa
+"
+
+while read line; do
+	if [[ $line == "" ]]; then
+		continue
 	fi
-done
+
+	lib="${HOME}/.zsh/lib/${line}.zsh"
+	source $lib
+done <<< "${LOAD_LIBS}"
