@@ -1,8 +1,14 @@
 #!/bin/sh
 set -e
 PATH="/usr/local/bin:$PATH"
-dir="`git rev-parse --git-dir`"
+git_dir="`git rev-parse --git-dir`"
 trap 'rm -f "$dir/$$.tags"' EXIT
-git ls-files | \
-  ctags --tag-relative -L - -f"$dir/$$.tags" --languages=-javascript,sql
-mv "$dir/$$.tags" "$dir/tags"
+
+temp="$git_dir/$$.tags"
+git ls-files | ctags --tag-relative -L - -f"$temp" --languages=-javascript,sql
+mv "$temp" "$git_dir/tags"
+
+if [ -e Gemfile.lock ]; then
+  ctags -f"$temp" -R `bundle show --paths`
+  mv "$temp" tags
+fi
