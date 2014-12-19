@@ -9,6 +9,7 @@ fi
 BREW_PACKAGES="
   ctags
   ghostscript
+  git
   go --cross-compile-common
   imagemagick
   mercurial
