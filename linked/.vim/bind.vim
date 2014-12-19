@@ -43,7 +43,9 @@ nnoremap <silent> ;u :<C-u>Unite buffer git_files<CR>
 imap ;q <C-u><C-h>
 
 " ctags
-nnoremap <silent> [Tag]d <C-]>
+"nnoremap <silent> [Tag]d <C-]>
+nnoremap <silent> [Tag]d :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
+nnoremap <silent> [Tag]f g<C-]>
 nnoremap <silent> [Tag]u <C-o>
 nnoremap <silent> [Tag]i <C-i>
 
