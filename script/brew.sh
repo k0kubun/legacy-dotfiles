@@ -18,6 +18,7 @@ BREW_PACKAGES="
   rbenv
   readline
   reattach-to-user-namespace
+  redis
   ruby-build
   tmux
   vim --with-lua --with-luajit
