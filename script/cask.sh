@@ -9,6 +9,7 @@ CASK_PACKAGES="
   iterm2
   karabiner
   mactex
+  sequel-pro
   vagrant
   virtualbox
   yorufukurou
