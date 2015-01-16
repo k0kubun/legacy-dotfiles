@@ -8,7 +8,7 @@ files.each do |file|
   host = file.gsub(/\.js$/, '')
   js   = File.read(file).gsub(/^/, '  ')
 
-  scripts << "(location.href.match(/^https?:\\\/\\\/#{host}/)) {\n#{js}}"
+  scripts << "(location.href.match(/^https?:\\\/\\\/(www\.|)#{host}/)) {\n#{js}}"
 end
 
 all_js = <<-JS
