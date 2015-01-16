@@ -22,3 +22,14 @@ Thus I use another way to load user scripts using Tampermonkey.
 // @require file:///Users/k0kubun/.js/all.js
 // ==/UserScript==
 ```
+
+## Build all.js
+
+```sh
+# You can manually build all.js by ./build
+$ ./build
+
+# Watch *.js and automatically execute ./build
+$ bundle install
+$ ./autobuild
+```
