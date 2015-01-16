@@ -11,11 +11,11 @@ if (location.href.match(/^https?:\/\/(www.|)google.co.jp/)) {
   }
 } else if (location.href.match(/^https?:\/\/(www.|)qiita.com/)) {
   if (location.pathname != '/') {
-    return
+    return;
   }
 
-  var loadedCount = 0
-  var ignoreExpression = /( \| |#ruby)/
+  var loadedCount = 0;
+  var ignoreExpression = /( \| |#ruby)/;
 
   function filterTracks() {
     $('.item-box.track').each(function() {
@@ -29,7 +29,7 @@ if (location.href.match(/^https?:\/\/(www.|)google.co.jp/)) {
   function tryFilter() {
     if ($('.item-box.track').length > loadedCount) {
       filterTracks();
-      loadedCount = $('.item-box.track').length
+      loadedCount = $('.item-box.track').length;
     } else {
       setTimeout(tryFilter, 100);
     }
