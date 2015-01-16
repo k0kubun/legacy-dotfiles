@@ -1,7 +1,8 @@
 # .js
 
 [dotjs](https://github.com/defunkt/dotjs) has awesome interface, but I don't like running a server just for it and seeing its response in Network tab of developer tools.
-I propose another way to load user scripts using Tampermonkey. This way is enough for me.
+And dotjs setup bothers me.
+Thus I use another way to load user scripts using Tampermonkey.
 
 - Install Tampermonkey [★](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=ja)
 - Enable accessibility for local file URL in chrome://extensions

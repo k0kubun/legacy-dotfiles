@@ -6,10 +6,14 @@ files.delete('all.js')
 scripts = []
 files.each do |file|
   host = file.gsub(/\.js$/, '')
-  js   = File.read(file)
+  js   = File.read(file).gsub(/^/, '  ')
 
   scripts << "(location.href.match(/^https?:\\\/\\\/#{host}/)) {\n#{js}}"
 end
 
-all_js = "if #{scripts.join(' else if ')}"
+all_js = <<-JS
+$(window).load(function() {
+  if #{scripts.join(' else if ').gsub(/^/, '  ').gsub(/\A  /, '')}
+});
+JS
 File.write('all.js', all_js)
