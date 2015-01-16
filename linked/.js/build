@@ -11,9 +11,5 @@ files.each do |file|
   scripts << "(location.href.match(/^https?:\\\/\\\/(www\.|)#{host}/)) {\n#{js}}"
 end
 
-all_js = <<-JS
-$(window).load(function() {
-  if #{scripts.join(' else if ').gsub(/^/, '  ').gsub(/\A  /, '')}
-});
-JS
+all_js = "if #{scripts.join(' else if ').gsub(/\A  /, '')}".gsub(/^ +$/, '')
 File.write('all.js', all_js)
