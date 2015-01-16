@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-# # Example
-# item "Command+E to Command+W", not: "TERMINAL" do
-#   identifier "option.not_terminal_opt_e"
-#   autogen "__KeyToKey__ KeyCode::E, VK_COMMAND, KeyCode::W, ModifierFlag::COMMAND_L"
-# end
