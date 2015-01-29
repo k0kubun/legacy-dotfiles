@@ -11,6 +11,7 @@ BREW_PACKAGES="
   ghostscript
   git
   go --cross-compile-common
+  hub
   imagemagick
   mercurial
   mysql
