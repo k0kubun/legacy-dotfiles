@@ -116,8 +116,12 @@ function preq() {
 	# git rev-list --first-parent  : follow only the first parent commit upon seeing a merge commit
 	merge_commit=$(ruby -e 'print (File.readlines(ARGV[0]) & File.readlines(ARGV[1])).last' <(git rev-list --ancestry-path $1..master) <(git rev-list --first-parent $1..master))
 
-	issue_number=$(git show $merge_commit | grep 'pull request' | ruby -ne 'puts $_.match(/#(\d+)/)[1]')
-	url="$(github-url)/pull/${issue_number}"
+	if git show $merge_commit | grep -q 'pull request'; then
+		issue_number=$(git show $merge_commit | grep 'pull request' | ruby -ne 'puts $_.match(/#(\d+)/)[1]')
+		url="$(github-url)/pull/${issue_number}"
+	else
+		url="$(github-url)/commit/${merge_commit}"
+	fi
 
 	open $url
 }
