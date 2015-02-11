@@ -2,7 +2,7 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # FIXME: bottle neck for sourcing .zshrc
-eval "$(rbenv init -)"
+eval "$(rbenv init - --no-rehash zsh)"
 
 # auto rehash when gem install
 function gem(){
