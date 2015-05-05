@@ -3,4 +3,5 @@ language:
 os:
   - osx
 script:
+  - brew update
   - bundle exec serverkit apply recipe.yml --log-level=DEBUG
