@@ -5,8 +5,10 @@ repo=dotfiles
 workdir=~/src/github.com/${user}/${repo}
 
 # Clone repository
-mkdir -p ~/src/github.com/${user}
-git clone https://github.com/${user}/${repo} $workdir
+if [ ! -e $workdir ]; then
+  mkdir -p ~/src/github.com/${user}
+  git clone https://github.com/${user}/${repo} $workdir
+fi
 
 # Bundle install
 sudo which bundle > /dev/null || sudo gem install bundler
