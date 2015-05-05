@@ -11,6 +11,11 @@ if [ ! -e $workdir ]; then
 fi
 pushd $workdir > /dev/null
 
+# Install homebrew
+if ! which -s brew; then
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
 # Bundle install
 sudo which bundle > /dev/null || sudo gem install bundler
 sudo bundle install > /dev/null
