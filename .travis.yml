@@ -4,4 +4,4 @@ os:
   - osx
 script:
   - brew update
-  - gem install rebuild && rebuild k0kubun
+  - bundle exec serverkit apply recipe.yml --log-level=DEBUG
