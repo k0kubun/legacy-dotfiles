@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-repo_path=/Users/k0kubun/src/github.com/ryotarai/itamae
-BUNDLE_GEMFILE=${repo_path}/Gemfile bundle exec ${repo_path}/bin/itamae $@

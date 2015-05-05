@@ -1,0 +1,3 @@
+resources:
+  - type: package
+    name: peco

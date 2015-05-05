@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
-repo_path=~/src/github.com/k0kubun/dotfiles
+user=k0kubun
+repo=dotfiles
+workdir=~/src/github.com/${user}/${repo}
 
-rebuild k0kubun/dotfiles -f -s script -d $repo_path <<-PRIMARY
-  brew.sh
-  cask.sh
-  ruby.sh
-  symlink.sh
-  karabiner.sh
-PRIMARY
+# Clone repository
+mkdir -p ~/src/github.com/${user}
+git clone https://github.com/${user}/${repo} $workdir
+
+# Bundle install
+sudo which bundle > /dev/null || sudo gem install bundler
+pushd $workdir && sudo bundle install > /dev/null
+
+# Run serverkit
+sudo bundle exec serverkit apply recipe.yml
+popd $workdir

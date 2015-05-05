@@ -1,5 +1,7 @@
-language: objective-c
+language:
+  - objective-c
 os:
   - osx
 script:
-  - gem install rebuild && rebuild k0kubun/dotfiles
+  - brew update
+  - bundle exec serverkit apply recipe.yml --log-level=DEBUG
