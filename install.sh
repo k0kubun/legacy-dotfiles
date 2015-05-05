@@ -14,4 +14,4 @@ pushd $workdir && sudo bundle install > /dev/null
 
 # Run serverkit
 sudo bundle exec serverkit apply recipe.yml
-popd $workdir
+popd > /dev/null
