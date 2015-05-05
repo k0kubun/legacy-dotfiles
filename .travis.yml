@@ -1,5 +1,0 @@
-language: objective-c
-os:
-  - osx
-script:
-  - gem install rebuild && rebuild k0kubun/dotfiles
