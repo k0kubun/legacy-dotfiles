@@ -5,5 +5,5 @@ Development Environment
 ## Usage
 
 ```
-sudo gem install rebuild && rebuild k0kubun/dotfiles
+sudo gem install rebuild && rebuild k0kubun
 ```
