@@ -16,5 +16,5 @@ sudo which bundle > /dev/null || sudo gem install bundler
 sudo bundle install > /dev/null
 
 # Run serverkit
-sudo bundle exec serverkit apply recipe.yml
+sudo bundle exec serverkit apply recipe.yml --log-level=DEBUG
 popd > /dev/null
