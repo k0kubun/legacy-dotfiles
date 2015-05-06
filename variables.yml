@@ -33,3 +33,19 @@ homebrew_cask_packages:
   - sequel-pro
   - vagrant
   - virtualbox
+
+dotfiles:
+  - .gemrc
+  - .git-template
+  - .gitconfig
+  - .githooks
+  - .gitignore
+  - .js
+  - .karabiner
+  - .peco
+  - .pryrc
+  - .tmux.conf
+  - .vim
+  - .vimrc
+  - .zsh
+  - .zshrc

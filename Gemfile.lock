@@ -6,8 +6,9 @@ GIT
       plist
       serverkit
 
-PATH
-  remote: ../../serverkit/serverkit
+GIT
+  remote: git://github.com/k0kubun/serverkit.git
+  revision: 01d33922293030810b896a902dce4c41211dcbe8
   specs:
     serverkit (0.5.0)
       activemodel
@@ -33,21 +34,15 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     builder (3.2.2)
-    coderay (1.1.0)
     hashie (3.4.1)
     highline (1.7.2)
     i18n (0.7.0)
     json (1.8.2)
-    method_source (0.8.2)
     minitest (5.6.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
     plist (3.1.0)
-    pry (0.10.1)
-      coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
-      slop (~> 3.4)
     rainbow (2.0.0)
     serverkit-homebrew (0.0.5)
       serverkit
@@ -66,7 +61,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  pry
   serverkit!
   serverkit-defaults!
   serverkit-homebrew

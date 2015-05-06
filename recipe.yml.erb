@@ -22,9 +22,11 @@ resources:
     notify:
       - restart_dock
 
+  <%- dotfiles.each do |file| -%>
   - type: symlink
-    destination: ~/src/github.com/k0kubun/dotfiles/linked/.gemrc
-    source: ~/.gemrc
+    destination: ~/src/github.com/k0kubun/dotfiles/linked/<%= file %>
+    source: ~/<%= file %>
+  <%- end -%>
 
 handlers:
   - id: restart_dock
