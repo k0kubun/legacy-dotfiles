@@ -44,6 +44,8 @@ GEM
     net-ssh (2.9.2)
     plist (3.1.0)
     rainbow (2.0.0)
+    serverkit-atom (0.0.1)
+      serverkit
     serverkit-dotfiles (0.1.1)
       serverkit
     serverkit-homebrew (0.0.5)
@@ -64,6 +66,7 @@ PLATFORMS
 
 DEPENDENCIES
   serverkit!
+  serverkit-atom
   serverkit-defaults!
   serverkit-dotfiles
   serverkit-homebrew

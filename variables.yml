@@ -1,3 +1,6 @@
+atom_packages:
+  - vim-mode
+
 homebrew_packages:
   - caskroom/cask/brew-cask
   - ctags

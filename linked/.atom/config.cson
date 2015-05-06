@@ -1,6 +1,6 @@
 "*":
   editor:
-    fontSize: 16
+    invisibles: {}
   core:
     themes: [
       "one-dark-ui"

@@ -12,6 +12,11 @@ resources:
     options: --appdir=/Applications
   <%- end -%>
 
+  <%- atom_packages.each do |name| -%>
+  - type: atom_package
+    name: <%= name %>
+  <%- end -%>
+
   - type: rbenv_ruby
     version: 2.2.1
 
