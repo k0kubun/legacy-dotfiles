@@ -17,7 +17,7 @@ if ! which -s brew; then
 fi
 
 # Bundle install
-sudo which bundle > /dev/null || sudo gem install bundler
+which bundle > /dev/null || sudo gem install bundler
 bundle install > /dev/null
 
 # Run serverkit
