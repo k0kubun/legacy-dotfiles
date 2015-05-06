@@ -7,7 +7,7 @@ workdir=~/src/github.com/${user}/${repo}
 # Clone repository
 if [ ! -e $workdir ]; then
   mkdir -p ~/src/github.com/${user}
-  git clone https://github.com/${user}/${repo} $workdir
+  git clone https://github.com/${user}/${repo} $workdir --recursive
   pushd $workdir > /dev/null
 else
   pushd $workdir > /dev/null
