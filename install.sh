@@ -21,7 +21,7 @@ which bundle > /dev/null || sudo gem install bundler
 bundle install > /dev/null
 
 # Run serverkit
-bundle exec serverkit apply recipe.yml
+bundle exec serverkit apply recipe.yml.erb --variables=variables.yml
 if [ $? -ne 0 ]; then
   popd > /dev/null
   exit 1
