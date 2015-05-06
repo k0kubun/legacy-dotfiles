@@ -29,7 +29,6 @@ homebrew_cask_packages:
   - iterm2
   - karabiner
   - licecap
-  - mactex
   - sequel-pro
   - vagrant
   - virtualbox
