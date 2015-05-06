@@ -1,0 +1,20 @@
+homebrew_package_names:
+  - caskroom/cask/brew-cask
+  - ctags
+  - ghostscript
+  - git
+  - homebrew/science/nusmv
+  - hub
+  - imagemagick
+  - k0kubun/envchain/envchain
+  - mercurial
+  - motemen/ghq/ghq
+  - mysql
+  - openssl
+  - peco
+  - rbenv
+  - readline
+  - reattach-to-user-namespace
+  - redis
+  - ruby-build
+  - tmux
