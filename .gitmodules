@@ -1,0 +1,6 @@
+[submodule "linked/.vim/bundle/neobundle.vim"]
+	path = linked/.vim/bundle/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim
+[submodule "linked/.zsh/bundle/zsh-context-sensitive-alias"]
+	path = linked/.zsh/bundle/zsh-context-sensitive-alias
+	url = https://github.com/uasi/zsh-context-sensitive-alias
