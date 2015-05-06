@@ -22,7 +22,9 @@ bundle install > /dev/null
 
 # Run serverkit
 bundle exec serverkit apply recipe.yml
-result=$?
-popd > /dev/null
-
-exit result
+if [ $? -ne 0 ]; then
+  popd > /dev/null
+  exit 1
+else
+  popd > /dev/null
+fi
