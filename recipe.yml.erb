@@ -14,3 +14,13 @@ resources:
 
   - type: rbenv_ruby
     version: 2.2.1
+  - type: defaults
+    domain: com.apple.dock
+    key: orientation
+    value: left
+    notify:
+      - restart_dock
+handlers:
+  - id: restart_dock
+    type: command
+    script: killall Dock
