@@ -17,6 +17,6 @@ homebrew_packages:
   - readline
   - reattach-to-user-namespace
   - redis
-  - ruby-build
+  - ruby-build --HEAD
   - tmux
   - vim --with-lua --with-luajit
