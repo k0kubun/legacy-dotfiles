@@ -3,3 +3,9 @@ resources:
   - type: homebrew_package
     name: <%= homebrew_package_name %>
   <%- end -%>
+  - type: homebrew_package
+    name: vim
+    options: --with-lua --with-luajit
+  - type: homebrew_package
+    name: go
+    options: --with-cc-common
