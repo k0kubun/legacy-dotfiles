@@ -22,6 +22,10 @@ resources:
     notify:
       - restart_dock
 
+  - type: symlink
+    destination: ~/src/github.com/k0kubun/dotfiles/linked/.gemrc
+    source: ~/.gemrc
+
 handlers:
   - id: restart_dock
     type: command

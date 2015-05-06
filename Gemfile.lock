@@ -6,6 +6,20 @@ GIT
       plist
       serverkit
 
+PATH
+  remote: ../../serverkit/serverkit
+  specs:
+    serverkit (0.5.0)
+      activemodel
+      activesupport
+      bundler
+      hashie
+      highline
+      rainbow
+      slop (~> 3.4)
+      specinfra (>= 2.29.0)
+      unix-crypt
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -19,26 +33,22 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     builder (3.2.2)
+    coderay (1.1.0)
     hashie (3.4.1)
     highline (1.7.2)
     i18n (0.7.0)
     json (1.8.2)
+    method_source (0.8.2)
     minitest (5.6.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
     plist (3.1.0)
-    rainbow (2.0.0)
-    serverkit (0.5.0)
-      activemodel
-      activesupport
-      bundler
-      hashie
-      highline
-      rainbow
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
       slop (~> 3.4)
-      specinfra (>= 2.29.0)
-      unix-crypt
+    rainbow (2.0.0)
     serverkit-homebrew (0.0.5)
       serverkit
     serverkit-rbenv (0.0.3)
@@ -56,7 +66,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  serverkit
+  pry
+  serverkit!
   serverkit-defaults!
   serverkit-homebrew
   serverkit-rbenv
