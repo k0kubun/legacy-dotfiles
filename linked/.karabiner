@@ -14,7 +14,7 @@ item "Application shortcuts" do
   if ENV['WORK_PC'] == 'true'
     remap "C-o", to: invoke("HipChat")
   else
-    remap "C-o", to: invoke("YoruFukurou")
+    remap "C-o", to: invoke("Night Owl")
   end
   remap "C-u", to: invoke("Google Chrome")
   remap "C-h", to: invoke("iTerm")
