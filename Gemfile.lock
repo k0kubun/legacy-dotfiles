@@ -32,6 +32,8 @@ GEM
       unix-crypt
     serverkit-homebrew (0.0.5)
       serverkit
+    serverkit-rbenv (0.0.3)
+      serverkit
     slop (3.6.0)
     specinfra (2.30.4)
       net-scp
@@ -47,3 +49,4 @@ PLATFORMS
 DEPENDENCIES
   serverkit
   serverkit-homebrew
+  serverkit-rbenv

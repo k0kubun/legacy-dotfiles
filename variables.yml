@@ -13,6 +13,7 @@ homebrew_packages:
   - openssl
   - peco
   - rbenv
+  - rbenv-default-gems
   - readline
   - reattach-to-user-namespace
   - redis
