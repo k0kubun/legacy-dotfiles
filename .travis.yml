@@ -3,5 +3,4 @@ language:
 os:
   - osx
 script:
-  - brew update
   - gem install rebuild && rebuild k0kubun
