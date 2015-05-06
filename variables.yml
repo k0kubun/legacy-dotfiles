@@ -30,7 +30,7 @@ homebrew_cask_packages:
   - karabiner
   - licecap
   - mactex
+  - night-owl
   - sequel-pro
   - vagrant
   - virtualbox
-  - yorufukurou

@@ -7,7 +7,7 @@ resources:
   <%- end -%>
 
   <%- homebrew_cask_packages.each do |name| -%>
-  - type: homebrew_package
+  - type: homebrew_cask_package
     name: <%= name %>
     options: --appdir=/Applications
   <%- end -%>
