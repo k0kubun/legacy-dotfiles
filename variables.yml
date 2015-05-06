@@ -4,7 +4,6 @@ homebrew_packages:
   - ghostscript
   - git
   - go --with-cc-common
-  - homebrew/science/nusmv
   - hub
   - imagemagick
   - k0kubun/envchain/envchain
