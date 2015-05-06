@@ -19,3 +19,18 @@ homebrew_packages:
   - ruby-build --HEAD
   - tmux
   - vim --with-lua --with-luajit
+
+homebrew_cask_packages:
+  - alfred
+  - caffeine
+  - dropbox
+  - google-chrome
+  - google-japanese-ime
+  - iterm2
+  - karabiner
+  - licecap
+  - mactex
+  - sequel-pro
+  - vagrant
+  - virtualbox
+  - yorufukurou

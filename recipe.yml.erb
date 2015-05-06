@@ -1,6 +1,13 @@
 resources:
-  <%- homebrew_packages.map { |pkg| pkg.split(' ') }.each do |name, *options| -%>
+  <%- homebrew_packages.each do |pkg| -%>
+  <%- name, *options = pkg.split(' ') %>
   - type: homebrew_package
     name: <%= name %>
     options: <%= options.join(' ') %>
+  <%- end -%>
+
+  <%- homebrew_cask_packages.each do |name| -%>
+  - type: homebrew_package
+    name: <%= name %>
+    options: --appdir=/Applications
   <%- end -%>
