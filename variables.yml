@@ -1,8 +1,9 @@
-homebrew_package_names:
+homebrew_packages:
   - caskroom/cask/brew-cask
   - ctags
   - ghostscript
   - git
+  - go --with-cc-common
   - homebrew/science/nusmv
   - hub
   - imagemagick
@@ -18,3 +19,4 @@ homebrew_package_names:
   - redis
   - ruby-build
   - tmux
+  - vim --with-lua --with-luajit
