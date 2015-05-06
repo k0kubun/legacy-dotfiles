@@ -5,5 +5,5 @@ Development Environment
 ## Usage
 
 ```
-sudo gem install rebuild && rebuild k0kubun
+sudo gem install rebuild && rebuild k0kubun | bash
 ```
