@@ -22,11 +22,8 @@ resources:
     notify:
       - restart_dock
 
-  <%- dotfiles.each do |file| -%>
-  - type: symlink
-    destination: ~/src/github.com/k0kubun/dotfiles/linked/<%= file %>
-    source: ~/<%= file %>
-  <%- end -%>
+  - type: dotfiles
+    directory: ~/src/github.com/k0kubun/dotfiles/linked
 
   - type: script
     path: scripts/karabiner.sh
