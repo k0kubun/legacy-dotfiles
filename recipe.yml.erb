@@ -28,6 +28,14 @@ resources:
     source: ~/<%= file %>
   <%- end -%>
 
+  - type: script
+    path: scripts/karabiner.sh
+  - type: script
+    path: scripts/karabiner_export.sh
+  - type: script
+    path: scripts/font.sh
+    check_script: 'test -e ~/Library/Fonts/Monaco\ for\ Powerline.otf'
+
 handlers:
   - id: restart_dock
     type: command

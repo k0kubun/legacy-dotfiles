@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/k0kubun/serverkit.git
-  revision: 01d33922293030810b896a902dce4c41211dcbe8
+  revision: 2e691d29e834063bddb17eb3d047b8e91317d689
   specs:
     serverkit (0.5.0)
       activemodel
