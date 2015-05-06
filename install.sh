@@ -8,8 +8,11 @@ workdir=~/src/github.com/${user}/${repo}
 if [ ! -e $workdir ]; then
   mkdir -p ~/src/github.com/${user}
   git clone https://github.com/${user}/${repo} $workdir
+  pushd $workdir > /dev/null
+else
+  pushd $workdir > /dev/null
+  git pull origin master
 fi
-pushd $workdir > /dev/null
 
 # Install homebrew
 if ! which -s brew; then
