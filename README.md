@@ -4,6 +4,6 @@ Development Environment
 
 ## Usage
 
-```
+```bash
 sudo gem install rebuild && rebuild k0kubun
 ```
