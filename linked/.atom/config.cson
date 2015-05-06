@@ -1,8 +1,13 @@
-'editor':
-  'fontSize': 16
-'core':
-  'themes': [
-    'one-dark-ui'
-    'one-dark-syntax'
-  ]
-   showOnStartup: false
+"*":
+  editor:
+    fontSize: 16
+  core:
+    themes: [
+      "one-dark-ui"
+      "one-dark-syntax"
+    ]
+    showOnStartup: false
+  "exception-reporting":
+    userId: "9314ec5e-6cda-a2b3-f8dc-434a6a430d4d"
+  welcome:
+    showOnStartup: false
