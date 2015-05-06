@@ -4,4 +4,4 @@ os:
   - osx
 script:
   - brew update
-  - gem install rebuild && rebuild k0kubun | bash
+  - gem install rebuild && rebuild k0kubun
