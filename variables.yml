@@ -4,6 +4,7 @@ atom_packages:
 homebrew_packages:
   - caskroom/cask/brew-cask
   - ctags
+  - ghc
   - ghostscript
   - git
   - go --with-cc-common
