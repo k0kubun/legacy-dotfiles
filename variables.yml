@@ -2,6 +2,7 @@ atom_packages:
   - vim-mode
 
 homebrew_packages:
+  - cabal-install
   - caskroom/cask/brew-cask
   - ctags
   - ghc
