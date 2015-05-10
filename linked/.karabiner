@@ -14,7 +14,8 @@ item "Application shortcuts" do
   if ENV['WORK_PC'] == 'true'
     remap "C-o", to: invoke("HipChat")
   else
-    remap "C-o", to: invoke("Night Owl")
+    yorufukurou = system('ls /Applications | grep -q YoruFukurou') ? 'YoruFukurou' : 'Night Owl'
+    remap "C-o", to: invoke(yorufukurou)
   end
   remap "C-u", to: invoke("Google Chrome")
   remap "C-h", to: invoke("iTerm")
