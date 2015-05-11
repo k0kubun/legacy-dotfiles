@@ -25,6 +25,7 @@ NeoBundle 'wannesm/wmnusmv.vim'
 " NeoBundleLazy 'shinka-cb/smv_vim', {'autoload':{'filetypes':['smv']}}
 " NeoBundle 'datsuns/vim-smv'
 NeoBundle 'vim-scripts/applescript.vim'
+NeoBundle 'aklt/plantuml-syntax'
 
 " Completion
 NeoBundle 'Shougo/neocomplcache.vim'
