@@ -114,7 +114,7 @@ alias t="tags-update"
 
 function uml() {
 	src=$(\ls | grep \.uml)
-	png=$(echo $source | sed 's/\.uml/\.png/')
+	png=$(echo $src | sed 's/\.uml/\.png/')
 
 	java -jar /usr/local/opt/plantuml/plantuml.8018.jar -tpng $src
 	open $png
