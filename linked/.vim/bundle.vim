@@ -26,6 +26,7 @@ NeoBundle 'wannesm/wmnusmv.vim'
 " NeoBundle 'datsuns/vim-smv'
 NeoBundle 'vim-scripts/applescript.vim'
 NeoBundle 'aklt/plantuml-syntax'
+NeoBundle 'pbrisbin/vim-syntax-shakespeare'
 
 " Completion
 NeoBundle 'Shougo/neocomplcache.vim'
