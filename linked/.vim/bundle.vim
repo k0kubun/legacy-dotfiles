@@ -27,6 +27,7 @@ NeoBundle 'wannesm/wmnusmv.vim'
 NeoBundle 'vim-scripts/applescript.vim'
 NeoBundle 'aklt/plantuml-syntax'
 NeoBundle 'pbrisbin/vim-syntax-shakespeare'
+NeoBundle 'mustache/vim-mustache-handlebars'
 
 " Completion
 NeoBundle 'Shougo/neocomplcache.vim'
