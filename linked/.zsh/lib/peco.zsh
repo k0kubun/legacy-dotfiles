@@ -51,7 +51,7 @@ function peco-find-file() {
 	else
 		source_files=$(find . -type f)
 	fi
-	selected_files=$(echo $source_files | grep -v "\.\/\.git\/" | peco --prompt "[find file]")
+	selected_files=$(echo $source_files | peco --prompt "[find file]")
 
 	result=''
 	for file in $selected_files; do
