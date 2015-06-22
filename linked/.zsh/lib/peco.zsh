@@ -57,7 +57,6 @@ function peco-find-file() {
 	for file in $selected_files; do
 		result="${result}$(echo $file | tr '\n' ' ')"
 	done
-	echo $result
 
 	BUFFER="${BUFFER}${result}"
 	CURSOR=$#BUFFER
