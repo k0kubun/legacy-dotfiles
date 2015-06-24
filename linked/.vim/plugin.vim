@@ -63,3 +63,7 @@ let g:indentLine_fileType = ['haskell']
 
 " ghcmod-vim
 let g:ghcmod_type_highlight = 'WildMenu'
+augroup vimrc-ghcmod
+  autocmd!
+  autocmd BufWritePost *.hs GhcModCheckAsync
+augroup END
