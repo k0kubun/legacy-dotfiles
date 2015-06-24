@@ -28,6 +28,8 @@ NeoBundle 'vim-scripts/applescript.vim'
 NeoBundle 'aklt/plantuml-syntax'
 NeoBundle 'pbrisbin/vim-syntax-shakespeare'
 NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'eagletmt/neco-ghc'
+NeoBundle 'eagletmt/ghcmod-vim'
 
 " Completion
 NeoBundle 'Shougo/neocomplcache.vim'
