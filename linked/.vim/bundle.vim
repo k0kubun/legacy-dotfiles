@@ -30,6 +30,7 @@ NeoBundle 'pbrisbin/vim-syntax-shakespeare'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'eagletmt/neco-ghc'
 NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'itchyny/vim-haskell-indent'
 
 " Completion
 NeoBundle 'Shougo/neocomplcache.vim'
