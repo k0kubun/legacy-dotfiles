@@ -14,7 +14,8 @@ item "Application shortcuts" do
   if ENV['WORK_PC'] == 'true'
     remap "C-o", to: invoke("HipChat")
   else
-    remap "C-o", to: invoke("YoruFukurou")
+    yorufukurou = system('ls /Applications | grep -q YoruFukurou') ? 'YoruFukurou' : 'Night Owl'
+    remap "C-o", to: invoke(yorufukurou)
   end
   remap "C-u", to: invoke("Google Chrome")
   remap "C-h", to: invoke("iTerm")
@@ -91,9 +92,12 @@ item "Command+D to Option+D, Command+BF to Option+BF", only: "TERMINAL" do
 end
 
 # Use Cmd_R+B/F as M-b/f, and Cmd_R+S as Cmd+F to avoid conflict with M-f
-item "Command+B/F to Option+Left/Right, Command+S to Command+F", not: "TERMINAL" do
+item "Command+B/F to Option+Left/Right", not: "TERMINAL" do
   remap "Cmd-B", to: "Opt-Left"
   remap "Cmd-F", to: "Opt-Right"
+end
+
+item "Command+S to Command+F", only: "CHROME" do
   remap "Cmd-S", to: "Cmd-F"
 end
 

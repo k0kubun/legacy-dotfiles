@@ -1,5 +1,8 @@
-language: objective-c
+language:
+  - objective-c
 os:
   - osx
 script:
-  - gem install rebuild && rebuild k0kubun/dotfiles
+  - brew update
+  - rm -rf ~/.vim
+  - gem install rebuild && rebuild k0kubun

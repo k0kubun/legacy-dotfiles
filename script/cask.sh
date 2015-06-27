@@ -2,17 +2,17 @@
 
 CASK_PACKAGES="
   alfred
+  atom
   caffeine
   dropbox
   google-chrome
   google-japanese-ime
   iterm2
   karabiner
-  mactex
+  licecap
   sequel-pro
   vagrant
   virtualbox
-  yorufukurou
 "
 INSTALL_OPTIONS="--appdir=/Applications"
 

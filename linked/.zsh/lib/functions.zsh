@@ -111,3 +111,18 @@ functions tags-update() {
 	source ~/.githooks/ctags
 }
 alias t="tags-update"
+
+function u() {
+	src=$(\ls | grep \.uml)
+	png=$(echo $src | sed 's/\.uml/\.png/')
+
+	java -jar /usr/local/opt/plantuml/plantuml.8018.jar -tpng $src
+}
+
+function uml() {
+	src=$(\ls | grep \.uml)
+	png=$(echo $src | sed 's/\.uml/\.png/')
+
+	java -jar /usr/local/opt/plantuml/plantuml.8018.jar -tpng $src
+	open $png
+}

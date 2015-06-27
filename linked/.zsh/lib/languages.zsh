@@ -15,3 +15,7 @@ function tex() {
 	rm *.log
 	rm *.aux
 }
+
+# Haskell
+export PATH=$HOME/.cabal/bin:$PATH
+alias ce="cabal exec"

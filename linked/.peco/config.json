@@ -14,5 +14,6 @@
     "Selected": ["on_cyan", "black"],
     "Query": ["on_default", "white"],
     "Matched": ["yellow", "bold"]
-  }
+  },
+  "StickySelection": true
 }

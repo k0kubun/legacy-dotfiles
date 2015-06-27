@@ -7,28 +7,32 @@ if ! which -s brew; then
 fi
 
 BREW_PACKAGES="
+  cabal-install
   ctags
+  ghc
   ghostscript
   git
-  go --cross-compile-common
+  go --with-cc-common
   hub
   imagemagick
   mercurial
   mysql
   openssl
+  peco
+  plantuml
+  postgres
   rbenv
+  rbenv-default-gems
   readline
   reattach-to-user-namespace
   redis
-  ruby-build
+  ruby-build --HEAD
   tmux
   vim --with-lua --with-luajit
 
-  peco/peco/peco
-  motemen/ghq/ghq
   caskroom/cask/brew-cask
-  homebrew/science/nusmv
   k0kubun/envchain/envchain
+  motemen/ghq/ghq
 "
 
 brew_list=$(brew list -1)
