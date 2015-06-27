@@ -1,6 +1,0 @@
-#!/bin/sh
-if [ -p /dev/stdin ]; then
-  cat - | dot -o -Tpng -o /tmp/dot.png > /dev/null && open /tmp/dot.png
-else
-  echo "no stdin"
-fi
