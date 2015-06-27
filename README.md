@@ -1,17 +1,21 @@
-# dotfiles [![Build Status](https://travis-ci.org/k0kubun/dotfiles.svg?branch=master)](https://travis-ci.org/k0kubun/dotfiles)
+# dotfiles
 
-Development environment bootstrap using [serverkit](https://github.com/serverkit/serverkit) and [rebuild](https://github.com/k0kubun/rebuild).
+Development environment for OSX
 
-## Usage
+## Installation
+
+With clean-installed OSX Yosemite, you can reproduce my development environment
+by executing commands below in Terminal.app.
 
 ```bash
-rebuild k0kubun
+$ sudo gem install rebuild
+$ rebuild k0kubun/dotfiles
 ```
 
-![](http://i.gyazo.com/2cb3efa40136f674ba16dddf67e31602.gif)
+## Update
 
-### With clean environment
+Setup scripts are ensured idempotence. You can use `rebuild` for update too.
 
-```bash
-sudo gem install rebuild && rebuild k0kubun
+```
+$ rebuild
 ```

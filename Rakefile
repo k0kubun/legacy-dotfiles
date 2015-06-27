@@ -1,11 +1,8 @@
-desc 'Apply with current dir'
-task :apply do
-  system('bundle exec serverkit apply recipe.yml.erb --variables=variables.yml')
+#!/usr/bin/env rake
+
+desc "Export Karabiner preferences"
+task :export do
+  system("/Applications/Karabiner.app/Contents/Library/bin/karabiner export > script/karabiner_export.sh")
 end
 
-desc 'Debug with current dir'
-task :debug do
-  system('bundle exec serverkit apply recipe.yml.erb --variables=variables.yml --log-level=DEBUG')
-end
-
-task default: :apply
+task default: :export

@@ -25,12 +25,6 @@ NeoBundle 'wannesm/wmnusmv.vim'
 " NeoBundleLazy 'shinka-cb/smv_vim', {'autoload':{'filetypes':['smv']}}
 " NeoBundle 'datsuns/vim-smv'
 NeoBundle 'vim-scripts/applescript.vim'
-NeoBundle 'aklt/plantuml-syntax'
-NeoBundle 'pbrisbin/vim-syntax-shakespeare'
-NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'eagletmt/neco-ghc'
-" NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'itchyny/vim-haskell-indent'
 
 " Completion
 NeoBundle 'Shougo/neocomplcache.vim'

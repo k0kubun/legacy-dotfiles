@@ -56,14 +56,3 @@ let g:unite_redraw_hold_candidates = 15000
 " vim-go
 let g:go_fmt_autosave = 1
 let g:go_fmt_fail_silently = 1
-
-" neco-ghc
-let g:necoghc_enable_detailed_browse = 1
-let g:indentLine_fileType = ['haskell']
-
-" ghcmod-vim
-" let g:ghcmod_type_highlight = 'WildMenu'
-" augroup vimrc-ghcmod
-"   autocmd!
-"   autocmd BufWritePost *.hs GhcModCheckAsync
-" augroup END

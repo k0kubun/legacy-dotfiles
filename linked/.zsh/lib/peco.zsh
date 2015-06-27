@@ -45,25 +45,14 @@ function peco-pkill() {
 alias pk="peco-pkill"
 
 # search file recursively and append the path to the buffer
-function peco-find-file() {
-	if git rev-parse 2> /dev/null; then
-		source_files=$(git ls-files)
-	else
-		source_files=$(find . -type f)
-	fi
-	selected_files=$(echo $source_files | peco --prompt "[find file]")
-
-	result=''
-	for file in $selected_files; do
-		result="${result}$(echo $file | tr '\n' ' ')"
-	done
-
-	BUFFER="${BUFFER}${result}"
+function peco-append-filepath() {
+local selected_file=$(find . -type f | grep -v "\.\/\.git\/" | peco --prompt "[find file]")
+	BUFFER="${BUFFER}${selected_file}"
 	CURSOR=$#BUFFER
 	zle redisplay
 }
-zle -N peco-find-file
-bindkey '^q' peco-find-file
+zle -N peco-append-filepath
+bindkey '^q' peco-append-filepath
 
 # bundler directory
 function bundler-directory() {
