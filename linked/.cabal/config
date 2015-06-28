@@ -11,7 +11,7 @@
 -- cabal-install version: 1.22.2.0
 
 
--- require-sandbox: False
+-- require-sandbox: True
 -- ignore-sandbox: False
 remote-repo: hackage.haskell.org:http://hackage.haskell.org/packages/archive
 remote-repo-cache: /Users/k0kubun/.cabal/packages
