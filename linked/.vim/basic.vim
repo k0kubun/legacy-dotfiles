@@ -32,6 +32,7 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead .itamae set filetype=yaml
 autocmd BufNewFile,BufRead *.tex set filetype=tex
 autocmd BufNewFile,BufRead *.yml.sample set filetype=yaml
+autocmd BufNewFile,BufRead *.jelly set filetype=xml
 
 " ファイルタイプ判定をon
 filetype plugin on
