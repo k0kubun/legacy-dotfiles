@@ -16,3 +16,4 @@ tags
 ,*
 .cabal/*
 !.cabal/config
+dump.rdb
