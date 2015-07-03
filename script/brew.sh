@@ -19,6 +19,7 @@ BREW_PACKAGES="
   mysql
   openssl
   peco
+  phantomjs
   plantuml
   postgres
   rbenv
