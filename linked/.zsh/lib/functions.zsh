@@ -93,9 +93,9 @@ function pass() {
 function replace-githooks() {
 	if [ -e .git/hooks ]; then
 		rm -rf .git/hooks
-		ln -s ~/.githooks .git/hooks
-		mkdir -p .git/local_hooks
 	fi
+	ln -s ~/.githooks .git/hooks
+	mkdir -p .git/local_hooks
 }
 
 function replace-all() {
