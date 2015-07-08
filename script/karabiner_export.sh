@@ -30,6 +30,10 @@ $cli set remap.command_i_to_option_i 1
 /bin/echo -n .
 $cli set repeat.initial_wait 0
 /bin/echo -n .
+$cli set remap.command_s_to_command_f 1
+/bin/echo -n .
+$cli set remap.copy_date 1
+/bin/echo -n .
 $cli set remap.tab_change 1
 /bin/echo -n .
 $cli set remap.command_d_to_option_d__command_bf_to_option_bf 1
@@ -38,9 +42,13 @@ $cli set remap.screen_shot 1
 /bin/echo -n .
 $cli set remap.control_r____command_r 1
 /bin/echo -n .
+$cli set remap.command_b_f_to_option_left_right 1
+/bin/echo -n .
 $cli set remap.control_leftclick_to_command_leftclick 1
 /bin/echo -n .
 $cli set remap.capslock_off 1
+/bin/echo -n .
+$cli set remap.enable_remap_on_external_keyboard 1
 /bin/echo -n .
 $cli set remap.chrome_inspector_command_control_i 1
 /bin/echo -n .
@@ -53,6 +61,8 @@ $cli set remap.shift_by_control 1
 $cli set remap.control_w_to_option_delete 1
 /bin/echo -n .
 $cli set remap.command_semicolon_to_colon 1
+/bin/echo -n .
+$cli set remap.disalbe_remap_on_external_keyboard 1
 /bin/echo -n .
 $cli set remap.command_l_to_control_r 1
 /bin/echo -n .

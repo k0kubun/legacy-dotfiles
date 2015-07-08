@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'karabiner/cli'
+
 appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
 appdef "CHROME", equal: "com.google.Chrome"
 appdef "HIPCHAT", equal: "com.hipchat.HipChat"
@@ -47,6 +49,26 @@ end
 
 item "Command_L to Control_R" do
   remap "Cmd_L", to: "Ctrl_R"
+end
+
+# You can disable all bindings...
+item "Disalbe remap on external keyboard", config_not: "notsave.private_remap_disabled" do
+  remap "Cmd-Opt-Space", to: [
+    execute("#{Karabiner::CLI::CLI_PATH} enable general.dont_remap_external"),
+    "VK_CONFIG_FORCE_ON_notsave_private_remap_disabled",
+  ]
+end
+
+item "Enable remap on external keyboard", config_only: "notsave.private_remap_disabled" do
+  remap "Cmd-Opt-Space", to: [
+    execute("#{Karabiner::CLI::CLI_PATH} disable general.dont_remap_external"),
+    "VK_CONFIG_FORCE_OFF_notsave_private_remap_disabled",
+  ]
+end
+
+item "Remap Disabled Mode" do
+  identifier "notsave.private_remap_disabled", vk_config: "true"
+  show_message "Remap Disabled"
 end
 
 # Change japanese input mode by Cmd_L + Space
@@ -156,7 +178,7 @@ end
 #   remap "Cmd-,", to: "Shift-,"
 #   remap "Cmd-.", to: "Shift-."
 # end
-# 
+#
 # item "Open config" do
 #   remap "Opt-,", to: "Cmd-,"
 # end
