@@ -120,7 +120,7 @@ function preq() {
 		issue_number=$(git show $merge_commit | grep 'pull request' | ruby -ne 'puts $_.match(/#(\d+)/)[1]')
 		url="$(github-url)/pull/${issue_number}"
 	else
-		url="$(github-url)/commit/${merge_commit}"
+		url="$(github-url)/commit/${1}"
 	fi
 
 	open $url
