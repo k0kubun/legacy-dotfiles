@@ -30,6 +30,7 @@ NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'eagletmt/neco-ghc'
 " NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'itchyny/vim-haskell-indent'
+NeoBundle 'Shougo/vinarise.vim'
 
 " Completion
 NeoBundle 'Shougo/neocomplcache.vim'
