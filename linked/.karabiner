@@ -19,7 +19,7 @@ item "Application shortcuts" do
     yorufukurou = system('ls /Applications | grep -q YoruFukurou') ? 'YoruFukurou' : 'Night Owl'
     remap "C-o", to: invoke(yorufukurou)
   end
-  remap "C-u", to: invoke("Google Chrome")
+  remap "C-u", to: invoke("Kindle")
   remap "C-h", to: invoke("iTerm")
 end
 
