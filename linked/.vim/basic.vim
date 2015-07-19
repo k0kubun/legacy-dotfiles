@@ -34,6 +34,7 @@ autocmd BufNewFile,BufRead *.tex set filetype=tex
 autocmd BufNewFile,BufRead *.yml.sample set filetype=yaml
 autocmd BufNewFile,BufRead *.jelly set filetype=xml
 autocmd BufNewFile,BufRead *.nas set filetype=asm
+autocmd BufNewFile,BufRead *.img Vinarise
 
 " ファイルタイプ判定をon
 filetype plugin on
