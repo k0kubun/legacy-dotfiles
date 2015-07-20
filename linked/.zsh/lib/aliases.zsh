@@ -14,5 +14,5 @@ alias vim="/usr/local/bin/vim"
 # cd by dir name only for ..
 alias ..="cd .."
 
-# Karabiner CLI
-# alias karabiner="/Applications/Karabiner.app/Contents/Library/bin/karabiner"
+# Short hand for karabiner gem
+alias dsl='karabiner dsl'
