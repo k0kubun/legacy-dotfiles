@@ -7,8 +7,10 @@ if ! which -s brew; then
 fi
 
 BREW_PACKAGES="
+  boot2docker
   cabal-install
   ctags
+  docker
   ghc
   ghostscript
   git
