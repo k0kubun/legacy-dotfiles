@@ -126,3 +126,8 @@ function uml() {
 	java -jar /usr/local/opt/plantuml/plantuml.8018.jar -tpng $src
 	open $png
 }
+
+function private() {
+	git config --local user.email takashikkbn@gmail.com
+	git config --local user.name "Takashi Kokubun"
+}
