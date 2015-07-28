@@ -46,6 +46,7 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'jeetsukumaran/vim-indentwise'
 
 " ctags
 " NeoBundle 'szw/vim-tags'
