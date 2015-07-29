@@ -107,7 +107,7 @@ function github-url() {
 		end
 
 		host, path = parse_remote(\`git config remote.origin.url\`.strip)
-		puts "https://#{host}/#{path}"
+		puts "https://#{host}/#{path.gsub(/\.git$/, '')}"
 	EOS
 }
 
