@@ -33,4 +33,4 @@
   repo = k0kubun/dotfiles
   scriptdir = script
   directory = ~/src/github.com/k0kubun/dotfiles
-  dependency = brew.sh cask.sh ruby.sh symlink.sh karabiner.sh
+  dependency = symlink.sh brew.sh cask.sh ruby.sh karabiner.sh
