@@ -26,6 +26,7 @@ BREW_PACKAGES="
   postgres
   rbenv
   rbenv-default-gems
+  rbenv-gem-rehash
   readline
   reattach-to-user-namespace
   redis
