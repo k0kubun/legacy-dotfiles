@@ -6,17 +6,16 @@ inoremap <C-E> <Esc>
 cnoremap <C-e> <Esc>
 cnoremap <C-E> <Esc>
 
-" 移動
-noremap gj 6j
-noremap gk 6k
-
 " スクロール
-noremap <Space>j <C-f>
-noremap <Space>k <C-b>
+noremap fj <C-f>
+noremap fk <C-b>
+
+" paste
+nnoremap gp :<C-u>r !pbpaste<CR>
 
 " The prefix key.
 nnoremap [Tag] <Nop>
-nmap <Space> [Tag]
+nmap f [Tag]
 " t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
 for n in range(1, 9)
   execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
@@ -59,9 +58,6 @@ noremap <silent> ;s :<C-u>source<Space>~/.vimrc<CR>
 " Cursor in command line
 cmap <C-f> <Right>
 cmap <C-b> <Left>
-
-" paste
-nnoremap gp :<C-u>r !pbpaste<CR>
 
 " delete highlight
 nnoremap <silent> gh :let @/=''<CR>
