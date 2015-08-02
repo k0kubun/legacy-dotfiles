@@ -12,6 +12,16 @@ if File.exists?(local)
   eval(source)
 end
 
+item "C-j browser", not: "TERMINAL" do
+  remap "C-j", to: "Enter"
+  remap "C-m", to: "C-j"
+end
+
+item "C-j terminal", only: "TERMINAL" do
+  remap "C-j", to: "C-m"
+  remap "C-m", to: "C-j"
+end
+
 item "Application shortcuts" do
   if ENV['WORK_PC'] == 'true'
     remap "C-o", to: invoke("HipChat")
