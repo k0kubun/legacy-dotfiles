@@ -131,3 +131,12 @@ function private() {
 	git config --local user.email takashikkbn@gmail.com
 	git config --local user.name "Takashi Kokubun"
 }
+
+function git-summary() {
+	echo
+	git status
+	git diff
+	zle redisplay
+}
+zle -N git-summary
+bindkey '^g' git-summary
