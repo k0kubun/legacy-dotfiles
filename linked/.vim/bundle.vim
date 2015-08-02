@@ -13,40 +13,40 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'slim-template/vim-slim'
 " NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'groenewege/vim-less'
+" NeoBundle 'groenewege/vim-less'
 " NeoBundle 'vim-scripts/coq-syntax'
 " NeoBundle 'eagletmt/coqtop-vim'
 " NeoBundle 'haruyama/scheme.vim'
 NeoBundle 'fatih/vim-go'
-NeoBundle 'vim-jp/vim-go-extra'
+" NeoBundle 'vim-jp/vim-go-extra'
 " NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
-NeoBundle 'wannesm/wmnusmv.vim'
+" NeoBundle 'wannesm/wmnusmv.vim'
 " NeoBundleLazy 'shinka-cb/smv_vim', {'autoload':{'filetypes':['smv']}}
 " NeoBundle 'datsuns/vim-smv'
-NeoBundle 'vim-scripts/applescript.vim'
-NeoBundle 'aklt/plantuml-syntax'
-NeoBundle 'pbrisbin/vim-syntax-shakespeare'
-NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'eagletmt/neco-ghc'
+" NeoBundle 'vim-scripts/applescript.vim'
+" NeoBundle 'aklt/plantuml-syntax'
+" NeoBundle 'pbrisbin/vim-syntax-shakespeare'
+" NeoBundle 'mustache/vim-mustache-handlebars'
+" NeoBundle 'eagletmt/neco-ghc'
 " NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'itchyny/vim-haskell-indent'
-NeoBundle 'Shougo/vinarise.vim'
+" NeoBundle 'itchyny/vim-haskell-indent'
+" NeoBundle 'Shougo/vinarise.vim'
 
 " Completion
 NeoBundle 'Shougo/neocomplcache.vim'
 " NeoBundle 'Shougo/neocomplete.vim'
 
 " Skin
-NeoBundle 'Lokaltog/powerline', 'da6667b', { 'rtp' : 'powerline/bindings/vim' }
+" NeoBundle 'Lokaltog/powerline', 'da6667b', { 'rtp' : 'powerline/bindings/vim' }
 " NeoBundle 'bling/vim-airline'
 NeoBundle 'w0ng/vim-hybrid'
 
 " Editing
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'osyo-manga/vim-over'
-NeoBundle 'thinca/vim-prettyprint'
-NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'jeetsukumaran/vim-indentwise'
+" NeoBundle 'thinca/vim-prettyprint'
+" NeoBundle 'haya14busa/incsearch.vim'
+" NeoBundle 'jeetsukumaran/vim-indentwise'
 
 " ctags
 " NeoBundle 'szw/vim-tags'
