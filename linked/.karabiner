@@ -6,64 +6,6 @@ appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
 appdef "CHROME", equal: "com.google.Chrome"
 appdef "HIPCHAT", equal: "com.hipchat.HipChat"
 
-item "Basic remap" do
-  remap "Command_R", to: "Shift_R"
-  remap "Command_L", to: "Ctrl_L"
-  remap "Option_L",  to: "Shift_L"
-end
-
-item "Double command common" do
-  %w[h x c v a n l].each do |key|
-    remap "C-Shift-#{key}", to: "Cmd-#{key}"
-  end
-  # workaround to avoid shutdown
-  remap "C-Shift-.", to: "Cmd-,"
-end
-
-item "HipChat Room Change", only: "HIPCHAT" do
-  remap "C-Shift-K", to: "Cmd-Shift-["
-  remap "C-Shift-J", to: "Cmd-Shift-]"
-end
-
-item "YoruFukurou Account Change", only: "YORUFUKUROU" do
-  remap "C-Shift-K", to: "Cmd-Opt-Up"
-  remap "C-Shift-J", to: "Cmd-Opt-Down"
-end
-
-item "Double command browser", not: "TERMINAL" do
-  remap "C-Shift-P", to: "Cmd-Shift-]"
-  remap "C-Shift-O", to: "Cmd-Shift-["
-  remap "C-Shift-E", to: "Cmd-w"
-  remap "C-Shift-R", to: "Cmd-t"
-  remap "C-Shift-D", to: "Opt-forward_delete"
-  remap "C-Shift-S", to: "Cmd-F" # browser search
-  remap "C-Shift-B", to: "Opt-Left"
-  remap "C-Shift-F", to: "Opt-Right"
-end
-
-item "Double command terminal", only: "TERMINAL" do
-  remap "C-Shift-P", to: "Opt-Shift-]"
-  remap "C-Shift-O", to: "Opt-Shift-["
-  remap "C-Shift-E", to: "M-e"
-  remap "C-Shift-R", to: "M-t"
-  remap "C-Shift-I", to: "M-i"
-  remap "C-Shift-D", to: "M-d"
-  remap "C-Shift-B", to: "M-b"
-  remap "C-Shift-F", to: "M-f"
-  remap "C-Shift-J", to: "M-j"
-  remap "C-Shift-K", to: "M-k"
-end
-
-item "C-j as Enter", not: "TERMINAL" do
-  remap "C-j", to: "Enter"
-  remap "C-m", to: "C-j"
-end
-
-item "C-j as Enter terminal", only: "TERMINAL" do
-  remap "C-j", to: "C-m"
-  remap "C-m", to: "C-j"
-end
-
 local = File.expand_path("~/.remap")
 if File.exists?(local)
   source = File.read(local)
@@ -71,10 +13,42 @@ if File.exists?(local)
 end
 
 item "Application shortcuts" do
-  yorufukurou = system('ls /Applications | grep -q YoruFukurou') ? 'YoruFukurou' : 'Night Owl'
-  remap "C-o", to: invoke(yorufukurou)
+  if ENV['WORK_PC'] == 'true'
+    remap "C-o", to: invoke("HipChat")
+  else
+    yorufukurou = system('ls /Applications | grep -q YoruFukurou') ? 'YoruFukurou' : 'Night Owl'
+    remap "C-o", to: invoke(yorufukurou)
+  end
   remap "C-u", to: invoke("Google Chrome")
   remap "C-h", to: invoke("iTerm")
+end
+
+item "Command+O|P to Command+{|}", not: "TERMINAL" do
+  remap "Cmd-P", to: "Cmd-Shift-]"
+  remap "Cmd-O", to: "Cmd-Shift-["
+end
+
+item "Command+O|P to Option+{|}", only: "TERMINAL" do
+  remap "Cmd-P", to: "Opt-Shift-]"
+  remap "Cmd-O", to: "Opt-Shift-["
+end
+
+item "Command+E to Command+W", not: "TERMINAL" do
+  remap "Cmd-E", to: "Cmd-W"
+end
+
+item "Command+T to Option+T, Command+E to Option+E", only: "TERMINAL" do
+  remap "Cmd-T", to: "Opt-T"
+  remap "Cmd-E", to: "Opt-E"
+end
+
+# For tmux copy mode
+item "Command+I to Option+I", only: "TERMINAL" do
+  remap "Cmd-I", to: "Opt-I"
+end
+
+item "Command_L to Control_R" do
+  remap "Cmd_L", to: "Ctrl_R"
 end
 
 # You can disable all bindings...
@@ -84,12 +58,14 @@ item "Disalbe remap on external keyboard", config_not: "notsave.private_remap_di
     "VK_CONFIG_FORCE_ON_notsave_private_remap_disabled",
   ]
 end
+
 item "Enable remap on external keyboard", config_only: "notsave.private_remap_disabled" do
   remap "Cmd-Opt-Space", to: [
     execute("#{Karabiner::CLI::CLI_PATH} disable general.dont_remap_external"),
     "VK_CONFIG_FORCE_OFF_notsave_private_remap_disabled",
   ]
 end
+
 item "Remap Disabled Mode" do
   identifier "notsave.private_remap_disabled", vk_config: "true"
   show_message "Remap Disabled"
@@ -101,11 +77,50 @@ item "Exchange Control + Space and Command + Space" do
   remap "Cmd-Space", to: "C-Space"
 end
 
+# Cmd-L is used by CapsLock
+item "Command+K to Command+L", only: "CHROME" do
+  remap "Cmd-K", to: "Cmd-L"
+end
+
+item "CapsLock ON", config_not: "notsave.private_capslock_on" do
+  remap "Cmd-L", to: ["capslock", "VK_CONFIG_FORCE_ON_notsave_private_capslock_on"]
+end
+
+item "CapsLock OFF", config_only: "notsave.private_capslock_on" do
+  remap "Cmd-L", to: ["capslock", "VK_CONFIG_FORCE_OFF_notsave_private_capslock_on"]
+end
+
+item "CapsLock Mode" do
+  identifier "notsave.private_capslock_on", vk_config: "true"
+  show_message "CapsLock"
+end
+
 item "Control+PNBF to Up/Down/Left/Right", not: "TERMINAL" do
   remap "C-p", to: "Up"
   remap "C-n", to: "Down"
   remap "C-b", to: "Left"
   remap "C-f", to: "Right"
+end
+
+# Use Cmd_R+D as M-d
+item "Command+D to Option+Forward Delete", not: "TERMINAL" do
+  remap "Cmd-D", to: "Opt-forward_delete"
+end
+
+item "Command+D to Option+D, Command+BF to Option+BF", only: "TERMINAL" do
+  remap "Cmd-D", to: "M-d"
+  remap "Cmd-B", to: "M-b"
+  remap "Cmd-F", to: "M-f"
+end
+
+# Use Cmd_R+B/F as M-b/f, and Cmd_R+S as Cmd+F to avoid conflict with M-f
+item "Command+B/F to Option+Left/Right", not: "TERMINAL" do
+  remap "Cmd-B", to: "Opt-Left"
+  remap "Cmd-F", to: "Opt-Right"
+end
+
+item "Command+S to Command+F", only: "CHROME" do
+  remap "Cmd-S", to: "Cmd-F"
 end
 
 item "Control+W to Option+Delete", not: "TERMINAL" do
@@ -114,6 +129,16 @@ end
 
 item "Control+LeftClick to Command+LeftClick" do
   autogen "__PointingButtonToPointingButton__ PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, PointingButton::LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND"
+end
+
+item "YoruFukurou Account Change", only: "YORUFUKUROU" do
+  remap "Cmd-K", to: "Cmd-Opt-Up"
+  remap "Cmd-J", to: "Cmd-Opt-Down"
+end
+
+item "HipChat Room Change", only: "HIPCHAT" do
+  remap "Cmd-K", to: "Cmd-Shift-["
+  remap "Cmd-J", to: "Cmd-Shift-]"
 end
 
 item "Chrome inspector Command+Control+I", not: "TERMINAL" do
@@ -144,6 +169,20 @@ item "Tab Change", not: "TERMINAL" do
   end
 end
 
+# I don't want to press shift key
+item "Command semicolon to colon" do
+  remap "Cmd-;", to: "Shift-;"
+end
+
+# item "tmux resize", only: "TERMINAL" do
+#   remap "Cmd-,", to: "Shift-,"
+#   remap "Cmd-.", to: "Shift-."
+# end
+#
+# item "Open config" do
+#   remap "Opt-,", to: "Cmd-,"
+# end
+
 item "Shift by control" do
   remap "C--", to: "Shift--"
   remap "C-0", to: "Shift-0"
@@ -151,6 +190,8 @@ item "Shift by control" do
   remap "C-8", to: "Shift-8"
   remap "C-7", to: "Shift-7"
   remap "C-6", to: "Shift-6"
+  remap "C-[", to: "Shift-["
+  remap "C-]", to: "Shift-]"
   remap "C-;", to: "Shift-;"
   remap "C-,", to: "Shift-,"
   remap "C-.", to: "Shift-."
@@ -160,8 +201,14 @@ item "Shift by control" do
 end
 
 item "Exchange single quote and double quote" do
+  # remap "Shift-'", to: "'"
   remap "Cmd-'", to: "Shift-'"
   remap "C-'", to: "Shift-'"
+  # remap "'", to: "Shift-'"
+end
+
+item "Command+A to Option+A", only: "TERMINAL" do
+  remap "Cmd-A", to: "M-a"
 end
 
 item "Disable Command-W" do
