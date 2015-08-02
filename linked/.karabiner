@@ -12,6 +12,17 @@ if File.exists?(local)
   eval(source)
 end
 
+item "SandS" do
+  remap "C-Space", to: "Cmd-Space"
+  remap "Cmd-Space", to: "C-Space"
+  autogen "__KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::SHIFT_L, KeyCode::SPACE"
+end
+
+item "C-j and C-m" do
+  remap "C-j", to: "Enter"
+  remap "C-m", to: "C-j"
+end
+
 item "Application shortcuts" do
   if ENV['WORK_PC'] == 'true'
     remap "C-o", to: invoke("HipChat")
@@ -69,12 +80,6 @@ end
 item "Remap Disabled Mode" do
   identifier "notsave.private_remap_disabled", vk_config: "true"
   show_message "Remap Disabled"
-end
-
-# Change japanese input mode by Cmd_L + Space
-item "Exchange Control + Space and Command + Space" do
-  remap "C-Space", to: "Cmd-Space"
-  remap "Cmd-Space", to: "C-Space"
 end
 
 # Cmd-L is used by CapsLock
