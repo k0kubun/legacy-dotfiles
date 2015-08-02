@@ -18,13 +18,8 @@ item "SandS" do
   autogen "__KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::SHIFT_L, KeyCode::SPACE"
 end
 
-item "C-j browser", not: "TERMINAL" do
+item "C-j and C-m" do
   remap "C-j", to: "Enter"
-  remap "C-m", to: "C-j"
-end
-
-item "C-j termi", only: "TERMINAL" do
-  remap "C-j", to: "C-m"
   remap "C-m", to: "C-j"
 end
 
