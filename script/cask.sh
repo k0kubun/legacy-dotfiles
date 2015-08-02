@@ -13,17 +13,13 @@ CASK_PACKAGES="
   sequel-pro
   vagrant
   virtualbox
-
-  aereal/homebrew-aereal_casks/aquaskk
 "
 INSTALL_OPTIONS="--appdir=/Applications"
 
 cask_list=$(brew cask list -1)
 
 for package in $CASK_PACKAGES; do
-  package_name=$(basename ${package})
-
-  if echo "${cask_list}" | grep -q "^${package_name}"; then
+  if echo "${cask_list}" | grep -q "^${package}"; then
     echo "Skip: brew cask install ${package}"
   else
     HOMEBREW_CASK_OPTS="${INSTALL_OPTIONS}" brew cask install $package
