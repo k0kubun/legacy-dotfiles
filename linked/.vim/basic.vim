@@ -35,6 +35,7 @@ autocmd BufNewFile,BufRead *.yml.sample set filetype=yaml
 autocmd BufNewFile,BufRead *.jelly set filetype=xml
 autocmd BufNewFile,BufRead *.nas set filetype=asm
 autocmd BufNewFile,BufRead *.img Vinarise
+autocmd BufNewFile,BufRead *.applescript setl filetype=applescript
 
 " ファイルタイプ判定をon
 filetype plugin on

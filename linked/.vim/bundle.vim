@@ -23,7 +23,7 @@ NeoBundle 'fatih/vim-go'
 " NeoBundle 'wannesm/wmnusmv.vim'
 " NeoBundleLazy 'shinka-cb/smv_vim', {'autoload':{'filetypes':['smv']}}
 " NeoBundle 'datsuns/vim-smv'
-" NeoBundle 'vim-scripts/applescript.vim'
+NeoBundle 'vim-scripts/applescript.vim'
 " NeoBundle 'aklt/plantuml-syntax'
 " NeoBundle 'pbrisbin/vim-syntax-shakespeare'
 " NeoBundle 'mustache/vim-mustache-handlebars'
