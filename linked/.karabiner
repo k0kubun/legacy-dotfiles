@@ -226,13 +226,8 @@ item "Disable Command-W" do
 end
 
 item "Screen shot" do
-  if ENV['WORK_PC'] == 'true'
-    remap "Ctrl-Shift-4", to: invoke("Gmage")
-    remap "Opt-Shift-4", to: invoke("Gmage")
-  else
-    remap "Ctrl-Shift-4", to: "Cmd-Shift-4"
-    remap "Opt-Shift-4", to: "Cmd-Shift-4"
-  end
+  remap "Ctrl-Shift-4", to: "Cmd-Shift-4"
+  remap "Opt-Shift-4", to: "Cmd-Shift-4"
   remap "Ctrl-Shift-3", to: "Cmd-Shift-3"
   remap "Opt-Shift-3", to: "Cmd-Shift-3"
 end
