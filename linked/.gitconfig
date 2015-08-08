@@ -29,6 +29,12 @@
   rebase = true
 [ghq]
   root = ~/src
+[url "git@github.com:"]
+    pushInsteadOf = https://github.com/
+    pushInsteadOf = git://github.com/
+[url "git@gist.github.com:"]
+    pushInsteadOf = https://gist.github.com/
+    pushInsteadOf = git://gist.github.com/
 [rebuild]
   repo = k0kubun/dotfiles
   scriptdir = script
