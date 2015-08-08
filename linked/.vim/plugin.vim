@@ -1,7 +1,11 @@
 " neocomplecache
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_auto_select = 1
-inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
+" let g:neocomplcache_enable_at_startup = 1
+" let g:neocomplcache_enable_auto_select = 1
+" inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
+
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_auto_select = 1
 
 " Unite.vim
 let g:unite_enable_start_insert = 1
