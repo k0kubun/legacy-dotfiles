@@ -52,7 +52,7 @@ NeoBundleLazy 'osyo-manga/vim-over', { 'autoload': { 'commands': ['OverCommandLi
 " NeoBundle 'szw/vim-tags'
 
 " Unite
-NeoBundleLazy 'Shougo/unite.vim', { 'autoload': { 'commands': ['Unite', 'UniteWithBufferDir'] } }
+NeoBundleLazy 'Shougo/unite.vim', '76612ec', { 'autoload': { 'commands': ['Unite', 'UniteWithBufferDir'] } }
 " NeoBundle 'yuku-t/unite-git'
 NeoBundleLazy 'k0kubun/unite-git-files', { 'depends': 'Shougo/unite.vim', 'autoload': { 'unite_sources': ['git_files'] } }
 NeoBundle 'Shougo/vimproc', {
