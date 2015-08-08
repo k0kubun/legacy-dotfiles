@@ -19,6 +19,3 @@ setopt ignore_eof
 
 export PATH="/opt/local/bin:$PATH"
 # export EDITOR="vim"
-
-# My C-e is remapped to C-[ for vim.
-bindkey '^[' end-of-line

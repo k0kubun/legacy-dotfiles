@@ -235,7 +235,3 @@ end
 item "Window change in the same app" do
   remap "Opt-tab", to: "Cmd-F1"
 end
-
-item "C-[ by C-e" do
-  remap "C-e", to: "C-["
-end
