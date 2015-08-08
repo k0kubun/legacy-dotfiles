@@ -140,3 +140,16 @@ function git-summary() {
 }
 zle -N git-summary
 bindkey '^g' git-summary
+
+# ghe get
+function ghe() {
+	case $1 in
+		get )
+			# You must export $GHE_HOST in ~/.zshrc.local
+			ghq get $GHE_HOST:$2
+			;;
+		* )
+			ghq $@
+			;;
+	esac
+}
