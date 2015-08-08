@@ -7,23 +7,23 @@ if has('vim_starting')
 endif
 
 " Language
-NeoBundle 'vim-ruby/vim-ruby'
+" NeoBundle 'vim-ruby/vim-ruby'
 " NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'slim-template/vim-slim'
+NeoBundleLazy 'tpope/vim-haml', { 'autoload': {'filetypes': 'haml'} }
+" NeoBundle 'slim-template/vim-slim'
 " NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'kchmck/vim-coffee-script'
+NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload': { 'filetypes': ['coffee'] } }
 " NeoBundle 'groenewege/vim-less'
 " NeoBundle 'vim-scripts/coq-syntax'
 " NeoBundle 'eagletmt/coqtop-vim'
 " NeoBundle 'haruyama/scheme.vim'
-NeoBundle 'fatih/vim-go'
+" NeoBundle 'fatih/vim-go'
 " NeoBundle 'vim-jp/vim-go-extra'
 " NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 " NeoBundle 'wannesm/wmnusmv.vim'
 " NeoBundleLazy 'shinka-cb/smv_vim', {'autoload':{'filetypes':['smv']}}
 " NeoBundle 'datsuns/vim-smv'
-NeoBundle 'vim-scripts/applescript.vim'
+" NeoBundle 'vim-scripts/applescript.vim'
 " NeoBundle 'aklt/plantuml-syntax'
 " NeoBundle 'pbrisbin/vim-syntax-shakespeare'
 " NeoBundle 'mustache/vim-mustache-handlebars'
@@ -33,17 +33,17 @@ NeoBundle 'vim-scripts/applescript.vim'
 " NeoBundle 'Shougo/vinarise.vim'
 
 " Completion
-NeoBundle 'Shougo/neocomplcache.vim'
-" NeoBundle 'Shougo/neocomplete.vim'
+" NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundleLazy 'Shougo/neocomplete.vim', { "autoload": { "insert": 1 } }
 
 " Skin
-" NeoBundle 'Lokaltog/powerline', 'da6667b', { 'rtp' : 'powerline/bindings/vim' }
+" NeoBundle 'Lokaltog/powerline', 'da6667b', { 'rtp' : 'powerline/bindings/vim' } " too slow to load
 " NeoBundle 'bling/vim-airline'
 NeoBundle 'w0ng/vim-hybrid'
 
 " Editing
-NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'osyo-manga/vim-over'
+NeoBundleLazy 'bronson/vim-trailing-whitespace', { 'autoload': { 'commands': ['FixWhitespace'] } }
+NeoBundleLazy 'osyo-manga/vim-over', { 'autoload': { 'commands': ['OverCommandLine'] } }
 " NeoBundle 'thinca/vim-prettyprint'
 " NeoBundle 'haya14busa/incsearch.vim'
 " NeoBundle 'jeetsukumaran/vim-indentwise'
@@ -52,9 +52,9 @@ NeoBundle 'osyo-manga/vim-over'
 " NeoBundle 'szw/vim-tags'
 
 " Unite
-NeoBundle 'Shougo/unite.vim', '76612ec'
+NeoBundleLazy 'Shougo/unite.vim', { 'autoload': { 'commands': ['Unite', 'UniteWithBufferDir'] } }
 " NeoBundle 'yuku-t/unite-git'
-NeoBundle 'k0kubun/unite-git-files'
+NeoBundleLazy 'k0kubun/unite-git-files', { 'depends': 'Shougo/unite.vim', 'autoload': { 'unite_sources': ['git_files'] } }
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
       \     'windows' : 'make -f make_mingw32.mak',
@@ -65,10 +65,10 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 
 " Git
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'k0kubun/vim-open-github'
+NeoBundleLazy 'tpope/vim-fugitive', { 'autoload': { 'commands': ['Gblame'] } }
+NeoBundleLazy 'k0kubun/vim-open-github', { 'autoload': { 'commands': ['OpenGithub'] } }
 " NeoBundle 'gregsexton/gitv'
-NeoBundle 'airblade/vim-gitgutter'
+NeoBundleLazy 'airblade/vim-gitgutter', { 'autoload': { 'insert': 1 } }
 
 NeoBundleCheck
 
