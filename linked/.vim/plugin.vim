@@ -14,24 +14,24 @@ augroup test
 augroup END
 
 " vim-markdown
-let g:vim_markdown_initial_foldlevel=2
+" let g:vim_markdown_initial_foldlevel=2
 
 " vim-tags
-let g:vim_tags_project_tags_command = "/usr/local/bin/ctags -R {OPTIONS} {DIRECTORY} 2>/dev/null"
-let g:vim_tags_gems_tags_command = "/usr/local/bin/ctags -R {OPTIONS} `bundle show --paths` 2>/dev/null"
+" let g:vim_tags_project_tags_command = "/usr/local/bin/ctags -R {OPTIONS} {DIRECTORY} 2>/dev/null"
+" let g:vim_tags_gems_tags_command = "/usr/local/bin/ctags -R {OPTIONS} `bundle show --paths` 2>/dev/null"
 
 " vim-gitgutter
 let g:gitgutter_sign_column_always = 1
 
 " gocode
-set rtp+=$GOROOT/misc/vim
-let g:go_fmt_autofmt = 1
+" set rtp+=$GOROOT/misc/vim
+" let g:go_fmt_autofmt = 1
 
 " golint
-exe "set rtp+=" . globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
+" exe "set rtp+=" . globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
 
 " coq-syntax
-au BufRead,BufNewFile *.v set filetype=coq
+" au BufRead,BufNewFile *.v set filetype=coq
 
 " disable trailing whitespace highlight in unite
 let g:extra_whitespace_ignored_filetypes = ['unite']
@@ -54,12 +54,12 @@ let g:unite_redraw_hold_candidates = 15000
 " endfunction
 
 " vim-go
-let g:go_fmt_autosave = 1
-let g:go_fmt_fail_silently = 1
+" let g:go_fmt_autosave = 1
+" let g:go_fmt_fail_silently = 1
 
 " neco-ghc
-let g:necoghc_enable_detailed_browse = 1
-let g:indentLine_fileType = ['haskell']
+" let g:necoghc_enable_detailed_browse = 1
+" let g:indentLine_fileType = ['haskell']
 
 " ghcmod-vim
 " let g:ghcmod_type_highlight = 'WildMenu'
