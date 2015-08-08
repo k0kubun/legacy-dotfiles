@@ -6,6 +6,8 @@ inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "<CR>"
 " Unite.vim
 let g:unite_enable_start_insert = 1
 let g:unite_source_file_mru_limit = 20
+let g:unite_enable_auto_select = 0
+let g:unite_source_grep_command = 'ag'
 
 " Unbind <C-e> in unite
 augroup test

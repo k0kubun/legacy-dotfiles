@@ -31,6 +31,7 @@ BREW_PACKAGES="
   reattach-to-user-namespace
   redis
   ruby-build --HEAD
+  the_silver_searcher
   tmux
   vim --with-lua --with-luajit
 
