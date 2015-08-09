@@ -6,6 +6,7 @@
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_auto_select = 1
+inoremap <expr><CR> pumvisible() ? neocomplete#close_popup() : "<CR>"
 
 " Unite.vim
 let g:unite_enable_start_insert = 1
