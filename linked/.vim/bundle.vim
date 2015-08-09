@@ -7,9 +7,9 @@ if has('vim_starting')
 endif
 
 " Language
-" NeoBundle 'vim-ruby/vim-ruby'
+NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload': { 'filetypes': 'ruby' } }
 " NeoBundle 'tpope/vim-rails'
-NeoBundleLazy 'tpope/vim-haml', { 'autoload': {'filetypes': 'haml'} }
+NeoBundleLazy 'tpope/vim-haml', { 'autoload': { 'filetypes': 'haml' } }
 " NeoBundle 'slim-template/vim-slim'
 " NeoBundle 'plasticboy/vim-markdown'
 NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload': { 'filetypes': ['coffee'] } }
@@ -17,13 +17,13 @@ NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload': { 'filetypes': ['coffee'
 " NeoBundle 'vim-scripts/coq-syntax'
 " NeoBundle 'eagletmt/coqtop-vim'
 " NeoBundle 'haruyama/scheme.vim'
-" NeoBundle 'fatih/vim-go'
+NeoBundleLazy 'fatih/vim-go', { 'autoload': { 'filetypes': ['go'] } }
 " NeoBundle 'vim-jp/vim-go-extra'
 " NeoBundleLazy 'Blackrush/vim-gocode', {"autoload": {"filetypes": ['go']}}
 " NeoBundle 'wannesm/wmnusmv.vim'
 " NeoBundleLazy 'shinka-cb/smv_vim', {'autoload':{'filetypes':['smv']}}
 " NeoBundle 'datsuns/vim-smv'
-" NeoBundle 'vim-scripts/applescript.vim'
+NeoBundleLazy 'vim-scripts/applescript.vim', { 'autoload': { 'filetypes': ['applescript'] } }
 " NeoBundle 'aklt/plantuml-syntax'
 " NeoBundle 'pbrisbin/vim-syntax-shakespeare'
 " NeoBundle 'mustache/vim-mustache-handlebars'
