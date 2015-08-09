@@ -3,3 +3,4 @@ rake
 rebuild
 karabiner
 foreman
+ghq-cache

@@ -153,3 +153,25 @@ function ghe() {
 			;;
 	esac
 }
+
+function ghq() {
+  case $1 in
+    get )
+      $GHQ $@
+
+      # hook after ghq get
+      ghq-cache refresh &
+      ;;
+    list )
+      if [ ! -e ~/.ghq-cache ]; then
+        ghq-cache refresh
+      fi
+
+      # use ghq list ordered by ghq-cache
+      cat ~/.ghq-cache
+      ;;
+    * )
+      $GHQ $@
+      ;;
+  esac
+}
