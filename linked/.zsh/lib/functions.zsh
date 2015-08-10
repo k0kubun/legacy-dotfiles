@@ -215,3 +215,10 @@ function bundle-default() {
 function ip() {
 	echo $(ipconfig getifaddr en0)
 }
+
+function forward() {
+	host=$1
+	local_port=$2
+	target_port=$3
+	ssh -L $local_port:127.0.0.1:$target_port $host
+}
