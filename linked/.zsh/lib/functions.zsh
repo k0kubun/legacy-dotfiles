@@ -178,6 +178,24 @@ function ghq() {
 	esac
 }
 
+export GIT="/usr/local/bin/git"
+
+function git() {
+	case $1 in
+		init )
+			$GIT $@
+			(ghq-cache refresh &)
+			;;
+		clone )
+			$GIT $@
+			(ghq-cache refresh &)
+			;;
+		* )
+			$GIT $@
+			;;
+	esac
+}
+
 function bundle-default() {
 	for version in $(rbenv-versions); do
 		rbenv local $version
