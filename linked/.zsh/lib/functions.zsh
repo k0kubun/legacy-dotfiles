@@ -211,3 +211,7 @@ function bundle-default() {
 	done
 	rm .ruby-version
 }
+
+function ip() {
+	echo $(ipconfig getifaddr en0)
+}
