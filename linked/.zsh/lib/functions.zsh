@@ -213,6 +213,13 @@ function bundle-default() {
 	rm .ruby-version
 }
 
+function install-all() {
+	for version in $(rbenv-versions); do
+		gem install $1
+	done
+	rm .ruby-version
+}
+
 function ip() {
 	echo $(ipconfig getifaddr en0)
 }
