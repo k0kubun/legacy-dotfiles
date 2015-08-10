@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+versions = []
+
+`rbenv versions`.each_line do |line|
+  line = line.strip
+  case line
+  when 'system', '2.0.0'
+    # noop
+  else
+    versions << line.gsub(/^\* /, '').split(" ").first
+  end
+end
+
+puts versions.join("\n").concat("\n")

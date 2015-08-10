@@ -177,3 +177,19 @@ function ghq() {
 			;;
 	esac
 }
+
+function bundle-default() {
+	for version in $(rbenv-versions); do
+		rbenv local $version
+		for gem in $(cat ~/.rbenv/default-gems); do
+			gems=`gem list`
+			if echo $gems | grep -q $gem; then
+				echo "Skip ${version}: ${gem}"
+			else
+				gem install $gem
+				echo "Install ${version}: ${gem}"
+			fi
+		done
+	done
+	rm .ruby-version
+}
