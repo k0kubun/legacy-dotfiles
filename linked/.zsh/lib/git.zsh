@@ -125,3 +125,76 @@ function preq() {
 
 	open $url
 }
+
+export GIT="/usr/local/bin/git"
+export GHQ="/usr/local/bin/ghq"
+
+function private() {
+	git config --local user.email takashikkbn@gmail.com
+	git config --local user.name "Takashi Kokubun"
+}
+
+# ghe get
+function ghe() {
+	case $1 in
+		get )
+			# You must export $GHE_HOST in ~/.zshrc.local
+			$GHQ get $GHE_HOST:$2
+			;;
+		* )
+			$GHQ $@
+			;;
+	esac
+}
+
+function ghq() {
+	case $1 in
+		get )
+			repo=$2
+
+			# always clone with ssh scheme
+			$GHQ get $repo -p
+
+			# hook after ghq get
+			(ghq-cache refresh &)
+
+			matched=`$GHQ list | grep "${repo}$"`
+			if [ $matched != "" ]; then
+				repo_dir="${GOPATH}/src/${matched}"
+				pushd $repo_dir > /dev/null
+				private
+				popd > /dev/null
+			fi
+			;;
+		list )
+			if [ ! -e ~/.ghq-cache ]; then
+				ghq-cache refresh
+			fi
+
+			# use ghq list ordered by ghq-cache
+			cat ~/.ghq-cache
+			;;
+		* )
+			$GHQ $@
+			;;
+	esac
+}
+
+function git() {
+	case $1 in
+		init )
+			$GIT $@
+			(ghq-cache refresh &)
+			;;
+		clone )
+			$GIT $@
+			(ghq-cache refresh &)
+			;;
+		* )
+			$GIT $@
+			;;
+	esac
+}
+
+alias ghq-cache="${HOME}/.rbenv/versions/2.2.2/bin/ghq-cache"
+alias stats="${HOME}/.rbenv/versions/2.2.2/bin/ghq-cache stats"
