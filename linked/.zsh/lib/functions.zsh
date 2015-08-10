@@ -159,7 +159,8 @@ export GHQ=/usr/local/bin/ghq
 function ghq() {
 	case $1 in
 		get )
-			$GHQ $@
+			# always clone with ssh scheme
+			$GHQ $@ -p
 
 			# hook after ghq get
 			(ghq-cache refresh &)
