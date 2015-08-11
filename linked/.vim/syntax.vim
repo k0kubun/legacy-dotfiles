@@ -16,3 +16,4 @@ autocmd BufNewFile,BufRead *.nas set filetype=asm
 autocmd BufNewFile,BufRead *.img Vinarise
 autocmd BufNewFile,BufRead *.applescript setl filetype=applescript
 autocmd BufNewFile,BufRead proxy.conf setl filetype=apache
+autocmd BufNewFile,BufRead unicorn.conf setl filetype=ruby
