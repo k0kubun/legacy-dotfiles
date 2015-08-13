@@ -3,3 +3,4 @@ BUNDLE_BUILD__MECAB-RUBY: "--with-opt-dir=/usr/local"
 BUNDLE_GEM__MIT: '0'
 BUNDLE_GEM__TEST: 'false'
 BUNDLE_GEM__COC: false
+BUNDLE_JOBS: '4'
