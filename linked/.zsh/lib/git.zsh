@@ -95,7 +95,7 @@ function github-url() {
 		require 'uri'
 
 		def parse_remote(remote_origin)
-		  if remote_origin =~ /^https:\/\//
+		  if remote_origin =~ /^(https|ssh):\/\//
 		    uri = URI.parse(remote_origin)
 		    [uri.host, uri.path]
 		  elsif remote_origin =~ /^[^:\/]+:\/?[^:\/]+\/[^:\/]+$/
