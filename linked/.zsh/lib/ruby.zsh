@@ -9,6 +9,7 @@ alias be="bundle exec"
 
 # parallel bundle install
 export BUNDLE_JOBS=4
+export BUNDLER_EDITOR='/usr/local/bin/vim'
 
 # rails
 alias -g RET="RAILS_ENV=test"
