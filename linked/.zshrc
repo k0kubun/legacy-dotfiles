@@ -13,6 +13,7 @@ load basic
 load tmux
 load completion
 load functions
+load overrides
 load git
 load languages
 load peco
