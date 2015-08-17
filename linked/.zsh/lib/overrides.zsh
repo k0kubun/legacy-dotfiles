@@ -50,3 +50,16 @@ function git() {
 			;;
 	esac
 }
+
+function bundle() {
+	super=$(which -a bundle | tail -n1)
+
+	case $1 in
+		cd )
+			cd `$super show $2`
+			;;
+		* )
+			$super $@
+			;;
+	esac
+}
