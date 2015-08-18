@@ -9,9 +9,11 @@ alias re="source ~/.zshrc"
 
 # vim
 function vi() {
-	/usr/local/bin/vim ${=*/:/ +}
+	vim ${=*/:/ +}
 }
-alias vim="/usr/local/bin/vim"
+
+# Prefer brew's vim
+export PATH="/usr/local/bin:${PATH}"
 
 # cd by dir name only for ..
 alias ..="cd .."
