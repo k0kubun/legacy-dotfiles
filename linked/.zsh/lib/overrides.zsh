@@ -34,19 +34,20 @@ function ghq() {
 	esac
 }
 
-export GIT="/usr/local/bin/git"
 function git() {
+	super=$(which -a $0 | tail -n1)
+
 	case $1 in
 		init )
-			$GIT $@
+			$super $@
 			(ghq-cache refresh &)
 			;;
 		clone )
-			$GIT $@
+			$super $@
 			(ghq-cache refresh &)
 			;;
 		* )
-			$GIT $@
+			$super $@
 			;;
 	esac
 }
