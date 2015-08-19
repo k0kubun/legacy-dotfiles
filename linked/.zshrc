@@ -7,10 +7,14 @@ function load() {
 }
 
 load go
-load ruby
+if which rbenv > /dev/null; then
+	load ruby
+fi
 load aliases
 load basic
-load tmux
+if which -a tmux | grep -q bin; then
+	load tmux
+fi
 load completion
 load functions
 load overrides
