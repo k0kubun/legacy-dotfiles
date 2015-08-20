@@ -1,5 +1,5 @@
 # zsh prompt
-PROMPT='%F{cyan}%(5~,%-2~/.../%2~,%~)%f (∩’ᴗ’)⊇ '
+PROMPT='%F{cyan}%(5~,%-2~/.../%2~,%~)%f $ '
 autoload -Uz vcs_info
 precmd() {
 	psvar=()
