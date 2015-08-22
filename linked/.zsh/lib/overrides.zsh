@@ -1,18 +1,19 @@
 # monkey command extensions
 
-export GHQ="/usr/local/bin/ghq"
 function ghq() {
+	super=$(which -a $0 | tail -n1)
+
 	case $1 in
 		get )
 			repo=$2
 
 			# always clone with ssh scheme
-			$GHQ get $repo -p
+			$super get $repo -p
 
 			# hook after ghq get
 			(ghq-cache refresh &)
 
-			matched=`$GHQ list | grep "${repo}$"`
+			matched=`$super list | grep "${repo}$"`
 			if [ $matched != "" ]; then
 				repo_dir="${GOPATH}/src/${matched}"
 				pushd $repo_dir > /dev/null
@@ -29,7 +30,7 @@ function ghq() {
 			cat ~/.ghq-cache
 			;;
 		* )
-			$GHQ $@
+			$super $@
 			;;
 	esac
 }
