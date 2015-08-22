@@ -5,9 +5,24 @@
 ! add control = Control_L Control_R
 ! add mod1 = Alt_L Meta_L
 
-add Control = Muhenkan
-add Shift = Henkan
-add mod1 = Hiragana Katakana
+
+! Henkan
+clear Shift
+keycode 100 = Shift_L
+add Shift = Shift_L
+
+! Katakana Hiragana
+keycode 101 = Alt_L
+
+! Muhenkan
+clear Control
+keycode 102 = Control_L
+add Control = Control_L
+
+
+! add Control = Muhenkan
+! add Shift = Henkan
+! add mod1 = Hiragana Katakana
 
 ! Reverse scroll
 pointer = 1 2 3 5 4 6 7 8 9 10 11 12
