@@ -7,15 +7,13 @@
 
 
 ! Henkan
-clear Shift
 keycode 100 = Shift_L
-add Shift = Shift_L
+add Shift = Henkan_Mode
 
 ! Katakana Hiragana
 keycode 101 = Alt_L
 
 ! Muhenkan
-clear Control
 keycode 102 = Control_L
 add Control = Control_L
 
