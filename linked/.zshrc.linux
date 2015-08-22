@@ -11,3 +11,4 @@ source ~/.zsh/lib/theme.zsh
 source ~/.zsh/lib/csa.zsh
 
 alias suspend="xset dpms force suspend"
+alias stats="ghq-cache stats"

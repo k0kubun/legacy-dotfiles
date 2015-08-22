@@ -143,6 +143,3 @@ function ghe() {
 			;;
 	esac
 }
-
-alias ghq-cache="${HOME}/.rbenv/versions/2.2.2/bin/ghq-cache"
-alias stats="${HOME}/.rbenv/versions/2.2.2/bin/ghq-cache stats"

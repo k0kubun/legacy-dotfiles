@@ -11,3 +11,6 @@ source ~/.zsh/lib/languages.zsh
 source ~/.zsh/lib/peco.zsh
 source ~/.zsh/lib/theme.zsh
 source ~/.zsh/lib/csa.zsh
+
+alias ghq-cache="${HOME}/.rbenv/versions/2.2.2/bin/ghq-cache"
+alias stats="${HOME}/.rbenv/versions/2.2.2/bin/ghq-cache stats"
