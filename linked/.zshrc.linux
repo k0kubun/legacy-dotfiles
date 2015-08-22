@@ -12,3 +12,4 @@ source ~/.zsh/lib/csa.zsh
 
 alias suspend="xset dpms force suspend"
 alias stats="ghq-cache stats"
+export GHQ=~/bin/ghq
