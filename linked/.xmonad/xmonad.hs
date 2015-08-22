@@ -8,4 +8,6 @@ import System.IO
 main = do
   xmonad $ defaultConfig
     { terminal = "urxvt"
+    , borderWidth = 2
+    , focusedBorderColor = "cyan"
     }
