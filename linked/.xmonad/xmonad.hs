@@ -7,8 +7,13 @@ import System.IO
 
 main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
-  xmonad $ defaultConfig
-    { terminal = "urxvt"
-    , borderWidth = 2
-    , focusedBorderColor = "cyan"
+  xmonad $ defaults
+    { manageHook = manageDocks <+> manageHook defaultConfig
+    , layoutHook = avoidStruts $ layoutHook defaultConfig
     }
+
+defaults = defaultConfig
+  { terminal = "urxvt"
+  , borderWidth = 2
+  , focusedBorderColor = "cyan"
+  }
