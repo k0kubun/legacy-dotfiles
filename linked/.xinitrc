@@ -42,7 +42,7 @@ xset dpms 0 0 0
 xset s off
 
 trayer --edge top --SetDockType true --SetPartialStrut true \
-  --expand true --width 10 --transparent true --tint 0x000000 --height 12 &
+  --expand true --width 10 --transparent true --tint 0x000000 --alpha 0 --height 12 &
 
 # start some nice programs
 exec xmonad
