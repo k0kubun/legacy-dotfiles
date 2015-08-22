@@ -41,7 +41,7 @@ xset s off
 xset b off
 
 # accererate key repeat
-xset r rate 150 40
+xset r rate 180 40
 
 # twm &
 # xclock -geometry 50x50-1+1 &
