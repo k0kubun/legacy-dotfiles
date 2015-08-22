@@ -1,0 +1,14 @@
+# Load local settings first
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+source ~/.zsh/go.zsh
+source ~/.zsh/aliases.zsh
+source ~/.zsh/basic.zsh
+source ~/.zsh/completion.zsh
+source ~/.zsh/functions.zsh
+source ~/.zsh/overrides.zsh
+source ~/.zsh/git.zsh
+source ~/.zsh/languages.zsh
+source ~/.zsh/peco.zsh
+source ~/.zsh/theme.zsh
+source ~/.zsh/csa.zsh

@@ -1,25 +1,16 @@
 # Load local settings first
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-function load() {
-	lib="${HOME}/.zsh/lib/${1}.zsh"
-	source $lib
-}
-
-load go
-if which rbenv > /dev/null; then
-	load ruby
-fi
-load aliases
-load basic
-if which -a tmux | grep -q bin; then
-	load tmux
-fi
-load completion
-load functions
-load overrides
-load git
-load languages
-load peco
-load theme
-load csa
+source ~/.zsh/go.zsh
+source ~/.zsh/ruby.zsh
+source ~/.zsh/aliases.zsh
+source ~/.zsh/basic.zsh
+source ~/.zsh/tmux.zsh
+source ~/.zsh/completion.zsh
+source ~/.zsh/functions.zsh
+source ~/.zsh/overrides.zsh
+source ~/.zsh/git.zsh
+source ~/.zsh/languages.zsh
+source ~/.zsh/peco.zsh
+source ~/.zsh/theme.zsh
+source ~/.zsh/csa.zsh
