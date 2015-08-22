@@ -10,6 +10,7 @@ main = do
   xmonad $ defaults
     { manageHook = manageDocks <+> manageHook defaultConfig
     , layoutHook = avoidStruts $ layoutHook defaultConfig
+    , startupHook = startup
     }
 
 defaults = defaultConfig
@@ -17,3 +18,6 @@ defaults = defaultConfig
   , borderWidth = 2
   , focusedBorderColor = "cyan"
   }
+
+startup = do
+  spawn "feh --bg-fill ~/Pictures/grisaia.jpg"
