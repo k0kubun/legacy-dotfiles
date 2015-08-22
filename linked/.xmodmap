@@ -11,7 +11,7 @@ keycode 100 = Shift_L
 add Shift = Henkan_Mode
 
 ! Katakana Hiragana
-keycode 101 = Super_L
+keycode 101 = Alt_R
 
 ! Muhenkan
 keycode 102 = Control_L
