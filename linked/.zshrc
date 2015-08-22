@@ -1,3 +1,6 @@
+# Load local settings first
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
 case $(uname) in
 	Linux )
 		source ~/.zshrc.linux
@@ -7,4 +10,5 @@ case $(uname) in
 		;;
 	* )
 		echo "Unknown uname $(uname)"
+		;;
 esac

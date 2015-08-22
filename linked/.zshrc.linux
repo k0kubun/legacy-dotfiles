@@ -1,6 +1,3 @@
-# Load local settings first
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
-
 source ~/.zsh/go.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/basic.zsh
