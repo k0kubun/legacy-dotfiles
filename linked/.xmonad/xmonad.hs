@@ -6,6 +6,7 @@ import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
 main = do
+  xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
   xmonad $ defaultConfig
     { terminal = "urxvt"
     , borderWidth = 2
