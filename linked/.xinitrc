@@ -38,7 +38,7 @@ fi
 xset b off
 
 # accererate key repeat
-xset r rate 180 40
+xset r rate 200 80
 
 # disable screen blackout
 xset dpms 0 0 0
