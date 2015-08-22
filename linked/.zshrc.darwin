@@ -14,3 +14,4 @@ source ~/.zsh/lib/csa.zsh
 
 alias ghq-cache="${HOME}/.rbenv/versions/2.2.2/bin/ghq-cache"
 alias stats="${HOME}/.rbenv/versions/2.2.2/bin/ghq-cache stats"
+alias ls="ls -Gla"

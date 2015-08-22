@@ -1,6 +1,3 @@
-# ls
-alias ls="ls -Gla --color"
-
 # override system ctags
 # alias ctags="/usr/local/bin/ctags"
 
