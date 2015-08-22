@@ -41,5 +41,8 @@ xset r rate 200 80
 xset dpms 0 0 0
 xset s off
 
+trayer --edge top --SetDockType true --SetPartialStrut true \
+  --expand true --width 10 --transparent true --tint 0x000000 --height 12 &
+
 # start some nice programs
 exec xmonad
