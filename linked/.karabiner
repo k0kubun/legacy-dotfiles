@@ -87,9 +87,9 @@ item "Exchange Control + Space and Command + Space" do
   remap "Cmd-Space", to: "C-Space"
 end
 
-item "Japanese input first" do
-  autogen "__KeyToKey__ KeyCode::JIS_KANA, ModifierFlag::CONTROL_L, KeyCode::SPACE, VK_COMMAND"
-end
+# item "Japanese input first" do
+#   autogen "__KeyToKey__ KeyCode::JIS_KANA, ModifierFlag::CONTROL_L, KeyCode::SPACE, VK_COMMAND"
+# end
 
 item "Logical ASCII arrangement" do
   autogen "__SetKeyboardType__ KeyboardType::MACBOOK"
@@ -107,9 +107,9 @@ item "KANA (Henkan by Seil) to shift" do
   autogen "__KeyToKey__ KeyCode::JIS_KANA, KeyCode::SHIFT_L"
 end
 
-item "Japanese input third" do
-  autogen "__KeyToKey__ KeyCode::SHIFT_L, ModifierFlag::CONTROL_L, KeyCode::SPACE, VK_COMMAND"
-end
+# item "Japanese input third" do
+#   autogen "__KeyToKey__ KeyCode::SHIFT_L, ModifierFlag::CONTROL_L, KeyCode::SPACE, VK_COMMAND"
+# end
 
 # Cmd-L is used by CapsLock
 item "Command+K to Command+L", only: "CHROME" do
