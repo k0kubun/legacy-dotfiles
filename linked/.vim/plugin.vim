@@ -44,7 +44,7 @@ let g:gitgutter_sign_column_always = 1
 let g:extra_whitespace_ignored_filetypes = ['unite']
 
 " Unite.vim redraw limit
-let g:unite_redraw_hold_candidates = 15000
+let g:unite_redraw_hold_candidates = 26000
 
 " " neocomplete
 " let g:neocomplete#enable_at_startup = 1
