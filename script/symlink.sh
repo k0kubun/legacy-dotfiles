@@ -19,19 +19,34 @@ force_symlink() {
   echo "Link: ${target} -> ${to}"
 }
 
+# Do not symlink shallow directory
+DEEP_SYMLINKS="
+  .rbenv/default-gems
+"
+
+# Symlink ~/
 for linked in `\ls -A ${linked_dir}`; do
+  if echo $DEEP_SYMLINKS | grep $linked -q; then
+    continue
+  fi
   force_symlink $linked
 done
-touch ~/.tmux.conf.local
 
+# Symlink ~/.*/
+for linked in $DEEP_SYMLINKS; do
+  force_symlink $linked
+done
+
+# Symlink ~/bin
 linked_dir=${repository_root}/bin
 link_destination=${HOME}/bin
-
 mkdir -p ${HOME}/bin
 for linked in `\ls ${linked_dir}`; do
   force_symlink $linked
 done
 
+# Etc
+touch ~/.tmux.conf.local
 if [ ! -e ~/icloud ]; then
   ln -s -f ~/Library/Mobile\ Documents/com\~apple\~CloudDocs ~/icloud
 fi
