@@ -5,9 +5,7 @@
 alias re="source ~/.zshrc"
 
 # vim
-function vi() {
-	vim ${=*/:/ +}
-}
+function vi() { vim ${=*/:/ +} }
 
 # Prefer brew's vim
 export PATH="/usr/local/bin:${PATH}"
