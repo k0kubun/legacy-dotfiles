@@ -47,6 +47,7 @@ NeoBundleLazy 'osyo-manga/vim-over', { 'autoload': { 'commands': ['OverCommandLi
 " NeoBundle 'thinca/vim-prettyprint'
 " NeoBundle 'haya14busa/incsearch.vim'
 " NeoBundle 'jeetsukumaran/vim-indentwise'
+NeoBundleLazy 'tyru/skk.vim', { 'autoload': { 'insert': 1 } }
 
 " ctags
 " NeoBundle 'szw/vim-tags'
