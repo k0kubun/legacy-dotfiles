@@ -1,1 +1,4 @@
 alias ls="ls -Gla"
+
+override_path=~/src/github.com/k0kubun/dotfiles/linked/.zsh/lib/overrides.zsh
+[ -f $override_path ] && source $override_path
