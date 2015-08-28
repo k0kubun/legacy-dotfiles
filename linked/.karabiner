@@ -71,16 +71,6 @@ item "Remap Disabled Mode" do
   show_message "Remap Disabled"
 end
 
-# Change japanese input mode by Cmd_L + Space
-item "Exchange Control + Space and Command + Space" do
-  remap "C-Space", to: "Cmd-Space"
-  remap "Cmd-Space", to: "C-Space"
-end
-
-# item "Japanese input first" do
-#   autogen "__KeyToKey__ KeyCode::JIS_KANA, ModifierFlag::CONTROL_L, KeyCode::SPACE, VK_COMMAND"
-# end
-
 item "Logical ASCII arrangement" do
   autogen "__SetKeyboardType__ KeyboardType::MACBOOK"
 end
@@ -89,17 +79,9 @@ item "EISUU (Muhenkan by Seil) to control" do
   autogen "__KeyToKey__ KeyCode::JIS_EISUU, KeyCode::CONTROL_L"
 end
 
-item "Japanese input second" do
-  autogen "__KeyToKey__ KeyCode::JIS_KANA, ModifierFlag::CONTROL_L, KeyCode::SPACE, VK_COMMAND"
-end
-
 item "KANA (Henkan by Seil) to shift" do
   autogen "__KeyToKey__ KeyCode::JIS_KANA, KeyCode::SHIFT_L"
 end
-
-# item "Japanese input third" do
-#   autogen "__KeyToKey__ KeyCode::SHIFT_L, ModifierFlag::CONTROL_L, KeyCode::SPACE, VK_COMMAND"
-# end
 
 # Cmd-L is used by CapsLock
 item "Command+K to Command+L", only: "CHROME" do
