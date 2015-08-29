@@ -74,3 +74,9 @@ let g:unite_redraw_hold_candidates = 26000
 "   autocmd!
 "   autocmd BufWritePost *.hs GhcModCheckAsync
 " augroup END
+
+let g:eskk#large_dictionary = {
+      \ 'path': $HOME . "/.vim/dict/skk/SKK-JISYO.L",
+      \ 'sorted': 1,
+      \ 'encoding': 'euc-jp',
+      \}
