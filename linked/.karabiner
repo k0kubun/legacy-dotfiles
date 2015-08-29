@@ -171,44 +171,6 @@ item "Tab Change", not: "TERMINAL" do
   end
 end
 
-# I don't want to press shift key
-item "Command semicolon to colon" do
-  remap "Cmd-;", to: "Shift-;"
-end
-
-# item "tmux resize", only: "TERMINAL" do
-#   remap "Cmd-,", to: "Shift-,"
-#   remap "Cmd-.", to: "Shift-."
-# end
-#
-# item "Open config" do
-#   remap "Opt-,", to: "Cmd-,"
-# end
-
-item "Shift by control" do
-  remap "C--", to: "Shift--"
-  remap "C-0", to: "Shift-0"
-  remap "C-9", to: "Shift-9"
-  remap "C-8", to: "Shift-8"
-  remap "C-7", to: "Shift-7"
-  remap "C-6", to: "Shift-6"
-  remap "C-[", to: "Shift-["
-  remap "C-]", to: "Shift-]"
-  remap "C-;", to: "Shift-;"
-  remap "C-,", to: "Shift-,"
-  remap "C-.", to: "Shift-."
-  remap "C-/", to: "Shift-/"
-  remap "C-=", to: "Shift-="
-  remap "C-\\", to: "Shift-\\"
-end
-
-item "Exchange single quote and double quote" do
-  # remap "Shift-'", to: "'"
-  remap "Cmd-'", to: "Shift-'"
-  remap "C-'", to: "Shift-'"
-  # remap "'", to: "Shift-'"
-end
-
 item "Command+A to Option+A", only: "TERMINAL" do
   remap "Cmd-A", to: "M-a"
 end
