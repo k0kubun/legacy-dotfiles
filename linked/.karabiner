@@ -12,6 +12,10 @@ if File.exists?(local)
   eval(source)
 end
 
+item "SandS on apple keyboard", device_only: "DeviceVendor::APPLE_COMPUTER" do
+  autogen "__KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::SHIFT_L, KeyCode::SPACE"
+end
+
 item "Application shortcuts" do
   yorufukurou = system('ls /Applications | grep -q YoruFukurou') ? 'YoruFukurou' : 'Night Owl'
   remap "C-o", to: invoke(yorufukurou)
