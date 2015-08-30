@@ -100,7 +100,7 @@ function peco-src() {
 		full_dir="${GOPATH}/src/${selected_dir}"
 
 		# Log repository access to ghq-cache
-		(ghq-cache log $full_dir &)
+		silent-nohup ghq-cache log $full_dir
 
 		BUFFER="cd ${full_dir}"
 		zle accept-line

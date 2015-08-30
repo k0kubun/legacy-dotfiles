@@ -11,7 +11,7 @@ function ghq() {
 			$super get $repo -p
 
 			# hook after ghq get
-			(ghq-cache refresh &)
+			silent-nohup ghq-cache refresh
 
 			matched=`$super list | grep "${repo}$"`
 			if [ $matched != "" ]; then
@@ -41,11 +41,11 @@ function git() {
 	case $1 in
 		init )
 			$super $@
-			(ghq-cache refresh &)
+			silent-nohup ghq-cache refresh
 			;;
 		clone )
 			$super $@
-			(ghq-cache refresh &)
+			silent-nohup ghq-cache refresh
 			;;
 		* )
 			$super $@
