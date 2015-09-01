@@ -1,15 +1,3 @@
-" Esc
-noremap <C-e> <Esc>
-noremap <C-E> <Esc>
-inoremap <C-e> <Esc>
-inoremap <C-E> <Esc>
-cnoremap <C-e> <Esc>
-cnoremap <C-E> <Esc>
-
-" 移動
-noremap gj 6j
-noremap gk 6k
-
 " スクロール
 noremap <Space>j <C-f>
 noremap <Space>k <C-b>
