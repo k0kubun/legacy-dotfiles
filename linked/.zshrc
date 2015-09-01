@@ -245,6 +245,11 @@ function ghe() {
 	esac
 }
 
+function private() {
+	git config --local user.email takashikkbn@gmail.com
+	git config --local user.name "Takashi Kokubun"
+}
+
 # Environment-local configurations
 [ -f ~/.zshrc.local ]   && source ~/.zshrc.local
 [ -f ~/.zshrc.`uname` ] && source ~/.zshrc.`uname`
