@@ -88,24 +88,6 @@ item "KANA (Henkan by Seil) to shift" do
   autogen "__KeyToKey__ KeyCode::JIS_KANA, KeyCode::SHIFT_L"
 end
 
-# Cmd-L is used by CapsLock
-item "Command+K to Command+L", only: "CHROME" do
-  remap "Cmd-K", to: "Cmd-L"
-end
-
-item "CapsLock ON", config_not: "notsave.private_capslock_on" do
-  remap "Cmd-L", to: ["capslock", "VK_CONFIG_FORCE_ON_notsave_private_capslock_on"]
-end
-
-item "CapsLock OFF", config_only: "notsave.private_capslock_on" do
-  remap "Cmd-L", to: ["capslock", "VK_CONFIG_FORCE_OFF_notsave_private_capslock_on"]
-end
-
-item "CapsLock Mode" do
-  identifier "notsave.private_capslock_on", vk_config: "true"
-  show_message "CapsLock"
-end
-
 item "Control+PNBF to Up/Down/Left/Right", not: "TERMINAL" do
   remap "C-p", to: "Up"
   remap "C-n", to: "Down"
