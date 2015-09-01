@@ -16,8 +16,9 @@ item "SandS on apple keyboard", device_only: "DeviceVendor::APPLE_COMPUTER" do
   autogen "__KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::SHIFT_L, KeyCode::SPACE"
 end
 
-item "invoke alfred" do
+item "Swap alfred and japanese input" do
   remap "Cmd-space", to: "C-space"
+  remap "C-space", to: "Cmd-space"
 end
 
 item "Application shortcuts" do
