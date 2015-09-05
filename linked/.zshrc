@@ -10,6 +10,7 @@ alias gh="git branch"
 alias co="git checkout"
 alias dsl="karabiner dsl"
 alias amend="git commit --amend"
+alias linuxgo="GOOS=linux GOARCH=amd64 go"
 alias suspend="xset dpms force suspend"
 alias -g B='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
 function vi() { vim ${=*/:/ +} }
