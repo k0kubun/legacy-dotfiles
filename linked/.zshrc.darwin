@@ -1,20 +1,6 @@
-source ~/.zsh/lib/go.zsh
 source ~/.zsh/lib/ruby.zsh
-source ~/.zsh/lib/aliases.zsh
-source ~/.zsh/lib/basic.zsh
 source ~/.zsh/lib/tmux.zsh
-source ~/.zsh/lib/completion.zsh
-source ~/.zsh/lib/functions.zsh
-source ~/.zsh/lib/overrides.zsh
-source ~/.zsh/lib/git.zsh
-source ~/.zsh/lib/languages.zsh
-source ~/.zsh/lib/peco.zsh
-source ~/.zsh/lib/theme.zsh
-source ~/.zsh/lib/csa.zsh
 
 alias ghq-cache="${HOME}/.rbenv/versions/2.2.2/bin/ghq-cache"
 alias stats="${HOME}/.rbenv/versions/2.2.2/bin/ghq-cache stats"
 alias ls="ls -Gla"
-
-override_path=~/src/github.com/k0kubun/dotfiles/linked/.zsh/lib/overrides.zsh
-[ -f $override_path ] && source $override_path
