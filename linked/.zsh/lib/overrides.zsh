@@ -14,7 +14,7 @@ function ghq() {
 			silent-nohup ghq-cache refresh
 
 			matched=`$super list | grep "${repo}$"`
-			if [ $matched != "" ]; then
+			if [[ $matched != "" ]]; then
 				repo_dir="${GOPATH}/src/${matched}"
 				pushd $repo_dir > /dev/null
 				private
