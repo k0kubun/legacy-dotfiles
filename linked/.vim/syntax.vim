@@ -5,6 +5,7 @@ autocmd BufNewFile,BufRead Capfile set filetype=ruby
 autocmd BufNewFile,BufRead Gomfile set filetype=ruby
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
 autocmd BufNewFile,BufRead *.schema set filetype=ruby
+autocmd BufNewFile,BufRead *.iam set filetype=ruby
 autocmd BufNewFile,BufRead *.sandal set filetype=go
 autocmd BufNewFile,BufRead *.pending set filetype=go
 autocmd BufNewFile,BufRead *.md set filetype=markdown
