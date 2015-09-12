@@ -70,4 +70,4 @@ nnoremap <C-w>> <C-w>14>
 nnoremap <C-w>< <C-w>14<
 
 " binding.pry
-inoremap <C-v> Pry.start_without_pry_byebug(binding)
+inoremap <C-v> require "pry"; binding.pry
