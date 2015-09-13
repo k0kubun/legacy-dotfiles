@@ -4,6 +4,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
+import System.Exit
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
@@ -24,7 +25,7 @@ defaults = defaultConfig
   }
 
 myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
-myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
+myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- launching and killing programs
   [ ((modMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf) -- %! Launch terminal
   , ((modMask,               xK_p     ), spawn "dmenu_run") -- %! Launch dmenu
@@ -63,9 +64,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , ((modMask .|. shiftMask, xK_q     ), io (exitWith ExitSuccess)) -- %! Quit xmonad
   , ((modMask              , xK_q     ), spawn "if type xmonad; then xmonad --recompile && xmonad --restart; else xmessage xmonad not in \\$PATH: \"$PATH\"; fi") -- %! Restart xmonad
 
-  , ((modMask .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -")) -- %! Run xmessage with a summary of the default keybindings (useful for beginners)
+  -- , ((modMask .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -")) -- %! Run xmessage with a summary of the default keybindings (useful for beginners)
   -- repeat the binding for non-American layout keyboards
-  , ((modMask              , xK_question), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
+  -- , ((modMask              , xK_question), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
   ]
   ++
   -- mod-[1..9] %! Switch to workspace N
