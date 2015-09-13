@@ -26,6 +26,7 @@ defaults = defaultConfig
 myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   [ ((modm, xK_Return), spawn $ XMonad.terminal conf)
+  , ((modm, xK_p), spawn "dmenu_run")
   -- close focused window
   , ((modm .|. shiftMask, xK_c), kill)
    -- Rotate through the available layout algorithms
