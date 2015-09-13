@@ -8,10 +8,10 @@ urxvt*colorULMode: on
 urxvt*dynamicColors: off
 urxvt*highlightSelection: true
 
-!———————————————————-
+!---------------------
 ! Colorscheme based on the gvim colorscheme desert
 ! http://ggellner.wordpress.com/2006/08/12/desert-xterm/
-!———————————————————-
+!---------------------
 urxvt*background: #313031
 urxvt*foreground: White
 
@@ -47,12 +47,12 @@ urxvt*color5: #ce5d5a
 urxvt*color6: #87ff87
 
 !set the window geometry
-urxvt*geometry: 110×40
+urxvt*geometry: 110x40
 
-urxvt*font: xft:Inconsolata:pixelsize=16:antialias=true:hinting=true
-urxvt*boldFont: xft:Inconsolata:pixelsize=16:antialias=true:bold:hinting=true
-urxvt*italicFont: xft:Inconsolata:pixelsize=16:antialias=true:italic:autohint=true:hinting=true
-urxvt*bolditalicFont: xft:Inconsolata:pixelsize=16:antialias=true:bold:italic:autohint=true:hinting=true
+urxvt*font: xft:Inconsolata:pixelsize=20:antialias=true:hinting=true
+urxvt*boldFont: xft:Inconsolata:pixelsize=20:antialias=true:bold:hinting=true
+urxvt*italicFont: xft:Inconsolata:pixelsize=20:antialias=true:italic:autohint=true:hinting=true
+urxvt*bolditalicFont: xft:Inconsolata:pixelsize=20:antialias=true:bold:italic:autohint=true:hinting=true
 
 URxvt*preeditType: OnTheSpot,None
 URxvt*perl-ext-common: default,matcher
