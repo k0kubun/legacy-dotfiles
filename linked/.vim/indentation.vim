@@ -16,7 +16,7 @@ if has("autocmd")
   autocmd FileType css        setlocal sw=2 sts=2 ts=2 et
   autocmd FileType java       setlocal sw=4 sts=4 ts=4 et
   autocmd FileType javascript setlocal sw=2 sts=2 ts=2 et
-  autocmd FileType ruby       setlocal sw=2 sts=2 ts=2 et
+  autocmd FileType ruby       setlocal sw=2 sts=2 ts=2 et iskeyword+=! iskeyword+=?
   autocmd FileType haml       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType slim       setlocal sw=2 sts=2 ts=2 et
   autocmd FileType vim        setlocal sw=2 sts=2 ts=2 et
