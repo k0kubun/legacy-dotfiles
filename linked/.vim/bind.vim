@@ -1,24 +1,24 @@
 " スクロール
-noremap <Space>j <C-f>
-noremap <Space>k <C-b>
+" noremap <Space>j <C-f>
+" noremap <Space>k <C-b>
 
 " The prefix key.
 nnoremap [Tag] <Nop>
 nmap <Space> [Tag]
 " t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
-for n in range(1, 9)
-  execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
-endfor
+" for n in range(1, 9)
+"   execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
+" endfor
 
 " tabline
 map <silent> [Tag]t :tablast <bar> tabnew <bar> Explore <bar> vs<CR>
 map <silent> [Tag]e :tabclose<CR>
-map <silent> [Tag]p :tabnext<CR>
-map <silent> [Tag]o :tabprevious<CR>
+" map <silent> [Tag]p :tabnext<CR>
+" map <silent> [Tag]o :tabprevious<CR>
 
 " ウィンドウ切り替え
-nnoremap [Tag]h <C-w>h
-nnoremap [Tag]l <C-w>l
+" nnoremap [Tag]h <C-w>h
+" nnoremap [Tag]l <C-w>l
 
 " Explore
 nnoremap <silent> ;e :<C-u>Explore<CR>
