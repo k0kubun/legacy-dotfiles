@@ -1,0 +1,69 @@
+!
+!urxvt*underLine: on
+urxvt*colorMode: on
+urxvt*colorBD: lightyellow
+!urxvt*colorBDMode: off
+urxvt*colorUL: yellow
+urxvt*colorULMode: on
+urxvt*dynamicColors: off
+urxvt*highlightSelection: true
+
+!———————————————————-
+! Colorscheme based on the gvim colorscheme desert
+! http://ggellner.wordpress.com/2006/08/12/desert-xterm/
+!———————————————————-
+urxvt*background: #313031
+urxvt*foreground: White
+
+!colors
+!(unknown)
+urxvt*color0: #000000
+urxvt*color7: #bebebe
+urxvt*color8: #666666
+urxvt*color9: #cf6171
+urxvt*color10: #c5f779
+urxvt*color11: #fff796
+urxvt*color12: #4186be
+urxvt*color13: #cf9ebe
+urxvt*color14: #71bebe
+urxvt*color15: #ffffff
+
+!(1 is an option color in .Xdefaults)
+urxvt*color1: #ffa2a5
+
+!(2 is a resource color in .Xdefaults)
+urxvt*color2: #bdb66b
+
+!(3 is for def/return color in python)
+urxvt*color3: #f7e78c
+
+!(4 is for comments color in python)
+urxvt*color4: #84cfef
+
+!(5 is for import/from color in python)
+urxvt*color5: #ce5d5a
+
+!(6 is for function color in python)
+urxvt*color6: #87ff87
+
+!set the window geometry
+urxvt*geometry: 110×40
+
+urxvt*font: xft:Inconsolata:pixelsize=16:antialias=true:hinting=true
+urxvt*boldFont: xft:Inconsolata:pixelsize=16:antialias=true:bold:hinting=true
+urxvt*italicFont: xft:Inconsolata:pixelsize=16:antialias=true:italic:autohint=true:hinting=true
+urxvt*bolditalicFont: xft:Inconsolata:pixelsize=16:antialias=true:bold:italic:autohint=true:hinting=true
+
+URxvt*preeditType: OnTheSpot,None
+URxvt*perl-ext-common: default,matcher
+URxvt*perl-ext: xim-onthespot
+urxvt*urlLauncher: /usr/bin/firefox
+urxvt*matcher.button: 1
+
+Xcursor.theme: Vanilla-DMZ-AA
+Xcursor.size: 16
+
+urxvt*scrollBar: true
+urxvt*scrollBar_right: true
+urxvt*scrollColor: #323232
+urxvt*cursorColor: #eeeeee
