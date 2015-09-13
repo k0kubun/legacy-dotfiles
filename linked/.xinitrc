@@ -44,5 +44,7 @@ xset s off
 trayer --edge top --SetDockType true --SetPartialStrut true \
   --expand true --width 10 --transparent true --tint 0x000000 --alpha 0 --height 12 &
 
+ibus-daemon &
+
 # start some nice programs
 exec xmonad
