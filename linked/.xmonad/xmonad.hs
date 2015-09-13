@@ -60,4 +60,4 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   ]
 
 startup = do
-  spawn "feh --bg-fill ~/Pictures/grisaia.jpg"
+  spawn "feh --bg-fill ~/Pictures/bg.jpg"
