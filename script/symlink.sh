@@ -24,9 +24,16 @@ DEEP_SYMLINKS="
   .rbenv/default-gems
 "
 
+IGNORED="
+  fonts.conf
+"
+
 # Symlink ~/
 for linked in `\ls -A ${linked_dir}`; do
   if echo $DEEP_SYMLINKS | grep $linked -q; then
+    continue
+  fi
+  if echo $IGNORED | grep $linked -q; then
     continue
   fi
   force_symlink $linked
