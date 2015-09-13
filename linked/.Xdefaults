@@ -1,4 +1,7 @@
 !
+urxvt*transparent: true
+urxvt*shading: 15
+
 !urxvt*underLine: on
 urxvt*colorMode: on
 urxvt*colorBD: lightyellow

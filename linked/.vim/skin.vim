@@ -1,6 +1,7 @@
 syntax on
 set t_Co=256
 colorscheme hybrid
+hi Normal ctermfg=White ctermbg=NONE
 
 " Anywhere SID.
 function! s:SID_PREFIX()
