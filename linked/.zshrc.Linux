@@ -1,1 +1,2 @@
 export GHQ=~/bin/ghq
+alias ls="ls -la --color"
