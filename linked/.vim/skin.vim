@@ -2,6 +2,7 @@ syntax on
 set t_Co=256
 colorscheme hybrid
 hi Normal ctermfg=White ctermbg=NONE
+hi LineNr ctermfg=242
 
 " Anywhere SID.
 function! s:SID_PREFIX()
