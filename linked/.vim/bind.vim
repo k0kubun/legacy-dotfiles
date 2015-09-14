@@ -13,8 +13,8 @@ nmap <Space> [Tag]
 " tabline
 map <silent> [Tag]t :tablast <bar> tabnew <bar> Explore <bar> vs<CR>
 map <silent> [Tag]e :tabclose<CR>
-" map <silent> [Tag]p :tabnext<CR>
-" map <silent> [Tag]o :tabprevious<CR>
+map <silent> [Tag]p :tabnext<CR>
+map <silent> [Tag]o :tabprevious<CR>
 
 " ウィンドウ切り替え
 " nnoremap [Tag]h <C-w>h
