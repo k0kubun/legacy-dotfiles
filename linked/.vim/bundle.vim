@@ -31,6 +31,7 @@ NeoBundleLazy 'vim-scripts/applescript.vim', { 'autoload': { 'filetypes': ['appl
 " NeoBundle 'eagletmt/ghcmod-vim'
 " NeoBundle 'itchyny/vim-haskell-indent'
 " NeoBundle 'Shougo/vinarise.vim'
+NeoBundleLazy 'rodjek/vim-puppet', { 'autoload': { 'filetypes': ['puppet'] } }
 
 " Completion
 " NeoBundle 'Shougo/neocomplcache.vim'
