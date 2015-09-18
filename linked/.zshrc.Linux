@@ -1,2 +1,11 @@
 export GHQ=~/bin/ghq
 alias ls="ls -la --color"
+
+if ! pgrep ssh-agent > /dev/null; then
+	ssh-agent > "${HOME}/.ssh/agent_env"
+	chmod 600 "${HOME}/.ssh/agent_env"
+fi
+
+if [ -e ~/.ssh/agent_env ]; then
+	source ~/.ssh/agent_env > /dev/null
+fi
