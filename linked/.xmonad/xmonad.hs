@@ -27,12 +27,12 @@ defaults = defaultConfig
 myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- launching and killing programs
-  [ ((modMask,               xK_Return), spawn $ XMonad.terminal conf) -- %! Launch terminal
-  , ((modMask,               xK_space ), spawn "dmenu_run") -- %! Launch dmenu
+  [ ((modMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf) -- %! Launch terminal
+  , ((modMask,               xK_p     ), spawn "dmenu_run") -- %! Launch dmenu
   , ((modMask .|. shiftMask, xK_c     ), kill) -- %! Close the focused window
 
-  , ((modMask .|. shiftMask, xK_space ), sendMessage NextLayout) -- %! Rotate through the available layout algorithms
-  -- , ((modMask .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf) -- %!  Reset the layouts on the current workspace to default
+  , ((modMask,               xK_space ), sendMessage NextLayout) -- %! Rotate through the available layout algorithms
+  , ((modMask .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf) -- %!  Reset the layouts on the current workspace to default
 
   , ((modMask,               xK_n     ), refresh) -- %! Resize viewed windows to the correct size
 
@@ -44,7 +44,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask,               xK_m     ), windows W.focusMaster  ) -- %! Move focus to the master window
 
   -- modifying the window order
-  , ((modMask,               xK_x     ), windows W.swapMaster) -- %! Swap the focused window and the master window
+  , ((modMask,               xK_Return), windows W.swapMaster) -- %! Swap the focused window and the master window
   , ((modMask .|. shiftMask, xK_j     ), windows W.swapDown  ) -- %! Swap the focused window with the next window
   , ((modMask .|. shiftMask, xK_k     ), windows W.swapUp    ) -- %! Swap the focused window with the previous window
 
