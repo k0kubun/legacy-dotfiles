@@ -11,8 +11,8 @@ setopt pushd_ignore_dups
 # share zsh history
 setopt share_history
 export HISTFILE=${HOME}/.zsh_history
-export HISTSIZE=1000
-export SAVEHIST=100000
+export HISTSIZE=10000000
+export SAVEHIST=60000000
 
 # don't logout by EOF
 setopt ignore_eof
