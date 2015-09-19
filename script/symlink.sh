@@ -25,6 +25,7 @@ DEEP_SYMLINKS="
 "
 
 IGNORED="
+  .tmux.conf
   fonts.conf
 "
 
@@ -43,6 +44,15 @@ done
 for linked in $DEEP_SYMLINKS; do
   force_symlink $linked
 done
+
+# Symlink .tmux.conf
+case uname in
+  Darwin )
+    ;;
+  * )
+    force_symlink .tmux.conf
+    ;;
+esac
 
 # Symlink ~/bin
 linked_dir=${repository_root}/bin
