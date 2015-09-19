@@ -19,3 +19,4 @@ autocmd BufNewFile,BufRead *.applescript setl filetype=applescript
 autocmd BufNewFile,BufRead proxy.conf setl filetype=apache
 autocmd BufNewFile,BufRead unicorn.conf setl filetype=ruby
 autocmd BufNewFile,BufRead *.pp setl filetype=puppet
+autocmd BufNewFile,BufRead xmobarrc setl filetype=haskell
