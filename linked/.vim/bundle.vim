@@ -43,7 +43,7 @@ NeoBundleLazy 'Shougo/neocomplete.vim', { "autoload": { "insert": 1 } }
 NeoBundle 'w0ng/vim-hybrid'
 
 " Editing
-NeoBundleLazy 'bronson/vim-trailing-whitespace', { 'autoload': { 'commands': ['FixWhitespace'] } }
+NeoBundleLazy 'bronson/vim-trailing-whitespace', { 'autoload': { 'commands': ['FixWhitespace'], "insert": 1 } }
 NeoBundleLazy 'osyo-manga/vim-over', { 'autoload': { 'commands': ['OverCommandLine'] } }
 " NeoBundle 'thinca/vim-prettyprint'
 " NeoBundle 'haya14busa/incsearch.vim'
