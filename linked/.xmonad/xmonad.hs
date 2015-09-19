@@ -12,10 +12,32 @@ import qualified Data.Map as M
 main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
   xmonad $ defaults
-    { manageHook = manageDocks <+> manageHook defaultConfig
-    , layoutHook = avoidStruts $ layoutHook defaultConfig
+    { manageHook  = manageDocks <+> manageHook defaultConfig
+    , layoutHook  = avoidStruts $ layoutHook defaultConfig
     , startupHook = startup
+    , logHook     = myLogHook xmproc
     }
+
+
+myLogHook h = dynamicLogWithPP $ wsPP { ppOutput = hPutStrLn h }
+
+colorBlue      = "#857da9"
+colorGreen     = "#88b986"
+colorGray      = "#676767"
+colorWhite     = "#d3d7cf"
+colorGrayAlt   = "#313131"
+colorNormalbg  = "#1a1e1b"
+
+wsPP = xmobarPP { ppOrder               = \(ws:l:t:_)   -> [ws,t]
+                , ppCurrent             = xmobarColor   colorGreen       colorNormalbg
+                , ppUrgent              = xmobarColor   colorWhite       colorNormalbg
+                , ppVisible             = xmobarColor   colorWhite       colorNormalbg
+                , ppHidden              = xmobarColor   colorWhite       colorNormalbg
+                , ppHiddenNoWindows     = xmobarColor   colorGray        colorNormalbg
+                , ppTitle               = xmobarColor   colorWhite       colorNormalbg
+                , ppWsSep               = ""
+                , ppSep                 = "  ::: "
+                }
 
 defaults = defaultConfig
   { terminal = "urxvt"

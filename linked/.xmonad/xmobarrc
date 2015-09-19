@@ -1,38 +1,43 @@
-Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
-       , additionalFonts = []
-       , borderColor = "black"
-       , border = TopB
-       , bgColor = "black"
-       , fgColor = "grey"
-       , alpha = 255
-       , position = TopSize C 100 20
-       , textOffset = -1
-       , iconOffset = -1
-       , lowerOnStart = True
-       , pickBroadest = False
-       , persistent = False
-       , hideOnStart = False
-       , iconRoot = "."
-       , allDesktops = True
-       , overrideRedirect = True
-       , commands = [ Run Weather "EGPF" ["-t","<station>: <tempC>C",
-                                          "-L","18","-H","25",
-                                          "--normal","green",
-                                          "--high","red",
-                                          "--low","lightblue"] 36000
-                    , Run Network "eth0" ["-L","0","-H","32",
-                                          "--normal","green","--high","red"] 10
-                    , Run Network "eth1" ["-L","0","-H","32",
-                                          "--normal","green","--high","red"] 10
-                    , Run Cpu ["-L","3","-H","50",
-                               "--normal","green","--high","red"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run Swap [] 10
-                    , Run Com "uname" ["-s","-r"] "" 36000
-            , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+Config { font = "xft:TakaoPGothic-16:Bold"
+       , bgColor = "#131418"
+       , fgColor = "#676767"
+       , position = Top
+       , lowerOnStart = False
+       , commands = [ Run Network "wlan0" [ "-t"       , " ⇩ <rx> : ⇧ <tx>"
+                                          , "-L"       , "40"
+                                          , "-H"       , "200"
+                                          , "--normal" , "#d3d7cf"
+                                          , "--high"   , "#88b986"
+                                          ] 10
+
+                    , Run MultiCpu        [ "-t"       , "<total0>.<total1>.<total2>.<total3>"
+                                          , "-L"       , "40"
+                                          , "-H"       , "85"
+                                          , "--normal" , "#d3d7cf"
+                                          , "--high"   , "#c16666"
+                                          ] 50
+
+                    , Run Memory          [ "-t"       , "<usedratio>%"
+                                          , "-L"       , "40"
+                                          , "-H"       , "90"
+                                          , "--normal" , "#d3d7cf"
+                                          , "--high"   , "#c16666"
+                                          ] 10
+                    , Run BatteryP        ["CMB1"]
+                                          [ "-t"       , "<acstatus>"
+                                          , "-L"       , "20"
+                                          , "-H"       , "80"
+                                          , "--low"    , "#c16666"
+                                          , "--normal" , "#d3d7cf"
+                                          , "--"
+                                                , "-o" , "<left>% (<timeleft>)"
+                                                , "-O" , "Charging <left>%"
+                                                , "-i" , "<left>%"
+                                          ] 50
+                    , Run Date "%a %m/%d %H:%M" "date" 10
+                    , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%cpu% | %memory% * %swap% | %eth0% - %eth1% }\
-                    \{ <fc=#ee9a00>%date%</fc>| %EGPF% | %uname%"
+       , template = " %StdinReader% }{≫%multicpu%  ≫%memory%  ≫%wlan0%  ≫%battery%  <fc=#c7a273>%date%</fc> "
        }
