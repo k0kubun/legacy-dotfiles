@@ -50,11 +50,11 @@ myKeys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- launching and killing programs
   [ ((modMask .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf) -- %! Launch terminal
-  , ((modMask,               xK_p     ), spawn "dmenu_run") -- %! Launch dmenu
+  , ((modMask,               xK_space ), spawn "dmenu_run") -- %! Launch dmenu
   , ((modMask .|. shiftMask, xK_c     ), kill) -- %! Close the focused window
 
-  , ((modMask,               xK_space ), sendMessage NextLayout) -- %! Rotate through the available layout algorithms
-  , ((modMask .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf) -- %!  Reset the layouts on the current workspace to default
+  , ((modMask .|. shiftMask, xK_space ), sendMessage NextLayout) -- %! Rotate through the available layout algorithms
+  -- , ((modMask .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf) -- %!  Reset the layouts on the current workspace to default
 
   , ((modMask,               xK_n     ), refresh) -- %! Resize viewed windows to the correct size
 
