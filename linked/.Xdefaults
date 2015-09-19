@@ -31,23 +31,23 @@ urxvt*color13: #cf9ebe
 urxvt*color14: #71bebe
 urxvt*color15: #ffffff
 
-!(1 is an option color in .Xdefaults)
-urxvt*color1: #ffa2a5
+! Normal Red: git's deletion
+urxvt*color1: #ff1500
 
-!(2 is a resource color in .Xdefaults)
-urxvt*color2: #bdb66b
+! Normal Green: git's addition
+urxvt*color2: #00bb00
 
-!(3 is for def/return color in python)
-urxvt*color3: #f7e78c
+! Normal Yellow: vim's changed line
+urxvt*color3: #efef00
 
-!(4 is for comments color in python)
-urxvt*color4: #84cfef
+! Normal Blue: ls's directory color
+urxvt*color4: #0090F0
 
-!(5 is for import/from color in python)
-urxvt*color5: #ce5d5a
+! Normal Magenta: ls's symlink
+urxvt*color5: #f030db
 
-!(6 is for function color in python)
-urxvt*color6: #87ff87
+! Normal Cyan: LPROMPT and peco
+urxvt*color6: #00bbbb
 
 !set the window geometry
 urxvt*geometry: 110x40
