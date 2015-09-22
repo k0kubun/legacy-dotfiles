@@ -13,3 +13,5 @@ fi
 # Ruby
 eval "$(rbenv init - zsh)"
 export PATH=~/.rbenv/shims:${PATH}
+
+export BUNDLE_JOBS=16
