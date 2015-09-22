@@ -9,3 +9,7 @@ fi
 if [ -e ~/.ssh/agent_env ]; then
 	source ~/.ssh/agent_env > /dev/null
 fi
+
+# Ruby
+eval "$(rbenv init - zsh)"
+export PATH=~/.rbenv/shims:${PATH}
