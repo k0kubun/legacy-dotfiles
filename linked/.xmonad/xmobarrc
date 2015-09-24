@@ -2,7 +2,7 @@ Config { font = "xft:TakaoPGothic-16:Bold"
        , bgColor = "#131418"
        , fgColor = "#676767"
        , position = Top
-       , lowerOnStart = False
+       , lowerOnStart = True
        , commands = [ Run Network "wlan0" [ "-t"       , " ⇩ <rx> : ⇧ <tx>"
                                           , "-L"       , "40"
                                           , "-H"       , "200"
