@@ -2,6 +2,7 @@
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Gemfile.shared set filetype=ruby
 autocmd BufNewFile,BufRead Capfile set filetype=ruby
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
 autocmd BufNewFile,BufRead Gomfile set filetype=ruby
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
 autocmd BufNewFile,BufRead *.schema set filetype=ruby
