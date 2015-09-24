@@ -22,6 +22,7 @@ force_symlink() {
 # Do not symlink shallow directory
 DEEP_SYMLINKS="
   .rbenv/default-gems
+  .config/fontconfig
 "
 
 IGNORED="
