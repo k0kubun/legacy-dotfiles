@@ -68,8 +68,8 @@ set -g status-utf8 on
 set -g status-interval 2
 set -g status-fg colour231
 set -g status-bg colour239
-set -g window-status-format "#[fg=colour244,bg=colour239]#I #[fg=colour244] #[default]#W "
-set -g window-status-current-format "#[fg=colour239,bg=colour31]#[fg=colour117,bg=colour31] #I  #[fg=colour231,bold]#W #[fg=colour31,bg=colour239,nobold]"
+set -g window-status-format "#[fg=colour244,bg=colour239]#I: #[fg=colour244]#[default]#W "
+set -g window-status-current-format "#[fg=colour239,bg=colour31]#[fg=colour117,bg=colour31] #I: #[fg=colour231,bold]#W #[fg=colour31,bg=colour239,nobold]"
 set-window-option -g window-status-fg colour249
 set-window-option -g window-status-activity-attr none
 set-window-option -g window-status-bell-attr none
@@ -79,7 +79,7 @@ set-window-option -g window-status-bell-fg red
 # left status
 # set -g status-left-length 20
 # set -g status-left '#[fg=colour16,bg=colour254,bold] #S #[fg=colour254,bg=colour239,nobold]#(eval $POWERLINE_COMMAND tmux left)'
-set -g status-left '#[fg=colour223,bg=colour202,bold][#(tmux ls | grep -n attached | sed -e "s/:.*$//")/#(tmux ls | wc -l | sed -e "s/ //g")] #S #[fg=colour202,bg=colour238,nobold] '
+set -g status-left '#[fg=colour223,bg=colour202,bold][#(tmux ls | grep -n attached | sed -e "s/:.*$//")/#(tmux ls | wc -l | sed -e "s/ //g")] #S #[fg=colour202,bg=colour238,nobold] '
 set -g status-left-length 120
 
 # right status
@@ -87,7 +87,7 @@ set -g status-left-length 120
 # set -g status-right '#(eval $POWERLINE_COMMAND tmux right -R pane_id=`tmux display -p "#D"`)'
 # set -g status-right-length 150
 # set -g status-right "#[fg=cyan][%Y-%m-%d(%a) %H:%M]"
-set -g status-right '#[fg=colour31,bg=colour255,bold] %Y/%m/%d(%a)%H:%M#[default]'
+set -g status-right '#[fg=colour31,bg=colour255,bold] %Y/%m/%d(%a)%H:%M#[default]'
 set -g status-right-length 200
 
 # pane-border
