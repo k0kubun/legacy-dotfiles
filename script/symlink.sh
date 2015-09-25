@@ -14,9 +14,17 @@ force_symlink() {
   from=${linked_dir}/${target}
   to=${link_destination}/${target}
 
-  rm -rf $to
-  ln -s $from $to
-  echo "Link: ${target} -> ${to}"
+  log_symlink $from $to
+}
+
+log_symlink() {
+  real_path=$1
+  virtual_path=$2
+  target=$(basename $realpath)
+
+  rm -rf $virtual_path
+  ln -s $real_path $virtual_path
+  echo "Link: ${target} -> ${virtual_path}"
 }
 
 # Do not symlink shallow directory
@@ -47,8 +55,9 @@ for linked in $DEEP_SYMLINKS; do
 done
 
 # Symlink .tmux.conf
-case uname in
-  Darwin )
+case $(uname) in
+  "Darwin" )
+    log_symlink ~/src/github.com/k0kubun/dotfiles/linked/.tmux.conf.darwin ~/.tmux.conf
     ;;
   * )
     force_symlink .tmux.conf
