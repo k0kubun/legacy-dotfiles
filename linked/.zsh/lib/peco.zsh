@@ -23,11 +23,7 @@ bindkey '^r' peco-select-history
 
 # integrate all source code with ghq
 function peco-src() {
-	if [ -e ~/.ghq-cache ]; then
-		selected_dir=$(cat ~/.ghq-cache | peco --query "$LBUFFER" --prompt "[ghq list]")
-	else
-		selected_dir=$(ghq list | peco --query "$LBUFFER" --prompt "[ghq list]")
-	fi
+	local selected_dir=$(ghq list | peco --query "$LBUFFER" --prompt "[ghq list]")
 	if [ -n "$selected_dir" ]; then
 		full_dir="${GOPATH}/src/${selected_dir}"
 
