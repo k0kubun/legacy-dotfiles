@@ -15,6 +15,7 @@ BREW_PACKAGES="
   git
   go --with-cc-common
   hub
+  htop
   imagemagick
   mercurial
   mysql
