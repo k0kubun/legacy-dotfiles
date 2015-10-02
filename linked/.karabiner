@@ -17,8 +17,7 @@ item "SandS on apple keyboard", device_only: "DeviceVendor::APPLE_COMPUTER" do
 end
 
 item "Application shortcuts" do
-  yorufukurou = system('ls /Applications | grep -q YoruFukurou') ? 'YoruFukurou' : 'Night Owl'
-  remap "C-o", to: invoke(yorufukurou)
+  remap "C-o", to: invoke("Nocturn")
   remap "C-u", to: invoke("Google Chrome")
   remap "C-h", to: invoke("iTerm")
 end
