@@ -10,6 +10,7 @@ CASK_PACKAGES="
   iterm2
   karabiner
   licecap
+  seil
   sequel-pro
   vagrant
   virtualbox
