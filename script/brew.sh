@@ -35,6 +35,7 @@ BREW_PACKAGES="
 
   caskroom/cask/brew-cask
   k0kubun/envchain/envchain
+  homebrew/dupes/apple-gcc42
   motemen/ghq/ghq
 "
 
