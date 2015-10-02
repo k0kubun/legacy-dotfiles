@@ -20,11 +20,10 @@ force_symlink() {
 log_symlink() {
   real_path=$1
   virtual_path=$2
-  target=$(basename $realpath)
 
   rm -rf $virtual_path
   ln -s $real_path $virtual_path
-  echo "Link: ${target} -> ${virtual_path}"
+  echo "Link: ${real_path} -> ${virtual_path}"
 }
 
 # Do not symlink shallow directory
