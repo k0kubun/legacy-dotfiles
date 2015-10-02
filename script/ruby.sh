@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION="2.2.2"
+VERSION="2.2.3"
 INSTALL_OPTIONS="
   --with-readline-dir=$(brew --prefix readline)
   --with-openssl-dir=$(brew --prefix openssl)
