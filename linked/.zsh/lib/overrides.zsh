@@ -11,7 +11,7 @@ function ghq() {
 			$super get $repo -p
 
 			# hook after ghq get
-			silent-nohup ghq-cache refresh
+			silent-nohup ghq-cache update
 
 			matched=`$super list | grep "${repo}$"`
 			if [[ $matched != "" ]]; then
@@ -23,7 +23,7 @@ function ghq() {
 			;;
 		list )
 			if [ ! -e ~/.ghq-cache ]; then
-				ghq-cache refresh
+				ghq-cache update
 			fi
 
 			# use ghq list ordered by ghq-cache
@@ -41,11 +41,11 @@ function git() {
 	case $1 in
 		init )
 			$super $@
-			silent-nohup ghq-cache refresh
+			silent-nohup ghq-cache update
 			;;
 		clone )
 			$super $@
-			silent-nohup ghq-cache refresh
+			silent-nohup ghq-cache update
 			;;
 		* )
 			$super $@
