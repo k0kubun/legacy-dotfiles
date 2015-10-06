@@ -1,5 +1,6 @@
 syntax on
 set t_Co=256
+set background=dark
 colorscheme hybrid
 hi Normal ctermbg=NONE
 hi LineNr ctermfg=242
