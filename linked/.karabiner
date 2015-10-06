@@ -32,13 +32,9 @@ item "Command+O|P to Option+{|}", only: "TERMINAL" do
   remap "Cmd-O", to: "Opt-Shift-["
 end
 
-item "Command+E to Command+W", not: "TERMINAL" do
-  remap "Cmd-E", to: "Cmd-W"
-end
-
 item "Command+T to Option+T, Command+E to Option+E", only: "TERMINAL" do
   remap "Cmd-T", to: "Opt-T"
-  remap "Cmd-E", to: "Opt-E"
+  remap "Cmd-W", to: "Opt-W"
 end
 
 # For tmux copy mode
@@ -159,10 +155,6 @@ end
 
 item "Command+A to Option+A", only: "TERMINAL" do
   remap "Cmd-A", to: "M-a"
-end
-
-item "Disable Command-W" do
-  remap "Cmd-W", to: "M-w"
 end
 
 item "Screen shot" do
