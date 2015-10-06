@@ -19,3 +19,6 @@ setopt ignore_eof
 
 export PATH="/opt/local/bin:$PATH"
 # export EDITOR="vim"
+
+# El Capitan
+export CPATH=/usr/local/opt/openssl/include:$CPATH
