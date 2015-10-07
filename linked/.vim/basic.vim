@@ -21,3 +21,6 @@ autocmd FileType * set formatoptions-=ro
 
 " ファイルタイプ判定をon
 filetype plugin on
+
+" clipboard=unnamedによるクリップボード汚染対策
+autocmd QuitPre * set clipboard-=unnamed
