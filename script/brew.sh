@@ -38,6 +38,7 @@ BREW_PACKAGES="
   k0kubun/envchain/envchain
   homebrew/dupes/apple-gcc42
   motemen/ghq/ghq
+  sanemat/font/ricty
 "
 
 brew_list=$(brew list -1)
