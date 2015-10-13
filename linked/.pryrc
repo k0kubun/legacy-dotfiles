@@ -12,3 +12,6 @@ Pry.config.prompt = [
     "[\e[34m#{pry.input_array.size}\e[0m] \e[36m\e[1m#{RUBY_VERSION}-p#{RUBY_PATCHLEVEL}\e[0m (\e[32m\e[1m#{Pry.view_clip(target_self)}\e[0m)#{nested}* "
   }
 ]
+
+require 'active_support'
+require 'active_support/core_ext'
