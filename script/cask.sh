@@ -4,6 +4,7 @@ CASK_PACKAGES="
   alfred
   atom
   caffeine
+  dockertoolbox
   dropbox
   google-chrome
   google-japanese-ime

@@ -9,7 +9,6 @@ fi
 BREW_PACKAGES="
   cabal-install
   ctags
-  docker
   ghc
   ghostscript
   git
