@@ -3,7 +3,7 @@ source ~/.zsh/lib/aliases.zsh
 source ~/.zsh/lib/basic.zsh
 source ~/.zsh/lib/completion.zsh
 source ~/.zsh/lib/functions.zsh
-source ~/.zsh/lib/overrides.zsh
+# source ~/.zsh/lib/overrides.zsh
 source ~/.zsh/lib/git.zsh
 source ~/.zsh/lib/languages.zsh
 source ~/.zsh/lib/peco.zsh
