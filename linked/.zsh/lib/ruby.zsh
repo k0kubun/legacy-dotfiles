@@ -2,13 +2,13 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # FIXME: bottle neck for sourcing .zshrc
-eval "$(rbenv init - --no-rehash zsh)"
+eval "$(rbenv init - zsh)"
 
 # bundler
 alias be="bundle exec"
 
 # bundle open
-export BUNDLER_EDITOR="/usr/local/bin/vim"
+export BUNDLER_EDITOR="$(brew --prefix)/bin/vim"
 
 # rails
 alias -g RET="RAILS_ENV=test"
