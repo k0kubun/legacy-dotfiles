@@ -10,7 +10,7 @@ function vi() {
 }
 
 # Prefer brew's vim
-export PATH="$(brew --prefix)/bin:${PATH}"
+export PATH="/opt/brew/bin:/usr/local/bin:${PATH}"
 
 # cd by dir name only for ..
 alias ..="cd .."
