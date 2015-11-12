@@ -48,9 +48,6 @@ noremap <silent> ;s :<C-u>source<Space>~/.vimrc<CR>
 cmap <C-f> <Right>
 cmap <C-b> <Left>
 
-" paste
-nnoremap gp :<C-u>r !pbpaste<CR>
-
 " delete highlight
 nnoremap <silent> gh :let @/=''<CR>
 
