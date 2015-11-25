@@ -2,7 +2,8 @@
 export PATH="$HOME/.rbenv/bin:$PATH"
 
 # FIXME: bottle neck for sourcing .zshrc
-eval "$(rbenv init - zsh)"
+# eval "$(rbenv init - zsh)"
+eval "$(rbenv init - --no-rehash zsh)"
 
 # bundler
 alias be="bundle exec"
