@@ -22,6 +22,7 @@ autocmd BufNewFile,BufRead default.conf setl filetype=apache
 autocmd BufNewFile,BufRead rewrite.conf setl filetype=apache
 autocmd BufNewFile,BufRead proxy.conf setl filetype=apache
 autocmd BufNewFile,BufRead unicorn.conf setl filetype=ruby
+autocmd BufNewFile,BufRead *.conf setl filetype=conf
 autocmd BufNewFile,BufRead *.pp setl filetype=puppet
 autocmd BufNewFile,BufRead xmobarrc setl filetype=haskell
 autocmd BufNewFile,BufRead *.ex setl filetype=elixir
