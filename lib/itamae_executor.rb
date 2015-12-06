@@ -12,7 +12,7 @@ module ItamaeExecutor
     def execute_role(role, itamae_options: nil, stackprof: false)
       cmd = itamae_local(role, itamae_options: itamae_options, stackprof: stackprof)
       cmd.push('lib/recipe_helper.rb', "roles/#{role}/default.rb")
-      printf "\e[32m#{cmd.join(' ')}\e[0m\n"
+      green_puts(" INFO : #{cmd.join(' ')}")
       system(*cmd)
     end
 
@@ -30,6 +30,10 @@ module ItamaeExecutor
       cmd.push('-y', node_path) if File.exist?(node_path)
       cmd << 'lib/stackprof_runner.rb' if stackprof
       cmd
+    end
+
+    def green_puts(str)
+      printf "\e[32m#{str}\e[0m\n"
     end
   end
 end
