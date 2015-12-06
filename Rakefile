@@ -4,7 +4,13 @@ roles = Dir.glob('./roles/*').map { |dir| File.basename(dir) }.sort
 roles.each do |role|
   desc "configure #{role}"
   task role do
-    system("bundle exec itamae local #{ENV['ITAMAE_OPTIONS']} lib/recipe_helper.rb roles/#{role}/default.rb")
+    node_path = File.expand_path("./roles/#{role}/node.yml", __dir__)
+    cmd = %w[bundle exec itamae local]
+    cmd << ENV['ITAMAE_OPTIONS'] if ENV['ITAMAE_OPTIONS']
+    cmd.push('-y', node_path) if File.exist?(node_path)
+    cmd << 'lib/recipe_helper.rb'
+    cmd << "roles/#{role}/default.rb"
+    system(*cmd)
   end
 end
 
