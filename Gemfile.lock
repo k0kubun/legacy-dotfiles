@@ -9,6 +9,16 @@ GIT
       specinfra (>= 2.37.0, < 3.0.0)
       thor
 
+GIT
+  remote: git://github.com/k0kubun/specinfra.git
+  revision: d9ddcfb8262c7f3978ebb756ef6cb558b470d189
+  specs:
+    specinfra (2.44.6)
+      net-scp
+      net-ssh (~> 2.7)
+      net-telnet
+      sfl
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -35,11 +45,6 @@ GEM
     schash (0.1.2)
     sfl (2.2)
     slop (3.6.0)
-    specinfra (2.44.6)
-      net-scp
-      net-ssh (~> 2.7)
-      net-telnet
-      sfl
     thor (0.19.1)
     yard (0.8.7.6)
 
@@ -51,6 +56,7 @@ DEPENDENCIES
   pry-byebug
   pry-doc
   rake
+  specinfra!
 
 BUNDLED WITH
    1.10.6

@@ -1,1 +1,1 @@
-execute "echo #{node[:hello]}"
+include_cookbook 'homebrew'
