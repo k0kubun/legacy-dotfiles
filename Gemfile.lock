@@ -31,6 +31,7 @@ GEM
     pry-doc (0.8.0)
       pry (~> 0.9)
       yard (~> 0.8)
+    rake (10.4.2)
     schash (0.1.2)
     sfl (2.2)
     slop (3.6.0)
@@ -49,6 +50,7 @@ DEPENDENCIES
   itamae!
   pry-byebug
   pry-doc
+  rake
 
 BUNDLED WITH
    1.10.6
