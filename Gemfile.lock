@@ -26,6 +26,8 @@ GEM
     byebug (8.2.1)
     coderay (1.1.0)
     hashie (3.4.3)
+    itamae-plugin-resource-cask (0.2.0)
+      itamae
     method_source (0.8.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -54,6 +56,7 @@ PLATFORMS
 
 DEPENDENCIES
   itamae!
+  itamae-plugin-resource-cask
   pry-byebug
   pry-doc
   rake

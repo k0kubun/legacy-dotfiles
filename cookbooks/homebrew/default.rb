@@ -1,3 +1,7 @@
+node.reverse_merge!(
+  brew_packages: [],
+)
+
 install_script_url = "https://raw.githubusercontent.com/Homebrew/install/master/install"
 
 execute "install homebrew" do

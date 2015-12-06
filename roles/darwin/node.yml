@@ -30,3 +30,19 @@ brew_packages:
   - homebrew/dupes/apple-gcc42
   - motemen/ghq/ghq
   - sanemat/font/ricty
+
+cask_packages:
+  - alfred
+  - atom
+  - caffeine
+  - dockertoolbox
+  - dropbox
+  - google-chrome
+  - google-japanese-ime
+  - iterm2
+  - karabiner
+  - licecap
+  - seil
+  - sequel-pro
+  - vagrant
+  - virtualbox
