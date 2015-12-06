@@ -6,7 +6,7 @@ roles.each do |role|
   task role do
     node_path = File.expand_path("./roles/#{role}/node.yml", __dir__)
     cmd = %w[bundle exec itamae local]
-    cmd << ENV['ITAMAE_OPTIONS'] if ENV['ITAMAE_OPTIONS']
+    cmd.push(*ENV['ITAMAE_OPTIONS'].split(' ')) if ENV['ITAMAE_OPTIONS']
     cmd.push('-y', node_path) if File.exist?(node_path)
     cmd << 'lib/recipe_helper.rb'
     cmd << "roles/#{role}/default.rb"
@@ -24,9 +24,15 @@ task :apply do
   end
 end
 
+desc 'debugging apply for current OS'
+task :debug do
+  ENV['ITAMAE_OPTIONS'] ||= '--log-level=debug'
+  Rake::Task['apply'].invoke
+end
+
 desc 'dry-run for current OS'
 task 'dry-run' do
-  ENV['ITAMAE_OPTIONS'] ||= '--dry-run'
+  ENV['ITAMAE_OPTIONS'] ||= '--dry-run --log-level=debug'
   Rake::Task['apply'].invoke
 end
 
