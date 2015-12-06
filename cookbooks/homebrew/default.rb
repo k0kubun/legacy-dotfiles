@@ -2,9 +2,9 @@ node.reverse_merge!(
   brew_packages: [],
 )
 
-install_script_url = "https://raw.githubusercontent.com/Homebrew/install/master/install"
-
 execute "install homebrew" do
+  install_script_url = "https://raw.githubusercontent.com/Homebrew/install/master/install"
+
   not_if "which brew"
   command %Q[ruby -e $(curl -fsSL #{install_script_url})]
 end
