@@ -1,46 +1,32 @@
 require 'bundler/setup'
+require_relative './lib/itamae_executor'
 
 roles = Dir.glob('./roles/*').map { |dir| File.basename(dir) }.sort
 roles.each do |role|
   desc "configure #{role}"
   task role do
-    node_path = File.expand_path("./roles/#{role}/node.yml", __dir__)
-    cmd = %w[bundle exec itamae local]
-    cmd.push(*ENV['ITAMAE_OPTIONS'].split(' ')) if ENV['ITAMAE_OPTIONS']
-    cmd.push('-y', node_path) if File.exist?(node_path)
-    cmd << 'lib/stackprof_runner.rb'
-    cmd << 'lib/recipe_helper.rb'
-    cmd << "roles/#{role}/default.rb"
-    system(*cmd)
+    ItamaeExecutor.execute_role(role)
   end
 end
 
 desc 'apply configuretion for current OS'
 task :apply do
-  case `uname`.strip
-  when 'Darwin'
-    Rake::Task['darwin'].invoke
-  else
-    abort "Unexpected uname: #{`uname`}"
-  end
+  ItamaeExecutor.execute
 end
 
 desc 'debugging apply for current OS'
 task :debug do
-  ENV['ITAMAE_OPTIONS'] ||= '--log-level=debug'
-  Rake::Task['apply'].invoke
+  ItamaeExecutor.execute(itamae_options: '--log-level=debug')
 end
 
 desc 'profile configuration for current OS'
 task :profile do
-  ENV['STACKPROF'] ||= '1'
-  Rake::Task['apply'].invoke
+  ItamaeExecutor.execute(stackprof: true)
 end
 
 desc 'dry-run for current OS'
 task 'dry-run' do
-  ENV['ITAMAE_OPTIONS'] ||= '--dry-run --log-level=debug'
-  Rake::Task['apply'].invoke
+  ItamaeExecutor.execute(itamae_options: '--dry-run --log-level=debug')
 end
 
 task default: :apply
