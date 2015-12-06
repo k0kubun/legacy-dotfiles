@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/k0kubun/itamae.git
+  revision: c30b24591259b7fcf171b3a309d2bc70690e8625
+  specs:
+    itamae (1.7.0.pre)
+      ansi
+      hashie
+      schash (~> 0.1.0)
+      specinfra (>= 2.37.0, < 3.0.0)
+      thor
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -5,12 +16,6 @@ GEM
     byebug (8.2.1)
     coderay (1.1.0)
     hashie (3.4.3)
-    itamae (1.6.3)
-      ansi
-      hashie
-      schash (~> 0.1.0)
-      specinfra (>= 2.37.0, < 3.0.0)
-      thor
     method_source (0.8.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -41,7 +46,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  itamae
+  itamae!
   pry-byebug
   pry-doc
 

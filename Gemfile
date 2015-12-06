@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'itamae'
+gem 'itamae', github: 'k0kubun/itamae'
 
 group :debug do
   gem 'pry-byebug'
