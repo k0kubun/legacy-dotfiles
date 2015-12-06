@@ -1,7 +1,7 @@
 require 'pathname'
 
 module RecipeHelper
-  ROOT_DIR = Pathname.new(File.expand_path(__dir__))
+  ROOT_DIR = Pathname.new(File.expand_path('..', __dir__))
 
   def include_role(name)
     path = ROOT_DIR.join('roles', *name.split('::'))
