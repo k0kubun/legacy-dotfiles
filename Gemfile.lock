@@ -45,6 +45,7 @@ GEM
     schash (0.1.2)
     sfl (2.2)
     slop (3.6.0)
+    stackprof (0.2.7)
     thor (0.19.1)
     yard (0.8.7.6)
 
@@ -57,6 +58,7 @@ DEPENDENCIES
   pry-doc
   rake
   specinfra!
+  stackprof
 
 BUNDLED WITH
    1.10.6

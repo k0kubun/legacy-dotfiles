@@ -8,6 +8,7 @@ roles.each do |role|
     cmd = %w[bundle exec itamae local]
     cmd.push(*ENV['ITAMAE_OPTIONS'].split(' ')) if ENV['ITAMAE_OPTIONS']
     cmd.push('-y', node_path) if File.exist?(node_path)
+    cmd << 'lib/stackprof_runner.rb'
     cmd << 'lib/recipe_helper.rb'
     cmd << "roles/#{role}/default.rb"
     system(*cmd)
@@ -27,6 +28,12 @@ end
 desc 'debugging apply for current OS'
 task :debug do
   ENV['ITAMAE_OPTIONS'] ||= '--log-level=debug'
+  Rake::Task['apply'].invoke
+end
+
+desc 'profile configuration for current OS'
+task :profile do
+  ENV['STACKPROF'] ||= '1'
   Rake::Task['apply'].invoke
 end
 
