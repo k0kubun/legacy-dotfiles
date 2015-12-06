@@ -1,8 +1,0 @@
-language:
-  - objective-c
-os:
-  - osx
-script:
-  - brew update
-  - rm -rf ~/.vim
-  - gem install rebuild && rebuild k0kubun

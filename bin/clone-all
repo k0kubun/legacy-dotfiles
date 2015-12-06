@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'octokit'
-
-client = Octokit::Client.new
-client.auto_paginate = true
-client.repos('k0kubun').each do |repo|
-  `ghq get #{repo[:full_name]}`
-end
