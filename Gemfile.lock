@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/k0kubun/itamae.git
-  revision: c30b24591259b7fcf171b3a309d2bc70690e8625
+  revision: 25f92709cc5e80d3b24c88c12c787b6a0cd9092a
   specs:
-    itamae (1.7.0.pre)
+    itamae (1.8.0)
       ansi
       hashie
       schash (~> 0.1.0)
@@ -26,7 +26,7 @@ GEM
     byebug (8.2.1)
     coderay (1.1.0)
     hashie (3.4.3)
-    itamae-plugin-recipe-rbenv (0.4.0)
+    itamae-plugin-recipe-rbenv (0.4.1)
       itamae (~> 1.2)
     itamae-plugin-resource-cask (0.2.0)
       itamae

@@ -77,3 +77,8 @@ dotfiles:
   #- .zshrc.Linux
   - .zshrc.darwin
   #- fonts.conf
+
+rbenv:
+  revision: 20755cfc153dd0bf802524cbb313f834a59c0f30
+ruby-build:
+  revision: eef6a2ed8e55041fd46bcac3212d8953526658a8
