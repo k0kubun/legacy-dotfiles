@@ -56,7 +56,6 @@ dotfiles:
   #- .js
   - .peco
   - .rake
-  - .rbenv
   - .vim
   #- .xmonad
   - .zsh
