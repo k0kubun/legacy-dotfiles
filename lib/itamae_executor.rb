@@ -1,12 +1,7 @@
 module ItamaeExecutor
   class << self
     def role_name
-      case `uname`.strip
-      when 'Darwin'
-        'darwin'
-      else
-        abort "Unexpected uname: #{`uname`}"
-      end
+      `uname`.strip.downcase
     end
 
     def execute_role(role, itamae_options: nil, stackprof: false)
