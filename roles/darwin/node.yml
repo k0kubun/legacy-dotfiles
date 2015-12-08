@@ -1,0 +1,80 @@
+brew_packages:
+  - cabal-install
+  - ctags
+  - ghc
+  - ghostscript
+  - git
+  - go --with-cc-common
+  - hub
+  - htop-osx
+  - imagemagick
+  - mercurial
+  - mysql
+  - openssl
+  - peco
+  - plantuml
+  - postgresql
+  - rbenv
+  - rbenv-default-gems
+  - rbenv-gem-rehash
+  - readline
+  - reattach-to-user-namespace
+  - redis
+  - ruby-build --HEAD
+  - the_silver_searcher
+  - tmux
+  - vim --with-lua --with-luajit
+
+  - caskroom/cask/brew-cask
+  - k0kubun/envchain/envchain
+  - homebrew/dupes/apple-gcc42
+  - motemen/ghq/ghq
+  - sanemat/font/ricty
+
+cask_packages:
+  - alfred
+  - atom
+  - caffeine
+  - dockertoolbox
+  - dropbox
+  - google-chrome
+  - google-japanese-ime
+  - iterm2
+  - karabiner
+  - licecap
+  - seil
+  - sequel-pro
+  - vagrant
+  - virtualbox
+
+dotfiles:
+  #- .bundle
+  #- .cabal
+  #- .config
+  - .git-template
+  - .githooks
+  #- .js
+  - .peco
+  - .rake
+  - .rbenv
+  - .vim
+  #- .xmonad
+  - .zsh
+  #- .Xdefaults
+  #- .Xmodmap
+  - .gemrc
+  - .gitconfig
+  - .gitignore
+  - .karabiner
+  - .pryrc
+  - .psqlrc
+  - .railsrc
+  - .tmux.conf
+  - .tmux.conf.darwin
+  - .uim
+  - .vimrc
+  #- .xinitrc
+  - .zshrc
+  #- .zshrc.Linux
+  - .zshrc.darwin
+  #- fonts.conf

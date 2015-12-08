@@ -1,8 +1,32 @@
-#!/usr/bin/env rake
+require 'bundler/setup'
+require_relative './lib/itamae_executor'
 
-desc "Export Karabiner preferences"
-task :export do
-  system("/Applications/Karabiner.app/Contents/Library/bin/karabiner export > script/karabiner_export.sh")
+roles = Dir.glob('./roles/*').map { |dir| File.basename(dir) }.sort
+roles.each do |role|
+  desc "configure #{role}"
+  task role do
+    ItamaeExecutor.execute_role(role)
+  end
 end
 
-task default: :export
+desc 'apply configuretion for current OS'
+task :apply do
+  ItamaeExecutor.execute
+end
+
+desc 'debugging apply for current OS'
+task :debug do
+  ItamaeExecutor.execute(itamae_options: '--log-level=debug')
+end
+
+desc 'profile configuration for current OS'
+task :profile do
+  ItamaeExecutor.execute(stackprof: true)
+end
+
+desc 'dry-run for current OS'
+task 'dry-run' do
+  ItamaeExecutor.execute(itamae_options: '--dry-run --log-level=debug')
+end
+
+task default: :apply

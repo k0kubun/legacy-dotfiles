@@ -26,3 +26,4 @@ autocmd BufNewFile,BufRead *.conf setl filetype=conf
 autocmd BufNewFile,BufRead *.pp setl filetype=puppet
 autocmd BufNewFile,BufRead xmobarrc setl filetype=haskell
 autocmd BufNewFile,BufRead *.ex setl filetype=elixir
+autocmd BufNewFile,BufRead *.slim setl filetype=slim

@@ -1,6 +1,6 @@
-[submodule "linked/.vim/bundle/neobundle.vim"]
-	path = linked/.vim/bundle/neobundle.vim
+[submodule "cookbooks/dotfiles/files/.vim/neobundle.vim"]
+	path = cookbooks/dotfiles/files/.vim/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim
-[submodule "linked/.zsh/bundle/zsh-context-sensitive-alias"]
-	path = linked/.zsh/bundle/zsh-context-sensitive-alias
+[submodule "cookbooks/dotfiles/files/.zsh/bundle/zsh-context-sensitive-alias"]
+	path = cookbooks/dotfiles/files/.zsh/bundle/zsh-context-sensitive-alias
 	url = https://github.com/uasi/zsh-context-sensitive-alias
