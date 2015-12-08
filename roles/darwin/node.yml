@@ -46,3 +46,35 @@ cask_packages:
   - sequel-pro
   - vagrant
   - virtualbox
+
+dotfiles:
+  #- .bundle
+  #- .cabal
+  #- .config
+  - .git-template
+  - .githooks
+  #- .js
+  - .peco
+  - .rake
+  - .rbenv
+  - .vim
+  #- .xmonad
+  - .zsh
+  #- .Xdefaults
+  #- .Xmodmap
+  - .gemrc
+  - .gitconfig
+  - .gitignore
+  - .karabiner
+  - .pryrc
+  - .psqlrc
+  - .railsrc
+  - .tmux.conf
+  - .tmux.conf.darwin
+  - .uim
+  - .vimrc
+  #- .xinitrc
+  - .zshrc
+  #- .zshrc.Linux
+  - .zshrc.darwin
+  #- fonts.conf

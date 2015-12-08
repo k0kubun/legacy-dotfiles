@@ -1,0 +1,5 @@
+---
+BUNDLE_BUILD__MECAB-RUBY: "--with-opt-dir=/opt/brew"
+BUNDLE_GEM__MIT: '1'
+BUNDLE_GEM__TEST: 'false'
+BUNDLE_GEM__COC: false

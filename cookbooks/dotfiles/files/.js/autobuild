@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+files = Dir.glob('*.js')
+files.delete('all.js')
+
+target = files.join(' ')
+system("bundle exec filewatcher '#{target}' ./build")
