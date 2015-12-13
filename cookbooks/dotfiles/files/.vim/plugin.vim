@@ -81,3 +81,8 @@ let g:eskk#large_dictionary = {
       \ 'sorted': 1,
       \ 'encoding': 'euc-jp',
       \}
+
+" augroup cruby
+"   autocmd!
+"   autocmd BufWinEnter,BufNewFile **/*.[chy] setlocal filetype=cruby
+" augroup END
