@@ -28,7 +28,7 @@ GEM
     hashie (3.4.3)
     itamae-plugin-recipe-rbenv (0.4.1)
       itamae (~> 1.2)
-    itamae-plugin-resource-cask (0.2.0)
+    itamae-plugin-resource-cask (0.2.2)
       itamae
     method_source (0.8.2)
     net-scp (1.2.1)
