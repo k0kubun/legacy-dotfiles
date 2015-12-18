@@ -18,3 +18,4 @@ tags
 !.cabal/config
 dump.rdb
 .vimrc.local
+.byebug_history
