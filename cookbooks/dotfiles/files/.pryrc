@@ -13,5 +13,14 @@ Pry.config.prompt = [
   }
 ]
 
+{
+  'n' => 'next',
+  's' => 'step',
+  'f' => 'finish',
+  'c' => 'continue',
+}.each do |from, to|
+  Pry::Commands.alias_command(from, to)
+end
+
 # require 'active_support'
 # require 'active_support/core_ext'
