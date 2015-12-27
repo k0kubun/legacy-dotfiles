@@ -83,4 +83,4 @@ rbenv:
     - 2.3.0-preview2
   revision: 20755cfc153dd0bf802524cbb313f834a59c0f30
 ruby-build:
-  revision: 59453d46d13799c24ffcf7fd4e6082d242c1a46d
+  revision: f3942fd45f991fc322cb585de7e53386e9f4c6f3
