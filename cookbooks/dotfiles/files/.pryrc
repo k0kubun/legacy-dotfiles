@@ -24,5 +24,9 @@ if defined?(PryByebug)
   end
 end
 
+def ppp(code)
+  puts Pry.Code(code).highlighted
+end
+
 # require 'active_support'
 # require 'active_support/core_ext'
