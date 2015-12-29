@@ -1,6 +1,7 @@
 "=============================================================================
 " FILE: raw.vim
 " AUTHOR:  Shougo Matsushita <Shougo.Matsu@gmail.com>
+" Last Modified: 02 Apr 2013.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -44,16 +45,14 @@ let s:type = {
 function! s:type.detect(path, opts) "{{{
   " No auto detect.
   let type = ''
-  let name = ''
 
-  if a:path =~# '^https:.*\.vim$'
-    " HTTPS
+  if a:path =~# '^https\?:.*\.vim$'
+    " HTTP/HTTPS
 
-    let name = neobundle#util#name_conversion(a:path)
+    let name = split(a:path, '/')[-1]
 
     let type = 'raw'
-  elseif a:path =~#
-        \ '^https://www\.vim\.org/scripts/download_script.php?src_id=\d\+$'
+  elseif a:path =~# '^https\?://www\.vim\.org/scripts/download_script.php?src_id=\d\+$'
     " For www.vim.org
     let name = 'vim-scripts-' . matchstr(a:path, '\d\+$')
     let type = 'raw'
@@ -67,6 +66,10 @@ function! s:type.get_sync_command(bundle) "{{{
     return 'E: script_type is not found.'
   endif
 
+  if !executable('curl') && !executable('wget')
+    return 'E: curl or wget command is not available!'
+  endif
+
   let path = a:bundle.path
 
   if !isdirectory(path)
@@ -77,13 +80,10 @@ function! s:type.get_sync_command(bundle) "{{{
   let filename = path . '/' . get(a:bundle,
         \ 'type__filename', fnamemodify(a:bundle.uri, ':t'))
   let a:bundle.type__filepath = filename
-
   if executable('curl')
     let cmd = printf('curl --fail -s -o "%s" "%s"', filename, a:bundle.uri)
   elseif executable('wget')
-    let cmd = printf('wget -q -O "%s" "%s"', filename, a:bundle.uri)
-  else
-    return 'E: curl or wget command is not available!'
+    let cmd = printf('wget -q -O "%s" "%s", ', filename, a:bundle.uri)
   endif
 
   return cmd
@@ -99,9 +99,7 @@ function! s:type.get_revision_number_command(bundle) "{{{
   endif
 
   " Calc hash.
-  return printf('%s %s',
-        \ g:neobundle#types#raw#calc_hash_command,
-        \ a:bundle.type__filepath)
+  return g:neobundle#types#raw#calc_hash_command . ' ' . a:bundle.type__filepath
 endfunction"}}}
 function! s:type.get_revision_lock_command(bundle) "{{{
   let new_rev = matchstr(a:bundle.new_rev, '^\S\+')

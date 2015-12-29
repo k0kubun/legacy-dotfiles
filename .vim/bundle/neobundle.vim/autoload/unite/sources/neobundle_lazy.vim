@@ -1,6 +1,7 @@
 "=============================================================================
 " FILE: neobundle_lazy.vim
 " AUTHOR:  Shougo Matsushita <Shougo.Matsu@gmail.com>
+" Last Modified: 30 Aug 2012.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -40,7 +41,7 @@ let s:source = {
 function! s:source.gather_candidates(args, context) "{{{
   let _ = []
   for bundle in filter(copy(neobundle#config#get_neobundles()),
-        \ '!v:val.sourced')
+        \ '!neobundle#config#is_sourced(v:val.name)')
     let name = substitute(bundle.orig_name,
         \  '^\%(https\?\|git\)://\%(github.com/\)\?', '', '')
     let dict = {

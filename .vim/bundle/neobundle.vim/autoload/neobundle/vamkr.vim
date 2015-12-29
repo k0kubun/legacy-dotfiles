@@ -1,6 +1,7 @@
 "=============================================================================
 " FILE: vamkr.vim
 " AUTHOR:  Shougo Matsushita <Shougo.Matsu@gmail.com>
+" Last Modified: 29 Dec 2013.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -110,7 +111,7 @@ function! neobundle#vamkr#parse(path) "{{{
       return []
     endif
 
-    call neobundle#util#system(cmd)
+    let result = neobundle#util#system(cmd)
 
     if !filereadable(cache_path)
       call unite#print_error('Cache file was not created!')

@@ -1,6 +1,7 @@
 "=============================================================================
 " FILE: util.vim
 " AUTHOR:  Shougo Matsushita <Shougo.Matsu at gmail.com>
+" Last Modified: 12 Jan 2014.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -26,50 +27,24 @@
 let s:save_cpo = &cpo
 set cpo&vim
 
-let s:is_windows = has('win32')
+let s:is_windows = has('win16') || has('win32') || has('win64')
 let s:is_cygwin = has('win32unix')
-let s:is_mac = !s:is_windows && !s:is_cygwin
+let s:is_mac = !s:is_windows
       \ && (has('mac') || has('macunix') || has('gui_macvim') ||
       \   (!isdirectory('/proc') && executable('sw_vers')))
 
 function! neobundle#util#substitute_path_separator(path) "{{{
   return (s:is_windows && a:path =~ '\\') ?
-        \ tr(a:path, '\', '/') : a:path
+        \ substitute(a:path, '\\', '/', 'g') : a:path
 endfunction"}}}
 function! neobundle#util#expand(path) "{{{
-  let path = (a:path =~ '^\~') ? fnamemodify(a:path, ':p') :
-        \ (a:path =~ '^\$\h\w*') ? substitute(a:path,
-        \               '^\$\h\w*', '\=eval(submatch(0))', '') :
-        \ a:path
+  let path = expand(escape(a:path, '*?{}'), 1)
   return (s:is_windows && path =~ '\\') ?
         \ neobundle#util#substitute_path_separator(path) : path
 endfunction"}}}
-function! neobundle#util#join_paths(path1, path2) "{{{
-  " Joins two paths together, handling the case where the second path
-  " is an absolute path.
-  if s:is_absolute(a:path2)
-    return a:path2
-  endif
-  if a:path1 =~ (s:is_windows ? '[\\/]$' : '/$') ||
-        \ a:path2 =~ (s:is_windows ? '^[\\/]' : '^/')
-    " the appropriate separator already exists
-    return a:path1 . a:path2
-  else
-    " note: I'm assuming here that '/' is always valid as a directory
-    " separator on Windows. I know Windows has paths that start with \\?\ that
-    " diasble behavior like that, but I don't know how Vim deals with that.
-    return a:path1 . '/' . a:path2
-  endif
-endfunction "}}}
-if s:is_windows
-  function! s:is_absolute(path) "{{{
-    return a:path =~ '^[\\/]\|^\a:'
-  endfunction "}}}
-else
-  function! s:is_absolute(path) "{{{
-    return a:path =~ "^/"
-  endfunction "}}}
-endif
+function! neobundle#util#expand2(path) "{{{
+  return expand(escape(a:path, '*?{}'), 1)
+endfunction"}}}
 
 function! neobundle#util#is_windows() "{{{
   return s:is_windows
@@ -136,37 +111,23 @@ function! neobundle#util#get_last_status() "{{{
 endfunction"}}}
 
 " Split a comma separated string to a list.
-function! neobundle#util#split_rtp(runtimepath) "{{{
-  if stridx(a:runtimepath, '\,') < 0
-    return split(a:runtimepath, ',')
+function! neobundle#util#split_rtp(...) "{{{
+  let rtp = a:0 ? a:1 : &runtimepath
+  if type(rtp) == type([])
+    return rtp
   endif
 
-  let split = split(a:runtimepath, '\\\@<!\%(\\\\\)*\zs,')
+  if rtp !~ '\\'
+    return split(rtp, ',')
+  endif
+
+  let split = split(rtp, '\\\@<!\%(\\\\\)*\zs,')
   return map(split,'substitute(v:val, ''\\\([\\,]\)'', "\\1", "g")')
 endfunction"}}}
 
 function! neobundle#util#join_rtp(list, runtimepath, rtp) "{{{
-  return (stridx(a:runtimepath, '\,') < 0 && stridx(a:rtp, ',') < 0) ?
+  return (a:runtimepath !~ '\\' && a:rtp !~ ',') ?
         \ join(a:list, ',') : join(map(copy(a:list), 's:escape(v:val)'), ',')
-endfunction"}}}
-
-function! neobundle#util#split_envpath(path) "{{{
-  let delimiter = neobundle#util#is_windows() ? ';' : ':'
-  if stridx(a:path, '\' . delimiter) < 0
-    return split(a:path, delimiter)
-  endif
-
-  let split = split(a:path, '\\\@<!\%(\\\\\)*\zs' . delimiter)
-  return map(split,'substitute(v:val, ''\\\([\\'
-        \ . delimiter . ']\)'', "\\1", "g")')
-endfunction"}}}
-
-function! neobundle#util#join_envpath(list, orig_path, add_path) "{{{
-  let delimiter = neobundle#util#is_windows() ? ';' : ':'
-  return (stridx(a:orig_path, '\' . delimiter) < 0
-        \ && stridx(a:add_path, delimiter) < 0) ?
-        \   join(a:list, delimiter) :
-        \   join(map(copy(a:list), 's:escape(v:val)'), delimiter)
 endfunction"}}}
 
 " Removes duplicates from a list.
@@ -209,73 +170,30 @@ function! neobundle#util#get_filetypes() "{{{
 endfunction"}}}
 
 function! neobundle#util#convert2list(expr) "{{{
-  return type(a:expr) ==# type([]) ? a:expr :
-        \ type(a:expr) ==# type('') ?
-        \   (a:expr == '' ? [] : split(a:expr, '\r\?\n', 1))
-        \ : [a:expr]
+  return type(a:expr) ==# type([]) ? a:expr : [a:expr]
 endfunction"}}}
 
 function! neobundle#util#print_error(expr) "{{{
-  return s:echo(a:expr, 'error')
+  let msg = neobundle#util#convert2list(a:expr)
+  echohl WarningMsg | echomsg join(msg, "\n") | echohl None
 endfunction"}}}
 
 function! neobundle#util#redraw_echo(expr) "{{{
-  return s:echo(a:expr, 'echo')
-endfunction"}}}
-
-function! neobundle#util#redraw_echomsg(expr) "{{{
-  return s:echo(a:expr, 'echomsg')
-endfunction"}}}
-
-function! s:echo(expr, mode) "{{{
-  let msg = map(neobundle#util#convert2list(a:expr),
-        \ "'[neobundle] ' .  v:val")
-  if empty(msg)
-    return
-  endif
-
   if has('vim_starting')
-    let m = join(msg, "\n")
-    call s:echo_mode(m, a:mode)
+    echo join(neobundle#util#convert2list(a:expr), "\n")
     return
   endif
 
-  let more_save = &more
-  let showcmd_save = &showcmd
-  let ruler_save = &ruler
-  try
-    set nomore
-    set noshowcmd
-    set noruler
-
-    let height = max([1, &cmdheight])
-    echo ''
-    for i in range(0, len(msg)-1, height)
-      redraw
-
-      let m = join(msg[i : i+height-1], "\n")
-      call s:echo_mode(m, a:mode)
-    endfor
-  finally
-    let &more = more_save
-    let &showcmd = showcmd_save
-    let &ruler = ruler_save
-  endtry
-endfunction"}}}
-function! s:echo_mode(m, mode) "{{{
-  for m in split(a:m, '\r\?\n', 1)
-    if a:mode ==# 'error'
-      echohl WarningMsg | echomsg m | echohl None
-    elseif a:mode ==# 'echomsg'
-      echomsg m
-    else
-      echo m
-    endif
+  let msg = neobundle#util#convert2list(a:expr)
+  let height = max([1, &cmdheight])
+  for i in range(0, len(msg)-1, height)
+    redraw!
+    echo join(msg[i : i+height-1], "\n")
   endfor
 endfunction"}}}
 
 function! neobundle#util#name_conversion(path) "{{{
-  return fnamemodify(split(a:path, ':')[-1], ':s?/$??:t:s?\c\.git\s*$??')
+  return fnamemodify(a:path, ':s?/$??:t:s?\c\.git\s*$??')
 endfunction"}}}
 
 " Escape a path for runtimepath.
@@ -288,137 +206,7 @@ function! neobundle#util#unify_path(path) "{{{
 endfunction"}}}
 
 function! neobundle#util#cd(path) "{{{
-  if isdirectory(a:path)
-    execute (haslocaldir() ? 'lcd' : 'cd') fnameescape(a:path)
-  endif
-endfunction"}}}
-
-function! neobundle#util#writefile(path, list) "{{{
-  let path = neobundle#get_neobundle_dir() . '/.neobundle/' . a:path
-  let dir = fnamemodify(path, ':h')
-  if !isdirectory(dir)
-    call mkdir(dir, 'p')
-  endif
-
-  return writefile(a:list, path)
-endfunction"}}}
-
-function! neobundle#util#cleandir(path) "{{{
-  let path = neobundle#get_neobundle_dir() . '/.neobundle/' . a:path
-
-  for file in filter(split(globpath(path, '*', 1), '\n'),
-        \ '!isdirectory(v:val)')
-    call delete(file)
-  endfor
-endfunction"}}}
-
-function! neobundle#util#copy_bundle_files(bundles, directory) "{{{
-  " Delete old files.
-  call neobundle#util#cleandir(a:directory)
-
-  let files = {}
-  for bundle in a:bundles
-    for file in filter(split(globpath(
-          \ bundle.rtp, a:directory.'/**', 1), '\n'),
-          \ '!isdirectory(v:val)')
-      let filename = fnamemodify(file, ':t')
-      let files[filename] = readfile(file)
-    endfor
-  endfor
-
-  for [filename, list] in items(files)
-    if filename =~# '^tags\%(-.*\)\?$'
-      call sort(list)
-    endif
-    call neobundle#util#writefile(a:directory . '/' . filename, list)
-  endfor
-endfunction"}}}
-function! neobundle#util#merge_bundle_files(bundles, directory) "{{{
-  " Delete old files.
-  call neobundle#util#cleandir(a:directory)
-
-  let files = []
-  for bundle in a:bundles
-    for file in filter(split(globpath(
-          \ bundle.rtp, a:directory.'/**', 1), '\n'),
-          \ '!isdirectory(v:val)')
-      let files += readfile(file, ':t')
-    endfor
-  endfor
-
-  call neobundle#util#writefile(
-        \ a:directory.'/'.a:directory . '.vim', files)
-endfunction"}}}
-
-" Sorts a list using a set of keys generated by mapping the values in the list
-" through the given expr.
-" v:val is used in {expr}
-function! neobundle#util#sort_by(list, expr) "{{{
-  let pairs = map(a:list, printf('[v:val, %s]', a:expr))
-  return map(s:sort(pairs,
-  \      'a:a[1] ==# a:b[1] ? 0 : a:a[1] ># a:b[1] ? 1 : -1'), 'v:val[0]')
-endfunction"}}}
-
-" Executes a command and returns its output.
-" This wraps Vim's `:redir`, and makes sure that the `verbose` settings have
-" no influence.
-function! neobundle#util#redir(cmd) abort "{{{
-  let [save_verbose, save_verbosefile] = [&verbose, &verbosefile]
-  set verbose=0 verbosefile=
-  redir => res
-    silent! execute a:cmd
-  redir END
-  let [&verbose, &verbosefile] = [save_verbose, save_verbosefile]
-  return res
-endfunction"}}}
-
-" Sorts a list with expression to compare each two values.
-" a:a and a:b can be used in {expr}.
-function! s:sort(list, expr) "{{{
-  if type(a:expr) == type(function('function'))
-    return sort(a:list, a:expr)
-  endif
-  let s:expr = a:expr
-  return sort(a:list, 's:_compare')
-endfunction"}}}
-
-function! s:_compare(a, b)
-  return eval(s:expr)
-endfunction
-
-function! neobundle#util#print_bundles(bundles) "{{{
-  echomsg string(map(copy(a:bundles), 'v:val.name'))
-endfunction"}}}
-
-function! neobundle#util#sort_human(filenames) "{{{
-  return sort(a:filenames, 's:compare_filename')
-endfunction"}}}
-
-" Compare filename by human order. "{{{
-function! s:compare_filename(i1, i2)
-  let words_1 = s:get_words(a:i1)
-  let words_2 = s:get_words(a:i2)
-  let words_1_len = len(words_1)
-  let words_2_len = len(words_2)
-
-  for i in range(0, min([words_1_len, words_2_len])-1)
-    if words_1[i] >? words_2[i]
-      return 1
-    elseif words_1[i] <? words_2[i]
-      return -1
-    endif
-  endfor
-
-  return words_1_len - words_2_len
-endfunction"}}}
-
-function! s:get_words(filename) abort "{{{
-  let words = []
-  for split in split(a:filename, '\d\+\zs\ze')
-    let words += split(split, '\D\zs\ze\d\+')
-  endfor
-
-  return map(words, "v:val =~ '^\\d\\+$' ? str2nr(v:val) : v:val")
+  execute 'lcd' fnameescape(a:path)
 endfunction"}}}
 
 let &cpo = s:save_cpo

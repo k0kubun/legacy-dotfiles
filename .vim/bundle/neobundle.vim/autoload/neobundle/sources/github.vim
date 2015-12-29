@@ -1,6 +1,7 @@
 "=============================================================================
 " FILE: github.vim
 " AUTHOR:  Shougo Matsushita <Shougo.Matsu@gmail.com>
+" Last Modified: 02 Mar 2013.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -35,51 +36,36 @@ let s:source = {
       \ 'short_name' : 'github',
       \ }
 
-" sorter
-let s:filter = {
-\   "name" : "sorter_stars",
-\}
-
-function! s:filter.filter(candidates, context)
-    return unite#util#sort_by(a:candidates, 'v:val.source__stars')
-endfunction
-
-call unite#define_filter(s:filter)
-unlet s:filter
-
 function! s:source.gather_candidates(args, context) "{{{
-  if !executable('wget')
+  if !executable('curl') && !executable('wget')
     call unite#print_error(
           \ '[neobundle/search:github] '.
-          \ 'wget command is not available!')
+          \ 'curl or wget command is not available!')
     return []
   endif
 
   let plugins = s:get_github_searches(a:context.source__input)
 
-
   return map(copy(plugins), "{
-        \ 'word' : v:val.full_name. ' ' . v:val.description,
+        \ 'word' : v:val.username.'/'.v:val.name . ' ' . v:val.description,
         \ 'source__name' : (v:val.fork ? '| ' : '') .
-        \          v:val.full_name,
-        \ 'source__path' : v:val.full_name,
+        \          v:val.username.'/'.v:val.name,
+        \ 'source__path' : v:val.username.'/'.v:val.name,
         \ 'source__description' : v:val.description,
-        \ 'source__stars' : v:val.stargazers_count,
         \ 'source__options' : [],
-        \ 'action__uri' : v:val.html_url,
+        \ 'action__uri' : 'https://github.com/' .
+        \        v:val.username.'/'.v:val.name,
         \ }")
 endfunction"}}}
 
 " Misc.
-" @vimlint(EVL102, 1, l:true)
-" @vimlint(EVL102, 1, l:false)
-" @vimlint(EVL102, 1, l:null)
 function! s:get_github_searches(string) "{{{
-  let path = 'https://api.github.com/search/repositories?q='
-        \ . a:string . '+language:VimL'.'\&sort=stars'.'\&order=desc'
+  let path = 'https://api.github.com/legacy/repos/search/'
+        \ . a:string . '*?language=VimL'
   let temp = neobundle#util#substitute_path_separator(tempname())
 
-  let cmd = printf('%s "%s" "%s"', 'wget -q -O ', temp, path)
+  let cmd = printf('%s "%s" "%s"', (executable('curl') ?
+          \ 'curl --fail -s -o' : 'wget -q -O '), temp, path)
 
   call unite#print_message(
         \ '[neobundle/search:github] Searching plugins from github...')
@@ -89,7 +75,7 @@ function! s:get_github_searches(string) "{{{
 
   if unite#util#get_last_status()
     call unite#print_message('[neobundle/search:github] ' . cmd)
-    call unite#print_error('[neobundle/search:github] Error occurred!')
+    call unite#print_error('[neobundle/search:github] Error occured!')
     call unite#print_error(result)
     return []
   elseif !filereadable(temp)
@@ -102,18 +88,33 @@ function! s:get_github_searches(string) "{{{
 
   let [true, false, null] = [1,0,"''"]
   sandbox let data = eval(join(readfile(temp)))
-  call filter(data.items,
-        \ "stridx(v:val.full_name, a:string) >= 0")
+  call filter(data.repositories,
+        \ "stridx(v:val.username.'/'.v:val.name, a:string) >= 0")
 
   call delete(temp)
 
-  return data.items
+  return data.repositories
 endfunction"}}}
-" @vimlint(EVL102, 0, l:true)
-" @vimlint(EVL102, 0, l:false)
-" @vimlint(EVL102, 0, l:null)
 
-call unite#custom_source('neobundle/search', 'sorters', 'sorters_stars')
+function! s:convert_vim_scripts_data(data) "{{{
+  return map(copy(a:data), "{
+        \ 'name' : v:val.n,
+        \ 'raw_type' : v:val.t,
+        \ 'repository' : v:val.rv,
+        \ 'description' : printf('%-5s %s', v:val.rv, v:val.s),
+        \ 'uri' : 'https://github.com/vim-scripts/' . v:val.n,
+        \ }")
+endfunction"}}}
+
+function! s:convert2script_type(type) "{{{
+  if a:type ==# 'utility'
+    return 'plugin'
+  elseif a:type ==# 'color scheme'
+    return 'colors'
+  else
+    return a:type
+  endif
+endfunction"}}}
 
 let &cpo = s:save_cpo
 unlet s:save_cpo

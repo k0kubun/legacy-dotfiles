@@ -1,6 +1,7 @@
 "=============================================================================
 " FILE: neobundle.vim
 " AUTHOR:  Shougo Matsushita <Shougo.Matsu@gmail.com>
+" Last Modified: 13 Dec 2013.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -36,14 +37,6 @@ elseif v:version < 702 || (v:version == 702 && !has('patch51'))
   " It is implemented in Vim 7.2.051.
   echoerr 'neobundle does not work this version of Vim "' . v:version . '".'
         \ .' You must use Vim 7.2.051 or later.'
-
-  let &cpo = s:save_cpo
-  unlet s:save_cpo
-
-  finish
-elseif fnamemodify(&shell, ':t') ==# 'fish' && !has('patch-7.4.276')
-  echoerr 'Vim does not support "' . &shell . '".'
-        \ .' You must use Vim 7.4.276 or later.'
 
   let &cpo = s:save_cpo
   unlet s:save_cpo

@@ -1,7 +1,7 @@
 "=============================================================================
 " FILE: init.vim
 " AUTHOR:  Shougo Matsushita <Shougo.Matsu at gmail.com>
-"          Copyright (C) 2010 http://github.com/gmarik
+" Last Modified: 17 Jan 2014.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -34,13 +34,6 @@ function! neobundle#init#_rc(path) "{{{
   if path =~ '/$'
     let path = path[: -2]
   endif
-
-  if path == ''
-    call neobundle#util#print_error(
-          \ 'neobundle#rc() argument is empty.')
-    return
-  endif
-
   call neobundle#set_neobundle_dir(path)
 
   " Join to the tail in runtimepath.
@@ -60,72 +53,44 @@ function! neobundle#init#_rc(path) "{{{
 endfunction"}}}
 
 function! neobundle#init#_bundle(bundle) "{{{
-  if (!has_key(a:bundle, 'type') && get(a:bundle, 'local', 0))
-        \ || get(a:bundle, 'type', '') ==# 'nosync'
+  let bundle = a:bundle
+  if !has_key(bundle, 'type') && get(bundle, 'local', 0)
     " Default type.
-    let a:bundle.type = 'none'
+    let bundle.type = 'nosync'
   endif
-  if !has_key(a:bundle, 'type')
+  if !has_key(bundle, 'type')
     call neobundle#installer#error(
           \ printf('Failed parse name "%s" and args %s',
           \   a:bundle.orig_name, string(a:bundle.orig_opts)))
     return {}
   endif
+  if !has_key(bundle, 'autoload')
+    " Auto set autoload keys.
+    let bundle.autoload = {}
 
-  let bundle = {
-          \ 'uri' : '',
-          \ 'script_type' : '',
-          \ 'rev' : '',
-          \ 'rtp' : '',
-          \ 'depends' : [],
-          \ 'fetch' : 0,
-          \ 'force' : 0,
-          \ 'gui' : 0,
-          \ 'terminal' : 0,
-          \ 'autoload' : {},
-          \ 'hooks' : {},
-          \ 'called_hooks' : {},
-          \ 'external_commands' : {},
-          \ 'build_commands': {},
-          \ 'description' : '',
-          \ 'dummy_commands' : [],
-          \ 'dummy_mappings' : [],
-          \ 'sourced' : 0,
-          \ 'disabled' : 0,
-          \ 'local' : 0,
-          \ 'focus' : 0,
-          \ 'verbose' : 0,
-          \ 'orig_name' : '',
-          \ 'vim_version' : '',
-          \ 'orig_opts' : {},
-          \ 'recipe' : '',
-          \ 'base' : neobundle#get_neobundle_dir(),
-          \ 'install_rev' : '',
-          \ 'install_process_timeout'
-          \    : g:neobundle#install_process_timeout,
-          \ 'refcnt' : 1,
-          \ 'frozen' : 0,
-          \ 'on_i' : 0,
-          \ 'on_ft' : [],
-          \ 'on_cmd' : [],
-          \ 'on_func' : [],
-          \ 'on_map' : [],
-          \ 'on_unite' : [],
-          \ 'on_path' : [],
-          \ 'on_source' : [],
-          \ 'pre_cmd' : [],
-          \ 'pre_func' : [],
-          \ }
-  call extend(bundle, a:bundle)
+    for key in filter([
+          \ 'filetypes', 'filename_patterns',
+          \ 'commands', 'functions', 'mappings', 'unite_sources',
+          \ 'insert', 'explorer', 'on_source', 'function_prefix',
+          \ ], 'has_key(bundle, v:val)')
+      let bundle.autoload[key] = bundle[key]
+      call remove(bundle, key)
+    endfor
+  endif
+
+  let bundle = extend(bundle, s:get_default(), 'keep')
 
   if !has_key(bundle, 'name')
     let bundle.name = neobundle#util#name_conversion(bundle.orig_name)
   endif
 
   if !has_key(bundle, 'normalized_name')
-    let bundle.normalized_name = substitute(
-          \ fnamemodify(bundle.name, ':r'),
-          \ '\c^vim[_-]\|[_-]vim$', '', 'g')
+    let normalized_name = fnamemodify(bundle.name, ':r')
+    let normalized_name = substitute(normalized_name,
+          \ '^vim-', '', '')
+    let normalized_name = substitute(normalized_name,
+          \ '-vim$', '', '')
+    let bundle.normalized_name = normalized_name
   endif
   if !has_key(bundle.orig_opts, 'name') &&
      \ g:neobundle#enable_name_conversion
@@ -135,36 +100,30 @@ function! neobundle#init#_bundle(bundle) "{{{
 
   if !has_key(bundle, 'directory')
     let bundle.directory = bundle.name
-
-    if bundle.rev != ''
-      let bundle.directory .= '_' . substitute(bundle.rev,
-            \ '[^[:alnum:]_-]', '_', 'g')
-    endif
   endif
 
-  if bundle.base[0] == '~'
-    let bundle.base = neobundle#util#expand(bundle.base)
-  endif
-  if bundle.base[-1] == '/' || bundle.base[-1] == '\'
+  let bundle.base = s:expand_path(bundle.base)
+  if bundle.base =~ '[/\\]$'
     " Chomp.
-    let bundle.base = bundle.base[: -2]
+    let bundle.base = substitute(bundle.base, '[/\\]\+$', '', '')
+  endif
+  if bundle.rev != ''
+    let bundle.directory .= '_' . substitute(bundle.rev,
+          \ '[^[:alnum:]_.-]', '', 'g')
   endif
 
   let bundle.path = isdirectory(bundle.uri) ?
         \ bundle.uri : bundle.base.'/'.bundle.directory
 
+  let rtp = bundle.rtp
   " Check relative path.
-  if bundle.rtp !~ '^\%([~/]\|\a\+:\)'
-    let bundle.rtp = bundle.path.'/'.bundle.rtp
-  endif
-  if bundle.rtp[0] == '~'
-    let bundle.rtp = neobundle#util#expand(bundle.rtp)
-  endif
-  if bundle.rtp[-1] == '/' || bundle.rtp[-1] == '\'
+  let bundle.rtp = (rtp =~ '^\%([~/]\|\a\+:\)') ?
+        \ s:expand_path(rtp) : (bundle.path.'/'.rtp)
+  if bundle.rtp =~ '[/\\]$'
     " Chomp.
-    let bundle.rtp = bundle.rtp[: -2]
+    let bundle.rtp = substitute(bundle.rtp, '[/\\]\+$', '', '')
   endif
-  if bundle.normalized_name ==# 'neobundle' || bundle.fetch
+  if bundle.normalized_name ==# 'neobundle'
     " Do not add runtimepath.
     let bundle.rtp = ''
   endif
@@ -175,105 +134,21 @@ function! neobundle#init#_bundle(bundle) "{{{
     let bundle.path .= '/' . bundle.script_type
   endif
 
-  if !has_key(bundle, 'augroup')
-    let bundle.augroup = bundle.normalized_name
+  if !has_key(bundle, 'resettable')
+    let bundle.resettable = !bundle.lazy
   endif
 
-  " Convert old name
-  if has_key(bundle, 'stay_same')
-    let bundle.frozen = bundle.stay_same
+  if !has_key(bundle.autoload, 'function_prefix')
+        \ && isdirectory(bundle.rtp . '/autoload')
+    let bundle.autoload.function_prefix =
+          \ neobundle#parser#_function_prefix(bundle.name)
   endif
-  call s:init_lazy(bundle)
+  if !has_key(bundle, 'augroup')
+    let bundle.augroup = bundle.name
+  endif
 
   " Parse depends.
-  if !empty(bundle.depends)
-    call s:init_depends(bundle)
-  endif
-
-  if type(bundle.disabled) == type('')
-    sandbox let bundle.disabled = eval(bundle.disabled)
-  endif
-
-  let bundle.disabled = bundle.disabled
-        \ || (bundle.gui && !has('gui_running'))
-        \ || (bundle.terminal && has('gui_running'))
-        \ || (bundle.vim_version != ''
-        \     && s:check_version(bundle.vim_version))
-        \ || (!empty(bundle.external_commands)
-        \     && neobundle#config#check_commands(bundle.external_commands))
-
-  return bundle
-endfunction"}}}
-
-function! s:init_lazy(bundle) "{{{
-  let bundle = a:bundle
-
-  " Auto set autoload keys.
-  for key in filter([
-        \ 'filetypes', 'filename_patterns',
-        \ 'commands', 'functions', 'mappings', 'unite_sources',
-        \ 'insert', 'explorer',
-        \ 'command_prefix', 'function_prefixes',
-        \ ], 'has_key(bundle, v:val)')
-    let bundle.autoload[key] = bundle[key]
-    call remove(bundle, key)
-  endfor
-
-  " Auto set on keys.
-  for [key, value] in items(filter({
-        \ 'filetypes' : 'on_ft',
-        \ 'filename_patterns' : 'on_path',
-        \ 'commands' : 'on_cmd',
-        \ 'functions' : 'on_func',
-        \ 'mappings' : 'on_map',
-        \ 'unite_sources' : 'on_unite',
-        \ 'insert' : 'on_i',
-        \ 'explorer' : 'on_path',
-        \ 'on_source' : 'on_source',
-        \ 'command_prefix' : 'pre_cmd',
-        \ 'function_prefixes' : 'pre_func',
-        \ }, 'has_key(bundle.autoload, v:key)'))
-
-    let bundle[value] = (key ==# 'explorer'
-          \ && type(bundle.autoload[key]) == type(0)
-          \ && bundle.autoload[key] == 1) ? '.*' : bundle.autoload[key]
-  endfor
-
-  if empty(bundle.pre_cmd)
-    let bundle.pre_cmd = substitute(bundle.normalized_name, '[_-]', '', 'g')
-  endif
-
-  if empty(bundle.on_unite)
-        \ && bundle.name =~# '^\%(vim-\)\?unite-'
-    let unite_source = matchstr(bundle.name, '^\%(vim-\)\?unite-\zs.*')
-    if unite_source != ''
-      let bundle.on_unite = [unite_source]
-    endif
-  endif
-
-  " Auto convert2list.
-  for key in filter([
-        \ 'on_ft', 'on_path', 'on_cmd',
-        \ 'on_func', 'on_map', 'on_unite',
-        \ 'on_source', 'pre_cmd', 'pre_func',
-        \ ], "type(bundle[v:val]) != type([])
-        \")
-    let bundle[key] = [bundle[key]]
-  endfor
-
-  if !has_key(bundle, 'lazy')
-    " Set lazy flag automatically
-    let bundle.lazy = bundle.on_i
-          \ || !empty(filter(['on_ft', 'on_path', 'on_cmd',
-          \                  'on_func', 'on_map', 'on_unite', 'on_source'],
-          \                 '!empty(bundle[v:val])'))
-  endif
-endfunction"}}}
-
-function! s:init_depends(bundle) "{{{
-  let bundle = a:bundle
   let _ = []
-
   for depend in neobundle#util#convert2list(bundle.depends)
     if type(depend) == type('')
       let depend = string(depend)
@@ -282,22 +157,66 @@ function! s:init_depends(bundle) "{{{
     let depend_bundle = type(depend) == type({}) ?
           \ depend : neobundle#parser#bundle(depend, 1)
     let depend_bundle.lazy = bundle.lazy
+    let depend_bundle.resettable = bundle.resettable
+    let depend_bundle.overwrite = 0
     call add(_, depend_bundle)
 
     unlet depend
   endfor
-
   let bundle.depends = _
+
+  if neobundle#config#is_sourced(bundle.name)
+    let bundle.sourced = 1
+  endif
+
+  return bundle
 endfunction"}}}
 
-function! s:check_version(min_version) "{{{
-  let versions = split(a:min_version, '\.')
-  let major = get(versions, 0, 0)
-  let minor = get(versions, 1, 0)
-  let patch = get(versions, 2, 0)
-  let min_version = major * 100 + minor
-  return v:version < min_version ||
-        \ (patch != 0 && v:version == min_version && !has('patch'.patch))
+if neobundle#util#is_windows()
+  function! s:expand_path(path)
+    return neobundle#util#substitute_path_separator(
+          \ simplify(expand(escape(a:path, '*?{}'), 1)))
+  endfunction
+else
+  function! s:expand_path(path)
+    return simplify(expand(escape(a:path, '*?{}'), 1))
+  endfunction
+endif
+
+function! s:get_default() "{{{
+  if !exists('s:default_bundle')
+    let s:default_bundle = {
+          \ 'uri' : '',
+          \ 'script_type' : '',
+          \ 'rev' : '',
+          \ 'rtp' : '',
+          \ 'depends' : [],
+          \ 'lazy' : 0,
+          \ 'force' : 0,
+          \ 'gui' : 0,
+          \ 'terminal' : 0,
+          \ 'overwrite' : 1,
+          \ 'stay_same' : 0,
+          \ 'hooks' : {},
+          \ 'called_hooks' : {},
+          \ 'external_commands' : {},
+          \ 'autoload' : {},
+          \ 'description' : '',
+          \ 'dummy_commands' : [],
+          \ 'dummy_mappings' : [],
+          \ 'sourced' : 0,
+          \ 'disabled' : 0,
+          \ 'local' : 0,
+          \ 'orig_name' : '',
+          \ 'vim_version' : '',
+          \ 'orig_opts' : {},
+          \ 'recipe' : '',
+          \ }
+  endif
+
+  let s:default_bundle.base = neobundle#get_neobundle_dir()
+
+  return deepcopy(s:default_bundle)
 endfunction"}}}
 
 let &cpo = s:save_cpo
