@@ -1,7 +1,7 @@
 require 'bundler/setup'
-require_relative './itamae/lib/itamae_executor'
+require_relative './lib/itamae_executor'
 
-roles = Dir.glob('./itamae/roles/*').map { |dir| File.basename(dir) }.sort
+roles = Dir.glob('./roles/*').map { |dir| File.basename(dir) }.sort
 roles.each do |role|
   desc "configure #{role}"
   task role do
