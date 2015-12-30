@@ -29,3 +29,4 @@ autocmd BufNewFile,BufRead *.ex setl filetype=elixir
 autocmd BufNewFile,BufRead *.iam set filetype=ruby
 autocmd BufNewFile,BufRead *.elb set filetype=ruby
 autocmd BufNewFile,BufRead *.route set filetype=ruby
+autocmd BufNewFile,BufRead *.group set filetype=ruby
