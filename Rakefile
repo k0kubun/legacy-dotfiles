@@ -29,4 +29,9 @@ task 'dry-run' do
   ItamaeExecutor.execute(itamae_options: '--dry-run --log-level=debug')
 end
 
+desc 'apply for vagrant'
+task :vagrant do
+  system(*%w[bundle exec itamae ssh --vagrant lib/recipe_helper.rb roles/linux/default.rb])
+end
+
 task default: :apply
