@@ -4,7 +4,7 @@ node.reverse_merge!(
 
 node[:dotfiles].each do |file|
   link File.join(node[:dotfiles_directory], file) do
-    to File.expand_path(File.join('../../', file), __dir__)
+    to File.expand_path(File.join('../../config', file), __dir__)
     force true
   end
 end
