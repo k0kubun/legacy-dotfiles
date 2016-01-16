@@ -10,3 +10,5 @@ CONF
 execute "echo #{Shellwords.escape(yaourt_conf)} | sudo tee -a /etc/pacman.conf" do
   not_if "grep -q #{Shellwords.escape(yaourt_server)} /etc/pacman.conf"
 end
+
+package 'yaourt'
