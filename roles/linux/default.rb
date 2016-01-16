@@ -9,3 +9,10 @@ package 'xmobar'
 
 package 'xterm'
 package 'rxvt-unicode'
+
+package 'git'
+package 'ruby'
+package 'make'
+package 'openssh'
+package 'zip'
+package 'unzip'
