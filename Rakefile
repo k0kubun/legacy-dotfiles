@@ -31,7 +31,7 @@ end
 
 desc 'apply for vagrant'
 task :vagrant do
-  system(*%w[bundle exec itamae ssh --vagrant lib/recipe_helper.rb roles/linux/default.rb])
+  system(*%w[bundle exec itamae ssh --vagrant -y roles/linux/node.yml lib/recipe_helper.rb roles/linux/default.rb])
 end
 
 task default: :apply
