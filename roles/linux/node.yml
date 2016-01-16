@@ -8,13 +8,13 @@ dotfiles:
   #- .peco
   #- .rake
   #- .vim
-  #- .xmonad
+  - .xmonad
   #- .zsh
-  #- .Xdefaults
-  #- .Xmodmap
+  - .Xdefaults
+  - .Xmodmap
   #- .gemrc
-  #- .gitconfig
-  #- .gitignore
+  - .gitconfig
+  - .gitignore
   #- .karabiner
   #- .pryrc
   #- .psqlrc
@@ -23,7 +23,7 @@ dotfiles:
   #- .tmux.conf.darwin
   #- .uim
   #- .vimrc
-  #- .xinitrc
+  - .xinitrc
   #- .zshrc
   #- .zshrc.Linux
   #- .zshrc.darwin

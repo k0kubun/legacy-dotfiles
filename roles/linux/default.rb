@@ -16,3 +16,5 @@ package 'make'
 package 'openssh'
 package 'zip'
 package 'unzip'
+
+include_cookbook 'dotfiles'
