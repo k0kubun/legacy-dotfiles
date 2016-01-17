@@ -19,7 +19,9 @@ package 'make'
 package 'openssh'
 package 'zip'
 package 'unzip'
-
 package 'fakeroot'
+
+package 'vim'
+package 'zsh'
 
 yaourt 'ttf-inconsolata'
