@@ -1,27 +1,10 @@
+define :yaourt do
+  package = params[:name]
+  execute "yaourt -S --noconfirm #{package}" do
+    not_if "yaourt -Q #{package}"
+  end
+end
+
 include_cookbook 'dotfiles'
-include_cookbook 'yaourt'
-
-package 'xorg-server'
-package 'xorg-xinit'
-package 'xf86-video-intel'
-
-package 'xmonad'
-package 'xmonad-contrib'
-package 'dmenu'
-package 'xmobar'
-
-package 'xterm'
-package 'rxvt-unicode'
-
-package 'git'
-package 'ruby'
-package 'make'
-package 'openssh'
-package 'zip'
-package 'unzip'
-package 'fakeroot'
-
-package 'vim'
-package 'zsh'
 
 yaourt 'ttf-inconsolata'
