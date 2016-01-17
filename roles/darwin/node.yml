@@ -76,7 +76,6 @@ dotfiles:
   - .zshrc
   #- .zshrc.Linux
   - .zshrc.darwin
-  #- fonts.conf
 
 rbenv:
   versions:
