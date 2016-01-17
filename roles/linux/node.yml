@@ -9,7 +9,7 @@ dotfiles:
   #- .rake
   - .vim
   - .xmonad
-  #- .zsh
+  - .zsh
   - .Xdefaults
   - .Xmodmap
   #- .gemrc
@@ -24,7 +24,5 @@ dotfiles:
   #- .uim
   - .vimrc
   - .xinitrc
-  #- .zshrc
-  #- .zshrc.Linux
-  #- .zshrc.darwin
-  #- fonts.conf
+  - .zshrc
+  - .zshrc.Linux
