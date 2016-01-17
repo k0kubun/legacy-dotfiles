@@ -22,4 +22,4 @@ package 'unzip'
 
 package 'fakeroot'
 
-yaourt 'ttf-ricty'
+yaourt 'ttf-inconsolata'
