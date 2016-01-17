@@ -31,7 +31,7 @@ module ItamaeExecutor
     end
 
     def itamae_local(role, itamae_options:, stackprof:)
-      node_path = File.expand_path("../roles/#{role}/node.yml", __dir__)
+      node_path = "roles/#{role}/node.yml"
 
       cmd = %w[bundle exec itamae local]
       cmd.push(*itamae_options.split(' ')) if itamae_options
