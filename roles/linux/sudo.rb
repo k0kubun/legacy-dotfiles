@@ -26,7 +26,6 @@ package 'fakeroot'
 package 'vim'
 package 'zsh'
 
-# passwd k0kubun
 user 'k0kubun' do
   shell '/bin/zsh'
 end
