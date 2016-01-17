@@ -15,7 +15,7 @@ package 'yaourt'
 
 define :yaourt do
   package = params[:name]
-  execute "yaourt -S #{package}" do
+  execute "yaourt -S --noconfirm #{package}" do
     not_if "yaourt -Q #{package}"
   end
 end

@@ -20,4 +20,6 @@ package 'openssh'
 package 'zip'
 package 'unzip'
 
+package 'fakeroot'
+
 yaourt 'ttf-ricty'
