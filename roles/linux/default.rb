@@ -5,7 +5,5 @@ define :yaourt do
   end
 end
 
-include_cookbook 'dotfiles'
-
 yaourt 'google-chrome'
 yaourt 'ttf-inconsolata'

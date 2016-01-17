@@ -13,20 +13,23 @@ module ItamaeExecutor
       execute_role(role_name, itamae_options: itamae_options, stackprof: stackprof)
     end
 
+    def system(*args)
+      green_puts(" EXEC : #{args.join(' ')}")
+      super
+    end
+
     private
 
     def execute_sudo(role, itamae_options:, stackprof:)
       return unless File.exist?("roles/#{role}/sudo.rb")
       cmd = ['sudo', *itamae_local(role, itamae_options: itamae_options, stackprof: stackprof)]
       cmd.push('lib/recipe_helper.rb', "roles/#{role}/sudo.rb")
-      green_puts(" INFO : #{cmd.join(' ')}")
       system(*cmd)
     end
 
     def execute_default(role, itamae_options:, stackprof:)
       cmd = itamae_local(role, itamae_options: itamae_options, stackprof: stackprof)
       cmd.push('lib/recipe_helper.rb', "roles/#{role}/default.rb")
-      green_puts(" INFO : #{cmd.join(' ')}")
       system(*cmd)
     end
 

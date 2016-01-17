@@ -31,7 +31,32 @@ end
 
 desc 'apply for vagrant'
 task :vagrant do
-  system(*%w[bundle exec itamae ssh --vagrant -y roles/linux/node.yml lib/recipe_helper.rb roles/linux/default.rb])
+  ItamaeExecutor.system(*%w[
+    bundle exec itamae ssh --vagrant
+    -y roles/linux/node.yml
+    lib/recipe_helper.rb roles/linux/sudo.rb
+  ])
+  ItamaeExecutor.system(*%w[
+    bundle exec itamae ssh --vagrant --no-sudo
+    -y roles/linux/node.yml
+    lib/recipe_helper.rb roles/linux/default.rb
+  ])
+end
+
+namespace :vagrant do
+  desc 'debug for vagrant'
+  task :debug do
+    ItamaeExecutor.system(*%w[
+      bundle exec itamae ssh --vagrant --log-level=debug
+      -y roles/linux/node.yml
+      lib/recipe_helper.rb roles/linux/sudo.rb
+    ])
+    ItamaeExecutor.system(*%w[
+      bundle exec itamae ssh --vagrant --no-sudo --log-level=debug
+      -y roles/linux/node.yml
+      lib/recipe_helper.rb roles/linux/default.rb
+    ])
+  end
 end
 
 task default: :apply

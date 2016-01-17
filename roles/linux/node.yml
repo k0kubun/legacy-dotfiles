@@ -1,3 +1,4 @@
+dotfiles_directory: '/home/k0kubun'
 dotfiles:
   #- .bundle
   #- .cabal
