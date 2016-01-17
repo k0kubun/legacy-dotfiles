@@ -12,3 +12,10 @@ execute "echo #{Shellwords.escape(yaourt_conf)} | sudo tee -a /etc/pacman.conf" 
 end
 
 package 'yaourt'
+
+define :yaourt do
+  package = params[:name]
+  execute "yaourt -S #{package}" do
+    not_if "yaourt -Q #{package}"
+  end
+end

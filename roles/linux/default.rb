@@ -1,3 +1,6 @@
+include_cookbook 'dotfiles'
+include_cookbook 'yaourt'
+
 package 'xorg-server'
 package 'xorg-xinit'
 package 'xf86-video-intel'
@@ -17,5 +20,4 @@ package 'openssh'
 package 'zip'
 package 'unzip'
 
-include_cookbook 'dotfiles'
-include_cookbook 'yaourt'
+yaourt 'ttf-ricty'
