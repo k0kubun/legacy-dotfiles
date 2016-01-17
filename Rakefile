@@ -14,21 +14,6 @@ task :apply do
   ItamaeExecutor.execute
 end
 
-desc 'apply with sudo for current OS'
-task :sudo do
-  ItamaeExecutor.execute_sudo(ItamaeExecutor.role_name)
-end
-
-namespace :sudo do
-  desc 'apply with debugging sudo'
-  task :debug do
-    ItamaeExecutor.execute_sudo(
-      ItamaeExecutor.role_name,
-      itamae_options: '--log-level=debug',
-    )
-  end
-end
-
 desc 'debugging apply for current OS'
 task :debug do
   ItamaeExecutor.execute(itamae_options: '--log-level=debug')

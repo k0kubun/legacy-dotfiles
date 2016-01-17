@@ -5,6 +5,7 @@ module ItamaeExecutor
     end
 
     def execute_role(role, itamae_options: nil, stackprof: false)
+      execute_sudo(role, itamae_options: itamae_options, stackprof: stackprof)
       execute_default(role, itamae_options: itamae_options, stackprof: stackprof)
     end
 
@@ -12,15 +13,15 @@ module ItamaeExecutor
       execute_role(role_name, itamae_options: itamae_options, stackprof: stackprof)
     end
 
-    def execute_sudo(role, itamae_options: nil, stackprof: false)
-      abort "roles/#{role}/sudo.rb is not found" unless File.exist?("roles/#{role}/sudo.rb")
+    private
+
+    def execute_sudo(role, itamae_options:, stackprof:)
+      return unless File.exist?("roles/#{role}/sudo.rb")
       cmd = ['sudo', *itamae_local(role, itamae_options: itamae_options, stackprof: stackprof)]
       cmd.push('lib/recipe_helper.rb', "roles/#{role}/sudo.rb")
       green_puts(" INFO : #{cmd.join(' ')}")
       system(*cmd)
     end
-
-    private
 
     def execute_default(role, itamae_options:, stackprof:)
       cmd = itamae_local(role, itamae_options: itamae_options, stackprof: stackprof)
