@@ -6,6 +6,9 @@ define :yaourt do
 end
 
 yaourt 'google-chrome'
+
+yaourt 'gtk-theme-arc'
+
 yaourt 'ttf-inconsolata'
 yaourt 'ttf-migu'
 yaourt 'adobe-source-sans-pro-fonts'
