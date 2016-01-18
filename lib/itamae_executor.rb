@@ -5,6 +5,7 @@ module ItamaeExecutor
     end
 
     def execute_role(role, itamae_options: nil, stackprof: false)
+      system('mkdir -p /tmp/itamae_tmp && chmod 777 /tmp/itamae_tmp')
       execute_sudo(role, itamae_options: itamae_options, stackprof: stackprof)
       execute_default(role, itamae_options: itamae_options, stackprof: stackprof)
     end
