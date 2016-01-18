@@ -20,7 +20,8 @@ yaourt 'ttf-migu'
 yaourt 'adobe-source-sans-pro-fonts'
 
 # extra
-package 'unrar'
+yaourt 'htop'
+yaourt 'unrar'
 
 # X: IV
 # Copyright (C) 2014-2016 Slurpaza
