@@ -1,9 +1,9 @@
-Config { font = "xft:TakaoPGothic-16:Bold"
+Config { font = "xft:Inconsolata:size=16:Bold"
        , bgColor = "#131418"
        , fgColor = "#676767"
        , position = Top
        , lowerOnStart = True
-       , commands = [ Run Network "wlan0" [ "-t"       , " ⇩ <rx> : ⇧ <tx>"
+       , commands = [ Run Network "wlan0" [ "-t"       , " <rx> : <tx>"
                                           , "-L"       , "40"
                                           , "-H"       , "200"
                                           , "--normal" , "#d3d7cf"
@@ -39,5 +39,5 @@ Config { font = "xft:TakaoPGothic-16:Bold"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{≫%multicpu%  ≫%memory%  ≫%wlan0%  ≫%battery%  <fc=#c7a273>%date%</fc> "
+       , template = " %StdinReader% }{| %multicpu% | %memory% | %wlan0% | %battery% | <fc=#c7a273>%date%</fc> "
        }
