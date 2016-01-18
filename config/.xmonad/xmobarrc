@@ -1,4 +1,4 @@
-Config { font = "xft:Inconsolata:size=16:Bold"
+Config { font = "xft:Inconsolata:size=18:Bold"
        , bgColor = "#131418"
        , fgColor = "#676767"
        , position = Top

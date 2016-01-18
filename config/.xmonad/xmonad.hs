@@ -14,7 +14,7 @@ main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
   xmonad $ defaults
     { manageHook  = manageDocks <+> manageHook defaultConfig
-    , layoutHook  = avoidStruts $ gaps [(U,26)] $ layoutHook defaultConfig
+    , layoutHook  = avoidStruts $ gaps [(U,30)] $ layoutHook defaultConfig
     , startupHook = startup
     , logHook     = myLogHook xmproc
     }
