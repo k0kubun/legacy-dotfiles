@@ -1,6 +1,6 @@
 !
 urxvt*transparent: true
-urxvt*shading: 10
+urxvt*shading: 16
 
 !urxvt*underLine: on
 urxvt*colorMode: on
