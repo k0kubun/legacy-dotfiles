@@ -2,6 +2,7 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run
+import XMonad.Layout.Gaps
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 import System.Exit
@@ -13,11 +14,10 @@ main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
   xmonad $ defaults
     { manageHook  = manageDocks <+> manageHook defaultConfig
-    , layoutHook  = avoidStruts $ layoutHook defaultConfig
+    , layoutHook  = avoidStruts $ gaps [(U,26)] $ layoutHook defaultConfig
     , startupHook = startup
     , logHook     = myLogHook xmproc
     }
-
 
 myLogHook h = dynamicLogWithPP $ wsPP { ppOutput = hPutStrLn h }
 
