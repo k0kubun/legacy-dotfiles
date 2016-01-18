@@ -41,10 +41,10 @@ xset r rate 200 80
 xset dpms 0 0 0
 xset s off
 
-trayer --edge top --SetDockType true --SetPartialStrut true \
-  --expand true --width 10 --transparent true --tint 0x131418 --alpha 0 --height 24 &
+# trayer --edge top --SetDockType true --SetPartialStrut true \
+#   --expand true --width 10 --transparent true --tint 0x131418 --alpha 0 --height 24 &
 
-ibus-daemon &
+# ibus-daemon &
 
 # start some nice programs
 exec xmonad
