@@ -3,6 +3,7 @@ include_cookbook 'dotfiles'
 
 package 'xorg-server'
 package 'xorg-xinit'
+package 'xorg-xmodmap'
 package 'xf86-video-intel'
 
 package 'xmonad'
