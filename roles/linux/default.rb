@@ -8,8 +8,9 @@ end
 # desktop apps
 yaourt 'google-chrome'
 
-# wallpaper
-yaourt 'feh'
+# input method
+yaourt 'ibus-skk'
+yaourt 'skk-jisyo'
 
 # gtk
 yaourt 'gtk-theme-arc'
@@ -18,6 +19,9 @@ yaourt 'gtk-theme-arc'
 yaourt 'ttf-inconsolata'
 yaourt 'ttf-migu'
 yaourt 'adobe-source-sans-pro-fonts'
+
+# wallpaper
+yaourt 'feh'
 
 # extra
 yaourt 'htop'
