@@ -16,3 +16,11 @@ fi
 
 export BUNDLE_JOBS=16
 alias be="bundle exec"
+
+export PATH="/home/k0kubun/.gem/ruby/2.3.0/bin:${PATH}"
+alias x='startx'
+
+alias ss='eval "$(ssh-agent)"; ssh-add ~/.ssh/id_rsa.github'
+
+setxkbmap -rules evdev -model us-layout us
+xmodmap ~/.Xmodmap 2> /dev/null
