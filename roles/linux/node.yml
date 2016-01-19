@@ -6,7 +6,7 @@ dotfiles:
   #- .git-template
   #- .githooks
   #- .js
-  #- .peco
+  - .peco
   #- .rake
   - .vim
   - .xmonad
