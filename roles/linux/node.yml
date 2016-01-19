@@ -1,5 +1,6 @@
 dotfiles_directory: '/home/k0kubun'
 dotfiles:
+  - .asoundrc
   #- .bundle
   #- .cabal
   #- .config
