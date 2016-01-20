@@ -1,7 +1,6 @@
 include_cookbook 'yaourt'
 include_cookbook 'dotfiles'
-
-include_recipe 'rbenv::dependency'
+include_cookbook 'ruby'
 
 # fundamentals
 package 'sudo'

@@ -4,7 +4,7 @@ dotfiles:
   #- .bundle
   #- .cabal
   #- .config
-  #- .git-template
+  - .git-template
   #- .githooks
   #- .js
   - .peco

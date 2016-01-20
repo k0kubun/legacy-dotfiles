@@ -6,7 +6,6 @@ define :yaourt do
 end
 
 include_recipe 'background'
-include_recipe 'rbenv::user'
 
 # desktop apps
 yaourt 'google-chrome'
