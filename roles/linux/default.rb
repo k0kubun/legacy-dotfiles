@@ -14,21 +14,21 @@ yaourt 'ibus-qt'
 yaourt 'ibus-skk'
 yaourt 'skk-jisyo'
 
-# desktop ui
+# utils
+yaourt 'feh'
 yaourt 'gtk-theme-arc'
+yaourt 'htop'
 yaourt 'trayer'
+yaourt 'unrar'
 
 # fonts
 yaourt 'ttf-inconsolata'
 yaourt 'ttf-migu'
 yaourt 'adobe-source-sans-pro-fonts'
 
-# wallpaper
-yaourt 'feh'
-
-# extra
-yaourt 'htop'
-yaourt 'unrar'
+# development
+yaourt 'nodejs'
+yaourt 'npm'
 
 # X: IV
 # Copyright (C) 2014-2016 Slurpaza
