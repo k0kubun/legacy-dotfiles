@@ -78,8 +78,8 @@ dotfiles:
   - .zshrc.darwin
 
 rbenv:
-  #versions:
-  #  - 2.3.0
+  versions:
+    - 2.3.0
   revision: 20755cfc153dd0bf802524cbb313f834a59c0f30
 ruby-build:
-  revision: f3942fd45f991fc322cb585de7e53386e9f4c6f3
+  revision: 8ea265d2faf1f28fce641e8097dc22fc7cb5de3c

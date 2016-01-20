@@ -28,3 +28,12 @@ dotfiles:
   - .xinitrc
   - .zshrc
   - .zshrc.Linux
+
+rbenv:
+  user: k0kubun
+  global: 2.3.0
+  versions:
+    - 2.3.0
+  revision: 20755cfc153dd0bf802524cbb313f834a59c0f30
+ruby-build:
+  revision: 8ea265d2faf1f28fce641e8097dc22fc7cb5de3c
