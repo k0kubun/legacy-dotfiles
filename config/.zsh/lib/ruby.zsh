@@ -9,7 +9,7 @@ eval "$(rbenv init - --no-rehash zsh)"
 alias be="bundle exec"
 
 # bundle open
-export BUNDLER_EDITOR="$(brew --prefix)/bin/vim"
+export BUNDLER_EDITOR="vim"
 
 # rails
 alias -g RET="RAILS_ENV=test"

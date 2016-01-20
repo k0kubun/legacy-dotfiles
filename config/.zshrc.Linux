@@ -11,8 +11,7 @@ if [ -e ~/.ssh/agent_env ]; then
 fi
 
 # Ruby
-# eval "$(rbenv init - zsh)"
-# export PATH=~/.rbenv/shims:${PATH}
+source ~/.zsh/lib/ruby.zsh
 
 export BUNDLE_JOBS=16
 alias be="bundle exec"
