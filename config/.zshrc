@@ -18,7 +18,6 @@ source ~/.zsh/lib/git.zsh
 source ~/.zsh/lib/languages.zsh
 source ~/.zsh/lib/peco.zsh
 source ~/.zsh/lib/theme.zsh
-# source ~/.zsh/lib/tmux.zsh
 
 # Environment-local configurations
 [ -f ~/.zshrc.local ]   && source ~/.zshrc.local
