@@ -37,7 +37,6 @@ package 'fakeroot'
 # extra
 package 'go'
 package 'unzip'
-package 'vim'
 package 'zip'
 package 'zsh'
 
