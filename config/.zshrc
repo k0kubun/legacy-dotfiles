@@ -19,6 +19,10 @@ source ~/.zsh/lib/languages.zsh
 source ~/.zsh/lib/peco.zsh
 source ~/.zsh/lib/theme.zsh
 
+if which tmux > /dev/null; then
+	source ~/.zsh/lib/tmux.zsh
+fi
+
 # Environment-local configurations
 [ -f ~/.zshrc.local ]   && source ~/.zshrc.local
 [ -f ~/.zshrc.`uname` ] && source ~/.zshrc.`uname`

@@ -20,6 +20,7 @@ yaourt 'skk-jisyo'
 yaourt 'feh'
 yaourt 'gtk-theme-arc'
 yaourt 'htop'
+yaourt 'tmux'
 yaourt 'trayer'
 yaourt 'unrar'
 
