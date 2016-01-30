@@ -31,5 +31,6 @@ yaourt 'ttf-migu'
 yaourt 'adobe-source-sans-pro-fonts'
 
 # development
+yaourt 'mysql56'
 yaourt 'nodejs'
 yaourt 'npm'
