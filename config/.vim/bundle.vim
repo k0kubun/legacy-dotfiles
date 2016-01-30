@@ -7,6 +7,7 @@ if has('vim_starting')
 endif
 
 " Language
+NeoBundle 'vim-scripts/netrw.vim'
 NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload': { 'filetypes': 'ruby' } }
 NeoBundleLazy 'mrkn/vim-cruby', { 'autoload': { 'filetypes': 'c' } }
 " NeoBundle 'tpope/vim-rails'
