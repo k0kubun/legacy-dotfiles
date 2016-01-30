@@ -17,6 +17,7 @@ yaourt 'ibus-skk'
 yaourt 'skk-jisyo'
 
 # utils
+yaourt 'dnsutils'
 yaourt 'feh'
 yaourt 'gtk-theme-arc'
 yaourt 'htop'
