@@ -11,7 +11,9 @@ if [ -e ~/.ssh/agent_env ]; then
 fi
 
 # Ruby
-source ~/.zsh/lib/ruby.zsh
+if which rbenv > /dev/null; then
+	source ~/.zsh/lib/ruby.zsh
+fi
 
 export BUNDLE_JOBS=16
 alias be="bundle exec"
