@@ -1,3 +1,7 @@
+if which tmux > /dev/null && pgrep mate-session > /dev/null; then
+	source ~/.zsh/lib/tmux.zsh
+fi
+
 export GHQ=~/bin/ghq
 alias ls="ls -la --color"
 
