@@ -21,10 +21,11 @@ yaourt 'dnsutils'
 yaourt 'feh'
 yaourt 'gtk-theme-arc'
 yaourt 'htop'
+yaourt 'time'
 yaourt 'tmux'
-yaourt 'vim'
 yaourt 'trayer'
 yaourt 'unrar'
+yaourt 'vim'
 
 # fonts
 yaourt 'ttf-inconsolata'
