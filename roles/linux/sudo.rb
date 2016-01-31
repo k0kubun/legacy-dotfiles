@@ -36,8 +36,6 @@ package 'fakeroot'
 
 # extra
 package 'go'
-package 'letsencrypt'
-package 'letsencrypt-nginx'
 package 'unzip'
 package 'zip'
 package 'zsh'
