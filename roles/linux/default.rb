@@ -22,7 +22,7 @@ yaourt 'feh'
 yaourt 'gtk-theme-arc'
 yaourt 'htop'
 yaourt 'tmux'
-yaourt 'vim-latest'
+yaourt 'vim'
 yaourt 'trayer'
 yaourt 'unrar'
 
