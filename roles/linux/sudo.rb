@@ -43,3 +43,7 @@ package 'zsh'
 user 'k0kubun' do
   shell '/bin/zsh'
 end
+
+service 'mysqld' do
+  action [:start, :enable]
+end
