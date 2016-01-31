@@ -10,7 +10,7 @@ package 'openssh'
 package 'gcc'
 package 'git'
 package 'make'
-package 'ruby'
+# package 'ruby'
 
 # X window system
 package 'xorg-server'
@@ -23,10 +23,10 @@ package 'xf86-video-intel'
 package 'mate'
 
 # xmonad
-package 'xmonad'
-package 'xmonad-contrib'
-package 'dmenu'
-package 'xmobar'
+# package 'xmonad'
+# package 'xmonad-contrib'
+# package 'dmenu'
+# package 'xmobar'
 
 # terminal
 package 'xterm'
@@ -39,15 +39,14 @@ package 'pkg-config'
 package 'fakeroot'
 
 # extra
-package 'go'
 package 'unzip'
-package 'zip'
+# package 'zip'
 package 'zsh'
 
 user 'k0kubun' do
   shell '/bin/zsh'
 end
 
-service 'mysqld' do
-  action [:start, :enable]
-end
+# service 'mysqld' do
+#   action [:start, :enable]
+# end

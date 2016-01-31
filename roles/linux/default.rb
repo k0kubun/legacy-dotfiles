@@ -5,34 +5,35 @@ define :yaourt do
   end
 end
 
-include_recipe 'background'
+# include_recipe 'background'
 
 # desktop apps
-yaourt 'google-chrome'
+# yaourt 'google-chrome'
 
 # input method
-yaourt 'ibus'
-yaourt 'ibus-qt'
-yaourt 'ibus-skk'
-yaourt 'skk-jisyo'
+# yaourt 'ibus'
+# yaourt 'ibus-qt'
+# yaourt 'ibus-skk'
+# yaourt 'skk-jisyo'
 
 # utils
-yaourt 'dnsutils'
-yaourt 'feh'
-yaourt 'gtk-theme-arc'
-yaourt 'htop'
-yaourt 'time'
+# yaourt 'dnsutils'
+# yaourt 'feh'
+# yaourt 'gtk-theme-arc'
+# yaourt 'htop'
+# yaourt 'time'
 yaourt 'tmux'
-yaourt 'trayer'
-yaourt 'unrar'
+# yaourt 'trayer'
+# yaourt 'unrar'
 yaourt 'vim'
 
 # fonts
 yaourt 'ttf-inconsolata'
-yaourt 'ttf-migu'
-yaourt 'adobe-source-sans-pro-fonts'
+# yaourt 'ttf-migu'
+# yaourt 'adobe-source-sans-pro-fonts'
 
 # development
-yaourt 'mysql56'
-yaourt 'nodejs'
-yaourt 'npm'
+yaourt 'go'
+# yaourt 'mysql56'
+# yaourt 'nodejs'
+# yaourt 'npm'
