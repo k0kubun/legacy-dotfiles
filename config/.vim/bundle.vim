@@ -7,7 +7,6 @@ if has('vim_starting')
 endif
 
 " Language
-NeoBundle 'vim-scripts/netrw.vim'
 NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload': { 'filetypes': 'ruby' } }
 NeoBundleLazy 'mrkn/vim-cruby', { 'autoload': { 'filetypes': 'c' } }
 " NeoBundle 'tpope/vim-rails'
@@ -53,6 +52,7 @@ NeoBundleLazy 'osyo-manga/vim-over', { 'autoload': { 'commands': ['OverCommandLi
 " NeoBundle 'jeetsukumaran/vim-indentwise'
 NeoBundle 'tyru/eskk.vim'
 NeoBundle 'tyru/skkdict.vim'
+NeoBundle 'vim-scripts/netrw.vim'
 
 " ctags
 " NeoBundle 'szw/vim-tags'
