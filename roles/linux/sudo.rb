@@ -19,6 +19,9 @@ package 'xorg-xinit'
 package 'xorg-xmodmap'
 package 'xf86-video-intel'
 
+# GNOME 2
+package 'mate'
+
 # xmonad
 package 'xmonad'
 package 'xmonad-contrib'
