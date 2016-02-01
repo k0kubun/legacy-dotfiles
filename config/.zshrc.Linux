@@ -1,4 +1,4 @@
-if which tmux > /dev/null && pgrep mate-session > /dev/null; then
+if which tmux > /dev/null && pgrep xmonad > /dev/null; then
 	source ~/.zsh/lib/tmux.zsh
 fi
 
