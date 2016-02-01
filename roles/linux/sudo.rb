@@ -18,6 +18,9 @@ package 'xorg-xinit'
 package 'xorg-xmodmap'
 package 'xf86-video-intel'
 
+# sound
+package 'alsa-utils'
+
 # xmonad
 package 'xmonad'
 package 'xmonad-contrib'
