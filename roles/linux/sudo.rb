@@ -10,7 +10,6 @@ package 'openssh'
 package 'gcc'
 package 'git'
 package 'make'
-package 'ruby'
 
 # X window system
 package 'xorg-server'
