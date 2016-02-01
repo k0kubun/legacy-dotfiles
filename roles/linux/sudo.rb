@@ -32,8 +32,9 @@ package 'rxvt-unicode'
 # build deps
 package 'autoconf'
 package 'automake'
-package 'pkg-config'
 package 'fakeroot'
+package 'patch'
+package 'pkg-config'
 
 # extra
 package 'go'
