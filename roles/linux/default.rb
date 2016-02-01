@@ -12,7 +12,6 @@ yaourt 'google-chrome'
 
 # input method
 yaourt 'ibus'
-yaourt 'ibus-qt'
 yaourt 'ibus-skk'
 yaourt 'skk-jisyo'
 
