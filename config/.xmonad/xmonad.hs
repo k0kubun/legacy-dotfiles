@@ -4,13 +4,16 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run
 import XMonad.Layout.Gaps
 import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Util.WorkspaceScreenshot
 import System.IO
 import System.Exit
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
+main :: IO ()
 main = do
+  initCapturing
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
   xmonad $ defaults
     { manageHook  = manageDocks <+> manageHook defaultConfig
@@ -84,6 +87,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- quit, or restart
   , ((modMask .|. shiftMask, xK_q     ), io (exitWith ExitSuccess)) -- %! Quit xmonad
   , ((modMask              , xK_q     ), spawn "if type xmonad; then xmonad --recompile && xmonad --restart; else xmessage xmonad not in \\$PATH: \"$PATH\"; fi") -- %! Restart xmonad
+
+  -- screenshot
+  , ((modMask .|. shiftMask, xK_4), captureWorkspacesWhen defaultPredicate defaultHook horizontally)
 
   -- , ((modMask .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -")) -- %! Run xmessage with a summary of the default keybindings (useful for beginners)
   -- repeat the binding for non-American layout keyboards

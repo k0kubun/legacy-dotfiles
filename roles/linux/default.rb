@@ -6,6 +6,7 @@ define :yaourt do
 end
 
 include_recipe 'background'
+include_recipe 'xmonad_screenshot'
 
 # desktop apps
 yaourt 'google-chrome'
@@ -17,7 +18,6 @@ yaourt 'skk-jisyo'
 
 # utils
 yaourt 'bind-tools'
-yaourt 'feh'
 yaourt 'gtk-theme-arc'
 yaourt 'htop'
 yaourt 'time'
