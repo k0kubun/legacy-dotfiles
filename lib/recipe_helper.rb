@@ -16,4 +16,12 @@ module RecipeHelper
   end
 end
 
-Itamae::Recipe::EvalContext.send(:include, RecipeHelper)
+module ResourceExtension
+  def config_path
+    root = File.expand_path('..', __dir__)
+    Pathname.new(root).join('config')
+  end
+end
+
+Itamae::Recipe::EvalContext.prepend RecipeHelper
+Itamae::Resource::Base::EvalContext.prepend ResourceExtension
