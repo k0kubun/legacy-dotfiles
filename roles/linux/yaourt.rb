@@ -13,6 +13,10 @@ yaourt 'ibus'
 yaourt 'ibus-skk'
 yaourt 'skk-jisyo'
 
+# X utils
+yaourt 'xclip'
+yaourt 'xsel'
+
 # utils
 yaourt 'bind-tools'
 yaourt 'gtk-theme-arc'

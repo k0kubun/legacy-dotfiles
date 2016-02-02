@@ -11,3 +11,5 @@ end
 service 'mysqld' do
   action [:start, :enable]
 end
+
+remote_file '/usr/lib/urxvt/perl/clipboard'

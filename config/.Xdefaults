@@ -61,10 +61,13 @@ urxvt*italicFont: xft:Inconsolata:pixelsize=27:antialias=true:italic:autohint=tr
 urxvt*bolditalicFont: xft:Inconsolata:pixelsize=27:antialias=true:bold:italic:autohint=true:hinting=true
 
 URxvt*preeditType: OnTheSpot,None
-URxvt*perl-ext-common: default,matcher
+URxvt*perl-ext-common: default,matcher,clipboard
 URxvt*perl-ext: xim-onthespot
 urxvt*urlLauncher: /usr/bin/firefox
 urxvt*matcher.button: 1
+
+! paste
+URxvt.keysym.M-v: perl:clipboard:paste
 
 Xcursor.theme: Vanilla-DMZ-AA
 Xcursor.size: 16
