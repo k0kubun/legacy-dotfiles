@@ -51,9 +51,6 @@ urxvt*color5: #f030db
 ! Normal Cyan: LPROMPT and peco
 urxvt*color6: #00bbbb
 
-!set the window geometry
-urxvt*geometry: 110x40
-
 urxvt*font: xft:Inconsolata:pixelsize=27:antialias=true:hinting=true
 urxvt*boldFont: xft:Inconsolata:pixelsize=27:antialias=true:bold:hinting=true
 urxvt*italicFont: xft:Inconsolata:pixelsize=27:antialias=true:italic:autohint=true:hinting=true
@@ -75,3 +72,6 @@ urxvt*scrollBar: true
 urxvt*scrollBar_right: true
 urxvt*scrollColor: #323232
 urxvt*cursorColor: #eeeeee
+
+! Layout of Workspace 1
+urxvt*geometry: 136x37+0+30

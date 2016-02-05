@@ -4,6 +4,9 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run
 import XMonad.Layout.Gaps
+import XMonad.Layout.SimplestFloat
+import XMonad.Layout.BorderResize
+import XMonad.Layout.PerWorkspace
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Util.WorkspaceScreenshot
 import System.IO
@@ -18,12 +21,10 @@ main = do
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
   xmonad $ defaults
     { manageHook  = myManageHook
-    , layoutHook  = gaps [(U,30)] $ layoutHook defaultConfig
+    , layoutHook  = myLayoutHook
     , startupHook = startup
     , logHook     = myLogHook xmproc
     }
-
-myLogHook h = dynamicLogWithPP $ wsPP { ppOutput = hPutStrLn h }
 
 myManageHook = manageHook defaultConfig
                  <+>
@@ -31,6 +32,12 @@ myManageHook = manageHook defaultConfig
                  -- <+>
                  -- composeAll
                  --   [ title =? "urxvt" --> doFloat ]
+
+myLayoutHook = onWorkspace "1" (borderResize $ simplestFloat) $
+               gaps [(U,30)] $
+               layoutHook defaultConfig
+
+myLogHook h = dynamicLogWithPP $ wsPP { ppOutput = hPutStrLn h }
 
 colorBlue      = "#857da9"
 colorGreen     = "#88b986"
