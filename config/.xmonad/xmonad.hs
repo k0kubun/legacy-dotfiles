@@ -1,4 +1,5 @@
 import XMonad
+import XMonad.Actions.WindowGo
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run
@@ -16,13 +17,20 @@ main = do
   initCapturing
   xmproc <- spawnPipe "xmobar ~/.xmonad/xmobarrc"
   xmonad $ defaults
-    { manageHook  = manageDocks <+> manageHook defaultConfig
+    { manageHook  = myManageHook
     , layoutHook  = gaps [(U,30)] $ layoutHook defaultConfig
     , startupHook = startup
     , logHook     = myLogHook xmproc
     }
 
 myLogHook h = dynamicLogWithPP $ wsPP { ppOutput = hPutStrLn h }
+
+myManageHook = manageHook defaultConfig
+                 <+>
+                 manageDocks
+                 -- <+>
+                 -- composeAll
+                 --   [ title =? "urxvt" --> doFloat ]
 
 colorBlue      = "#857da9"
 colorGreen     = "#88b986"
@@ -60,6 +68,10 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- , ((modMask .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf) -- %!  Reset the layouts on the current workspace to default
 
   , ((modMask,               xK_n     ), refresh) -- %! Resize viewed windows to the correct size
+
+  , ((controlMask, xK_h), runOrRaise "urxvt" (className =? "URxvt"))
+  , ((controlMask, xK_u), runOrRaise "google-chrome-stable" (className =? "google-chrome"))
+  , ((controlMask, xK_o), runOrRaise "nocturn" (className =? "nocturn"))
 
   -- move focus up or down the window stack
   , ((modMask,               xK_Tab   ), windows W.focusDown) -- %! Move focus to the next window
