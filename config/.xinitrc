@@ -46,5 +46,7 @@ trayer --edge top --SetDockType true --SetPartialStrut true \
 
 ibus-daemon &
 
+compton &
+
 # start some nice programs
 exec xmonad

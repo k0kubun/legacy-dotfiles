@@ -19,6 +19,7 @@ yaourt 'xsel'
 
 # utils
 yaourt 'bind-tools'
+yaourt 'compton'
 yaourt 'gtk-theme-arc'
 yaourt 'htop'
 yaourt 'time'

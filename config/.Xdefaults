@@ -2,8 +2,8 @@
 urxvt.iso14755: false
 urxvt.iso14755_52: false
 !
-urxvt*transparent: true
-urxvt*shading: 16
+URxvt.depth: 32
+URxvt*background: rgba:0000/0000/0000/dddd
 
 !urxvt*underLine: on
 urxvt*colorMode: on
@@ -18,7 +18,6 @@ urxvt*highlightSelection: true
 ! Colorscheme based on the gvim colorscheme desert
 ! http://ggellner.wordpress.com/2006/08/12/desert-xterm/
 !---------------------
-urxvt*background: #313031
 urxvt*foreground: White
 
 !colors

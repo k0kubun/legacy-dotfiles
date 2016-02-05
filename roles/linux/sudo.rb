@@ -13,3 +13,4 @@ service 'mysqld' do
 end
 
 remote_file '/usr/lib/urxvt/perl/clipboard'
+remote_file '/usr/share/X11/xorg.conf.d/11-composite.conf'
