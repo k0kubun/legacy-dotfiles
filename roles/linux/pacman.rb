@@ -36,6 +36,7 @@ package 'pkg-config'
 
 # extra
 package 'go'
+package 'postgresql'
 package 'unzip'
 package 'zip'
 package 'zsh'
