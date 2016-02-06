@@ -1,3 +1,16 @@
 #!/usr/bin/env ruby
 
-puts "test"
+begin
+  gem 'octokit'
+rescue Gem::LoadError
+  Gem.install('octokit')
+end
+
+require 'octokit'
+
+client = Octokit::Client.new
+client.auto_paginate = true
+client.repos('k0kubun').each do |repo|
+  next if repo[:fork]
+  system('ghq', 'get', repo[:full_name])
+end
