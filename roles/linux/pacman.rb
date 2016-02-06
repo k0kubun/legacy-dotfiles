@@ -10,6 +10,7 @@ package 'make'
 # X window system
 package 'xorg-server'
 package 'xorg-server-utils'
+package 'xorg-server-xvfb'
 package 'xorg-xinit'
 package 'xorg-xmodmap'
 package 'xf86-video-intel'
