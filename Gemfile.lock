@@ -11,6 +11,8 @@ GEM
       schash (~> 0.1.0)
       specinfra (>= 2.37.0, < 3.0.0)
       thor
+    itamae-plugin-recipe-docker (0.2.0)
+      itamae (>= 1.6)
     itamae-plugin-recipe-rbenv (0.6.1)
       itamae (~> 1.2)
     itamae-plugin-resource-cask (0.2.2)
@@ -48,6 +50,7 @@ PLATFORMS
 
 DEPENDENCIES
   itamae
+  itamae-plugin-recipe-docker
   itamae-plugin-recipe-rbenv
   itamae-plugin-resource-cask
   pry-byebug

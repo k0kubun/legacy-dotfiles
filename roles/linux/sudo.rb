@@ -3,6 +3,7 @@ include_cookbook 'dotfiles'
 include_cookbook 'ruby'
 
 include_recipe 'pacman'
+include_recipe 'docker::install'
 
 user 'k0kubun' do
   shell '/bin/zsh'
