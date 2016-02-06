@@ -2,16 +2,16 @@ GEM
   remote: https://rubygems.org/
   specs:
     ansi (1.5.0)
-    byebug (8.2.1)
+    byebug (8.2.2)
     coderay (1.1.0)
     hashie (3.4.3)
-    itamae (1.9.2)
+    itamae (1.9.3)
       ansi
       hashie
       schash (~> 0.1.0)
       specinfra (>= 2.37.0, < 3.0.0)
       thor
-    itamae-plugin-recipe-rbenv (0.6.0)
+    itamae-plugin-recipe-rbenv (0.6.1)
       itamae (~> 1.2)
     itamae-plugin-resource-cask (0.2.2)
       itamae
