@@ -28,6 +28,7 @@ yaourt 'tmux'
 yaourt 'trayer'
 yaourt 'unrar'
 yaourt 'vim'
+yaourt 'wget'
 yaourt 'xdot'
 
 # fonts
