@@ -20,6 +20,7 @@ yaourt 'xsel'
 # utils
 yaourt 'bind-tools'
 yaourt 'compton'
+yaourt 'graphviz'
 yaourt 'gtk-theme-arc'
 yaourt 'htop'
 yaourt 'time'
@@ -27,6 +28,7 @@ yaourt 'tmux'
 yaourt 'trayer'
 yaourt 'unrar'
 yaourt 'vim'
+yaourt 'xdot'
 
 # fonts
 yaourt 'ttf-inconsolata'
@@ -39,3 +41,10 @@ yaourt 'nodejs'
 yaourt 'npm'
 yaourt 'phantomjs'
 yaourt 'imagemagick'
+
+# build deps
+yaourt 'svn'
+yaourt 'texinfo'
+yaourt 'python'
+yaourt 'perl'
+yaourt 'm4'
