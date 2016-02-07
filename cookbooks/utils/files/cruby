@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+vimrc_local = <<~VIMRC
+  augroup cruby
+    autocmd!
+    autocmd BufWinEnter,BufNewFile **/*.[chy] setlocal filetype=cruby
+  augroup END
+VIMRC
+
+File.write('.vimrc.local', vimrc_local)
