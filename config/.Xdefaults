@@ -51,10 +51,10 @@ urxvt*color5: #f030db
 ! Normal Cyan: LPROMPT and peco
 urxvt*color6: #00bbbb
 
-urxvt*font: xft:Inconsolata:pixelsize=27:antialias=true:hinting=true
-urxvt*boldFont: xft:Inconsolata:pixelsize=27:antialias=true:bold:hinting=true
-urxvt*italicFont: xft:Inconsolata:pixelsize=27:antialias=true:italic:autohint=true:hinting=true
-urxvt*bolditalicFont: xft:Inconsolata:pixelsize=27:antialias=true:bold:italic:autohint=true:hinting=true
+urxvt*font: xft:Ricty:pixelsize=26:antialias=true:hinting=true
+urxvt*boldFont: xft:Ricty:pixelsize=26:antialias=true:bold:hinting=true
+urxvt*italicFont: xft:Ricty:pixelsize=26:antialias=true:italic:autohint=true:hinting=true
+urxvt*bolditalicFont: xft:Ricty:pixelsize=26:antialias=true:bold:italic:autohint=true:hinting=true
 
 URxvt*preeditType: OnTheSpot,None
 URxvt*perl-ext-common: default,matcher,clipboard
@@ -74,4 +74,4 @@ urxvt*scrollColor: #323232
 urxvt*cursorColor: #eeeeee
 
 ! Layout of Workspace 1
-urxvt*geometry: 136x37+0+30
+urxvt*geometry: 146x37+0+30
