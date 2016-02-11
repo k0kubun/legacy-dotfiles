@@ -1,10 +1,11 @@
 " Syntax highlights for custom extensions
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 autocmd BufNewFile,BufRead Gemfile.shared set filetype=ruby
-autocmd BufNewFile,BufRead *file set filetype=ruby
 autocmd BufNewFile,BufRead *.cap set filetype=ruby
 autocmd BufNewFile,BufRead *.schema set filetype=ruby
 autocmd BufNewFile,BufRead *.god set filetype=ruby
+autocmd BufNewFile,BufRead *file set filetype=ruby
+autocmd BufNewFile,BufRead Makefile set filetype=make
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead .itamae set filetype=yaml
 autocmd BufNewFile,BufRead *.tex set filetype=tex
