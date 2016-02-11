@@ -28,7 +28,8 @@ nnoremap <silent> ;xc :qa!<CR>
 
 " Unite.vim
 nnoremap <silent> ;u :<C-u>Unite buffer git_files<CR>
-autocmd FileType unite imap ;q <C-u><C-h>:iunmap ;q<CR>
+autocmd FileType unite imap ;q <C-u><C-h>
+autocmd BufLeave * silent! iunmap ;q
 
 " ctags
 nnoremap <silent> [Tag]d <C-]>
