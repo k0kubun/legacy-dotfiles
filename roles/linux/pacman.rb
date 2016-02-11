@@ -31,6 +31,7 @@ package 'rxvt-unicode'
 # build deps
 package 'autoconf'
 package 'automake'
+package 'bison'
 package 'fakeroot'
 package 'patch'
 package 'pkg-config'
