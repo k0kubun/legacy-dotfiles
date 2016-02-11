@@ -33,6 +33,7 @@ package 'autoconf'
 package 'automake'
 package 'bison'
 package 'fakeroot'
+package 'flex'
 package 'patch'
 package 'pkg-config'
 
