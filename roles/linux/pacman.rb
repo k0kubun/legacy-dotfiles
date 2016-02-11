@@ -41,3 +41,7 @@ package 'postgresql'
 package 'unzip'
 package 'zip'
 package 'zsh'
+
+# llvm
+package 'llvm35'
+package 'clang35'
