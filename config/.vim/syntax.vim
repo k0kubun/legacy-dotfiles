@@ -22,6 +22,7 @@ autocmd BufNewFile,BufRead *.conf setl filetype=conf
 autocmd BufNewFile,BufRead *.pp setl filetype=puppet
 autocmd BufNewFile,BufRead xmobarrc setl filetype=haskell
 autocmd BufNewFile,BufRead *.ex setl filetype=elixir
+autocmd BufNewFile,BufRead *.c setl filetype=cpp
 
 " codenize.tools
 autocmd BufNewFile,BufRead *.iam set filetype=ruby
