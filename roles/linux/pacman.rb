@@ -39,6 +39,7 @@ package 'pkg-config'
 
 # extra
 package 'go'
+package 'nemo'
 package 'postgresql'
 package 'unzip'
 package 'zip'
