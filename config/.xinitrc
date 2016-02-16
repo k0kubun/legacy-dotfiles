@@ -44,6 +44,8 @@ xset s off
 trayer --edge top --SetDockType true --SetPartialStrut true \
   --expand true --width 10 --transparent true --tint 0x131418 --alpha 0 --height 24 &
 
+pulseaudio --start
+
 ibus-daemon &
 
 compton &

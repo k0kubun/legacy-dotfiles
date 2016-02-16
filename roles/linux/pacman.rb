@@ -17,6 +17,8 @@ package 'xf86-video-intel'
 
 # sound
 package 'alsa-utils'
+package 'pulseaudio'
+package 'pulseaudio-alsa'
 
 # xmonad
 package 'xmonad'
