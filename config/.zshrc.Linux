@@ -32,3 +32,6 @@ xmodmap ~/.Xmodmap 2> /dev/null
 
 export PATH="${HOME}/.cabal/bin:${PATH}"
 export PATH="/usr/local/llvm/bin:${PATH}"
+
+. ~/.zsh/bundle/ssh-find-agent/ssh-find-agent.sh
+set_ssh_agent_socket
