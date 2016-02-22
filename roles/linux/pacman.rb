@@ -44,6 +44,7 @@ package 'go'
 package 'nemo'
 package 'postgresql'
 package 'unzip'
+package 'wmctrl'
 package 'zip'
 package 'zsh'
 

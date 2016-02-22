@@ -1,0 +1,10 @@
+#!/bin/sh
+
+keyword=$1
+shift
+
+wmctrl -l | grep -i "$keyword" > /dev/null
+case $? in
+1) $@;;
+0) wmctrl -R $keyword;;
+esac
