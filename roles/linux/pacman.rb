@@ -44,6 +44,7 @@ package 'patch'
 package 'pkg-config'
 
 # extra
+package 'file-roller'
 package 'go'
 package 'nemo'
 package 'postgresql'

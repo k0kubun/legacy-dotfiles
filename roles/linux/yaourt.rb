@@ -31,6 +31,7 @@ yaourt 'unrar'
 yaourt 'vim'
 yaourt 'wget'
 yaourt 'xdot'
+yaourt 'gnome-shell-frippery'
 
 # fonts
 yaourt 'ttf-inconsolata'
