@@ -26,6 +26,10 @@ package 'xmonad-contrib'
 package 'dmenu'
 package 'xmobar'
 
+# gnome
+package 'gnome'
+package 'gnome-tweak-tool'
+
 # terminal
 package 'xterm'
 package 'rxvt-unicode'
