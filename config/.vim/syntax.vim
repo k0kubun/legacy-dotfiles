@@ -6,6 +6,7 @@ autocmd BufNewFile,BufRead *.schema set filetype=ruby
 autocmd BufNewFile,BufRead *.god set filetype=ruby
 autocmd BufNewFile,BufRead *file set filetype=ruby
 autocmd BufNewFile,BufRead Makefile set filetype=make
+autocmd BufNewFile,BufRead Dockerfile set filetype=dockerfile
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead .itamae set filetype=yaml
 autocmd BufNewFile,BufRead *.tex set filetype=tex
