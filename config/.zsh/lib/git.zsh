@@ -123,7 +123,11 @@ function preq() {
 		url="$(github-url)/commit/${1}"
 	fi
 
-	open $url
+	if which open > /dev/null; then
+		open $url
+	else
+		xdg-open $url
+	fi
 }
 
 function private() {
