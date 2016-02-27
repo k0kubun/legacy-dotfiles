@@ -3,8 +3,13 @@
 keyword=$1
 shift
 
-wmctrl -l | grep -i "$keyword" > /dev/null
+match=$(wmctrl -l | grep "${keyword}$")
 case $? in
-1) $@;;
-0) wmctrl -R $keyword;;
+  1)
+    $@
+    ;;
+  0)
+    window_id=$(echo $match | tail -n1 | cut -d' ' -f1)
+    wmctrl -i -R $window_id
+    ;;
 esac
