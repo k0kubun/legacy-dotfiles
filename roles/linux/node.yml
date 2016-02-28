@@ -15,7 +15,6 @@ dotfiles:
   #- .uim
   - .Xdefaults
   - .Xmodmap
-  - .asoundrc
   - .git-template
   - .gitconfig
   - .gitignore
