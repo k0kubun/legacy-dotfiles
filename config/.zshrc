@@ -9,6 +9,8 @@ function profile() {
     echo "${SEC}.`printf '%09d' $USEC`: $1"
 }
 
+bindkey -e
+
 source ~/.zsh/lib/go.zsh
 source ~/.zsh/lib/aliases.zsh
 source ~/.zsh/lib/basic.zsh
