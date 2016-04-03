@@ -86,3 +86,6 @@ let g:eskk#large_dictionary = {
 "   autocmd!
 "   autocmd BufWinEnter,BufNewFile **/*.[chy] setlocal filetype=cruby
 " augroup END
+
+" tags for haskell
+set tags=tags;/,codex.tags;/

@@ -57,6 +57,7 @@ NeoBundleLazy 'osyo-manga/vim-over', { 'autoload': { 'commands': ['OverCommandLi
 NeoBundle 'tyru/eskk.vim'
 NeoBundle 'tyru/skkdict.vim'
 NeoBundle 'vim-scripts/netrw.vim'
+NeoBundle 'majutsushi/tagbar'
 
 " ctags
 " NeoBundle 'szw/vim-tags'
