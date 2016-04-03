@@ -50,7 +50,11 @@ cmap <C-f> <Right>
 cmap <C-b> <Left>
 
 " paste
-nnoremap gp :<C-u>r !pbpaste<CR>
+if has('mac')
+  nnoremap gp :<C-u>r !pbpaste<CR>
+else
+  nnoremap gp :<C-u>r !xsel -b<CR>
+endif
 
 " delete highlight
 nnoremap <silent> gh :let @/=''<CR>
