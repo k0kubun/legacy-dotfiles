@@ -58,12 +58,7 @@ function peco-find-file() {
 	fi
 	selected_files=$(echo $source_files | peco --prompt "[find file]")
 
-	result=''
-	for file in $selected_files; do
-		result="${result}$(echo $file | tr '\n' ' ')"
-	done
-
-	BUFFER="${BUFFER}${result}"
+	BUFFER="${BUFFER}$(echo $selected_files | tr '\n' ' ')"
 	CURSOR=$#BUFFER
 	zle redisplay
 }
