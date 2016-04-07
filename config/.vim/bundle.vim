@@ -41,7 +41,7 @@ NeoBundleLazy 'gavocanov/vim-js-indent', { 'autoload': { 'filetypes': ['javascri
 
 " Completion
 " NeoBundle 'Shougo/neocomplcache.vim'
-NeoBundleLazy 'Shougo/neocomplete.vim', { "autoload": { "insert": 1 } }
+NeoBundleLazy 'Shougo/neocomplete.vim', { 'autoload': { 'insert': 1 } }
 
 " Skin
 " NeoBundle 'Lokaltog/powerline', 'da6667b', { 'rtp' : 'powerline/bindings/vim' } " too slow to load
@@ -57,6 +57,7 @@ NeoBundleLazy 'osyo-manga/vim-over', { 'autoload': { 'commands': ['OverCommandLi
 NeoBundle 'tyru/eskk.vim'
 NeoBundle 'tyru/skkdict.vim'
 NeoBundle 'vim-scripts/netrw.vim'
+NeoBundleLazy 'tpope/vim-abolish', { 'autoload': { 'insert': 1 } }
 
 " ctags
 " NeoBundle 'szw/vim-tags'
