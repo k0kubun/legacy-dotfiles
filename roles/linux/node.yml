@@ -28,6 +28,7 @@ dotfiles:
   - .zsh
   - .zshrc
   - .zshrc.Linux
+  - .xbindkeysrc
 
 rbenv:
   user: k0kubun
