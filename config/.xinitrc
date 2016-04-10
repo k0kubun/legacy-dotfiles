@@ -54,3 +54,4 @@ ibus-daemon &
 #exec xmonad
 exec gnome-session
 #exec /home/k0kubun/src/github.com/k0kubun/libx11-ruby/bin/window-manager
+#exec /home/k0kubun/src/github.com/k0kubun/xepher/bin/xepher
