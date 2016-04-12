@@ -11,7 +11,7 @@ NeoBundleLazy 'vim-ruby/vim-ruby', { 'autoload': { 'filetypes': 'ruby' } }
 NeoBundleLazy 'mrkn/vim-cruby', { 'autoload': { 'filetypes': 'c' } }
 " NeoBundle 'tpope/vim-rails'
 NeoBundleLazy 'tpope/vim-haml', { 'autoload': { 'filetypes': 'haml' } }
-" NeoBundle 'slim-template/vim-slim'
+NeoBundleLazy 'slim-template/vim-slim', { 'autoload': { 'filetypes': 'slim' } }
 " NeoBundle 'plasticboy/vim-markdown'
 NeoBundleLazy 'kchmck/vim-coffee-script', { 'autoload': { 'filetypes': ['coffee'] } }
 " NeoBundle 'groenewege/vim-less'
