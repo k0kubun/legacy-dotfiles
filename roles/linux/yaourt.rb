@@ -32,6 +32,7 @@ yaourt 'vim'
 yaourt 'wget'
 yaourt 'xdot'
 yaourt 'gnome-shell-frippery'
+yaourt 'gnome-shell-extension-dash-to-dock'
 
 # fonts
 yaourt 'ttf-inconsolata'
