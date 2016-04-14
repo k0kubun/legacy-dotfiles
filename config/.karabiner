@@ -5,6 +5,7 @@ require 'karabiner/cli'
 appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
 appdef "CHROME", equal: "com.google.Chrome"
 appdef "HIPCHAT", equal: "com.hipchat.HipChat"
+appdef "SLACK", equal: "com.tinyspeck.slackmacgap"
 
 local = File.expand_path("~/.remap")
 if File.exists?(local)
@@ -123,6 +124,11 @@ end
 item "HipChat Room Change", only: "HIPCHAT" do
   remap "Cmd-K", to: "Cmd-Shift-["
   remap "Cmd-J", to: "Cmd-Shift-]"
+end
+
+item "Slack Room Change", only: "SLACK" do
+  remap "Cmd-K", to: "Opt-Up"
+  remap "Cmd-J", to: "Opt-Down"
 end
 
 item "Chrome inspector Command+Control+I", not: "TERMINAL" do
