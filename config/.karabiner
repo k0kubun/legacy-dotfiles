@@ -127,6 +127,8 @@ item "HipChat Room Change", only: "HIPCHAT" do
 end
 
 item "Slack Room Change", only: "SLACK" do
+  remap "Cmd-C-K", to: "Opt-Shift-Up"
+  remap "Cmd-C-J", to: "Opt-Shift-Down"
   remap "Cmd-N", to: "Cmd-K"
   remap "Cmd-K", to: "Opt-Up"
   remap "Cmd-J", to: "Opt-Down"
