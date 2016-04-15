@@ -149,13 +149,13 @@ item "Tmux configs", only: "TERMINAL" do
   # Window change
   (1..5).each do |index|
     remap "Cmd-#{index}", to: "M-#{index}"
-    remap "C-#{index}", to: "M-#{index}"
+    #remap "C-#{index}", to: "M-#{index}"
   end
 end
 
 item "Tab Change", not: "TERMINAL" do
   (1..5).each do |index|
-    remap "C-#{index}", to: "Cmd-#{index}"
+    #remap "C-#{index}", to: "Cmd-#{index}"
   end
 end
 
