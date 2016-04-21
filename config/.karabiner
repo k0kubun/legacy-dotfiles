@@ -69,7 +69,7 @@ end
 
 item "Logical ASCII arrangement" do
   autogen "__SetKeyboardType__ KeyboardType::MACBOOK"
-  remap "Shift-Return", to: "Shift-\\"
+  # remap "Shift-Return", to: "Shift-\\"
 end
 
 item "EISUU (Muhenkan by Seil) to control" do
