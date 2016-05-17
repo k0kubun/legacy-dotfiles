@@ -2,6 +2,8 @@
 
 require 'karabiner/cli'
 
+OPENMOKO_VENDOR_ID = 'DeviceVendor::RawValue::0x1d50'
+
 appdef "YORUFUKUROU", equal: "com.YoruFukurouProject.YoruFukurou"
 appdef "CHROME", equal: "com.google.Chrome"
 appdef "HIPCHAT", equal: "com.hipchat.HipChat"
@@ -11,6 +13,10 @@ local = File.expand_path("~/.remap")
 if File.exists?(local)
   source = File.read(local)
   eval(source)
+end
+
+item "Alt to Cmd in ErgoDox", device_only: OPENMOKO_VENDOR_ID do
+  remap "Opt_L", to: "Cmd_L"
 end
 
 item "SandS on apple keyboard", device_only: "DeviceVendor::APPLE_COMPUTER" do
