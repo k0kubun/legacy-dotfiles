@@ -75,4 +75,5 @@ nnoremap <C-w>> <C-w>14>
 nnoremap <C-w>< <C-w>14<
 
 " binding.pry
-inoremap <C-v> require "pry"; binding.pry
+" inoremap <C-v> begin;require "pry";binding.pry;rescue LoadError;require "irb";IRB.setup(nil);IRB.dbg(binding);end
+inoremap <C-v> require "pry";binding.pry
