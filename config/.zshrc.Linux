@@ -36,3 +36,6 @@ export PATH="/usr/local/llvm/bin:${PATH}"
 
 . ~/.zsh/bundle/ssh-find-agent/ssh-find-agent.sh
 set_ssh_agent_socket
+
+export EDITOR="vim"
+export BUNDLER_EDITOR="vim"
