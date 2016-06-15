@@ -33,6 +33,7 @@ yaourt 'wget'
 yaourt 'xdot'
 yaourt 'gnome-shell-frippery'
 yaourt 'gnome-shell-extension-dash-to-dock'
+yaourt 'gnome-shell-extension-panel-osd'
 
 # fonts
 yaourt 'ttf-inconsolata'
