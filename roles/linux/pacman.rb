@@ -43,7 +43,7 @@ package 'pkg-config'
 # extra
 package 'file-roller'
 package 'go'
-package 'nemo'
+# package 'nemo'
 package 'postgresql'
 package 'unzip'
 package 'wmctrl'
@@ -51,5 +51,5 @@ package 'zip'
 package 'zsh'
 
 # llvm
-package 'llvm35'
-package 'clang35'
+# package 'llvm35'
+# package 'clang35'
