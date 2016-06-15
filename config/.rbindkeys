@@ -90,7 +90,24 @@ window(@default_bind_resolver, class: /slack/) do
     operator.release_key KEY_LEFTSHIFT
 
     # Ctrl+x : cut
-    operator.press_key KEY_BACKSPACE
-    operator.release_key KEY_BACKSPACE
+    operator.press_key KEY_LEFTCTRL
+    operator.press_key KEY_X
+    operator.release_key KEY_X
+    operator.release_key KEY_LEFTCTRL
   end
+
+  # Alt-k to Alt-Up
+  bind_key [KEY_LEFTALT, KEY_K], [KEY_LEFTALT, KEY_UP]
+
+  # Alt-j to Alt-Down
+  bind_key [KEY_LEFTALT, KEY_J], [KEY_LEFTALT, KEY_DOWN]
+
+  # Alt-n to C-k
+  bind_key [KEY_LEFTALT, KEY_N], [KEY_RIGHTCTRL, KEY_K]
+
+  # Alt-C-k to Alt-Shift-Up
+  bind_key [KEY_LEFTALT, KEY_LEFTCTRL, KEY_K], [KEY_LEFTALT, KEY_LEFTSHIFT, KEY_UP]
+
+  # Alt-C-j to Alt-Shift-Down
+  bind_key [KEY_LEFTALT, KEY_LEFTCTRL, KEY_J], [KEY_LEFTALT, KEY_LEFTSHIFT, KEY_DOWN]
 end
