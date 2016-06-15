@@ -8,27 +8,26 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
-    xrdb -merge $sysresources
+  xrdb -merge $sysresources
 fi
 
 if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
+  xmodmap $sysmodmap
 fi
 
 if [ -f "$userresources" ]; then
-    xrdb -merge "$userresources"
-
+  xrdb -merge "$userresources"
 fi
 
 if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
+  xmodmap "$usermodmap"
 fi
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
+  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
 fi
 
 # disable beep sound
@@ -47,11 +46,9 @@ xset s off
 pulseaudio --start
 
 ibus-daemon &
+xscreensaver -no-splash &
 
 #compton &
 
 # start some nice programs
-#exec xmonad
 exec gnome-session
-#exec /home/k0kubun/src/github.com/k0kubun/libx11-ruby/bin/window-manager
-#exec /home/k0kubun/src/github.com/k0kubun/xepher/bin/xepher
