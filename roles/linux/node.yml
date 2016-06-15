@@ -13,7 +13,7 @@ dotfiles:
   #- .rake
   #- .tmux.conf.darwin
   #- .uim
-  - .Xdefaults
+  #- .Xdefaults
   - .Xmodmap
   - .git-template
   - .gitconfig
