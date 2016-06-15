@@ -23,12 +23,6 @@ package 'alsa-utils'
 package 'pulseaudio'
 package 'pulseaudio-alsa'
 
-# xmonad
-package 'xmonad'
-package 'xmonad-contrib'
-package 'dmenu'
-package 'xmobar'
-
 # gnome
 package 'gnome'
 package 'gnome-tweak-tool'
