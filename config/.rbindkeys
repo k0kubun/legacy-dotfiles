@@ -21,7 +21,6 @@
 # end
 
 # # cursor move
-# bind_key [KEY_LEFTCTRL, KEY_B], KEY_LEFT
 # bind_key [KEY_LEFTCTRL, KEY_P], KEY_UP
 # bind_key [KEY_LEFTCTRL, KEY_N], KEY_DOWN
 # bind_key [KEY_LEFTCTRL, KEY_A], KEY_HOME
@@ -73,10 +72,23 @@
 #   bind_key [KEY_LEFTCTRL, KEY_C], [KEY_LEFTALT, KEY_F4]
 # end
 
-# # settings per window class (or title)
+window(@default_bind_resolver, class: /chrome/) do
+  bind_key [KEY_LEFTCTRL, KEY_K] do |event, operator|
+    # Shift+End : select text to end of line
+    operator.press_key KEY_LEFTSHIFT
+    operator.press_key KEY_END
+    operator.release_key KEY_END
+    operator.release_key KEY_LEFTSHIFT
 
-# # through all key inputs if active
-# window(:through, class: /gnome-terminal/)
+    # Ctrl+x : cut
+    operator.press_key KEY_LEFTCTRL
+    operator.press_key KEY_X
+    operator.release_key KEY_X
+    operator.release_key KEY_LEFTCTRL
+  end
+
+  bind_key [KEY_LEFTCTRL, KEY_B], KEY_LEFT
+end
 
 # add new bind_key to default binds
 window(@default_bind_resolver, class: /slack/) do
