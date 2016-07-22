@@ -1,9 +1,11 @@
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+if [ "${RBENV_ROOT}" != "/usr/share/rbenv" ]; then
+	export PATH="$HOME/.rbenv/bin:$PATH"
 
-# FIXME: bottle neck for sourcing .zshrc
-# eval "$(rbenv init - zsh)"
-eval "$(rbenv init - --no-rehash zsh)"
+	# FIXME: bottle neck for sourcing .zshrc
+	# eval "$(rbenv init - zsh)"
+	eval "$(rbenv init - --no-rehash zsh)"
+fi
 
 # bundler
 alias be="bundle exec"

@@ -16,7 +16,7 @@ if [ -e ~/.ssh/agent_env ]; then
 fi
 
 # Ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="/usr/share/rbenv/bin:$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then
 	source ~/.zsh/lib/ruby.zsh
 fi
