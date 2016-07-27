@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+require 'json'
+require 'cgi'
+require 'active_support'
+require 'action_controller'
+
+def decrypt_session_cookie(cookie, key)
+  cookie = CGI.unescape(cookie)
+
+  # Default values for Rails 4 apps
+  key_iter_num = 1000
+  key_size     = 64
+  salt         = "encrypted cookie"
+  signed_salt  = "signed encrypted cookie"
+
+  key_generator = ActiveSupport::KeyGenerator.new(key, iterations: key_iter_num)
+  secret = key_generator.generate_key(salt)
+  sign_secret = key_generator.generate_key(signed_salt)
+
+  encryptor  = ActiveSupport::MessageEncryptor.new(secret, sign_secret, serializer: ActiveSupport::MessageEncryptor::NullSerializer)
+  serialized = encryptor.decrypt_and_verify(cookie)
+  session    = JSON.load(serialized) rescue Marshal.load(serialized)
+  puts session
+end
+
+abort "Please execute `read -s SECRET_KEY_BASE && export SECRET_KEY_BASE`" unless ENV.key?('SECRET_KEY_BASE')
+secret_key_base = ENV['SECRET_KEY_BASE']
+print "session_cookie: "
+session_cookie = gets.strip
+
+decrypt_session_cookie(session_cookie, secret_key_base)
