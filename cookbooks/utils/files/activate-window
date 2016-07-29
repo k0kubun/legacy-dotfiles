@@ -3,7 +3,7 @@
 keyword=$1
 shift
 
-match=$(wmctrl -l | grep "${keyword}$")
+match=$(wmctrl -l | grep "$(hostname) ${keyword}")
 case $? in
   1)
     $@
