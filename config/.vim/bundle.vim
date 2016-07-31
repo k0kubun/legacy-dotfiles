@@ -54,8 +54,8 @@ NeoBundleLazy 'osyo-manga/vim-over', { 'autoload': { 'commands': ['OverCommandLi
 " NeoBundle 'thinca/vim-prettyprint'
 " NeoBundle 'haya14busa/incsearch.vim'
 " NeoBundle 'jeetsukumaran/vim-indentwise'
-NeoBundle 'tyru/eskk.vim'
-NeoBundle 'tyru/skkdict.vim'
+NeoBundle 'tyru/skk.vim'
+" NeoBundle 'tyru/skkdict.vim'
 NeoBundle 'vim-scripts/netrw.vim'
 NeoBundleLazy 'tpope/vim-abolish', { 'autoload': { 'insert': 1 } }
 
